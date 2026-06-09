@@ -6,11 +6,14 @@ import GraphView from "./components/GraphView";
 import FilterPanel from "./components/FilterPanel";
 import DetailPanel from "./components/DetailPanel";
 import Legend from "./components/Legend";
+import Scrollytelling from "./story/Scrollytelling";
 
 export default function App() {
   const data = useStore((s) => s.data);
   const loading = useStore((s) => s.loading);
   const error = useStore((s) => s.error);
+  const view = useStore((s) => s.view);
+  const setView = useStore((s) => s.setView);
   const mode = useStore((s) => s.mode);
   const filters = useStore((s) => s.filters);
   const selectedNodeId = useStore((s) => s.selectedNodeId);
@@ -49,10 +52,17 @@ export default function App() {
     );
   }
 
+  if (view === "story") {
+    return <Scrollytelling />;
+  }
+
   return (
     <div className="layout">
       <FilterPanel />
       <main className="stage">
+        <button className="back-to-story" onClick={() => setView("story")}>
+          ← Intro
+        </button>
         <GraphView
           computed={computed}
           selectedNodeId={selectedNodeId}

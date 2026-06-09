@@ -12,11 +12,14 @@ function emptyFilters(): Filters {
   };
 }
 
+export type AppView = "story" | "explore";
+
 interface AppState {
   data: GraphData | null;
   loading: boolean;
   error: string | null;
 
+  view: AppView;
   mode: GraphMode;
   filters: Filters;
   selectedNodeId: string | null;
@@ -24,6 +27,7 @@ interface AppState {
 
   setData: (data: GraphData) => void;
   setError: (msg: string) => void;
+  setView: (view: AppView) => void;
   setMode: (mode: GraphMode) => void;
 
   toggleSetFilter: (
@@ -44,6 +48,7 @@ export const useStore = create<AppState>((set) => ({
   loading: true,
   error: null,
 
+  view: "story",
   mode: "keyword",
   filters: emptyFilters(),
   selectedNodeId: null,
@@ -51,6 +56,7 @@ export const useStore = create<AppState>((set) => ({
 
   setData: (data) => set({ data, loading: false, error: null }),
   setError: (msg) => set({ error: msg, loading: false }),
+  setView: (view) => set({ view }),
   setMode: (mode) => set({ mode, selectedNodeId: null }),
 
   toggleSetFilter: (key, value) =>

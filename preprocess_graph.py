@@ -88,6 +88,9 @@ def main() -> None:
     jahre: set[int] = set()
     posten: list[dict] = []
 
+    # Anzahl Haushaltstitel (fortgeschriebene Titel ueber mehrere Jahre)
+    titel_count = sum(1 for _ in g.subjects(RDF.type, DH.Haushaltstitel))
+
     # --- Keywords (skos:Concept im keyword-Namespace) ---
     for s in g.subjects(RDF.type, SKOS.Concept):
         su = str(s)
@@ -184,6 +187,7 @@ def main() -> None:
                 "bereiche": len(bereiche),
                 "klassen": len(klassen),
                 "posten": len(posten),
+                "titel": titel_count,
             },
         },
         "keywords": keywords,
