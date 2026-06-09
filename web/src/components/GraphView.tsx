@@ -71,6 +71,23 @@ export default function GraphView({
       const active = st.selected ?? st.hovered;
       const q = st.search.trim().toLowerCase();
 
+      // Prioritaet 1: Ein Knoten ist ausgewaehlt oder gehovert -> Nachbarschaft anzeigen
+      if (active) {
+        if (node === active) {
+          res.zIndex = 2;
+          res.forceLabel = true;
+        } else if (st.highlighted.has(node)) {
+          res.zIndex = 1;
+          res.forceLabel = true;
+        } else {
+          res.color = "#e6e9ed";
+          res.label = "";
+          res.zIndex = 0;
+        }
+        return res;
+      }
+
+      // Prioritaet 2: Suche ist aktiv (und kein Knoten ausgewaehlt/gehovert) -> Suchtreffer anzeigen
       if (q) {
         const match = String(data.label ?? "").toLowerCase().includes(q);
         if (!match) {
@@ -84,19 +101,6 @@ export default function GraphView({
         return res;
       }
 
-      if (active) {
-        if (node === active) {
-          res.zIndex = 2;
-          res.forceLabel = true;
-        } else if (st.highlighted.has(node)) {
-          res.zIndex = 1;
-          res.forceLabel = true;
-        } else {
-          res.color = "#e6e9ed";
-          res.label = "";
-          res.zIndex = 0;
-        }
-      }
       return res;
     });
 
