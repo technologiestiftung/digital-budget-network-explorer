@@ -5,3 +5,9 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# Alle Anfragen auf die index.html leiten (Single Page App Fallback)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

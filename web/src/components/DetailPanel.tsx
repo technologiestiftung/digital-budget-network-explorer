@@ -106,7 +106,9 @@ export default function DetailPanel() {
       {/* Wikidata-Anreicherung */}
       <section className="wikidata">
         {!meta.qid && (
-          <p className="muted small">Keine Wikidata-Verknüpfung im Datensatz.</p>
+          <p className="muted small">
+            Keine Wikidata-Verknüpfung im Datensatz.
+          </p>
         )}
         {meta.qid && wdLoading && <p className="muted small">Lade Wikidata…</p>}
         {wdError && <p className="error small">Wikidata: {wdError}</p>}
@@ -144,7 +146,7 @@ export default function DetailPanel() {
             </div>
             <div className="stat">
               <span className="num">{formatTEur(kwStats.digSum)}</span>
-              <span className="lbl">T€ digital (weit)</span>
+              <span className="lbl">T€ IST digital (weit)</span>
             </div>
           </div>
 
@@ -155,8 +157,7 @@ export default function DetailPanel() {
                 <li key={a.id}>
                   <button
                     className="link-row"
-                    onClick={() => selectNode(`ep:${a.id}`)}
-                  >
+                    onClick={() => selectNode(`ep:${a.id}`)}>
                     <span className="row-label">{a.label}</span>
                     <span className="row-count">{a.count}</span>
                   </button>
@@ -172,15 +173,30 @@ export default function DetailPanel() {
                 <button
                   key={c.id}
                   className="tag"
-                  onClick={() => selectNode(`kw:${c.id}`)}
-                >
+                  onClick={() => selectNode(`kw:${c.id}`)}>
                   {c.label} <span className="muted">×{c.count}</span>
                 </button>
               ))}
               {kwStats.cooccurrences.length === 0 && (
-                <span className="muted small">Keine Ko-Occurrence im Filter.</span>
+                <span className="muted small">
+                  Keine Ko-Occurrence im Filter.
+                </span>
               )}
             </div>
+          </section>
+
+          <section>
+            <h3>Haushaltstitel ({kwStats.titles.length})</h3>
+            <details className="title-details">
+              <summary>Titel anzeigen</summary>
+              <ul className="title-list">
+                {kwStats.titles.map((t) => (
+                  <li key={t.id} title={t.id}>
+                    {t.label}
+                  </li>
+                ))}
+              </ul>
+            </details>
           </section>
         </>
       )}
@@ -199,7 +215,7 @@ export default function DetailPanel() {
             </div>
             <div className="stat">
               <span className="num">{formatTEur(epStats.digSum)}</span>
-              <span className="lbl">T€ digital (weit)</span>
+              <span className="lbl">T€ IST digital (weit)</span>
             </div>
           </div>
 
@@ -210,12 +226,25 @@ export default function DetailPanel() {
                 <button
                   key={k.id}
                   className="tag"
-                  onClick={() => selectNode(`kw:${k.id}`)}
-                >
+                  onClick={() => selectNode(`kw:${k.id}`)}>
                   {k.label} <span className="muted">×{k.count}</span>
                 </button>
               ))}
             </div>
+          </section>
+
+          <section>
+            <h3>Haushaltstitel ({epStats.titles.length})</h3>
+            <details className="title-details">
+              <summary>Titel anzeigen</summary>
+              <ul className="title-list">
+                {epStats.titles.map((t) => (
+                  <li key={t.id} title={t.id}>
+                    {t.label}
+                  </li>
+                ))}
+              </ul>
+            </details>
           </section>
         </>
       )}

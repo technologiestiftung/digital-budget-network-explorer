@@ -11,6 +11,7 @@ interface Props {
   computed: ComputedGraph;
   selectedNodeId: string | null;
   search: string;
+  nodeSizeMetric: "count" | "budget";
   onSelect: (id: string | null) => void;
 }
 
@@ -31,6 +32,7 @@ export default function GraphView({
   computed,
   selectedNodeId,
   search,
+  nodeSizeMetric,
   onSelect,
 }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -151,13 +153,17 @@ export default function GraphView({
     layoutRef.current = null;
     graph.clear();
 
-    const maxFreq = computed.nodes.reduce((m, n) => Math.max(m, n.frequency), 1);
+    const maxVal = computed.nodes.reduce((m, n) => {
+      const val = nodeSizeMetric === "budget" ? n.digSum : n.frequency;
+      return Math.max(m, val);
+    }, 1);
     const maxWeight = computed.edges.reduce((m, e) => Math.max(m, e.weight), 1);
 
     for (const n of computed.nodes) {
+      const val = nodeSizeMetric === "budget" ? n.digSum : n.frequency;
       graph.addNode(n.id, {
         label: n.label,
-        size: scaleSize(n.frequency, maxFreq),
+        size: scaleSize(val, maxVal),
         color: n.kind === "einzelplan" ? EINZELPLAN_COLOR : colorForKeyword(n.bereich),
         kind: n.kind,
         x: 0,
@@ -193,7 +199,7 @@ export default function GraphView({
     renderer.getCamera().animatedReset({ duration: 300 });
 
     return () => clearTimeout(timer);
-  }, [computed]);
+  }, [computed, nodeSizeMetric]);
 
   // Auswahl/Suche -> Reducer-Status aktualisieren + neu zeichnen
   useEffect(() => {

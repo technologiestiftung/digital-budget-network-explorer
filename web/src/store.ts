@@ -13,6 +13,12 @@ function emptyFilters(): Filters {
 }
 
 export type AppView = "story" | "explore";
+export type NodeSizeMetric = "count" | "budget";
+
+const initialView: AppView = 
+  typeof window !== "undefined" && window.location.pathname.includes("/explorer") 
+    ? "explore" 
+    : "story";
 
 interface AppState {
   data: GraphData | null;
@@ -21,6 +27,7 @@ interface AppState {
 
   view: AppView;
   mode: GraphMode;
+  nodeSizeMetric: NodeSizeMetric;
   filters: Filters;
   selectedNodeId: string | null;
   search: string;
@@ -29,6 +36,7 @@ interface AppState {
   setError: (msg: string) => void;
   setView: (view: AppView) => void;
   setMode: (mode: GraphMode) => void;
+  setNodeSizeMetric: (metric: NodeSizeMetric) => void;
 
   toggleSetFilter: (
     key: "bereiche" | "klassen" | "einzelplaene",
@@ -48,8 +56,9 @@ export const useStore = create<AppState>((set) => ({
   loading: true,
   error: null,
 
-  view: "story",
+  view: initialView,
   mode: "keyword",
+  nodeSizeMetric: "count",
   filters: emptyFilters(),
   selectedNodeId: null,
   search: "",
@@ -58,6 +67,7 @@ export const useStore = create<AppState>((set) => ({
   setError: (msg) => set({ error: msg, loading: false }),
   setView: (view) => set({ view }),
   setMode: (mode) => set({ mode, selectedNodeId: null }),
+  setNodeSizeMetric: (metric) => set({ nodeSizeMetric: metric }),
 
   toggleSetFilter: (key, value) =>
     set((state) => {

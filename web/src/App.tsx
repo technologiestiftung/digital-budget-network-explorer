@@ -15,12 +15,31 @@ export default function App() {
   const view = useStore((s) => s.view);
   const setView = useStore((s) => s.setView);
   const mode = useStore((s) => s.mode);
+  const nodeSizeMetric = useStore((s) => s.nodeSizeMetric);
   const filters = useStore((s) => s.filters);
   const selectedNodeId = useStore((s) => s.selectedNodeId);
   const search = useStore((s) => s.search);
   const setData = useStore((s) => s.setData);
   const setError = useStore((s) => s.setError);
   const selectNode = useStore((s) => s.selectNode);
+
+  // Sync Browser URL mit View-Status
+  useEffect(() => {
+    const handlePopState = () => {
+      setView(window.location.pathname.includes("/explorer") ? "explore" : "story");
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [setView]);
+
+  useEffect(() => {
+    const isExplorer = window.location.pathname.includes("/explorer");
+    if (view === "explore" && !isExplorer) {
+      window.history.pushState({}, "", "/explorer");
+    } else if (view === "story" && isExplorer) {
+      window.history.pushState({}, "", "/");
+    }
+  }, [view]);
 
   useEffect(() => {
     loadGraph()
@@ -67,6 +86,7 @@ export default function App() {
           computed={computed}
           selectedNodeId={selectedNodeId}
           search={search}
+          nodeSizeMetric={nodeSizeMetric}
           onSelect={selectNode}
         />
         <Legend nodeCount={computed.nodes.length} edgeCount={computed.edges.length} />

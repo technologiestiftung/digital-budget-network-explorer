@@ -373,6 +373,39 @@ input[type="range"] {
   color: #c0392b;
 }
 
+/* ---------- Title List in Details ---------- */
+.title-details {
+  margin-top: 8px;
+  font-size: 12.5px;
+}
+
+.title-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.title-details summary:hover {
+  text-decoration: underline;
+}
+
+.title-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  color: #34425a;
+  border-left: 2px solid #e2e7ee;
+  margin-left: 6px;
+}
+
+.title-list li {
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
 /* ---------- Legend ---------- */
 .legend {
   position: absolute;

@@ -53,7 +53,10 @@ export default function Scrollytelling() {
       list.push({ key: `chain-${i}`, focus: { type: "chain", upto: i } }),
     );
     ministries.forEach((m) =>
-      list.push({ key: `min-${m.epId}`, focus: { type: "set", ids: m.kwIds, primary: m.epId } }),
+      list.push({
+        key: `min-${m.epId}`,
+        focus: { type: "set", ids: m.kwIds, primary: m.epId },
+      }),
     );
     list.push({ key: "cta", focus: { type: "all" } });
     return list;
@@ -91,7 +94,8 @@ export default function Scrollytelling() {
   const budgetMrd = useMemo(() => {
     const latest = Math.max(...data.jahre);
     let sumT = 0;
-    for (const p of data.posten) if (p.jahr === latest && p.soll) sumT += p.soll;
+    for (const p of data.posten)
+      if (p.jahr === latest && p.soll) sumT += p.soll;
     return { value: sumT / 1e6, jahr: latest }; // T€ -> Mrd €
   }, [data]);
 
@@ -114,17 +118,19 @@ export default function Scrollytelling() {
         <section
           ref={setRef(idxOf("hero"))}
           data-idx={idxOf("hero")}
-          className={`story-panel hero ${active === idxOf("hero") ? "is-active" : ""}`}
-        >
+          className={`story-panel hero ${active === idxOf("hero") ? "is-active" : ""}`}>
           <div className="panel-inner center">
-            <p className="eyebrow">Digitalhaushalt des Bundes</p>
+            <p className="eyebrow">
+              Wofür zahlen wir, wenn wir von Digitalisierung im Bundeshalt
+              sprechen?
+            </p>
             <h1 className="hero-title">
-              Der Bundeshaushalt als <em>Wissensnetzwerk</em>
+              Die Macht der <em>Worte</em>
             </h1>
             <ul className="hero-questions">
+              <li>Welche Begriffe prägen die Digitalisierungsausgaben?</li>
               <li>Welche Themen verbinden Ministerien?</li>
               <li>Welche Technologien werden gemeinsam gefördert?</li>
-              <li>Welche Begriffe prägen die Digitalisierungsausgaben?</li>
             </ul>
             <div className="scroll-hint">Scrollen zum Erkunden ↓</div>
           </div>
@@ -134,35 +140,50 @@ export default function Scrollytelling() {
         <section
           ref={setRef(idxOf("stats"))}
           data-idx={idxOf("stats")}
-          className={`story-panel ${active === idxOf("stats") ? "is-active" : ""}`}
-        >
+          className={`story-panel ${active === idxOf("stats") ? "is-active" : ""}`}>
           <div className="panel-inner">
             <h2 className="screen-title">Der Datensatz enthält</h2>
             <div className="stat-cards">
               <div className="stat-card">
                 <span className="stat-num">
-                  <CountUp value={data.meta.counts.titel ?? 0} active={active === idxOf("stats")} />
+                  <CountUp
+                    value={data.meta.counts.titel ?? 0}
+                    active={active === idxOf("stats")}
+                  />
                 </span>
                 <span className="stat-label">Haushaltstitel</span>
               </div>
               <div className="stat-card">
                 <span className="stat-num">
-                  <CountUp value={data.meta.counts.keywords} active={active === idxOf("stats")} />
+                  <CountUp
+                    value={data.meta.counts.keywords}
+                    active={active === idxOf("stats")}
+                  />
                 </span>
                 <span className="stat-label">Keywords</span>
               </div>
               <div className="stat-card">
                 <span className="stat-num">
-                  <CountUp value={data.meta.counts.einzelplaene} active={active === idxOf("stats")} />
+                  <CountUp
+                    value={data.meta.counts.einzelplaene}
+                    active={active === idxOf("stats")}
+                  />
                 </span>
                 <span className="stat-label">Ministerien & Organe</span>
               </div>
               <div className="stat-card">
                 <span className="stat-num">
-                  ≈ <CountUp value={budgetMrd.value} decimals={1} active={active === idxOf("stats")} />{" "}
+                  ≈{" "}
+                  <CountUp
+                    value={budgetMrd.value}
+                    decimals={1}
+                    active={active === idxOf("stats")}
+                  />{" "}
                   Mrd €
                 </span>
-                <span className="stat-label">Soll-Volumen {budgetMrd.jahr}</span>
+                <span className="stat-label">
+                  Soll-Volumen {budgetMrd.jahr}
+                </span>
               </div>
             </div>
           </div>
@@ -176,13 +197,16 @@ export default function Scrollytelling() {
               key={c.id}
               ref={setRef(idx)}
               data-idx={idx}
-              className={`story-panel chain ${active === idx ? "is-active" : ""}`}
-            >
+              className={`story-panel chain ${active === idx ? "is-active" : ""}`}>
               <div className="panel-inner">
-                <span className="chain-step">{i + 1} / {STORY_CHAIN.length}</span>
+                <span className="chain-step">
+                  {i + 1} / {STORY_CHAIN.length}
+                </span>
                 <h2 className="chain-word">{c.label}</h2>
                 <p className="chain-note">{c.note}</p>
-                {i < STORY_CHAIN.length - 1 && <div className="chain-arrow">↓</div>}
+                {i < STORY_CHAIN.length - 1 && (
+                  <div className="chain-arrow">↓</div>
+                )}
               </div>
             </section>
           );
@@ -196,10 +220,11 @@ export default function Scrollytelling() {
               key={m.epId}
               ref={setRef(idx)}
               data-idx={idx}
-              className={`story-panel ministry ${active === idx ? "is-active" : ""}`}
-            >
+              className={`story-panel ministry ${active === idx ? "is-active" : ""}`}>
               <div className="panel-inner">
-                <h2 className="screen-title">Welche Ressorts beschäftigen sich mit ähnlichen Themen?</h2>
+                <h2 className="screen-title">
+                  Welche Ressorts beschäftigen sich mit ähnlichen Themen?
+                </h2>
                 <div className="ministry-card">
                   <span className="ministry-short">{m.short}</span>
                   <span className="ministry-name">{m.label}</span>
@@ -220,13 +245,12 @@ export default function Scrollytelling() {
         <section
           ref={setRef(idxOf("cta"))}
           data-idx={idxOf("cta")}
-          className={`story-panel cta ${active === idxOf("cta") ? "is-active" : ""}`}
-        >
+          className={`story-panel cta ${active === idxOf("cta") ? "is-active" : ""}`}>
           <div className="panel-inner center">
             <h2 className="cta-title">Jetzt selbst erkunden</h2>
             <p className="cta-sub">
-              Filtere nach Jahr, Ressort und Thema – und entdecke, welche Begriffe
-              den Digitalhaushalt verbinden.
+              Filtere nach Jahr, Ressort und Thema – und entdecke, welche
+              Begriffe den Digitalhaushalt verbinden.
             </p>
             <button className="cta-button" onClick={() => setView("explore")}>
               Netzwerk-Explorer öffnen →

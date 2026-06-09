@@ -11,6 +11,7 @@ export interface EinzelplanInfo {
 }
 
 export interface Posten {
+  t: string | null; // titel id
   kw: string[];
   ep: string | null;
   jahr: number | null;
@@ -29,6 +30,7 @@ export interface GraphData {
   };
   keywords: Record<string, KeywordInfo>;
   einzelplaene: Record<string, EinzelplanInfo>;
+  titel: Record<string, string>;
   bereiche: Record<string, string>;
   klassen: Record<string, string>;
   jahre: number[];

@@ -162,6 +162,8 @@ export interface KeywordStats {
   actors: { id: string; label: string; qid: string | null; count: number }[];
   /** Haeufigste Ko-Occurrence-Partner. */
   cooccurrences: { id: string; label: string; count: number }[];
+  /** Verbundene Haushaltstitel (eindeutig, ID und Label) */
+  titles: { id: string; label: string }[];
 }
 
 /** Detailstatistik fuer ein einzelnes Keyword (fuer das Detail-Panel). */
@@ -176,6 +178,7 @@ export function keywordStats(
   const bereichCounts = new Map<string, number>();
   const actorCounts = new Map<string, number>();
   const coCounts = new Map<string, number>();
+  const titleSet = new Set<string>();
 
   for (const p of posten) {
     if (!p.kw.includes(keywordId)) continue;
@@ -183,6 +186,7 @@ export function keywordStats(
     digSum += p.digW ?? 0;
     if (p.ber) bereichCounts.set(p.ber, (bereichCounts.get(p.ber) ?? 0) + 1);
     if (p.ep) actorCounts.set(p.ep, (actorCounts.get(p.ep) ?? 0) + 1);
+    if (p.t) titleSet.add(p.t);
     for (const k of p.kw) {
       if (k === keywordId) continue;
       coCounts.set(k, (coCounts.get(k) ?? 0) + 1);
@@ -206,8 +210,13 @@ export function keywordStats(
       label: data.keywords[id]?.label ?? id,
       count,
     }));
+    
+  const titles = Array.from(titleSet).map(id => ({
+    id,
+    label: data.titel[id] ?? id
+  }));
 
-  return { frequency, digSum, bereich: dominantBereich(bereichCounts), actors, cooccurrences };
+  return { frequency, digSum, bereich: dominantBereich(bereichCounts), actors, cooccurrences, titles };
 }
 
 export interface EinzelplanStats {
@@ -215,6 +224,8 @@ export interface EinzelplanStats {
   digSum: number;
   /** Haeufigste Keywords dieses Einzelplans. */
   topKeywords: { id: string; label: string; count: number }[];
+  /** Verbundene Haushaltstitel (eindeutig, ID und Label) */
+  titles: { id: string; label: string }[];
 }
 
 /** Detailstatistik fuer einen Einzelplan (fuer das Detail-Panel). */
@@ -227,15 +238,23 @@ export function einzelplanStats(
   let frequency = 0;
   let digSum = 0;
   const kwCounts = new Map<string, number>();
+  const titleSet = new Set<string>();
   for (const p of posten) {
     if (p.ep !== einzelplanId) continue;
     frequency += 1;
     digSum += p.digW ?? 0;
+    if (p.t) titleSet.add(p.t);
     for (const k of p.kw) kwCounts.set(k, (kwCounts.get(k) ?? 0) + 1);
   }
   const topKeywords = [...kwCounts.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 15)
     .map(([id, count]) => ({ id, label: data.keywords[id]?.label ?? id, count }));
-  return { frequency, digSum, topKeywords };
+    
+  const titles = Array.from(titleSet).map(id => ({
+    id,
+    label: data.titel[id] ?? id
+  }));
+    
+  return { frequency, digSum, topKeywords, titles };
 }

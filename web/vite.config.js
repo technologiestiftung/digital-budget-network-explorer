@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-// Base auf relativen Pfad setzen, damit ein statischer Export (z.B. GitHub Pages
-// oder ein Unterverzeichnis) ohne Anpassung funktioniert.
+// Base auf "/" setzen fuer korrekte HTML5 History API (URL-Routing)
 export default defineConfig({
-    base: "./",
+    base: "/",
     plugins: [react()],
 });

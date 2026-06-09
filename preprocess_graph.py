@@ -83,13 +83,20 @@ def main() -> None:
 
     keywords: dict[str, dict] = {}
     einzelplaene: dict[str, dict] = {}
+    titel: dict[str, str] = {}
     bereiche: dict[str, str] = {}
     klassen: dict[str, str] = {}
     jahre: set[int] = set()
     posten: list[dict] = []
 
+    # --- Haushaltstitel ---
+    for s in g.subjects(RDF.type, DH.Haushaltstitel):
+        tid = local_name(s)
+        label = first_label(g, s) or tid
+        titel[tid] = label
+
     # Anzahl Haushaltstitel (fortgeschriebene Titel ueber mehrere Jahre)
-    titel_count = sum(1 for _ in g.subjects(RDF.type, DH.Haushaltstitel))
+    titel_count = len(titel)
 
     # --- Keywords (skos:Concept im keyword-Namespace) ---
     for s in g.subjects(RDF.type, SKOS.Concept):
@@ -158,6 +165,9 @@ def main() -> None:
             except ValueError:
                 pass
 
+        titel_obj = g.value(s, DCTERMS.isPartOf)
+        t_id = local_name(titel_obj) if titel_obj is not None else None
+
         def num(pred):
             v = g.value(s, pred)
             try:
@@ -166,6 +176,7 @@ def main() -> None:
                 return None
 
         rec = {
+            "t": t_id,
             "kw": kw,
             "ep": ep,
             "jahr": jahr,
@@ -184,14 +195,15 @@ def main() -> None:
             "counts": {
                 "keywords": len(keywords),
                 "einzelplaene": len(einzelplaene),
+                "titel": titel_count,
                 "bereiche": len(bereiche),
                 "klassen": len(klassen),
                 "posten": len(posten),
-                "titel": titel_count,
             },
         },
         "keywords": keywords,
         "einzelplaene": einzelplaene,
+        "titel": titel,
         "bereiche": bereiche,
         "klassen": klassen,
         "jahre": sorted(jahre),

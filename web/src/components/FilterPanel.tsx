@@ -5,8 +5,10 @@ export default function FilterPanel() {
   const data = useStore((s) => s.data);
   const filters = useStore((s) => s.filters);
   const mode = useStore((s) => s.mode);
+  const nodeSizeMetric = useStore((s) => s.nodeSizeMetric);
   const search = useStore((s) => s.search);
   const setMode = useStore((s) => s.setMode);
+  const setNodeSizeMetric = useStore((s) => s.setNodeSizeMetric);
   const toggleJahr = useStore((s) => s.toggleJahr);
   const toggleSetFilter = useStore((s) => s.toggleSetFilter);
   const setMinFrequency = useStore((s) => s.setMinFrequency);
@@ -39,6 +41,22 @@ export default function FilterPanel() {
             onClick={() => setMode("bipartite")}
           >
             Keyword ↔ Einzelplan
+          </button>
+        </div>
+
+        <h2 style={{ marginTop: 16 }}>Knotengröße nach</h2>
+        <div className="mode-toggle">
+          <button
+            className={nodeSizeMetric === "count" ? "active" : ""}
+            onClick={() => setNodeSizeMetric("count")}
+          >
+            Anzahl Posten
+          </button>
+          <button
+            className={nodeSizeMetric === "budget" ? "active" : ""}
+            onClick={() => setNodeSizeMetric("budget")}
+          >
+            Budget (T€ digital)
           </button>
         </div>
       </section>
