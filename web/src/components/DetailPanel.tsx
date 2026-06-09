@@ -7,6 +7,7 @@ import {
   type KeywordStats,
 } from "../graph/buildGraph";
 import { fetchWikidata, type WikidataInfo } from "../services/wikidata";
+import InfoTooltip from "./InfoTooltip";
 
 function formatTEur(value: number): string {
   return new Intl.NumberFormat("de-DE", { maximumFractionDigits: 0 }).format(
@@ -19,6 +20,10 @@ export default function DetailPanel() {
   const filters = useStore((s) => s.filters);
   const selectedNodeId = useStore((s) => s.selectedNodeId);
   const selectNode = useStore((s) => s.selectNode);
+  const [distTab, setDistTab] = useState<"bereich" | "ressort">("bereich");
+  const [semTab, setSemTab] = useState<"phrasen" | "kookkurrenz">("phrasen");
+
+  useEffect(() => { setDistTab("bereich"); setSemTab("phrasen"); }, [selectedNodeId]);
 
   const parsed = useMemo(() => {
     if (!selectedNodeId) return null;
@@ -146,78 +151,146 @@ export default function DetailPanel() {
             </div>
           </div>
 
-          {kwStats.bereichCounts && kwStats.bereichCounts.length > 0 && (
-            <section>
-              <h3>Verteilung nach Digitalisierungsbereich</h3>
-              <div className="bereich-bars">
-                {kwStats.bereichCounts.map((b) => {
-                  const total = kwStats.bereichCounts.reduce((sum, item) => sum + item.count, 0);
-                  const pct = Math.round((b.count / total) * 100);
-                  return (
-                    <div key={b.id} className="bereich-bar-row">
-                      <div className="bereich-bar-label">
-                        <span>{b.label}</span>
-                        <span className="bereich-bar-percent">{b.count}</span>
+          <section className="distribution-section">
+            <h3>Verteilung</h3>
+            <div className="detail-tabs">
+              <button
+                className={distTab === "bereich" ? "active" : ""}
+                onClick={() => setDistTab("bereich")}>
+                nach Digitalbereich
+                <InfoTooltip text="Zeigt, in welchen thematischen Digitalisierungsbereichen (z.B. Verwaltung, Infrastruktur) dieses Keyword vorkommt." />
+              </button>
+              <button
+                className={distTab === "ressort" ? "active" : ""}
+                onClick={() => setDistTab("ressort")}>
+                nach Einzelplan
+                <InfoTooltip text="Listet die Ministerien und obersten Bundesbehörden auf, die dieses Keyword in ihren Titeln verwenden." />
+              </button>
+            </div>
+
+            {distTab === "bereich" &&
+              kwStats.bereichCounts &&
+              kwStats.bereichCounts.length > 0 && (
+                <div className="dist-list">
+                  {kwStats.bereichCounts.map((b) => {
+                    const total = kwStats.bereichCounts.reduce(
+                      (sum, item) => sum + item.count,
+                      0,
+                    );
+                    const pct = Math.round((b.count / total) * 100);
+                    return (
+                      <div key={b.id} className="dist-row">
+                        <div className="dist-label">
+                          <span className="dist-name">{b.label}</span>
+                          <span className="dist-count">{b.count}</span>
+                        </div>
+                        <div className="dist-bar-bg">
+                          <div
+                            className="dist-bar-fill"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
                       </div>
-                      <div className="bereich-bar-bg">
-                        <div 
-                          className="bereich-bar-fill" 
-                          style={{ width: `${pct}%`, background: "var(--accent)" }} 
+                    );
+                  })}
+                </div>
+              )}
+            {distTab === "bereich" &&
+              (!kwStats.bereichCounts ||
+                kwStats.bereichCounts.length === 0) && (
+                <p className="muted small" style={{ marginTop: 10 }}>
+                  Keine Daten verfügbar.
+                </p>
+              )}
+
+            {distTab === "ressort" && (
+              <div className="dist-list">
+                {kwStats.actors.slice(0, 10).map((a) => {
+                  const total = kwStats.actors.reduce(
+                    (sum, item) => sum + item.count,
+                    0,
+                  );
+                  const pct = Math.round((a.count / total) * 100);
+                  return (
+                    <button
+                      key={a.id}
+                      className="dist-row clickable"
+                      onClick={() => selectNode(`ep:${a.id}`)}>
+                      <div className="dist-label">
+                        <span className="dist-name">{a.label}</span>
+                        <span className="dist-count">{a.count}</span>
+                      </div>
+                      <div className="dist-bar-bg">
+                        <div
+                          className="dist-bar-fill"
+                          style={{ width: `${pct}%` }}
                         />
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
-            </section>
-          )}
-
-          {kwStats.phrases && kwStats.phrases.length > 0 && (
-            <section className="phrases-section">
-              <h3>Wortverbindungen im Text</h3>
-              <ul className="phrase-list">
-                {kwStats.phrases.map((p) => (
-                  <li key={p.label}>
-                    {p.label} <span className="muted small">×{p.count}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          <section>
-            <h3>Akteure (Einzelpläne)</h3>
-            <ul className="bars">
-              {kwStats.actors.slice(0, 10).map((a) => (
-                <li key={a.id}>
-                  <button
-                    className="link-row"
-                    onClick={() => selectNode(`ep:${a.id}`)}>
-                    <span className="row-label">{a.label}</span>
-                    <span className="row-count">{a.count}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
+            )}
           </section>
 
-          <section>
-            <h3>Tritt gemeinsam auf mit</h3>
-            <div className="tags">
-              {kwStats.cooccurrences.map((c) => (
-                <button
-                  key={c.id}
-                  className="tag"
-                  onClick={() => selectNode(`kw:${c.id}`)}>
-                  {c.label} <span className="muted">×{c.count}</span>
-                </button>
-              ))}
-              {kwStats.cooccurrences.length === 0 && (
-                <span className="muted small">
-                  Keine Ko-Occurrence im Filter.
-                </span>
-              )}
+          <section className="distribution-section">
+            <h3>Semantik</h3>
+            <div className="detail-tabs">
+              <button
+                className={semTab === "phrasen" ? "active" : ""}
+                onClick={() => setSemTab("phrasen")}>
+                Wortkontext
+                <InfoTooltip text="Zeigt, wie dieses Keyword tatsächlich im Fließtext der Haushaltstitel vorkommt (z.B. als 'digitale Infrastruktur' statt nur 'Infrastruktur')." />
+              </button>
+              <button
+                className={semTab === "kookkurrenz" ? "active" : ""}
+                onClick={() => setSemTab("kookkurrenz")}>
+                Themenverbünde
+                <InfoTooltip text="Listet andere Keywords auf, die gemeinsam mit diesem in denselben Haushaltstiteln vorkommen – je häufiger, desto enger der thematische Zusammenhang." />
+              </button>
             </div>
+
+            {semTab === "phrasen" && kwStats.phrases && kwStats.phrases.length > 0 && (
+              <div className="dist-list">
+                {kwStats.phrases.map((p) => (
+                  <div key={p.label} className="dist-row">
+                    <div className="dist-label">
+                      <span className="dist-name">{p.label}</span>
+                      <span className="dist-count">{p.count}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+            {semTab === "phrasen" && (!kwStats.phrases || kwStats.phrases.length === 0) && (
+              <p className="muted small" style={{ marginTop: 10 }}>Keine Wortkontexte gefunden.</p>
+            )}
+
+            {semTab === "kookkurrenz" && kwStats.cooccurrences.length > 0 && (
+              <div className="dist-list">
+                {kwStats.cooccurrences.map((c) => {
+                  const total = kwStats.cooccurrences.reduce((sum, item) => sum + item.count, 0);
+                  const pct = Math.round((c.count / total) * 100);
+                  return (
+                    <button
+                      key={c.id}
+                      className="dist-row clickable"
+                      onClick={() => selectNode(`kw:${c.id}`)}>
+                      <div className="dist-label">
+                        <span className="dist-name">{c.label}</span>
+                        <span className="dist-count">{c.count}</span>
+                      </div>
+                      <div className="dist-bar-bg">
+                        <div className="dist-bar-fill" style={{ width: `${pct}%` }} />
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+            {semTab === "kookkurrenz" && kwStats.cooccurrences.length === 0 && (
+              <p className="muted small" style={{ marginTop: 10 }}>Keine Themenverbünde im aktuellen Filter.</p>
+            )}
           </section>
 
           <section>
