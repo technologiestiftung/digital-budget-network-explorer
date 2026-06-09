@@ -146,6 +146,32 @@ export default function DetailPanel() {
             </div>
           </div>
 
+          {kwStats.bereichCounts && kwStats.bereichCounts.length > 0 && (
+            <section>
+              <h3>Verteilung nach Digitalisierungsbereich</h3>
+              <div className="bereich-bars">
+                {kwStats.bereichCounts.map((b) => {
+                  const total = kwStats.bereichCounts.reduce((sum, item) => sum + item.count, 0);
+                  const pct = Math.round((b.count / total) * 100);
+                  return (
+                    <div key={b.id} className="bereich-bar-row">
+                      <div className="bereich-bar-label">
+                        <span>{b.label}</span>
+                        <span className="bereich-bar-percent">{b.count}</span>
+                      </div>
+                      <div className="bereich-bar-bg">
+                        <div 
+                          className="bereich-bar-fill" 
+                          style={{ width: `${pct}%`, background: "var(--accent)" }} 
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
           {kwStats.phrases && kwStats.phrases.length > 0 && (
             <section className="phrases-section">
               <h3>Wortverbindungen im Text</h3>

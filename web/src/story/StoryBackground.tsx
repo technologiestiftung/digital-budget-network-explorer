@@ -6,7 +6,7 @@ import forceAtlas2 from "graphology-layout-forceatlas2";
 import FA2Layout from "graphology-layout-forceatlas2/worker";
 import type { GraphData } from "../types";
 import { buildGraph } from "../graph/buildGraph";
-import { colorForKeyword } from "../colors";
+import { colorForType } from "../colors";
 
 export type StoryFocus =
   | { type: "all" }
@@ -55,6 +55,8 @@ export default function StoryBackground({ data, chain, focus }: Props) {
         bereiche: new Set(),
         klassen: new Set(),
         einzelplaene: new Set(),
+        hauptgruppen: new Set(),
+        hauptfunktionen: new Set(),
         minFrequency: 4,
         nurDigital: false,
       },
@@ -70,8 +72,8 @@ export default function StoryBackground({ data, chain, focus }: Props) {
       const t = Math.sqrt(n.frequency) / Math.sqrt(maxFreq);
       graph.addNode(n.id, {
         label: n.label,
-        baseColor: colorForKeyword(n.bereich),
-        color: colorForKeyword(n.bereich),
+        baseColor: colorForType(n.type),
+        color: colorForType(n.type),
         size: 3 + t * 16,
         x: 0,
         y: 0,

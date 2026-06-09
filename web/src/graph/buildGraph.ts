@@ -14,13 +14,17 @@ export function filterPosten(data: GraphData, f: Filters): Posten[] {
   const useBer = f.bereiche.size > 0;
   const useKl = f.klassen.size > 0;
   const useEp = f.einzelplaene.size > 0;
+  const useHg = f.hauptgruppen.size > 0;
+  const useHf = f.hauptfunktionen.size > 0;
 
   return data.posten.filter((p) => {
     if (useJahr && p.jahr !== f.jahr) return false;
     if (useBer && (p.ber == null || !f.bereiche.has(p.ber))) return false;
     if (useKl && (p.kl == null || !f.klassen.has(p.kl))) return false;
     if (useEp && (p.ep == null || !f.einzelplaene.has(p.ep))) return false;
-    if (f.nurDigital && !(p.digW && p.digW > 0)) return false;
+    if (useHg && (p.hg == null || !f.hauptgruppen.has(p.hg))) return false;
+    if (useHf && (p.hf == null || !f.hauptfunktionen.has(p.hf))) return false;
+    
     return true;
   });
 }
@@ -54,17 +58,7 @@ function aggregateKeywords(posten: Posten[]): Map<string, KeywordAgg> {
   return agg;
 }
 
-function dominantBereich(counts: Map<string, number>): string | null {
-  let best: string | null = null;
-  let max = -1;
-  for (const [b, c] of counts) {
-    if (c > max) {
-      max = c;
-      best = b;
-    }
-  }
-  return best;
-}
+
 
 function makeKeywordNode(
   data: GraphData,
@@ -77,7 +71,7 @@ function makeKeywordNode(
     label: data.keywords[id]?.label ?? id,
     qid: data.keywords[id]?.qid ?? null,
     frequency: a.titelIds.size + a.fallbackCount,
-    bereich: dominantBereich(a.bereichCounts),
+    type: data.keywords[id]?.type ?? "other",
     digSum: a.digSum,
   };
 }
@@ -182,7 +176,7 @@ export function buildGraph(
         label: data.einzelplaene[ep]?.label ?? `Einzelplan ${ep}`,
         qid: data.einzelplaene[ep]?.qid ?? null,
         frequency: usage,
-        bereich: null,
+        type: null,
         digSum: epDig.get(ep) ?? 0,
       });
     }
@@ -201,7 +195,7 @@ export function buildGraph(
 export interface KeywordStats {
   frequency: number;
   digSum: number;
-  bereich: string | null;
+  bereichCounts: { id: string; label: string; count: number }[];
   /** Akteure (Einzelplaene), absteigend nach Nutzung. */
   actors: { id: string; label: string; qid: string | null; count: number }[];
   /** Haeufigste Ko-Occurrence-Partner. */
@@ -281,9 +275,13 @@ export function keywordStats(
     .sort((a, b) => b[1] - a[1])
     .map(([label, count]) => ({ label, count }));
 
+  const bereichCountsArray = [...bereichCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([id, count]) => ({ id, label: data.bereiche[id] ?? id, count }));
+
   frequency = titleSet.size + fallbackCount;
 
-  return { frequency, digSum, bereich: dominantBereich(bereichCounts), actors, cooccurrences, titles, phrases };
+  return { frequency, digSum, bereichCounts: bereichCountsArray, actors, cooccurrences, titles, phrases };
 }
 
 export interface EinzelplanStats {

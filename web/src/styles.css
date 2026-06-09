@@ -810,3 +810,181 @@ input[type="range"] {
   border-top: 1px solid var(--border);
   box-shadow: 0 -4px 12px rgba(0,0,0,0.02);
 }
+
+/* ---------- Bereich-Verteilung in Details ---------- */
+.bereich-bars {
+  margin: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bereich-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.bereich-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: var(--text);
+}
+.bereich-bar-percent {
+  color: var(--muted);
+  font-weight: 500;
+}
+.bereich-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #edf1f5;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bereich-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* ---------- Accordions / Advanced Filters ---------- */
+details > summary {
+  list-style: none; /* Hide default triangle */
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.advanced-filters {
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.advanced-filters > summary {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.advanced-filters > summary::after {
+  content: "+";
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.advanced-filters[open] > summary::after {
+  content: "−";
+}
+
+.filter-accordion {
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.filter-accordion:last-child {
+  border-bottom: none;
+}
+
+.filter-accordion > summary {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.filter-accordion > summary::after {
+  content: "▼";
+  font-size: 9px;
+  transition: transform 0.2s;
+  color: var(--muted);
+}
+
+.filter-accordion[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.filter-accordion-content {
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+/* ---------- Tooltip Info Icon ---------- */
+.info-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+  cursor: help;
+  color: #aab6c4;
+}
+
+.info-icon-wrapper svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.info-icon-wrapper:hover {
+  color: var(--accent);
+}
+
+.info-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  /* Bind to the h2 width instead of the icon to avoid clipping in the overflow panel */
+  left: 0;
+  top: 100%;
+  margin-top: 8px;
+  width: calc(100% - 10px);
+  background: #1a2330;
+  color: #fff;
+  font-size: 11.5px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  z-index: 100;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: opacity 0.2s, visibility 0.2s;
+  pointer-events: none;
+}
+
+/* Der Pfeil zeigt nach oben */
+.info-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  /* Da der Tooltip relative zum H2 ist, aber der Hover vom Icon ausgelöst wird,
+     machen wir den Pfeil einfach mittig oder linksbündig */
+  left: 20px;
+  border-width: 0 6px 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent #1a2330 transparent;
+}
+
+.info-icon-wrapper:hover .info-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Adjust h2 to allow inline-flex alignment */
+.panel h2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+

@@ -11,6 +11,8 @@ const EMPTY_FILTERS: Filters = {
   bereiche: new Set(),
   klassen: new Set(),
   einzelplaene: new Set(),
+  hauptgruppen: new Set(),
+  hauptfunktionen: new Set(),
   minFrequency: 1,
   nurDigital: false,
 };

@@ -30,9 +30,6 @@ from __future__ import annotations
 
 import json
 import os
-import re
-import urllib.request
-import urllib.parse
 from datetime import datetime, timezone
 
 from rdflib import Graph, Namespace, RDF
@@ -103,44 +100,6 @@ def extract_phrases(text: str) -> list[str]:
     return results
 
 
-def fetch_wikidata_buckets(qids: list[str]) -> dict[str, str]:
-    if not qids: return {}
-    print(f"  Frage {len(qids)} fehlende QIDs bei Wikidata SPARQL ab...")
-    results = {}
-    batch_size = 60
-    for i in range(0, len(qids), batch_size):
-        batch = qids[i:i+batch_size]
-        values = " ".join([f"wd:{q}" for q in batch])
-        query = f"""
-        SELECT ?item ?bucket WHERE {{
-          VALUES ?item {{ {values} }}
-          ?item wdt:P31/wdt:P279* ?class .
-          BIND(
-            IF(?class IN (wd:Q43229, wd:Q3180671, wd:Q327333), "org",
-            IF(?class IN (wd:Q7397, wd:Q11660, wd:Q8274, wd:Q205315, wd:Q14001, wd:Q11012, wd:Q68), "tech",
-            IF(?class IN (wd:Q1301371, wd:Q41136, wd:Q211111), "infra",
-            IF(?class IN (wd:Q7748, wd:Q820655, wd:Q748052, wd:Q17013853), "law",
-            IF(?class IN (wd:Q11862829, wd:Q13442814), "science",
-            "none")))))
-            AS ?bucket)
-          FILTER(?bucket != "none")
-        }}
-        """
-        url = "https://query.wikidata.org/sparql?query=" + urllib.parse.quote(query) + "&format=json"
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 DigitalBudget/1.0'})
-        try:
-            with urllib.request.urlopen(req) as response:
-                data = json.loads(response.read().decode())
-                for r in data['results']['bindings']:
-                    qid = r['item']['value'].split('/')[-1]
-                    bucket = r['bucket']['value']
-                    if qid not in results:
-                        results[qid] = bucket
-        except Exception as e:
-            print(f"  Warnung: SPARQL Batch fehlgeschlagen: {e}")
-            
-    return results
-
 def main() -> None:
     print(f"Lade Turtle: {TTL_PATH}")
     g = Graph()
@@ -152,26 +111,8 @@ def main() -> None:
     titel: dict[str, str] = {}
     bereiche: dict[str, str] = {}
     klassen: dict[str, str] = {}
-    hauptgruppen: dict[str, str] = {}
-    hauptfunktionen: dict[str, str] = {}
     jahre: set[int] = set()
     posten: list[dict] = []
-
-    # --- Hierarchy Helper ---
-    broader_map = {}
-    for s, p, o in g.triples((None, SKOS.broader, None)):
-        broader_map[str(s)] = str(o)
-
-    def get_top_level(concept_uri: str) -> str:
-        curr = concept_uri
-        while curr in broader_map:
-            curr = broader_map[curr]
-        return curr
-
-    # Load all concepts for labels
-    concept_labels = {}
-    for s in g.subjects(RDF.type, SKOS.Concept):
-        concept_labels[str(s)] = first_label(g, s) or local_name(s)
 
     # --- Haushaltstitel ---
     for s in g.subjects(RDF.type, DH.Haushaltstitel):
@@ -215,35 +156,6 @@ def main() -> None:
             "qid": qid,
         }
 
-    # --- Wikidata Buckets auflösen ---
-    cache_path = os.path.join(HERE, "wikidata_type_cache.json")
-    wd_cache = {}
-    if os.path.exists(cache_path):
-        try:
-            with open(cache_path, "r", encoding="utf-8") as f:
-                wd_cache = json.load(f)
-        except Exception:
-            pass
-
-    qids_to_fetch = []
-    for kid, info in keywords.items():
-        qid = info.get("qid")
-        if qid and qid not in wd_cache:
-            qids_to_fetch.append(qid)
-
-    if qids_to_fetch:
-        new_buckets = fetch_wikidata_buckets(qids_to_fetch)
-        # Für QIDs ohne Treffer "other" speichern, um nicht nochmal zu fragen
-        for q in qids_to_fetch:
-            wd_cache[q] = new_buckets.get(q, "other")
-        with open(cache_path, "w", encoding="utf-8") as f:
-            json.dump(wd_cache, f, indent=2)
-
-    # Buckets ins Keyword-Objekt schreiben
-    for kid, info in keywords.items():
-        qid = info.get("qid")
-        info["type"] = wd_cache.get(qid, "other") if qid else "other"
-
     # --- Posten (dh:Haushaltsposten) ---
     for s in g.subjects(RDF.type, DH.Haushaltsposten):
         kw = [
@@ -266,29 +178,8 @@ def main() -> None:
         kl = None
         if kl_obj is not None:
             kl = local_name(kl_obj)
-            # "Nicht digital" (Klasse 0) komplett ausschliessen
-            if kl == "0":
-                continue
             if kl not in klassen:
                 klassen[kl] = first_label(g, kl_obj) or kl
-
-        # --- Gruppe & Hauptgruppe ---
-        grp_obj = g.value(s, DH.gruppe)
-        hg = None
-        if grp_obj is not None:
-            hg_uri = get_top_level(str(grp_obj))
-            hg = local_name(hg_uri)
-            if hg not in hauptgruppen:
-                hauptgruppen[hg] = concept_labels.get(hg_uri, hg)
-
-        # --- Funktion & Hauptfunktion ---
-        fun_obj = g.value(s, DH.funktion)
-        hf = None
-        if fun_obj is not None:
-            hf_uri = get_top_level(str(fun_obj))
-            hf = local_name(hf_uri)
-            if hf not in hauptfunktionen:
-                hauptfunktionen[hf] = concept_labels.get(hf_uri, hf)
 
         jahr_obj = g.value(s, DH.jahr)
         jahr = None
@@ -331,8 +222,6 @@ def main() -> None:
             "jahr": jahr,
             "ber": ber,
             "kl": kl,
-            "hg": hg,
-            "hf": hf,
             "soll": num(DH.soll),
             "ist": num(DH.ist),
             "digW": num(DH.istDigitalWeit),
@@ -349,8 +238,6 @@ def main() -> None:
                 "titel": titel_count,
                 "bereiche": len(bereiche),
                 "klassen": len(klassen),
-                "hauptgruppen": len(hauptgruppen),
-                "hauptfunktionen": len(hauptfunktionen),
                 "posten": len(posten),
             },
         },
@@ -359,8 +246,6 @@ def main() -> None:
         "titel": titel,
         "bereiche": bereiche,
         "klassen": klassen,
-        "hauptgruppen": hauptgruppen,
-        "hauptfunktionen": hauptfunktionen,
         "jahre": sorted(jahre),
         "posten": posten,
     }

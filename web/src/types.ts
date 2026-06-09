@@ -3,6 +3,7 @@
 export interface KeywordInfo {
   label: string;
   qid: string | null;
+  type: "tech" | "org" | "law" | "infra" | "science" | "other";
 }
 
 export interface EinzelplanInfo {
@@ -18,6 +19,8 @@ export interface Posten {
   jahr: number | null;
   ber: string | null;
   kl: string | null;
+  hg: string | null;
+  hf: string | null;
   soll: number | null;
   ist: number | null;
   digW: number | null;
@@ -34,6 +37,8 @@ export interface GraphData {
   titel: Record<string, string>;
   bereiche: Record<string, string>;
   klassen: Record<string, string>;
+  hauptgruppen: Record<string, string>;
+  hauptfunktionen: Record<string, string>;
   jahre: number[];
   posten: Posten[];
 }
@@ -45,6 +50,8 @@ export interface Filters {
   bereiche: Set<string>;
   klassen: Set<string>;
   einzelplaene: Set<string>;
+  hauptgruppen: Set<string>;
+  hauptfunktionen: Set<string>;
   minFrequency: number;
   /** Nur digitale Posten (digW > 0) beruecksichtigen. */
   nurDigital: boolean;
@@ -60,8 +67,8 @@ export interface ComputedNode {
   qid: string | null;
   /** Haeufigkeit = Anzahl (gefilterter) Posten, in denen das Keyword vorkommt. */
   frequency: number;
-  /** Dominanter Bereich (nur Keywords), fuer Einfaerbung. */
-  bereich: string | null;
+  /** Wikidata Kategorie des Keywords. */
+  type: string | null;
   /** Summe digitaler Ausgaben (weite Abgrenzung) ueber die Posten. */
   digSum: number;
 }

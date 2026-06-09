@@ -1,5 +1,5 @@
 import { useStore } from "../store";
-import { BEREICH_COLORS, EINZELPLAN_COLOR } from "../colors";
+import { TYPE_COLORS, TYPE_LABELS, EINZELPLAN_COLOR } from "../colors";
 
 interface Props {
   nodeCount: number;
@@ -23,11 +23,11 @@ export default function Legend({ nodeCount, edgeCount }: Props) {
             Einzelplan
           </div>
         )}
-        {Object.entries(data.bereiche).map(([id, label]) => (
+        {Object.entries(TYPE_LABELS).map(([id, label]) => (
           <div className="legend-item" key={id} title={label}>
             <span
               className="dot"
-              style={{ background: BEREICH_COLORS[id] ?? "#9aa7b5" }}
+              style={{ background: TYPE_COLORS[id] }}
             />
             {label}
           </div>

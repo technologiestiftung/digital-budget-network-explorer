@@ -7,7 +7,9 @@ function emptyFilters(): Filters {
     bereiche: new Set<string>(),
     klassen: new Set<string>(),
     einzelplaene: new Set<string>(),
-    minFrequency: 2,
+    hauptgruppen: new Set<string>(),
+    hauptfunktionen: new Set<string>(),
+    minFrequency: 1,
     nurDigital: false,
   };
 }
@@ -39,7 +41,7 @@ interface AppState {
   setNodeSizeMetric: (metric: NodeSizeMetric) => void;
 
   toggleSetFilter: (
-    key: "bereiche" | "klassen" | "einzelplaene",
+    key: "bereiche" | "klassen" | "einzelplaene" | "hauptgruppen" | "hauptfunktionen",
     value: string,
   ) => void;
   setJahr: (jahr: number | null) => void;

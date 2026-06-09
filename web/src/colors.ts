@@ -1,21 +1,25 @@
-// Farbpalette fuer die Digitalisierungsbereiche (Einfaerbung der Keyword-Knoten
-// nach dominantem Bereich). Schluessel = lokaler Name des Bereichs.
-export const BEREICH_COLORS: Record<string, string> = {
-  "infrastruktur": "#4e79a7",
-  "digitalisierung-der-wirtschaft": "#f28e2b",
-  "digitalisierung-der-oeffentlichen-verwaltung": "#59a14f",
-  "digitale-kompetenzen": "#e15759",
-  "digitalisierung-im-bereich-kultur-medien-zivilgesellschaft": "#b07aa1",
-  "foerderung-von-forschung-und-innovation": "#76b7b2",
-  "gesundheitswesen": "#ff9da7",
-  "bundeswehr": "#9c755f",
-  "unteilbare-ausgaben": "#bab0ac",
+// Farbpalette fuer die Wikidata-Kategorien (Buckets)
+export const TYPE_COLORS: Record<string, string> = {
+  "tech": "#2f6fed",       // Technologie / IT (Blau)
+  "org": "#f28e2b",        // Organisation / Akteur (Orange)
+  "law": "#e15759",        // Recht / Strategie (Rot)
+  "infra": "#59a14f",      // Infrastruktur (Gruen)
+  "science": "#b07aa1",    // Wissenschaft (Lila)
+  "other": "#9aa7b5",      // Sonstiges (Grau)
 };
 
-export const KEYWORD_FALLBACK_COLOR = "#9aa7b5";
+export const TYPE_LABELS: Record<string, string> = {
+  "tech": "Technologie / Software",
+  "org": "Organisation / Akteur",
+  "law": "Recht / Strategie",
+  "infra": "Infrastruktur / Hardware",
+  "science": "Forschung / Methode",
+  "other": "Sonstiges",
+};
+
 export const EINZELPLAN_COLOR = "#222f3e";
 
-export function colorForKeyword(bereich: string | null): string {
-  if (bereich && BEREICH_COLORS[bereich]) return BEREICH_COLORS[bereich];
-  return KEYWORD_FALLBACK_COLOR;
+export function colorForType(type: string | null): string {
+  if (type && TYPE_COLORS[type]) return TYPE_COLORS[type];
+  return TYPE_COLORS["other"];
 }

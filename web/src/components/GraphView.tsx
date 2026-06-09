@@ -5,7 +5,7 @@ import { circular } from "graphology-layout";
 import forceAtlas2 from "graphology-layout-forceatlas2";
 import FA2Layout from "graphology-layout-forceatlas2/worker";
 import type { ComputedGraph } from "../types";
-import { colorForKeyword, EINZELPLAN_COLOR } from "../colors";
+import { colorForType, EINZELPLAN_COLOR } from "../colors";
 
 interface Props {
   computed: ComputedGraph;
@@ -168,7 +168,7 @@ export default function GraphView({
       graph.addNode(n.id, {
         label: n.label,
         size: scaleSize(val, maxVal),
-        color: n.kind === "einzelplan" ? EINZELPLAN_COLOR : colorForKeyword(n.bereich),
+        color: n.kind === "einzelplan" ? EINZELPLAN_COLOR : colorForType(n.type),
         kind: n.kind,
         x: 0,
         y: 0,
