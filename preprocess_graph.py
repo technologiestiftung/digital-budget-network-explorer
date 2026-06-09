@@ -34,6 +34,7 @@ from datetime import datetime, timezone
 
 from rdflib import Graph, Namespace, RDF
 from rdflib.namespace import SKOS, OWL, DCTERMS, RDFS
+import re
 
 BASE = "http://example.org/digitalhaushalt/"
 DH = Namespace(BASE + "ontology#")
@@ -73,6 +74,30 @@ def first_label(g: Graph, subj) -> str | None:
         if val is not None:
             return str(val)
     return None
+
+
+def extract_phrases(text: str) -> list[str]:
+    """Extrahiert eingeklammerte Begriffe wie [{{Digital]e} Infrastruktur} als 'Digitale Infrastruktur'."""
+    if not text:
+        return []
+    tokens = text.split()
+    results = []
+    current = []
+    bracket_level = 0
+    for w in tokens:
+        opens = w.count('[') + w.count('{')
+        closes = w.count(']') + w.count('}')
+        if opens > 0 or closes > 0 or bracket_level > 0:
+            current.append(w)
+        bracket_level += opens - closes
+        if bracket_level <= 0 and current:
+            raw = " ".join(current)
+            clean = re.sub(r'[\[\]{}]', '', raw).strip('.,:;()')
+            if clean:
+                results.append(clean)
+            current = []
+            bracket_level = 0
+    return results
 
 
 def main() -> None:
@@ -168,6 +193,20 @@ def main() -> None:
         titel_obj = g.value(s, DCTERMS.isPartOf)
         t_id = local_name(titel_obj) if titel_obj is not None else None
 
+        desc = g.value(s, SCHEMA.description)
+        phrases = extract_phrases(str(desc)) if desc else []
+        
+        # Ordne die gefundenen Phrasen den Keywords des Postens zu
+        # Einfacher Heuristik: Eine Phrase gehört zu einem Keyword, 
+        # wenn der Label des Keywords als Teilstring in der Phrase vorkommt.
+        kw_phrases = {}
+        for k in kw:
+            lbl = keywords.get(k, {}).get("label", "").lower()
+            if not lbl: continue
+            matched = [p for p in phrases if lbl in p.lower() or k.lower() in p.lower()]
+            if matched:
+                kw_phrases[k] = list(set(matched)) # deduplicate
+
         def num(pred):
             v = g.value(s, pred)
             try:
@@ -178,6 +217,7 @@ def main() -> None:
         rec = {
             "t": t_id,
             "kw": kw,
+            "phrases": kw_phrases,
             "ep": ep,
             "jahr": jahr,
             "ber": ber,

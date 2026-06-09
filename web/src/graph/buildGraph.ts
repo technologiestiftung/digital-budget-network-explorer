@@ -10,13 +10,13 @@ import type {
 
 /** Wendet die aktiven Filter auf die Postenliste an. */
 export function filterPosten(data: GraphData, f: Filters): Posten[] {
-  const useJahr = f.jahre.size > 0;
+  const useJahr = f.jahr !== null;
   const useBer = f.bereiche.size > 0;
   const useKl = f.klassen.size > 0;
   const useEp = f.einzelplaene.size > 0;
 
   return data.posten.filter((p) => {
-    if (useJahr && (p.jahr == null || !f.jahre.has(p.jahr))) return false;
+    if (useJahr && p.jahr !== f.jahr) return false;
     if (useBer && (p.ber == null || !f.bereiche.has(p.ber))) return false;
     if (useKl && (p.kl == null || !f.klassen.has(p.kl))) return false;
     if (useEp && (p.ep == null || !f.einzelplaene.has(p.ep))) return false;
@@ -26,7 +26,8 @@ export function filterPosten(data: GraphData, f: Filters): Posten[] {
 }
 
 interface KeywordAgg {
-  frequency: number;
+  titelIds: Set<string>;
+  fallbackCount: number;
   digSum: number;
   bereichCounts: Map<string, number>;
 }
@@ -38,10 +39,14 @@ function aggregateKeywords(posten: Posten[]): Map<string, KeywordAgg> {
     for (const k of p.kw) {
       let a = agg.get(k);
       if (!a) {
-        a = { frequency: 0, digSum: 0, bereichCounts: new Map() };
+        a = { titelIds: new Set(), fallbackCount: 0, digSum: 0, bereichCounts: new Map() };
         agg.set(k, a);
       }
-      a.frequency += 1;
+      if (p.t) {
+        a.titelIds.add(p.t);
+      } else {
+        a.fallbackCount += 1;
+      }
       a.digSum += dig;
       if (p.ber) a.bereichCounts.set(p.ber, (a.bereichCounts.get(p.ber) ?? 0) + 1);
     }
@@ -71,7 +76,7 @@ function makeKeywordNode(
     kind: "keyword",
     label: data.keywords[id]?.label ?? id,
     qid: data.keywords[id]?.qid ?? null,
-    frequency: a.frequency,
+    frequency: a.titelIds.size + a.fallbackCount,
     bereich: dominantBereich(a.bereichCounts),
     digSum: a.digSum,
   };
@@ -89,7 +94,8 @@ export function buildGraph(
   // Keywords, die die Mindesthaeufigkeit erfuellen
   const keptKeywords = new Set<string>();
   for (const [k, a] of agg) {
-    if (a.frequency >= filters.minFrequency) keptKeywords.add(k);
+    const freq = a.titelIds.size + a.fallbackCount;
+    if (freq >= filters.minFrequency) keptKeywords.add(k);
   }
 
   const nodes: ComputedNode[] = [];
@@ -100,8 +106,11 @@ export function buildGraph(
   const edges: ComputedEdge[] = [];
 
   if (mode === "keyword") {
-    // Ko-Occurrence-Kanten: pro Posten alle Keyword-Paare zaehlen
-    const pairWeights = new Map<string, number>();
+    // Ko-Occurrence-Kanten: Paare auf Basis von Titeln zaehlen statt Posten, 
+    // um die Gewichtung konsistent zur Knotengroesse zu halten
+    const titlePairs = new Map<string, Set<string>>(); // key -> Set of titelIds
+    const fallbackPairs = new Map<string, number>();   // key -> count for null titles
+    
     for (const p of posten) {
       const ks = p.kw.filter((k) => keptKeywords.has(k));
       if (ks.length < 2) continue;
@@ -109,32 +118,64 @@ export function buildGraph(
       for (let i = 0; i < ks.length; i++) {
         for (let j = i + 1; j < ks.length; j++) {
           const key = `${ks[i]}\u0000${ks[j]}`;
-          pairWeights.set(key, (pairWeights.get(key) ?? 0) + 1);
+          if (p.t) {
+            let s = titlePairs.get(key);
+            if (!s) { s = new Set(); titlePairs.set(key, s); }
+            s.add(p.t);
+          } else {
+            fallbackPairs.set(key, (fallbackPairs.get(key) ?? 0) + 1);
+          }
         }
       }
     }
-    for (const [key, w] of pairWeights) {
+    
+    // Kombinieren aus Sets und Fallbacks
+    const allKeys = new Set([...titlePairs.keys(), ...fallbackPairs.keys()]);
+    for (const key of allKeys) {
+      const w = (titlePairs.get(key)?.size ?? 0) + (fallbackPairs.get(key) ?? 0);
       const [s, t] = key.split("\u0000");
       edges.push({ source: `kw:${s}`, target: `kw:${t}`, weight: w });
     }
   } else {
     // Bipartit: Keyword <-> Einzelplan
-    const epWeights = new Map<string, number>(); // "ep|kw" -> count
-    const epUsage = new Map<string, number>(); // ep -> Anzahl Posten
+    const epWeightsTitle = new Map<string, Set<string>>(); 
+    const epWeightsFallback = new Map<string, number>(); 
+    
+    const epUsageTitle = new Map<string, Set<string>>(); 
+    const epUsageFallback = new Map<string, number>(); 
+    
     const epDig = new Map<string, number>();
+    
     for (const p of posten) {
       if (!p.ep) continue;
       const ks = p.kw.filter((k) => keptKeywords.has(k));
       if (ks.length === 0) continue;
-      epUsage.set(p.ep, (epUsage.get(p.ep) ?? 0) + 1);
+      
+      if (p.t) {
+        let s = epUsageTitle.get(p.ep);
+        if (!s) { s = new Set(); epUsageTitle.set(p.ep, s); }
+        s.add(p.t);
+      } else {
+        epUsageFallback.set(p.ep, (epUsageFallback.get(p.ep) ?? 0) + 1);
+      }
+      
       epDig.set(p.ep, (epDig.get(p.ep) ?? 0) + (p.digW ?? 0));
       for (const k of ks) {
         const key = `${p.ep}\u0000${k}`;
-        epWeights.set(key, (epWeights.get(key) ?? 0) + 1);
+        if (p.t) {
+           let s = epWeightsTitle.get(key);
+           if (!s) { s = new Set(); epWeightsTitle.set(key, s); }
+           s.add(p.t);
+        } else {
+           epWeightsFallback.set(key, (epWeightsFallback.get(key) ?? 0) + 1);
+        }
       }
     }
+    
     // Einzelplan-Knoten
-    for (const [ep, usage] of epUsage) {
+    const allEps = new Set([...epUsageTitle.keys(), ...epUsageFallback.keys()]);
+    for (const ep of allEps) {
+      const usage = (epUsageTitle.get(ep)?.size ?? 0) + (epUsageFallback.get(ep) ?? 0);
       nodes.push({
         id: `ep:${ep}`,
         kind: "einzelplan",
@@ -145,7 +186,10 @@ export function buildGraph(
         digSum: epDig.get(ep) ?? 0,
       });
     }
-    for (const [key, w] of epWeights) {
+    
+    const allKeys = new Set([...epWeightsTitle.keys(), ...epWeightsFallback.keys()]);
+    for (const key of allKeys) {
+      const w = (epWeightsTitle.get(key)?.size ?? 0) + (epWeightsFallback.get(key) ?? 0);
       const [ep, k] = key.split("\u0000");
       edges.push({ source: `ep:${ep}`, target: `kw:${k}`, weight: w });
     }
@@ -164,6 +208,8 @@ export interface KeywordStats {
   cooccurrences: { id: string; label: string; count: number }[];
   /** Verbundene Haushaltstitel (eindeutig, ID und Label) */
   titles: { id: string; label: string }[];
+  /** Die aus dem Rohtext extrahierten Wortverbindungen fuer dieses Keyword */
+  phrases: { label: string; count: number }[];
 }
 
 /** Detailstatistik fuer ein einzelnes Keyword (fuer das Detail-Panel). */
@@ -178,15 +224,30 @@ export function keywordStats(
   const bereichCounts = new Map<string, number>();
   const actorCounts = new Map<string, number>();
   const coCounts = new Map<string, number>();
+  const phraseCounts = new Map<string, number>();
   const titleSet = new Set<string>();
+  let fallbackCount = 0;
 
   for (const p of posten) {
     if (!p.kw.includes(keywordId)) continue;
-    frequency += 1;
+    
     digSum += p.digW ?? 0;
     if (p.ber) bereichCounts.set(p.ber, (bereichCounts.get(p.ber) ?? 0) + 1);
     if (p.ep) actorCounts.set(p.ep, (actorCounts.get(p.ep) ?? 0) + 1);
-    if (p.t) titleSet.add(p.t);
+    
+    if (p.t) {
+      titleSet.add(p.t);
+    } else {
+      fallbackCount++;
+    }
+    
+    // Phrasen aggregieren
+    if (p.phrases && p.phrases[keywordId]) {
+      for (const phrase of p.phrases[keywordId]) {
+        phraseCounts.set(phrase, (phraseCounts.get(phrase) ?? 0) + 1);
+      }
+    }
+    
     for (const k of p.kw) {
       if (k === keywordId) continue;
       coCounts.set(k, (coCounts.get(k) ?? 0) + 1);
@@ -216,7 +277,13 @@ export function keywordStats(
     label: data.titel[id] ?? id
   }));
 
-  return { frequency, digSum, bereich: dominantBereich(bereichCounts), actors, cooccurrences, titles };
+  const phrases = [...phraseCounts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([label, count]) => ({ label, count }));
+
+  frequency = titleSet.size + fallbackCount;
+
+  return { frequency, digSum, bereich: dominantBereich(bereichCounts), actors, cooccurrences, titles, phrases };
 }
 
 export interface EinzelplanStats {
@@ -239,13 +306,23 @@ export function einzelplanStats(
   let digSum = 0;
   const kwCounts = new Map<string, number>();
   const titleSet = new Set<string>();
+  let fallbackCount = 0;
+  
   for (const p of posten) {
     if (p.ep !== einzelplanId) continue;
-    frequency += 1;
+    
     digSum += p.digW ?? 0;
-    if (p.t) titleSet.add(p.t);
+    if (p.t) {
+      titleSet.add(p.t);
+    } else {
+      fallbackCount++;
+    }
+    
     for (const k of p.kw) kwCounts.set(k, (kwCounts.get(k) ?? 0) + 1);
   }
+  
+  frequency = titleSet.size + fallbackCount;
+  
   const topKeywords = [...kwCounts.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 15)

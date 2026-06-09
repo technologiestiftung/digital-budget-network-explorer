@@ -765,3 +765,48 @@ input[type="range"] {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Phrases List in Details ---------- */
+.phrases-section {
+  margin-bottom: 18px;
+}
+.phrase-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.phrase-list li {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: #34425a;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------- Sticky Filter Footer ---------- */
+.filter-panel {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.filter-panel-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 16px;
+}
+
+.filter-panel-footer {
+  flex: none;
+  padding: 16px;
+  background: var(--panel-bg);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.02);
+}

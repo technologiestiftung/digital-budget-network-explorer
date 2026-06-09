@@ -39,6 +39,7 @@ export default function GraphView({
   const sigmaRef = useRef<Sigma | null>(null);
   const graphRef = useRef<Graph | null>(null);
   const layoutRef = useRef<FA2Layout | null>(null);
+  
   const stateRef = useRef<RenderState>({
     selected: null,
     hovered: null,
@@ -64,7 +65,6 @@ export default function GraphView({
     });
     sigmaRef.current = renderer;
 
-    // Reducer: Hervorhebung von Auswahl/Hover/Suche
     renderer.setSetting("nodeReducer", (node, data) => {
       const st = stateRef.current;
       const res = { ...data };
@@ -229,5 +229,7 @@ export default function GraphView({
     }
   }, [selectedNodeId, search]);
 
-  return <div ref={containerRef} className="graph-canvas" />;
+  return (
+    <div ref={containerRef} className="graph-canvas" />
+  );
 }

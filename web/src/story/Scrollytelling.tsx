@@ -7,7 +7,7 @@ import { STORY_CHAIN, STORY_MINISTRIES } from "./storyConfig";
 import CountUp from "./CountUp";
 
 const EMPTY_FILTERS: Filters = {
-  jahre: new Set(),
+  jahr: null,
   bereiche: new Set(),
   klassen: new Set(),
   einzelplaene: new Set(),
@@ -121,7 +121,7 @@ export default function Scrollytelling() {
           className={`story-panel hero ${active === idxOf("hero") ? "is-active" : ""}`}>
           <div className="panel-inner center">
             <p className="eyebrow">
-              Wofür zahlen wir, wenn wir von Digitalisierung im Bundeshalt
+              Wofür zahlen wir, wenn wir von Digitalisierung im Bundeshaushalt
               sprechen?
             </p>
             <h1 className="hero-title">

@@ -9,7 +9,6 @@ import {
 import { fetchWikidata, type WikidataInfo } from "../services/wikidata";
 
 function formatTEur(value: number): string {
-  // Werte liegen in Tausend Euro (T€) vor.
   return new Intl.NumberFormat("de-DE", { maximumFractionDigits: 0 }).format(
     Math.round(value),
   );
@@ -55,7 +54,6 @@ export default function DetailPanel() {
     return einzelplanStats(data, filters, parsed.localId);
   }, [data, filters, parsed]);
 
-  // Wikidata-Anreicherung
   const [wd, setWd] = useState<WikidataInfo | null>(null);
   const [wdLoading, setWdLoading] = useState(false);
   const [wdError, setWdError] = useState<string | null>(null);
@@ -103,7 +101,6 @@ export default function DetailPanel() {
       </span>
       <h2 className="detail-title">{meta.label}</h2>
 
-      {/* Wikidata-Anreicherung */}
       <section className="wikidata">
         {!meta.qid && (
           <p className="muted small">
@@ -132,13 +129,12 @@ export default function DetailPanel() {
         )}
       </section>
 
-      {/* Keyword-Statistik */}
       {kwStats && (
         <>
           <div className="stats-grid">
             <div className="stat">
               <span className="num">{kwStats.frequency}</span>
-              <span className="lbl">Posten</span>
+              <span className="lbl">Titel</span>
             </div>
             <div className="stat">
               <span className="num">{kwStats.actors.length}</span>
@@ -149,6 +145,19 @@ export default function DetailPanel() {
               <span className="lbl">T€ IST digital (weit)</span>
             </div>
           </div>
+
+          {kwStats.phrases && kwStats.phrases.length > 0 && (
+            <section className="phrases-section">
+              <h3>Wortverbindungen im Text</h3>
+              <ul className="phrase-list">
+                {kwStats.phrases.map((p) => (
+                  <li key={p.label}>
+                    {p.label} <span className="muted small">×{p.count}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section>
             <h3>Akteure (Einzelpläne)</h3>
@@ -201,13 +210,12 @@ export default function DetailPanel() {
         </>
       )}
 
-      {/* Einzelplan-Statistik */}
       {epStats && (
         <>
           <div className="stats-grid">
             <div className="stat">
               <span className="num">{epStats.frequency}</span>
-              <span className="lbl">Posten</span>
+              <span className="lbl">Titel</span>
             </div>
             <div className="stat">
               <span className="num">{epStats.topKeywords.length}</span>

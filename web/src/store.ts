@@ -3,7 +3,7 @@ import type { Filters, GraphData, GraphMode } from "./types";
 
 function emptyFilters(): Filters {
   return {
-    jahre: new Set<number>(),
+    jahr: 2025,
     bereiche: new Set<string>(),
     klassen: new Set<string>(),
     einzelplaene: new Set<string>(),
@@ -42,7 +42,7 @@ interface AppState {
     key: "bereiche" | "klassen" | "einzelplaene",
     value: string,
   ) => void;
-  toggleJahr: (jahr: number) => void;
+  setJahr: (jahr: number | null) => void;
   setMinFrequency: (n: number) => void;
   setNurDigital: (v: boolean) => void;
   resetFilters: () => void;
@@ -77,13 +77,8 @@ export const useStore = create<AppState>((set) => ({
       return { filters: { ...state.filters, [key]: next } };
     }),
 
-  toggleJahr: (jahr) =>
-    set((state) => {
-      const next = new Set(state.filters.jahre);
-      if (next.has(jahr)) next.delete(jahr);
-      else next.add(jahr);
-      return { filters: { ...state.filters, jahre: next } };
-    }),
+  setJahr: (jahr) =>
+    set((state) => ({ filters: { ...state.filters, jahr } })),
 
   setMinFrequency: (n) =>
     set((state) => ({ filters: { ...state.filters, minFrequency: n } })),

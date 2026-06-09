@@ -13,6 +13,7 @@ export interface EinzelplanInfo {
 export interface Posten {
   t: string | null; // titel id
   kw: string[];
+  phrases?: Record<string, string[]>; // k -> liste von Phrasen
   ep: string | null;
   jahr: number | null;
   ber: string | null;
@@ -40,7 +41,7 @@ export interface GraphData {
 export type GraphMode = "keyword" | "bipartite";
 
 export interface Filters {
-  jahre: Set<number>;
+  jahr: number | null;
   bereiche: Set<string>;
   klassen: Set<string>;
   einzelplaene: Set<string>;

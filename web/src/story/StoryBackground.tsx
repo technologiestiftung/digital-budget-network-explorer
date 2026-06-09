@@ -51,7 +51,7 @@ export default function StoryBackground({ data, chain, focus }: Props) {
     const computed = buildGraph(
       data,
       {
-        jahre: new Set(),
+        jahr: null,
         bereiche: new Set(),
         klassen: new Set(),
         einzelplaene: new Set(),
