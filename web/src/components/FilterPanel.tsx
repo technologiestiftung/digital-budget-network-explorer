@@ -63,7 +63,7 @@ export default function FilterPanel() {
           </h2>
           <input
             type="search"
-            placeholder="Keyword hervorheben…"
+            placeholder="Keyword suchen…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
