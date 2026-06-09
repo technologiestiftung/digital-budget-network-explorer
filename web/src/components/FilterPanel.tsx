@@ -33,19 +33,17 @@ export default function FilterPanel() {
           <div className="mode-toggle">
             <button
               className={mode === "keyword" ? "active" : ""}
-              onClick={() => setMode("keyword")}
-            >
+              onClick={() => setMode("keyword")}>
               Keyword-Netzwerk
             </button>
             <button
               className={mode === "bipartite" ? "active" : ""}
-              onClick={() => setMode("bipartite")}
-            >
+              onClick={() => setMode("bipartite")}>
               Keyword ↔ Einzelplan
             </button>
           </div>
 
-          <h2 style={{ marginTop: 16 }}>Knotengröße nach</h2>
+          {/*           <h2 style={{ marginTop: 16 }}>Knotengröße nach</h2>
           <div className="mode-toggle">
             <button
               className={nodeSizeMetric === "count" ? "active" : ""}
@@ -59,7 +57,7 @@ export default function FilterPanel() {
             >
               Budget (T€ digital)
             </button>
-          </div>
+          </div> */}
         </section>
 
         <section>
@@ -98,16 +96,14 @@ export default function FilterPanel() {
           <div className="chips">
             <button
               className={`chip ${filters.jahr === null ? "active" : ""}`}
-              onClick={() => setJahr(null)}
-            >
+              onClick={() => setJahr(null)}>
               Alle
             </button>
             {data.jahre.map((j) => (
               <button
                 key={j}
                 className={`chip ${filters.jahr === j ? "active" : ""}`}
-                onClick={() => setJahr(j)}
-              >
+                onClick={() => setJahr(j)}>
                 {j}
               </button>
             ))}
