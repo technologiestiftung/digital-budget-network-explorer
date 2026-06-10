@@ -1140,3 +1140,173 @@ details > summary::-webkit-details-marker {
   background: var(--accent);
   border-radius: 999px;
 }
+
+/* ---------- Title Cards ---------- */
+
+
+
+
+
+
+.title-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafbfc;
+}
+
+.title-card-summary {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  outline: none;
+  user-select: none;
+  position: relative;
+  padding-right: 28px;
+}
+
+.title-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.title-card-summary::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  font-size: 9px;
+  color: var(--muted);
+  transition: transform 0.2s;
+}
+
+.title-card[open] .title-card-summary::after {
+  transform: rotate(180deg);
+}
+
+.title-card-id {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.35;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.title-card[open] .title-card-id {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.title-card-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+.title-card-ep,
+.title-card-ber {
+  background: #eef1f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+  word-break: break-word;
+  flex: 1;
+  min-width: 60px;
+}
+
+.title-card-budget {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+
+
+
+
+/* ---------- Title Section Accordion ---------- */
+.title-section-accordion {
+  border-radius: 8px;
+  padding: 0;
+  margin-top: 16px;
+  background: var(--panel-bg);
+}
+
+.title-section-accordion > summary {
+  list-style: none;
+  padding: 12px 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  user-select: none;
+}
+
+.title-section-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.title-section-accordion > summary::after {
+  content: "▼";
+  font-size: 9px;
+  color: var(--muted);
+  transition: transform 0.2s;
+}
+
+.title-section-accordion[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.title-section-heading {
+  font-size: 12.5px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.title-section-accordion[open] {
+  padding-bottom: 14px;
+}
+
+.title-section-accordion[open] > .title-summary-text,
+.title-section-accordion[open] > .title-card-list {
+  padding-right: 14px;
+}
+
+/* ---------- Inline SOLL-eng summary ---------- */
+.title-summary-text {
+  padding: 8px 0px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.title-summary-soil {
+  font-weight: 500;
+}
+
+.title-summary-soil strong {
+  color: var(--accent-dark);
+  font-weight: 700;
+}

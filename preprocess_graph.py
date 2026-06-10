@@ -150,6 +150,7 @@ def main() -> None:
     keywords: dict[str, dict] = {}
     einzelplaene: dict[str, dict] = {}
     titel: dict[str, str] = {}
+    titel_beschreibung: dict[str, str] = {}
     bereiche: dict[str, str] = {}
     klassen: dict[str, str] = {}
     hauptgruppen: dict[str, str] = {}
@@ -303,7 +304,12 @@ def main() -> None:
         t_id = local_name(titel_obj) if titel_obj is not None else None
 
         desc = g.value(s, SCHEMA.description)
-        phrases = extract_phrases(str(desc)) if desc else []
+        desc_text = str(desc) if desc else ""
+        phrases = extract_phrases(desc_text) if desc else []
+        
+        # Store full description text for titel (first posten wins)
+        if t_id and desc_text and t_id not in titel_beschreibung:
+            titel_beschreibung[t_id] = desc_text
         
         # Ordne die gefundenen Phrasen den Keywords des Postens zu
         # Einfacher Heuristik: Eine Phrase gehört zu einem Keyword, 
@@ -336,6 +342,8 @@ def main() -> None:
             "soll": num(DH.soll),
             "ist": num(DH.ist),
             "digW": num(DH.istDigitalWeit),
+            "sollEng": num(DH.sollDigitalEng),
+            "istEng": num(DH.istDigitalEng),
         }
         posten.append(rec)
 
@@ -357,6 +365,7 @@ def main() -> None:
         "keywords": keywords,
         "einzelplaene": einzelplaene,
         "titel": titel,
+        "titel_beschreibung": titel_beschreibung,
         "bereiche": bereiche,
         "klassen": klassen,
         "hauptgruppen": hauptgruppen,

@@ -200,8 +200,10 @@ export interface KeywordStats {
   actors: { id: string; label: string; qid: string | null; count: number }[];
   /** Haeufigste Ko-Occurrence-Partner. */
   cooccurrences: { id: string; label: string; count: number }[];
-  /** Verbundene Haushaltstitel (eindeutig, ID und Label) */
-  titles: { id: string; label: string }[];
+  /** Verbundene Haushaltstitel (eindeutig, mit Metadaten) */
+  titles: { id: string; label: string; beschreibung: string | null; ep: string | null; ber: string | null; sollEng: number | null; istEng: number | null }[];
+  /** Summe SOLL-Eng ueber alle Titel (pro Titel der erste/letzte Posten) */
+  titlesSollEngSum: number;
   /** Die aus dem Rohtext extrahierten Wortverbindungen fuer dieses Keyword */
   phrases: { label: string; count: number }[];
 }
@@ -219,7 +221,8 @@ export function keywordStats(
   const actorCounts = new Map<string, number>();
   const coCounts = new Map<string, number>();
   const phraseCounts = new Map<string, number>();
-  const titleSet = new Set<string>();
+  const titleMap = new Map<string, { label: string; beschreibung: string | null; ep: string | null; ber: string | null; sollEng: number | null; istEng: number | null }>();
+  const titleSeen = new Set<string>();
   let fallbackCount = 0;
 
   for (const p of posten) {
@@ -229,9 +232,17 @@ export function keywordStats(
     if (p.ber) bereichCounts.set(p.ber, (bereichCounts.get(p.ber) ?? 0) + 1);
     if (p.ep) actorCounts.set(p.ep, (actorCounts.get(p.ep) ?? 0) + 1);
     
-    if (p.t) {
-      titleSet.add(p.t);
-    } else {
+    if (p.t && !titleSeen.has(p.t)) {
+      titleSeen.add(p.t);
+      titleMap.set(p.t, {
+        label: data.titel[p.t] ?? p.t,
+        beschreibung: data.titel_beschreibung?.[p.t] ?? null,
+        ep: p.ep,
+        ber: p.ber,
+        sollEng: p.sollEng ?? 0,
+        istEng: p.istEng ?? 0,
+      });
+    } else if (!p.t) {
       fallbackCount++;
     }
     
@@ -266,10 +277,17 @@ export function keywordStats(
       count,
     }));
     
-  const titles = Array.from(titleSet).map(id => ({
+  const titles = Array.from(titleMap.entries()).map(([id, info]) => ({
     id,
-    label: data.titel[id] ?? id
+    label: info.label,
+    beschreibung: info.beschreibung,
+    ep: info.ep,
+    ber: info.ber,
+    sollEng: info.sollEng,
+    istEng: info.istEng,
   }));
+
+  const titlesSollEngSum = titles.reduce((sum, t) => sum + (t.sollEng ?? 0), 0);
 
   const phrases = [...phraseCounts.entries()]
     .sort((a, b) => b[1] - a[1])
@@ -279,9 +297,9 @@ export function keywordStats(
     .sort((a, b) => b[1] - a[1])
     .map(([id, count]) => ({ id, label: data.bereiche[id] ?? id, count }));
 
-  frequency = titleSet.size + fallbackCount;
+  frequency = titleSeen.size + fallbackCount;
 
-  return { frequency, digSum, bereichCounts: bereichCountsArray, actors, cooccurrences, titles, phrases };
+  return { frequency, digSum, bereichCounts: bereichCountsArray, actors, cooccurrences, titles, titlesSollEngSum, phrases };
 }
 
 export interface EinzelplanStats {
@@ -289,8 +307,10 @@ export interface EinzelplanStats {
   digSum: number;
   /** Haeufigste Keywords dieses Einzelplans. */
   topKeywords: { id: string; label: string; count: number }[];
-  /** Verbundene Haushaltstitel (eindeutig, ID und Label) */
-  titles: { id: string; label: string }[];
+  /** Verbundene Haushaltstitel (eindeutig, mit Metadaten) */
+  titles: { id: string; label: string; beschreibung: string | null; ep: string | null; ber: string | null; sollEng: number | null; istEng: number | null }[];
+  /** Summe SOLL-Eng ueber alle Titel */
+  titlesSollEngSum: number;
 }
 
 /** Detailstatistik fuer einen Einzelplan (fuer das Detail-Panel). */
@@ -303,33 +323,49 @@ export function einzelplanStats(
   let frequency = 0;
   let digSum = 0;
   const kwCounts = new Map<string, number>();
-  const titleSet = new Set<string>();
+  const titleMap = new Map<string, { label: string; beschreibung: string | null; ep: string | null; ber: string | null; sollEng: number | null; istEng: number | null }>();
+  const titleSeen = new Set<string>();
   let fallbackCount = 0;
   
   for (const p of posten) {
     if (p.ep !== einzelplanId) continue;
     
     digSum += p.digW ?? 0;
-    if (p.t) {
-      titleSet.add(p.t);
-    } else {
+    if (p.t && !titleSeen.has(p.t)) {
+      titleSeen.add(p.t);
+      titleMap.set(p.t, {
+        label: data.titel[p.t] ?? p.t,
+        beschreibung: data.titel_beschreibung?.[p.t] ?? null,
+        ep: p.ep,
+        ber: p.ber,
+        sollEng: p.sollEng ?? 0,
+        istEng: p.istEng ?? 0,
+      });
+    } else if (!p.t) {
       fallbackCount++;
     }
     
     for (const k of p.kw) kwCounts.set(k, (kwCounts.get(k) ?? 0) + 1);
   }
   
-  frequency = titleSet.size + fallbackCount;
+  frequency = titleSeen.size + fallbackCount;
   
   const topKeywords = [...kwCounts.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 15)
     .map(([id, count]) => ({ id, label: data.keywords[id]?.label ?? id, count }));
     
-  const titles = Array.from(titleSet).map(id => ({
+  const titles = Array.from(titleMap.entries()).map(([id, info]) => ({
     id,
-    label: data.titel[id] ?? id
+    label: info.label,
+    beschreibung: info.beschreibung,
+    ep: info.ep,
+    ber: info.ber,
+    sollEng: info.sollEng,
+    istEng: info.istEng,
   }));
+
+  const titlesSollEngSum = titles.reduce((sum, t) => sum + (t.sollEng ?? 0), 0);
     
-  return { frequency, digSum, topKeywords, titles };
+  return { frequency, digSum, topKeywords, titles, titlesSollEngSum };
 }

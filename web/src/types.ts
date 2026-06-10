@@ -24,6 +24,8 @@ export interface Posten {
   soll: number | null;
   ist: number | null;
   digW: number | null;
+  sollEng: number | null;
+  istEng: number | null;
 }
 
 export interface GraphData {
@@ -35,6 +37,7 @@ export interface GraphData {
   keywords: Record<string, KeywordInfo>;
   einzelplaene: Record<string, EinzelplanInfo>;
   titel: Record<string, string>;
+  titel_beschreibung: Record<string, string>;
   bereiche: Record<string, string>;
   klassen: Record<string, string>;
   hauptgruppen: Record<string, string>;

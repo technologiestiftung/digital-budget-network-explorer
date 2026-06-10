@@ -23,7 +23,10 @@ export default function DetailPanel() {
   const [distTab, setDistTab] = useState<"bereich" | "ressort">("bereich");
   const [semTab, setSemTab] = useState<"phrasen" | "kookkurrenz">("phrasen");
 
-  useEffect(() => { setDistTab("bereich"); setSemTab("phrasen"); }, [selectedNodeId]);
+  useEffect(() => {
+    setDistTab("bereich");
+    setSemTab("phrasen");
+  }, [selectedNodeId]);
 
   const parsed = useMemo(() => {
     if (!selectedNodeId) return null;
@@ -138,16 +141,14 @@ export default function DetailPanel() {
         <>
           <div className="stats-grid">
             <div className="stat">
+              <span className="lbl">Das Keywort taucht in</span>
               <span className="num">{kwStats.frequency}</span>
-              <span className="lbl">Titel</span>
+              <span className="lbl">Titeln auf</span>
             </div>
             <div className="stat">
+              <span className="lbl">Das Keywort wird von</span>
               <span className="num">{kwStats.actors.length}</span>
-              <span className="lbl">Einzelpläne</span>
-            </div>
-            <div className="stat">
-              <span className="num">{formatTEur(kwStats.digSum)}</span>
-              <span className="lbl">T€ IST digital (weit)</span>
+              <span className="lbl">Einzelplänen verwendet</span>
             </div>
           </div>
 
@@ -250,26 +251,34 @@ export default function DetailPanel() {
               </button>
             </div>
 
-            {semTab === "phrasen" && kwStats.phrases && kwStats.phrases.length > 0 && (
-              <div className="dist-list">
-                {kwStats.phrases.map((p) => (
-                  <div key={p.label} className="dist-row">
-                    <div className="dist-label">
-                      <span className="dist-name">{p.label}</span>
-                      <span className="dist-count">{p.count}</span>
+            {semTab === "phrasen" &&
+              kwStats.phrases &&
+              kwStats.phrases.length > 0 && (
+                <div className="dist-list">
+                  {kwStats.phrases.map((p) => (
+                    <div key={p.label} className="dist-row">
+                      <div className="dist-label">
+                        <span className="dist-name">{p.label}</span>
+                        <span className="dist-count">{p.count}</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            )}
-            {semTab === "phrasen" && (!kwStats.phrases || kwStats.phrases.length === 0) && (
-              <p className="muted small" style={{ marginTop: 10 }}>Keine Wortkontexte gefunden.</p>
-            )}
+                  ))}
+                </div>
+              )}
+            {semTab === "phrasen" &&
+              (!kwStats.phrases || kwStats.phrases.length === 0) && (
+                <p className="muted small" style={{ marginTop: 10 }}>
+                  Keine Wortkontexte gefunden.
+                </p>
+              )}
 
             {semTab === "kookkurrenz" && kwStats.cooccurrences.length > 0 && (
               <div className="dist-list">
                 {kwStats.cooccurrences.map((c) => {
-                  const total = kwStats.cooccurrences.reduce((sum, item) => sum + item.count, 0);
+                  const total = kwStats.cooccurrences.reduce(
+                    (sum, item) => sum + item.count,
+                    0,
+                  );
                   const pct = Math.round((c.count / total) * 100);
                   return (
                     <button
@@ -281,7 +290,10 @@ export default function DetailPanel() {
                         <span className="dist-count">{c.count}</span>
                       </div>
                       <div className="dist-bar-bg">
-                        <div className="dist-bar-fill" style={{ width: `${pct}%` }} />
+                        <div
+                          className="dist-bar-fill"
+                          style={{ width: `${pct}%` }}
+                        />
                       </div>
                     </button>
                   );
@@ -289,23 +301,48 @@ export default function DetailPanel() {
               </div>
             )}
             {semTab === "kookkurrenz" && kwStats.cooccurrences.length === 0 && (
-              <p className="muted small" style={{ marginTop: 10 }}>Keine Themenverbünde im aktuellen Filter.</p>
+              <p className="muted small" style={{ marginTop: 10 }}>
+                Keine Themenverbünde im aktuellen Filter.
+              </p>
             )}
           </section>
 
-          <section>
-            <h3>Haushaltstitel ({kwStats.titles.length})</h3>
-            <details className="title-details">
-              <summary>Titel anzeigen</summary>
-              <ul className="title-list">
-                {kwStats.titles.map((t) => (
-                  <li key={t.id} title={t.id}>
-                    {t.label}
-                  </li>
-                ))}
-              </ul>
-            </details>
-          </section>
+          <details className="title-section-accordion">
+            <summary>
+              <h3 className="title-section-heading">
+                Haushaltstitel ({kwStats.titles.length})
+              </h3>
+            </summary>
+            <div className="title-summary-text">
+              <span className="title-summary-soil">
+                SOLL-eng gesamt:{" "}
+                <strong>{formatTEur(kwStats.titlesSollEngSum)} T€</strong>
+              </span>
+              <InfoTooltip text="Summe der engen digitalen SOLL-Budgets aller aufgelisteten Haushaltstitel in Tausend Euro." />
+            </div>
+            <div className="title-card-list">
+              {kwStats.titles.map((t) => (
+                <details key={t.id} className="title-card">
+                  <summary className="title-card-summary">
+                    <span className="title-card-id">
+                      {t.beschreibung ?? t.label}
+                    </span>
+                    <div className="title-card-meta-row">
+                      <span className="title-card-ep">
+                        {t.ep
+                          ? data!.einzelplaene[t.ep]?.label || "EP " + t.ep
+                          : "—"}
+                      </span>
+                      <span className="title-card-budget">
+                        {formatTEur(t.sollEng ?? 0)} /{" "}
+                        {formatTEur(t.istEng ?? 0)} T€
+                      </span>
+                    </div>
+                  </summary>
+                </details>
+              ))}
+            </div>
+          </details>
         </>
       )}
 
@@ -319,10 +356,6 @@ export default function DetailPanel() {
             <div className="stat">
               <span className="num">{epStats.topKeywords.length}</span>
               <span className="lbl">Keywords</span>
-            </div>
-            <div className="stat">
-              <span className="num">{formatTEur(epStats.digSum)}</span>
-              <span className="lbl">T€ IST digital (weit)</span>
             </div>
           </div>
 
@@ -340,19 +373,40 @@ export default function DetailPanel() {
             </div>
           </section>
 
-          <section>
-            <h3>Haushaltstitel ({epStats.titles.length})</h3>
-            <details className="title-details">
-              <summary>Titel anzeigen</summary>
-              <ul className="title-list">
-                {epStats.titles.map((t) => (
-                  <li key={t.id} title={t.id}>
-                    {t.label}
-                  </li>
-                ))}
-              </ul>
-            </details>
-          </section>
+          <details className="title-section-accordion">
+            <summary>
+              <h3 className="title-section-heading">Haushaltstitel</h3>
+            </summary>
+            <div className="title-summary-text">
+              <span className="title-summary-soil">
+                SOLL-eng gesamt:{" "}
+                <strong>{formatTEur(epStats.titlesSollEngSum)} T€</strong>
+              </span>
+              <InfoTooltip text="Summe der engen digitalen SOLL-Budgets aller aufgelisteten Haushaltstitel in Tausend Euro." />
+            </div>
+            <div className="title-card-list">
+              {epStats.titles.map((t) => (
+                <details key={t.id} className="title-card">
+                  <summary className="title-card-summary">
+                    <span className="title-card-id">
+                      {t.beschreibung ?? t.label}
+                    </span>
+                    <div className="title-card-meta-row">
+                      <span className="title-card-ep">
+                        {t.ep
+                          ? data!.einzelplaene[t.ep]?.label || "EP " + t.ep
+                          : "—"}
+                      </span>
+                      <span className="title-card-budget">
+                        {formatTEur(t.sollEng ?? 0)} /{" "}
+                        {formatTEur(t.istEng ?? 0)} T€
+                      </span>
+                    </div>
+                  </summary>
+                </details>
+              ))}
+            </div>
+          </details>
         </>
       )}
     </aside>
