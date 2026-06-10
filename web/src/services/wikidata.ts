@@ -13,6 +13,10 @@ export interface WikidataInfo {
   url: string;
   /** Link zum deutschen Wikipedia-Artikel (falls vorhanden). */
   wikipediaUrl: string | null;
+  /** Instanz von (P31) - direkte Typen */
+  instanceOf: { id: string; label: string }[];
+  /** Unterklasse von (P279) */
+  subclassOf: { id: string; label: string }[];
 }
 
 const CACHE_PREFIX = "wd:";
@@ -92,6 +96,43 @@ export async function fetchWikidata(qid: string): Promise<WikidataInfo> {
 
   const wikipediaUrl: string | null = entity?.sitelinks?.dewiki?.url ?? null;
 
+  // P31 (Instance of) and P279 (Subclass of)
+  function extractClaims(prop: string): { id: string; label: string }[] {
+    const claims = entity?.claims?.[prop] ?? [];
+    return claims
+      .map((c: any) => c?.mainsnak?.datavalue?.value)
+      .filter((v: any) => typeof v === "object" && v.id)
+      .map((v: any) => ({ id: v.id, label: v.id })); // will resolve labels below
+  }
+  let instanceOf = extractClaims("P31");
+  let subclassOf = extractClaims("P279");
+  
+  // Batch-resolve labels for all class IDs
+  const allIds = [...instanceOf.map((x) => x.id), ...subclassOf.map((x) => x.id)];
+  if (allIds.length > 0) {
+    try {
+      const labelParams = new URLSearchParams({
+        action: "wbgetentities",
+        ids: allIds.join("|"),
+        props: "labels",
+        languages: "de|en",
+        format: "json",
+        origin: "*",
+      });
+      const labelUrl = "https://www.wikidata.org/w/api.php?" + labelParams.toString();
+      const labelRes = await fetch(labelUrl);
+      const labelJson = await labelRes.json();
+      const entities = labelJson?.entities ?? {};
+      const resolveLabel = (id: string): string => {
+        const ent = entities[id];
+        if (!ent) return id;
+        return ent.labels?.de?.value ?? ent.labels?.en?.value ?? id;
+      };
+      instanceOf = instanceOf.map((x) => ({ ...x, label: resolveLabel(x.id) }));
+      subclassOf = subclassOf.map((x) => ({ ...x, label: resolveLabel(x.id) }));
+    } catch { /* silently fall back to IDs */ }
+  }
+
   const info: WikidataInfo = {
     qid,
     label,
@@ -99,6 +140,8 @@ export async function fetchWikidata(qid: string): Promise<WikidataInfo> {
     imageUrl,
     url: `https://www.wikidata.org/wiki/${qid}`,
     wikipediaUrl,
+    instanceOf,
+    subclassOf,
   };
   writeCache(qid, info);
   return info;

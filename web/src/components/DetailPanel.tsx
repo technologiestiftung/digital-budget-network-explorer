@@ -119,10 +119,96 @@ export default function DetailPanel() {
         {wdError && <p className="error small">Wikidata: {wdError}</p>}
         {wd && (
           <div className="wd-card">
+            <h3>Verlinkung zum Wissensgraph</h3>
             {wd.imageUrl && (
               <img className="wd-image" src={wd.imageUrl} alt={meta.label} />
             )}
             {wd.description && <p className="wd-desc">{wd.description}</p>}
+
+            {((wd.instanceOf?.length ?? 0) > 0 ||
+              (wd.subclassOf?.length ?? 0) > 0) && (
+              <div className="wd-classes">
+                {(wd.instanceOf?.length ?? 0) > 0 && (
+                  <div className="wd-class-group">
+                    <span className="wd-class-label">Instanz von</span>
+                    <div className="wd-class-tags">
+                      {(wd.instanceOf ?? []).map((c) => (
+                        <a
+                          key={c.id}
+                          className="wd-class-tag"
+                          href={"https://www.wikidata.org/wiki/" + c.id}
+                          target="_blank"
+                          rel="noreferrer">
+                          {c.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {(wd.subclassOf?.length ?? 0) > 0 && (
+                  <div className="wd-class-group">
+                    <span className="wd-class-label">Unterklasse von</span>
+                    <div className="wd-class-tags">
+                      {(wd.subclassOf ?? []).map((c) => (
+                        <a
+                          key={c.id}
+                          className="wd-class-tag"
+                          href={"https://www.wikidata.org/wiki/" + c.id}
+                          target="_blank"
+                          rel="noreferrer">
+                          {c.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {meta.kind === "keyword" && meta.qid && (
+              <div className="wd-category">
+                <span
+                  className="wd-category-dot"
+                  style={{
+                    background: (() => {
+                      const t =
+                        (data!.keywords as any)[parsed!.localId]?.type ??
+                        "other";
+                      const colors: Record<string, string> = {
+                        tech: "#2f6fed",
+                        org: "#f28e2b",
+                        law: "#e15759",
+                        infra: "#59a14f",
+                        science: "#b07aa1",
+                        other: "#9aa7b5",
+                      };
+                      return colors[t] ?? "#9aa7b5";
+                    })(),
+                  }}
+                />
+                <span className="wd-category-text">
+                  Kategorie:{" "}
+                  <strong>
+                    {(() => {
+                      const type =
+                        (data!.keywords as any)[parsed!.localId]?.type ??
+                        "other";
+                      const labels: Record<string, string> = {
+                        tech: "Technologie / Software",
+                        org: "Organisation / Akteur",
+                        law: "Recht / Strategie",
+                        infra: "Infrastruktur / Hardware",
+                        science: "Forschung / Methode",
+                        other: "Sonstiges",
+                      };
+                      return labels[type] ?? "Sonstiges";
+                    })()}
+                  </strong>
+                  <InfoTooltip text="Die Kategorie wird automatisch aus den Wikidata-Instanz- und Unterklassen-Beziehungen (P31/P279) abgeleitet: Ein Begriff wird z. B. der Kategorie 'Technologie / Software' zugeordnet, wenn er in der Wikidata-Hierarchie direkt oder indirekt mit 'Software', 'Computerprogramm', 'Künstliche Intelligenz' o. Ä. verwandt ist." />
+                </span>
+              </div>
+            )}
+
             <div className="wd-links">
               <a href={wd.url} target="_blank" rel="noreferrer">
                 Wikidata ({wd.qid})
