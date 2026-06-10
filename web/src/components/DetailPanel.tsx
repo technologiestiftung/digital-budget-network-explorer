@@ -227,12 +227,12 @@ export default function DetailPanel() {
         <>
           <div className="stats-grid">
             <div className="stat">
-              <span className="lbl">Das Keywort taucht in</span>
+              <span className="lbl">Das Keyword taucht in</span>
               <span className="num">{kwStats.frequency}</span>
               <span className="lbl">Titeln auf</span>
             </div>
             <div className="stat">
-              <span className="lbl">Das Keywort wird von</span>
+              <span className="lbl">Das Keyword wird von</span>
               <span className="num">{kwStats.actors.length}</span>
               <span className="lbl">Einzelplänen verwendet</span>
             </div>
