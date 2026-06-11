@@ -14,6 +14,8 @@ export default function FilterPanel() {
   const setMinFrequency = useStore((s) => s.setMinFrequency);
   const resetFilters = useStore((s) => s.resetFilters);
   const setSearch = useStore((s) => s.setSearch);
+  const mobileFilterOpen = useStore((s) => s.mobileFilterOpen);
+  const setMobileFilterOpen = useStore((s) => s.setMobileFilterOpen);
 
   if (!data) return null;
 
@@ -22,7 +24,8 @@ export default function FilterPanel() {
   );
 
   return (
-    <aside className="panel filter-panel">
+    <aside className={`panel filter-panel ${mobileFilterOpen ? "is-open" : ""}`}>
+      <button className="mobile-close-btn" onClick={() => setMobileFilterOpen(false)}>×</button>
       <div className="filter-panel-scroll">
         <h1>Die Vielfalt der Worte</h1>
         <p className="subtitle">

@@ -33,6 +33,7 @@ interface AppState {
   filters: Filters;
   selectedNodeId: string | null;
   search: string;
+  mobileFilterOpen: boolean;
 
   setData: (data: GraphData) => void;
   setError: (msg: string) => void;
@@ -51,6 +52,7 @@ interface AppState {
 
   selectNode: (id: string | null) => void;
   setSearch: (s: string) => void;
+  setMobileFilterOpen: (b: boolean) => void;
 }
 
 export const useStore = create<AppState>((set) => ({
@@ -64,6 +66,7 @@ export const useStore = create<AppState>((set) => ({
   filters: emptyFilters(),
   selectedNodeId: null,
   search: "",
+  mobileFilterOpen: false,
 
   setData: (data) => set({ data, loading: false, error: null }),
   setError: (msg) => set({ error: msg, loading: false }),
@@ -92,4 +95,5 @@ export const useStore = create<AppState>((set) => ({
 
   selectNode: (id) => set({ selectedNodeId: id }),
   setSearch: (s) => set({ search: s }),
+  setMobileFilterOpen: (b) => set({ mobileFilterOpen: b }),
 }));

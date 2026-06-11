@@ -100,7 +100,7 @@ export default function DetailPanel() {
   }
 
   return (
-    <aside className="panel detail-panel">
+    <aside className={`panel detail-panel is-open`}>
       <button className="close" onClick={() => selectNode(null)}>
         ×
       </button>

@@ -1,0 +1,52 @@
+--- web/src/styles.css
++++ web/src/styles.css
+@@ -29,6 +29,12 @@
+   grid-template-columns: 300px 1fr 340px;
+   height: 100vh;
+   overflow: hidden;
++  position: relative;
++}
++
++@media (max-width: 900px) {
++  .layout {
++    grid-template-columns: 1fr;
++  }
+ }
+ 
+ .stage {
+@@ -53,6 +59,19 @@
+   overflow-x: hidden;
+   padding: 18px 16px;
+ }
++
++@media (max-width: 900px) {
++  .panel {
++    position: absolute;
++    inset: 0;
++    z-index: 100;
++    transform: translateX(-100%);
++    transition: transform 0.3s ease;
++  }
++  .panel.is-open {
++    transform: translateX(0);
++  }
++}
+ 
+ .detail-panel {
+   border-right: none;
+@@ -60,6 +79,15 @@
+   position: relative;
+ }
+ 
++@media (max-width: 900px) {
++  .detail-panel {
++    transform: translateX(100%);
++  }
++  .detail-panel.is-open {
++    transform: translateX(0);
++  }
++}
++
+ .filter-panel h1 {
+   font-size: 18px;
+   margin: 0;

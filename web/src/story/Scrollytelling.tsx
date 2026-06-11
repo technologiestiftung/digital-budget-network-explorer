@@ -110,14 +110,6 @@ export default function Scrollytelling() {
 
   const focus = panels[active]?.focus ?? { type: "all" };
 
-  const budgetMrd = useMemo(() => {
-    const latest = Math.max(...data.jahre);
-    let sumT = 0;
-    for (const p of data.posten)
-      if (p.jahr === latest && p.soll) sumT += p.soll;
-    return { value: sumT / 1e6, jahr: latest }; // T€ -> Mrd €
-  }, [data]);
-
   const setRef = (i: number) => (el: HTMLElement | null) => {
     refs.current[i] = el;
   };
@@ -334,13 +326,13 @@ export default function Scrollytelling() {
                 </span>
               </div>
               <div className="stat-card">
-                <span className="stat-num">≈ 16,9 Mrd €</span>
+                <span className="stat-num">≈ 16,7 Mrd €</span>
                 <span className="stat-label">
                   sind für den Digitalhaushalt veranschlagt (2025, SOLL)
                 </span>
               </div>
               <div className="stat-card">
-                <span className="stat-num"> ≈ 3%</span>
+                <span className="stat-num"> ≈ 3,3%</span>
                 <span className="stat-label">
                   des Gesamthaushalts macht dieses Budget aus
                 </span>

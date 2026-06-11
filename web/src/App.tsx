@@ -23,6 +23,8 @@ export default function App() {
   const setData = useStore((s) => s.setData);
   const setError = useStore((s) => s.setError);
 const selectNode = useStore((s) => s.selectNode);
+  const setMobileFilterOpen = useStore((s) => s.setMobileFilterOpen);
+  const mobileFilterOpen = useStore((s) => s.mobileFilterOpen);
   const [showProjectModal, setShowProjectModal] = useState(false);
 
   useEffect(() => {
@@ -98,7 +100,30 @@ const selectNode = useStore((s) => s.selectNode);
           nodeSizeMetric={nodeSizeMetric}
           onSelect={selectNode}
         />
+
         <Legend nodeCount={computed.nodes.length} edgeCount={computed.edges.length} />
+
+        <div className="mobile-bottom-bar">
+          <button 
+            className={`mobile-bottom-btn ${mobileFilterOpen ? "active" : ""}`}
+            onClick={() => setMobileFilterOpen(true)}
+          >
+            <svg viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+            Filter
+          </button>
+          <button 
+            className={`mobile-bottom-btn ${selectedNodeId ? "active" : ""}`}
+            onClick={() => {
+              if (!selectedNodeId) {
+                // If nothing selected, maybe show a toast or just open empty details? 
+                // We let it do nothing or open empty.
+              }
+            }}
+          >
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            Details
+          </button>
+        </div>
       </main>
       <DetailPanel />
     </div>
