@@ -170,6 +170,7 @@ kapitel:701 a skos:Concept ;
     skos:notation "701" .
 
 keyword:ais-dienstes a skos:Concept ;
+    skos:exactMatch wd:Q787197 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "AIS-Dienstes"@de .
 
@@ -179,26 +180,32 @@ keyword:desktop a skos:Concept ;
     skos:prefLabel "Desktop"@de .
 
 keyword:fachbezogene-it a skos:Concept ;
+    skos:exactMatch wd:Q118385180 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "fachbezogene IT"@de .
 
 keyword:it-verkabelung a skos:Concept ;
+    skos:exactMatch wd:Q1413030 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Verkabelung"@de .
 
 keyword:onlineberatungsdienst a skos:Concept ;
+    skos:exactMatch wd:Q3555418 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Onlineberatungsdienst"@de .
 
 keyword:quantenmeterologie a skos:Concept ;
+    skos:exactMatch wd:Q2081419 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Quantenmeterologie"@de .
 
 keyword:videokonferenzanlage a skos:Concept ;
+    skos:exactMatch wd:Q238354 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Videokonferenzanlage"@de .
 
 keyword:wik a skos:Concept ;
+    skos:exactMatch wd:Q565 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "WIK"@de .
 
@@ -90438,25 +90445,19 @@ titel:91581273342 a dh:Haushaltstitel ;
 
 wd:Q1005549 rdfs:label "Bundesanstalt für den Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben"@de .
 
-wd:Q1005821 rdfs:label "Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit"@de .
-
 wd:Q103845039 rdfs:label "Green AI"@de .
 
-wd:Q10404148 rdfs:label "Aktören"@de .
+wd:Q104603362 rdfs:label "Nationale Plattform Zukunft der Mobilität"@de .
 
 wd:Q1047251 rdfs:label "Informationsinfrastruktur"@de .
 
 wd:Q104760828 rdfs:label "Föderale IT-Kooperation"@de .
 
-wd:Q1047626 rdfs:label "International Golf Federation"@de .
-
-wd:Q104860899 rdfs:label "Demis"@de .
-
 wd:Q1048818 rdfs:label "Desktop"@de .
 
-wd:Q105062003 rdfs:label "Mobilfunkinfrastrukturgesellschaft"@de .
+wd:Q104954 rdfs:label "RFID"@de .
 
-wd:Q10533272 rdfs:label "Iais"@de .
+wd:Q105062003 rdfs:label "Mobilfunkinfrastrukturgesellschaft"@de .
 
 wd:Q105543920 rdfs:label "Gesundheitsportal"@de .
 
@@ -90464,27 +90465,25 @@ wd:Q105822973 rdfs:label "IT-Projekt"@de .
 
 wd:Q1061197 rdfs:label "Radio-Network"@de .
 
-wd:Q106403488 rdfs:label "Konsens"@de .
-
 wd:Q106676433 rdfs:label "Unabhängiger Kontrollrat"@de .
 
 wd:Q106707749 rdfs:label "Bürotechnik"@de .
 
-wd:Q1067529 rdfs:label "Telekommunikationsüberwachung"@de .
-
-wd:Q1069215 rdfs:label "Hierarchical Data Format"@de .
+wd:Q1069084 rdfs:label "Gigabit Ethernet"@de .
 
 wd:Q1084094 rdfs:label "Christliche Theologische Akademie Warschau"@de .
 
 wd:Q10871684 rdfs:label "elektronische Gesundheitsakte"@de .
 
-wd:Q109674791 rdfs:label "Dati"@de .
+wd:Q109380216 rdfs:label "Cyber Innovation Hub der Bundeswehr"@de .
 
 wd:Q110021824 rdfs:label "Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen"@de .
 
 wd:Q11012 rdfs:label "Roboter"@de .
 
-wd:Q111356373 rdfs:label "Fiz"@de .
+wd:Q110401739 rdfs:label "Digitaltechnik"@de .
+
+wd:Q11121294 rdfs:label "Simulationssoftware"@de .
 
 wd:Q1116876 rdfs:label "Modellierung"@de .
 
@@ -90492,11 +90491,15 @@ wd:Q111688137 rdfs:label "Smart Contracts"@de .
 
 wd:Q112335315 rdfs:label "Datenportal"@de .
 
+wd:Q1130645 rdfs:label "Open-Source-Software"@de .
+
 wd:Q1130982 rdfs:label "Institut Henri Poincaré"@de .
 
 wd:Q113403137 rdfs:label "Bildgenerator"@de .
 
 wd:Q1135326 rdfs:label "Telearbeit"@de .
+
+wd:Q11375 rdfs:label "Funknetz"@de .
 
 wd:Q11384 rdfs:label "Wide Area Network"@de .
 
@@ -90512,11 +90515,15 @@ wd:Q1149653 rdfs:label "Gebäudeautomation"@de .
 
 wd:Q1152227 rdfs:label "Pharmakogenomik"@de .
 
+wd:Q115766617 rdfs:label "Echtzeitanalyse"@de .
+
 wd:Q115946387 rdfs:label "Sovereign Tech Fund"@de .
 
 wd:Q115965402 rdfs:label "BundID"@de .
 
 wd:Q1167435 rdfs:label "Fraunhofer-Institut für Biomedizinische Technik"@de .
+
+wd:Q116781 rdfs:label "Open Educational Resources"@de .
 
 wd:Q116897462 rdfs:label "DigitalService des Bundes"@de .
 
@@ -90532,101 +90539,115 @@ wd:Q117246174 rdfs:label "generative Künstliche Intelligenz"@de .
 
 wd:Q1172472 rdfs:label "Datenmenge"@de .
 
+wd:Q1172474 rdfs:label "Datenmanagementsystem"@de .
+
 wd:Q1172494 rdfs:label "Datenraum"@de .
 
 wd:Q117470322 rdfs:label "Monocab"@de .
 
 wd:Q11826893 rdfs:label "Telekommunikationsrecht"@de .
 
-wd:Q1190465 rdfs:label "Hochleistungsrechnen"@de .
+wd:Q1183543 rdfs:label "Gerät"@de .
+
+wd:Q118945294 rdfs:label "Cyberresilienz-Verordnung"@de .
 
 wd:Q1191337 rdfs:label "Elektronische Mauterhebung"@de .
 
-wd:Q120499786 rdfs:label "Netzinfrastruktur"@de .
+wd:Q1192297 rdfs:label "disruptive Technologie"@de .
+
+wd:Q120962327 rdfs:label "smart data capture"@de .
 
 wd:Q121182 rdfs:label "Informationssystem"@de .
 
-wd:Q121566744 rdfs:label "Datenquelle"@de .
+wd:Q121661896 rdfs:label "Datenstrategie der Bundesregierung (2021)"@de .
 
 wd:Q1224901 rdfs:label "Digitale Infrastruktur"@de .
 
-wd:Q1225035 rdfs:label "Digitalfunk"@de .
+wd:Q122625839 rdfs:label "data provider"@de .
 
 wd:Q122871685 rdfs:label "Datenabgabe"@de .
+
+wd:Q122946109 rdfs:label "digital infrastructure"@de .
 
 wd:Q1235234 rdfs:label "Dokumentenserver"@de .
 
 wd:Q123958958 rdfs:label "Intelligent Computing"@de .
 
-wd:Q124429893 rdfs:label "Digitale Rentenübersicht"@de .
+wd:Q124192 rdfs:label "Fahrzeugtechnik"@de .
 
-wd:Q124472412 rdfs:label "Geodaten"@de .
+wd:Q124429893 rdfs:label "Digitale Rentenübersicht"@de .
 
 wd:Q125499331 rdfs:label "Dateninstitut"@de .
 
 wd:Q126278541 rdfs:label "KI-Kompetenz"@de .
 
+wd:Q126346776 rdfs:label "Berufsbildung 4.0 als didaktische Herausforderung"@de .
+
 wd:Q127113159 rdfs:label "data gap"@de .
 
 wd:Q1275809 rdfs:label "ERP-Sondervermögen"@de .
 
-wd:Q12802776 rdfs:label "Skala"@de .
-
 wd:Q129238 rdfs:label "Jungunternehmen"@de .
+
+wd:Q130279460 rdfs:label "KI-Servicezentrum Berlin-Brandenburg"@de .
 
 wd:Q130376267 rdfs:label "Blockchain-Technologie"@de .
 
 wd:Q130385289 rdfs:label "Zentrum für Digitale Souveränität der Öffentlichen Verwaltung"@de .
 
-wd:Q131395 rdfs:label "Dialog"@de .
+wd:Q131384970 rdfs:label "Campusnetze"@de .
 
 wd:Q131428133 rdfs:label "In-Service Aircraft for a Global Observing System"@de .
 
 wd:Q131470986 rdfs:label "Datenkompetenzzentrum"@de .
 
+wd:Q131605583 rdfs:label "IT-Staatsvertrag"@de .
+
+wd:Q131765 rdfs:label "Multimedia"@de .
+
 wd:Q133894806 rdfs:label "Bundesministerium für Digitales und Staatsmodernisierung"@de .
 
-wd:Q1340766 rdfs:label "Erp"@de .
+wd:Q13407144 rdfs:label "Computersystem"@de .
 
 wd:Q135013037 rdfs:label "Registermodernisierung"@de .
 
 wd:Q135013041 rdfs:label "Registermodernisierungsgesetz"@de .
 
-wd:Q135033654 rdfs:label "Disruptive"@de .
-
-wd:Q136083669 rdfs:label "Wolf 2"@de .
+wd:Q136779172 rdfs:label "I-Kfz-App"@de .
 
 wd:Q1369723 rdfs:label "Internetagentur"@de .
+
+wd:Q1385171 rdfs:label "Sondervermögen"@de .
 
 wd:Q1391898 rdfs:label "Fraunhofer-Institut für Photonische Mikrosysteme"@de .
 
 wd:Q139268432 rdfs:label "Digitalakademie"@de .
 
+wd:Q1405041 rdfs:label "Ferdinand-Braun-Institut, Leibniz-Institut für Höchstfrequenztechnik"@de .
+
 wd:Q1406943 rdfs:label "Fernerkundungsdaten"@de .
+
+wd:Q141090 rdfs:label "Verschlüsselung"@de .
 
 wd:Q1421636 rdfs:label "Intelligentes Wohnen"@de .
 
 wd:Q1425343 rdfs:label "Funktechnik"@de .
 
+wd:Q1431598 rdfs:label "Shared Services"@de .
+
 wd:Q1451973 rdfs:label "Fraunhofer-Institut für Elektronische Mikrosysteme und Festkörper-Technologien"@de .
+
+wd:Q1452008 rdfs:label "Fraunhofer-Institut für Graphische Datenverarbeitung IGD"@de .
 
 wd:Q1452032 rdfs:label "Fraunhofer-Institut für Software- und Systemtechnik ISST"@de .
 
 wd:Q1452044 rdfs:label "Fraunhofer-Institut für Werkstoffmechanik"@de .
-
-wd:Q1452078 rdfs:label "Fraunhofer"@de .
 
 wd:Q1454667 rdfs:label "Netzwerkmanagement"@de .
 
 wd:Q146138 rdfs:label "Bundesrat"@de .
 
 wd:Q1479544 rdfs:label "Nanoelektronik"@de .
-
-wd:Q14906204 rdfs:label "HGF"@de .
-
-wd:Q14941772 rdfs:label "Ega"@de .
-
-wd:Q14951 rdfs:label "AGILE"@de .
 
 wd:Q1499925 rdfs:label "gematik"@de .
 
@@ -90638,9 +90659,9 @@ wd:Q1546066 rdfs:label "Netzwerkkomponente"@de .
 
 wd:Q154797 rdfs:label "Deutscher Bundestag"@de .
 
-wd:Q15729109 rdfs:label "Internacia Kultura Servo"@de .
+wd:Q155271 rdfs:label "Denkfabrik"@de .
 
-wd:Q157332 rdfs:label "Deutsches Zentrum für Luft- und Raumfahrt"@de .
+wd:Q15806970 rdfs:label "E-Rechnung an den Bund"@de .
 
 wd:Q15809982 rdfs:label "Forschungsdaten"@de .
 
@@ -90648,87 +90669,83 @@ wd:Q15836561 rdfs:label "Netzausbau"@de .
 
 wd:Q15849271 rdfs:label "Stiftung Datenschutz"@de .
 
+wd:Q1605915 rdfs:label "Visa-Informationssystem"@de .
+
 wd:Q161410 rdfs:label "Peer-to-Peer"@de .
 
 wd:Q16163596 rdfs:label "Chip"@de .
 
-wd:Q16183347 rdfs:label "IZM"@de .
+wd:Q16331069 rdfs:label "data entry"@de .
 
 wd:Q1633452 rdfs:label "Internet Governance"@de .
 
 wd:Q1633467 rdfs:label "Krypto"@de .
 
-wd:Q1654941 rdfs:label "IT-Controlling"@de .
+wd:Q16338 rdfs:label "Personal Computer"@de .
 
-wd:Q1654951 rdfs:label "IT-Planungsrat"@de .
+wd:Q1654941 rdfs:label "IT-Controlling"@de .
 
 wd:Q166020 rdfs:label "Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend"@de .
 
 wd:Q1661989 rdfs:label "Industrie 4.0"@de .
 
-wd:Q1662611 rdfs:label "informationstechnisches System"@de .
-
-wd:Q1665453 rdfs:label "Systemintegration"@de .
+wd:Q1662581 rdfs:label "Informationsmodell"@de .
 
 wd:Q1665657 rdfs:label "Intelligence"@de .
 
+wd:Q1665681 rdfs:label "Intelligentes Netz"@de .
+
+wd:Q1668023 rdfs:label "Internetbuchungsmaschine"@de .
+
 wd:Q167676 rdfs:label "Sensor"@de .
 
+wd:Q16848759 rdfs:label "Bug-Bounty-Programm"@de .
+
 wd:Q16856938 rdfs:label "Smart Factory"@de .
-
-wd:Q16869767 rdfs:label "Edge"@de .
-
-wd:Q16871993 rdfs:label "Ledger"@de .
 
 wd:Q17067559 rdfs:label "Datenkompetenz"@de .
 
 wd:Q170978 rdfs:label "Robotik"@de .
 
-wd:Q17334923 rdfs:label "physischer Standort"@de .
+wd:Q17327088 rdfs:label "XÖV"@de .
 
 wd:Q175403 rdfs:label "Mikroelektronik"@de .
 
-wd:Q17630369 rdfs:label "Technologiesouveränität"@de .
+wd:Q175561 rdfs:label "Mikrosystem"@de .
 
-wd:Q176634 rdfs:label "Flughafen Graciosa"@de .
+wd:Q17630369 rdfs:label "Technologiesouveränität"@de .
 
 wd:Q179310 rdfs:label "Computing"@de .
 
-wd:Q18046123 rdfs:label "HAUS3"@de .
-
-wd:Q18054746 rdfs:label "SCAI"@de .
+wd:Q179550 rdfs:label "Programmfehler"@de .
 
 wd:Q1813768 rdfs:label "Leibniz-Institut für Wissensmedien"@de .
 
-wd:Q184199 rdfs:label "Automatisierung"@de .
-
 wd:Q1852983 rdfs:label "Liste der Telekommunikationsstandards"@de .
 
-wd:Q18597 rdfs:label "1950"@de .
-
-wd:Q186165 rdfs:label "Webportal"@de .
+wd:Q18745135 rdfs:label "Gesundheitsdaten"@de .
 
 wd:Q189900 rdfs:label "Informationssicherheit"@de .
 
-wd:Q1916441 rdfs:label "Medientechnik"@de .
+wd:Q19280069 rdfs:label "Funkmessstelle für Weltraumfunk"@de .
+
+wd:Q193040 rdfs:label "eingebettetes System"@de .
 
 wd:Q193091 rdfs:label "Optoelektronik"@de .
 
 wd:Q1932543 rdfs:label "Datenmigration"@de .
 
-wd:Q193592 rdfs:label "Mittelfeldspieler"@de .
-
 wd:Q194274 rdfs:label "Backup"@de .
-
-wd:Q1943201 rdfs:label "Ommelander Ziekenhuis Groningen"@de .
 
 wd:Q1945081 rdfs:label "Monopolkommission"@de .
 
 wd:Q1968219 rdfs:label "Digital-Gipfel"@de .
 
-wd:Q19860309 rdfs:label "Esa"@de .
+wd:Q1968237 rdfs:label "Nationaler Normenkontrollrat"@de .
 
 wd:Q1988917 rdfs:label "Datenanalyse"@de .
+
+wd:Q19967801 rdfs:label "Onlinedienst"@de .
 
 wd:Q199687 rdfs:label "Fernerkundung"@de .
 
@@ -90736,17 +90753,15 @@ wd:Q20181828 rdfs:label "Assist Processor"@de .
 
 wd:Q202833 rdfs:label "Soziale Medien"@de .
 
+wd:Q204606 rdfs:label "Cyberspace"@de .
+
 wd:Q20514253 rdfs:label "Blockchain"@de .
 
 wd:Q206637 rdfs:label "Rechnerverbund"@de .
 
 wd:Q207977 rdfs:label "Prototyp"@de .
 
-wd:Q2081419 rdfs:label "Quantentechnologie"@de .
-
 wd:Q21074109 rdfs:label "Schlüsseltechnologie"@de .
-
-wd:Q211017 rdfs:label "E-Government"@de .
 
 wd:Q21198 rdfs:label "Informatik"@de .
 
@@ -90754,13 +90769,13 @@ wd:Q212108 rdfs:label "Authentifizierung"@de .
 
 wd:Q2122216 rdfs:label "Quanteninformatik"@de .
 
-wd:Q2130276 rdfs:label "Ramona"@de .
-
-wd:Q2205026 rdfs:label "SASPF"@de .
-
 wd:Q2225985 rdfs:label "Satellitenkommunikation"@de .
 
+wd:Q2226016 rdfs:label "Satellitentechnik"@de .
+
 wd:Q228641 rdfs:label "Prototype"@de .
+
+wd:Q229362 rdfs:label "3D-Echtzeit"@de .
 
 wd:Q229367 rdfs:label "3D-Druck"@de .
 
@@ -90770,51 +90785,61 @@ wd:Q2330575 rdfs:label "Standleitung"@de .
 
 wd:Q2354216 rdfs:label "Telefonnetz"@de .
 
+wd:Q23561231 rdfs:label "Fraunhofer-Institut für Integrierte Systeme und Bauelementetechnologie"@de .
+
 wd:Q2374463 rdfs:label "Data Science"@de .
 
 wd:Q23808 rdfs:label "Schnittstelle"@de .
 
-wd:Q238354 rdfs:label "Videokonferenz"@de .
-
-wd:Q2401720 rdfs:label "Telekommunikationsanlage"@de .
-
-wd:Q241317 rdfs:label "Plattform"@de .
-
-wd:Q24636819 rdfs:label "Breitband"@de .
+wd:Q2450880 rdfs:label "exascale computing"@de .
 
 wd:Q24843185 rdfs:label "Smart Service"@de .
 
+wd:Q249 rdfs:label "drahtlose Kommunikation"@de .
+
 wd:Q25099680 rdfs:label "Digitaler Zwilling"@de .
 
-wd:Q2516171 rdfs:label "Verkehrsdaten"@de .
+wd:Q251072 rdfs:label "Machine to Machine"@de .
 
-wd:Q253405 rdfs:label "Vernetzung"@de .
+wd:Q2516171 rdfs:label "Verkehrsdaten"@de .
 
 wd:Q25385105 rdfs:label "Hightech-Strategie"@de .
 
 wd:Q25386214 rdfs:label "Gründerwettbewerb"@de .
 
-wd:Q2539 rdfs:label "maschinelles Lernen"@de .
-
 wd:Q257906 rdfs:label "Bundesamt für Sicherheit in der Informationstechnik"@de .
+
+wd:Q2589465 rdfs:label "Chief Information Officer"@de .
 
 wd:Q26540 rdfs:label "Satellit"@de .
 
 wd:Q270471 rdfs:label "Virtualisierung"@de .
 
+wd:Q271680 rdfs:label "Framework"@de .
+
 wd:Q272826 rdfs:label "Elektronischer Kampf"@de .
 
 wd:Q27720980 rdfs:label "Network"@de .
+
+wd:Q28381792 rdfs:label "Cyber- und Informationsraum"@de .
+
+wd:Q28549308 rdfs:label "Fake News"@de .
+
+wd:Q28601953 rdfs:label "email system"@de .
+
+wd:Q28871075 rdfs:label "Data Facility Product"@de .
+
+wd:Q29032648 rdfs:label "FAIRe Daten"@de .
+
+wd:Q29169143 rdfs:label "Data Scientist"@de .
+
+wd:Q294362 rdfs:label "öffentlicher Personennahverkehr"@de .
 
 wd:Q30089794 rdfs:label "Forschungsdatenmanagement"@de .
 
 wd:Q3027857 rdfs:label "Reallabor"@de .
 
-wd:Q30282083 rdfs:label "National Center on Institutions and Alternatives"@de .
-
-wd:Q308993 rdfs:label "NeXT"@de .
-
-wd:Q31039797 rdfs:label "Paice"@de .
+wd:Q309901 rdfs:label "Open Data"@de .
 
 wd:Q3105497 rdfs:label "Gigabit"@de .
 
@@ -90826,37 +90851,39 @@ wd:Q317027 rdfs:label "Bundeskanzleramt"@de .
 
 wd:Q31839610 rdfs:label "Weizenbaum-Institut"@de .
 
-wd:Q3244038 rdfs:label "Établissement public à caractère administratif"@de .
+wd:Q3353185 rdfs:label "Business Intelligence"@de .
 
 wd:Q336038 rdfs:label "Sensornetz"@de .
 
-wd:Q336286 rdfs:label "Abwehrspieler"@de .
+wd:Q337445 rdfs:label "Aufzeichnungsdichte"@de .
 
-wd:Q34561213 rdfs:label "BWI GmbH"@de .
+wd:Q35535 rdfs:label "Polizei"@de .
 
-wd:Q347066 rdfs:label "Echtzeit"@de .
-
-wd:Q3678226 rdfs:label "Cispa"@de .
+wd:Q3555418 rdfs:label "Onlineberatung"@de .
 
 wd:Q3757616 rdfs:label "Galileo"@de .
 
 wd:Q376150 rdfs:label "Internationale Fernmeldeunion"@de .
 
+wd:Q37726 rdfs:label "Heer"@de .
+
 wd:Q377505 rdfs:label "Elektronische Beschaffung"@de .
 
-wd:Q389772 rdfs:label "Datenübertragung"@de .
+wd:Q386824 rdfs:label "Informationsintegration"@de .
 
-wd:Q39162 rdfs:label "Open Source"@de .
+wd:Q4071928 rdfs:label "Cyberattacke"@de .
 
-wd:Q3966 rdfs:label "Hardware"@de .
+wd:Q42848 rdfs:label "Daten"@de .
+
+wd:Q42882637 rdfs:label "IT-Support"@de .
 
 wd:Q4288448 rdfs:label "Internationales Institut für Soziologie"@de .
-
-wd:Q4392761 rdfs:label "ACM/IEEE Supercomputing Conference"@de .
 
 wd:Q44127 rdfs:label "Server"@de .
 
 wd:Q4417999 rdfs:label "Netzwerkanalyse"@de .
+
+wd:Q4418003 rdfs:label "network element"@de .
 
 wd:Q450394 rdfs:label "Bundeskartellamt"@de .
 
@@ -90868,15 +90895,19 @@ wd:Q45842 rdfs:label "Webcrawler"@de .
 
 wd:Q467054 rdfs:label "Photonik"@de .
 
-wd:Q46994 rdfs:label "Telemedizin"@de .
-
 wd:Q470470 rdfs:label "Bundespräsidialamt"@de .
 
-wd:Q47859 rdfs:label "Minzen"@de .
+wd:Q47146 rdfs:label "Benutzerschnittstelle"@de .
+
+wd:Q480220 rdfs:label "Militärischer Abschirmdienst"@de .
 
 wd:Q484000 rdfs:label "unbemanntes Luftfahrzeug"@de .
 
+wd:Q484105 rdfs:label "Autonomie"@de .
+
 wd:Q485396 rdfs:label "Analytik"@de .
+
+wd:Q487343 rdfs:label "Solid-State-Drive"@de .
 
 wd:Q48780629 rdfs:label "Datenhoheit"@de .
 
@@ -90892,8 +90923,6 @@ wd:Q491637 rdfs:label "Bundesministerium für Verkehr"@de .
 
 wd:Q492234 rdfs:label "Bundesministerium für Forschung, Technologie und Raumfahrt"@de .
 
-wd:Q4929239 rdfs:label "Datenerhebung"@de .
-
 wd:Q4930 rdfs:label "E-Health"@de .
 
 wd:Q493344 rdfs:label "Bundesministerium für Umwelt, Klimaschutz, Naturschutz und nukleare Sicherheit"@de .
@@ -90904,9 +90933,9 @@ wd:Q498251 rdfs:label "Bundesministerium der Justiz und für Verbraucherschutz"@
 
 wd:Q499118 rdfs:label "Bundesministerium der Finanzen"@de .
 
-wd:Q502698 rdfs:label "Bundesministerium des Innern"@de .
+wd:Q5001829 rdfs:label "business analytics"@de .
 
-wd:Q5048912 rdfs:label "Casio Data Bank"@de .
+wd:Q502698 rdfs:label "Bundesministerium des Innern"@de .
 
 wd:Q5059695 rdfs:label "Center for Intelligence and Security Studies"@de .
 
@@ -90914,29 +90943,27 @@ wd:Q508378 rdfs:label "Verkehrstelematik"@de .
 
 wd:Q5094647 rdfs:label "Intensivstation"@de .
 
-wd:Q5135629 rdfs:label "Cloud"@de .
+wd:Q51069963 rdfs:label "Once-Only-Prinzip"@de .
 
-wd:Q519138 rdfs:label "Supremo Tribunal Federal"@de .
+wd:Q51885719 rdfs:label "ETSI Standard"@de .
 
 wd:Q5226597 rdfs:label "Dashboard"@de .
 
-wd:Q5227304 rdfs:label "Dateninfrastruktur"@de .
+wd:Q5227230 rdfs:label "data access"@de .
 
 wd:Q5268834 rdfs:label "Informations- und Kommunikationstechnik"@de .
 
-wd:Q5270173 rdfs:label "Diablo Valley College"@de .
+wd:Q5276090 rdfs:label "Digitale Gesundheitsversorgung"@de .
 
 wd:Q528166 rdfs:label "Client"@de .
 
 wd:Q52948 rdfs:label "Interaktion"@de .
 
-wd:Q5324529 rdfs:label "Eucaris"@de .
-
 wd:Q5381206 rdfs:label "Umweltdaten"@de .
 
-wd:Q549379 rdfs:label "GSM-R"@de .
+wd:Q5440699 rdfs:label "Federated Naming Service"@de .
 
-wd:Q55229875 rdfs:label "Bisp"@de .
+wd:Q549379 rdfs:label "GSM-R"@de .
 
 wd:Q552581 rdfs:label "SAP"@de .
 
@@ -90954,9 +90981,9 @@ wd:Q56297418 rdfs:label "Smart Data"@de .
 
 wd:Q56298189 rdfs:label "Schul-Cloud"@de .
 
-wd:Q57515336 rdfs:label "Datenspeicher"@de .
+wd:Q565 rdfs:label "Wikimedia Commons"@de .
 
-wd:Q577764 rdfs:label "Kommunikationssystem"@de .
+wd:Q58327688 rdfs:label "Internetbasierter Dienst"@de .
 
 wd:Q58328699 rdfs:label "Industrial Data Space"@de .
 
@@ -90964,23 +90991,27 @@ wd:Q59289206 rdfs:label "Natural Language Processing"@de .
 
 wd:Q59385693 rdfs:label "Datenökonomie"@de .
 
-wd:Q594593 rdfs:label "IT-Infrastruktur"@de .
-
 wd:Q59504247 rdfs:label "Digitalpakt"@de .
 
-wd:Q60024 rdfs:label "Hermann von Helmholtz"@de .
+wd:Q5970330 rdfs:label "IEEE Consumer Electronics Society"@de .
+
+wd:Q60024 rdfs:label "Helmholtz"@de .
+
+wd:Q60054001 rdfs:label "Raumfahrtprogramm"@de .
+
+wd:Q60194168 rdfs:label "Corporate Digital Responsibility"@de .
 
 wd:Q6030887 rdfs:label "IT-Architektur"@de .
 
-wd:Q603337 rdfs:label "Apple Wallet"@de .
-
 wd:Q603889 rdfs:label "GUID Partition Table"@de .
+
+wd:Q60474237 rdfs:label "Standortdaten"@de .
 
 wd:Q604804 rdfs:label "European Train Control System"@de .
 
-wd:Q606807 rdfs:label "Yerseke"@de .
+wd:Q605177 rdfs:label "COSPAS-SARSAT"@de .
 
-wd:Q609697 rdfs:label "Einladung"@de .
+wd:Q60846594 rdfs:label "Initiative Junge Forscherinnen und Forscher"@de .
 
 wd:Q60983149 rdfs:label "European High-Performance Computing Joint Undertaking"@de .
 
@@ -90988,29 +91019,25 @@ wd:Q61658497 rdfs:label "Nationale Forschungsdateninfrastruktur (NFDI) e.V."@de 
 
 wd:Q620615 rdfs:label "Mobile-App"@de .
 
-wd:Q6279182 rdfs:label "Epileptischer Anfall"@de .
-
-wd:Q64147 rdfs:label "Visp"@de .
-
-wd:Q64485073 rdfs:label "Deutsches Zentrum für Schienenverkehrsforschung"@de .
-
-wd:Q64739460 rdfs:label "Onlinezugangsgesetz"@de .
+wd:Q638422 rdfs:label "Datenarchitektur"@de .
 
 wd:Q64865818 rdfs:label "intelligentes Heim"@de .
 
 wd:Q65237918 rdfs:label "HateAid"@de .
 
-wd:Q653439 rdfs:label "Universität Suceava"@de .
-
 wd:Q654940 rdfs:label "Connected"@de .
-
-wd:Q657516 rdfs:label "Troyer-Syndrom"@de .
-
-wd:Q6661985 rdfs:label "Datenverarbeitung"@de .
 
 wd:Q676290 rdfs:label "Gaming"@de .
 
+wd:Q679913 rdfs:label "Helmholtz-Gemeinschaft Deutscher Forschungszentren"@de .
+
+wd:Q680090 rdfs:label "Leibniz"@de .
+
+wd:Q681263 rdfs:label "offener Standard"@de .
+
 wd:Q684357 rdfs:label "Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung"@de .
+
+wd:Q692163 rdfs:label "EUMETSAT"@de .
 
 wd:Q6953132 rdfs:label "NATO Communications and Information Agency"@de .
 
@@ -91020,37 +91047,29 @@ wd:Q707283 rdfs:label "Deutsche Forschungsgemeinschaft"@de .
 
 wd:Q720829 rdfs:label "Open Government"@de .
 
-wd:Q72898059 rdfs:label "Knotenzusammenhangszahl"@de .
+wd:Q727490 rdfs:label "Skalierbarkeit"@de .
 
 wd:Q72975645 rdfs:label "Bundesagentur für Sprunginnovationen"@de .
 
 wd:Q7300787 rdfs:label "Echtzeitdaten"@de .
 
-wd:Q73368 rdfs:label "online"@de .
-
 wd:Q738621 rdfs:label "Festnetz"@de .
 
-wd:Q7397 rdfs:label "Software"@de .
+wd:Q740083 rdfs:label "Precision Farming"@de .
 
 wd:Q74431584 rdfs:label "Gaia-X"@de .
 
-wd:Q749647 rdfs:label "Interoperabilität"@de .
-
-wd:Q75 rdfs:label "Internet"@de .
-
-wd:Q76504070 rdfs:label "Virtual Study of Theatre Institute"@de .
+wd:Q749245 rdfs:label "autonomes System"@de .
 
 wd:Q778274 rdfs:label "Business Angel"@de .
 
-wd:Q784 rdfs:label "Dominica"@de .
+wd:Q784808 rdfs:label "European Data Relay Satellite"@de .
 
-wd:Q787197 rdfs:label "Automatic Identification System"@de .
+wd:Q78670249 rdfs:label "Verordnung zur Umsetzung der Vorschriften über die Datentransparenz"@de .
 
 wd:Q7889 rdfs:label "Computerspiel"@de .
 
 wd:Q7924308 rdfs:label "ViEWER"@de .
-
-wd:Q7946357 rdfs:label "WADO"@de .
 
 wd:Q797193 rdfs:label "BWI Informationstechnik"@de .
 
@@ -91058,17 +91077,21 @@ wd:Q79769 rdfs:label "Tebibyte"@de .
 
 wd:Q80006 rdfs:label "Programmierung"@de .
 
+wd:Q80831 rdfs:label "integrierter Schaltkreis"@de .
+
 wd:Q81945 rdfs:label "IP-Telefonie"@de .
 
-wd:Q8366 rdfs:label "Algorithmus"@de .
+wd:Q82 rdfs:label "Drucker"@de .
 
-wd:Q843958 rdfs:label "Digitalisieren"@de .
+wd:Q829492 rdfs:label "Beschaffung"@de .
+
+wd:Q830382 rdfs:label "Best practice"@de .
+
+wd:Q8366 rdfs:label "Algorithmus"@de .
 
 wd:Q8513 rdfs:label "Datenbank"@de .
 
 wd:Q856608 rdfs:label "Bibliotheksportal"@de .
-
-wd:Q858810 rdfs:label "Big Data"@de .
 
 wd:Q860625 rdfs:label "Bilddatei"@de .
 
@@ -91076,15 +91099,13 @@ wd:Q870780 rdfs:label "Chatbot"@de .
 
 wd:Q8767 rdfs:label "Domain Name Server"@de .
 
-wd:Q8789 rdfs:label "Kryptographie"@de .
+wd:Q879857 rdfs:label "Schloss Dagstuhl – Leibniz-Zentrum für Informatik"@de .
 
 wd:Q89412656 rdfs:label "DIVI IntensivRegister"@de .
 
 wd:Q899383 rdfs:label "Europäisches Institut für Telekommunikationsnormen"@de .
 
 wd:Q902174 rdfs:label "Funkspektrum"@de .
-
-wd:Q9047 rdfs:label "Gottfried Wilhelm Leibniz"@de .
 
 wd:Q9135 rdfs:label "Betriebssystem"@de .
 
@@ -91094,19 +91115,11 @@ wd:Q919597 rdfs:label "SATCOMBw"@de .
 
 wd:Q92801800 rdfs:label "Netze des Bundes"@de .
 
-wd:Q93306323 rdfs:label "LaMarr"@de .
-
-wd:Q94895 rdfs:label "Baltimore-Washington International Airport"@de .
-
-wd:Q96653984 rdfs:label "Tawan"@de .
+wd:Q943687 rdfs:label "SIP-Telefon"@de .
 
 wd:Q96678462 rdfs:label "Forschungsdateninfrastruktur"@de .
 
-wd:Q98058138 rdfs:label "Vernetzt"@de .
-
-wd:Q985855 rdfs:label "Wan"@de .
-
-wd:Q992968 rdfs:label "Mobilfunk"@de .
+wd:Q977772 rdfs:label "Identitätsmanagement"@de .
 
 wd:Q999646 rdfs:label "Autofahren"@de .
 
@@ -91323,18 +91336,17 @@ keyword:computerspiel a skos:Concept ;
 
 keyword:d-lbo a skos:Concept ;
     dh:cooccursWith keyword:digitalisierung-landbasierte-operationen ;
-    skos:exactMatch wd:Q136083669 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "D-LBO"@de .
 
 keyword:erp a skos:Concept ;
     dh:cooccursWith keyword:erp-sondervermoegen ;
-    skos:exactMatch wd:Q1340766 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ERP"@de .
 
 keyword:fake-news a skos:Concept ;
     dh:cooccursWith keyword:multimediaangebote ;
+    skos:exactMatch wd:Q28549308 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fake- News"@de .
 
@@ -91345,11 +91357,13 @@ keyword:fernmeldewesen a skos:Concept ;
     skos:prefLabel "Fernmeldewesen"@de .
 
 keyword:internetgebrauch a skos:Concept ;
+    skos:exactMatch wd:Q75 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Internetgebrauch"@de .
 
 keyword:it-technik a skos:Concept ;
     dh:cooccursWith keyword:medientechnik ;
+    skos:exactMatch wd:Q1662611 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Technik"@de .
 
@@ -91360,26 +91374,29 @@ keyword:ki-nachwuchs-fachhochschulen a skos:Concept ;
 
 keyword:ki-optimierter a skos:Concept ;
     dh:cooccursWith keyword:drohne ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-optimierter"@de .
 
 keyword:kryptomodernisierung a skos:Concept ;
+    skos:exactMatch wd:Q8789 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Kryptomodernisierung"@de .
 
 keyword:ledger a skos:Concept ;
     dh:cooccursWith keyword:smart-contracts ;
-    skos:exactMatch wd:Q16871993 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Ledger"@de .
 
 keyword:online-bereich a skos:Concept ;
     dh:cooccursWith keyword:online ;
+    skos:exactMatch wd:Q73368 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Online-Bereich"@de .
 
 keyword:precision-farmings a skos:Concept ;
     dh:cooccursWith keyword:software ;
+    skos:exactMatch wd:Q740083 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Precision Farmings"@de .
 
@@ -91391,7 +91408,6 @@ keyword:satcombw a skos:Concept ;
 
 keyword:tawan a skos:Concept ;
     dh:cooccursWith keyword:network ;
-    skos:exactMatch wd:Q96653984 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TaWAN"@de .
 
@@ -91875,33 +91891,81 @@ titel:91453999165 a dh:Haushaltstitel ;
     schema:identifier "91453999165" ;
     schema:name "Bundesanstalt für Materialforschung und -prüfung  Vermischte Verwaltungsausgaben Erläuterungen: Bezeichnung 1 000 € 1..."@de .
 
+wd:Q1005821 rdfs:label "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit"@de,
+        "Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit"@de .
+
 wd:Q105443193 rdfs:label "Important Project of Common European Interest"@de .
+
+wd:Q1067529 rdfs:label "Telekommunikationsüberwachung"@de .
 
 wd:Q108366971 rdfs:label "Berlin Institute for the Foundations of Learning and Data"@de .
 
-wd:Q11661 rdfs:label "Informationstechnik"@de .
+wd:Q113470369 rdfs:label "data platform"@de .
 
-wd:Q116781 rdfs:label "Open Educational Resources"@de .
+wd:Q11381 rdfs:label "Local Area Network"@de .
 
-wd:Q1231558 rdfs:label "Smart City"@de .
+wd:Q1155318 rdfs:label "IT-Governance"@de .
 
-wd:Q158085 rdfs:label "Max-Planck-Gesellschaft"@de .
+wd:Q120499786 rdfs:label "Netzinfrastruktur"@de .
 
-wd:Q161057 rdfs:label "Fraunhofer-Gesellschaft"@de .
+wd:Q121197805 rdfs:label "Digitalstrategie Deutschland"@de .
 
-wd:Q1654942 rdfs:label "IT-Dienstleistung"@de .
+wd:Q121566744 rdfs:label "Datenquelle"@de .
+
+wd:Q1225037 rdfs:label "Digitalfunk"@de,
+        "Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben"@de .
+
+wd:Q1301371 rdfs:label "Rechnernetz"@de .
+
+wd:Q131463156 rdfs:label "Basisregister für Unternehmen"@de .
+
+wd:Q1363408 rdfs:label "5G"@de .
+
+wd:Q1413030 rdfs:label "Strukturierte Verkabelung"@de .
+
+wd:Q1481411 rdfs:label "IT-Service-Management"@de .
+
+wd:Q157332 rdfs:label "Deutsches Zentrum für Luft- und Raumfahrt"@de .
+
+wd:Q165194 rdfs:label "Programmierschnittstelle"@de .
+
+wd:Q1654951 rdfs:label "IT-Planungsrat"@de .
+
+wd:Q1665453 rdfs:label "Systemintegration"@de .
+
+wd:Q170519 rdfs:label "virtuelle Realität"@de .
 
 wd:Q1780543 rdfs:label "Kommunikationstechnik"@de .
 
-wd:Q179435 rdfs:label "Globales Navigationssatellitensystem"@de .
+wd:Q186165 rdfs:label "Webportal"@de .
+
+wd:Q1916441 rdfs:label "Medientechnik"@de .
 
 wd:Q1978927 rdfs:label "Netzpolitik"@de .
 
+wd:Q19835007 rdfs:label "autonomes Fahren"@de .
+
+wd:Q211017 rdfs:label "E-Government"@de .
+
 wd:Q219409 rdfs:label "Risikokapital"@de .
 
-wd:Q251212 rdfs:label "Internet der Dinge"@de .
+wd:Q23786362 rdfs:label "Informationstechnikzentrum Bund"@de .
+
+wd:Q238354 rdfs:label "Videokonferenz"@de .
+
+wd:Q2401720 rdfs:label "Telekommunikationsanlage"@de .
+
+wd:Q241317 rdfs:label "Plattform"@de .
+
+wd:Q2498397 rdfs:label "Unternehmensdaten"@de .
+
+wd:Q253405 rdfs:label "Vernetzung"@de .
+
+wd:Q2539 rdfs:label "maschinelles Lernen"@de .
 
 wd:Q269138 rdfs:label "Bundesnetzagentur"@de .
+
+wd:Q347066 rdfs:label "Echtzeit"@de .
 
 wd:Q3510521 rdfs:label "Computersicherheit"@de .
 
@@ -91909,21 +91973,63 @@ wd:Q35127 rdfs:label "Website"@de .
 
 wd:Q384093 rdfs:label "Stammdaten"@de .
 
-wd:Q418 rdfs:label "Telekommunikation"@de .
+wd:Q389772 rdfs:label "Datenübertragung"@de .
+
+wd:Q39162 rdfs:label "Open Source"@de .
+
+wd:Q4027615 rdfs:label "informatics"@de .
+
+wd:Q46994 rdfs:label "Telemedizin"@de .
+
+wd:Q484847 rdfs:label "elektronischer Handel"@de .
+
+wd:Q4929239 rdfs:label "Datenerhebung"@de .
+
+wd:Q5227278 rdfs:label "data-driven"@de .
+
+wd:Q5227304 rdfs:label "Dateninfrastruktur"@de .
+
+wd:Q57515336 rdfs:label "Datenspeicher"@de .
+
+wd:Q577764 rdfs:label "Kommunikationssystem"@de .
+
+wd:Q594593 rdfs:label "IT-Infrastruktur"@de .
 
 wd:Q627685 rdfs:label "Arbeitsgemeinschaft für wirtschaftliche Verwaltung"@de .
 
-wd:Q671224 rdfs:label "Rechenzentrum"@de .
+wd:Q64485073 rdfs:label "Deutsches Zentrum für Schienenverkehrsforschung"@de .
+
+wd:Q64739460 rdfs:label "Onlinezugangsgesetz"@de .
+
+wd:Q65280844 rdfs:label "elektronisches System"@de .
 
 wd:Q687308 rdfs:label "European Rail Traffic Management System"@de .
 
 wd:Q697111 rdfs:label "Forschungszentrum Jülich"@de .
 
+wd:Q73368 rdfs:label "online"@de .
+
+wd:Q7397 rdfs:label "Software"@de .
+
+wd:Q749647 rdfs:label "Interoperabilität"@de .
+
+wd:Q75 rdfs:label "Internet"@de .
+
+wd:Q787197 rdfs:label "Automatic Identification System"@de .
+
 wd:Q80993 rdfs:label "Softwaretechnik"@de .
 
 wd:Q829654 rdfs:label "Innovations for High Performance Microelectronics"@de .
 
-wd:Q842017 rdfs:label "Building Information Modeling"@de .
+wd:Q832436 rdfs:label "Funkmeldeempfänger"@de .
+
+wd:Q836610 rdfs:label "Signals Intelligence"@de .
+
+wd:Q839721 rdfs:label "Interaktivität"@de .
+
+wd:Q8789 rdfs:label "Kryptographie"@de .
+
+wd:Q992968 rdfs:label "Mobilfunk"@de .
 
 funktion:129 a skos:Concept ;
     skos:broader funktion:12 ;
@@ -92094,6 +92200,7 @@ keyword:bwi-informationstechnik a skos:Concept ;
 keyword:cyberangriffe a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:plattform ;
+    skos:exactMatch wd:Q4071928 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Cyberangriffe"@de .
 
@@ -92110,6 +92217,7 @@ keyword:datenleitung a skos:Concept ;
 
 keyword:digitalisierung-landbasierte-operationen a skos:Concept ;
     dh:cooccursWith keyword:d-lbo ;
+    skos:exactMatch wd:Q37726 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitalisierung landbasierte Operationen"@de .
 
@@ -92121,12 +92229,14 @@ keyword:dns a skos:Concept ;
     skos:prefLabel "DNS"@de .
 
 keyword:e-commerce-verbindungsstelle a skos:Concept ;
+    skos:exactMatch wd:Q484847 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "e-commerce-Verbindungsstelle"@de .
 
 keyword:e-rechnung a skos:Concept ;
     dh:cooccursWith keyword:adv-verfahrens,
         keyword:informationstechnik ;
+    skos:exactMatch wd:Q15806970 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "e-Rechnung"@de .
 
@@ -92143,6 +92253,7 @@ keyword:egasus a skos:Concept ;
 
 keyword:fernmeldeagentur a skos:Concept ;
     dh:cooccursWith keyword:fernmelde ;
+    skos:exactMatch wd:Q836610 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fernmeldeagentur"@de .
 
@@ -92173,6 +92284,7 @@ keyword:hamburg-wireless-competence a skos:Concept ;
 
 keyword:handfunkgeraete a skos:Concept ;
     dh:cooccursWith keyword:fernmeldeanlage ;
+    skos:exactMatch wd:Q832436 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Handfunkgeräte"@de .
 
@@ -92194,17 +92306,20 @@ keyword:internetauftritt a skos:Concept ;
 keyword:ki-gestuetzte-auswertetools a skos:Concept ;
     dh:cooccursWith keyword:drohne,
         keyword:grosse-datenmengen ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-gestützte Auswertetools"@de .
 
 keyword:rechenzentrumsverbund a skos:Concept ;
     dh:cooccursWith keyword:satellitenkommunikation ;
+    skos:exactMatch wd:Q671224 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Rechenzentrumsverbund"@de .
 
 keyword:rfid-technologie a skos:Concept ;
     dh:cooccursWith keyword:grosse-datenmengen,
         keyword:ki-gestuetzt ;
+    skos:exactMatch wd:Q104954 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "RFID-Technologie"@de .
 
@@ -92216,6 +92331,7 @@ keyword:roboter a skos:Concept ;
 
 keyword:strategische-it-steuerung a skos:Concept ;
     dh:cooccursWith keyword:digitalpolitik ;
+    skos:exactMatch wd:Q1155318 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Strategische IT-Steuerung"@de .
 
@@ -92228,12 +92344,14 @@ keyword:telefonnetz a skos:Concept ;
 
 keyword:telemedizinisch a skos:Concept ;
     dh:cooccursWith keyword:digital ;
+    skos:exactMatch wd:Q46994 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Telemedizinisch"@de .
 
 keyword:tk-komponenten a skos:Concept ;
     dh:cooccursWith keyword:festnetz,
         keyword:telefonnetz ;
+    skos:exactMatch wd:Q418 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TK-Komponenten"@de .
 
@@ -93160,9 +93278,35 @@ titel:91881222019 a dh:Haushaltstitel ;
     schema:identifier "91881222019" ;
     schema:name "[Bundesnetzagentur] für Elektrizität, Gas, {Telekommunikation}, Post und Eisenbahnen ({Bundesnetzagentur}) Durchführu..."@de .
 
-wd:Q11660 rdfs:label "künstliche Intelligenz"@de .
+wd:Q118385180 rdfs:label "Elektronisches Fachverfahren"@de .
+
+wd:Q1231558 rdfs:label "Smart City"@de .
+
+wd:Q15057100 rdfs:label "Breitband"@de,
+        "Breitband-Internetzugang"@de .
+
+wd:Q158085 rdfs:label "Max-Planck-Gesellschaft"@de .
+
+wd:Q161057 rdfs:label "Fraunhofer"@de,
+        "Fraunhofer-Gesellschaft"@de .
+
+wd:Q1662611 rdfs:label "informationstechnisches System"@de .
+
+wd:Q179435 rdfs:label "Globales Navigationssatellitensystem"@de .
+
+wd:Q251212 rdfs:label "Internet der Dinge"@de .
+
+wd:Q6661985 rdfs:label "Datenverarbeitung"@de .
+
+wd:Q671224 rdfs:label "Rechenzentrum"@de .
 
 wd:Q68 rdfs:label "Computer"@de .
+
+wd:Q842017 rdfs:label "Building Information Modeling"@de .
+
+wd:Q843958 rdfs:label "Digitalisieren"@de .
+
+wd:Q858810 rdfs:label "Big Data"@de .
 
 einzelplan:24 a schema:GovernmentOrganization ;
     rdfs:label "Bundesministerium für Digitales und Staatsmodernisierung"@de ;
@@ -93251,6 +93395,7 @@ keyword:auslands-it a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:software,
         keyword:vis-vo ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Auslands- IT"@de .
 
@@ -93265,15 +93410,18 @@ keyword:betriebssystem a skos:Concept ;
 keyword:breitbandbuero a skos:Concept ;
     dh:cooccursWith keyword:breitband,
         keyword:digitale-infrastruktur ;
+    skos:exactMatch wd:Q15057100 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Breitbandbüro"@de .
 
 keyword:cesoc a skos:Concept ;
     dh:cooccursWith keyword:computational ;
+    skos:exactMatch wd:Q5970330 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "CESOC"@de .
 
 keyword:datenbereitstellung a skos:Concept ;
+    skos:exactMatch wd:Q386824 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenbereitstellung"@de .
 
@@ -93286,6 +93434,7 @@ keyword:datenorientierte a skos:Concept ;
     dh:cooccursWith keyword:vernetzung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q5227278 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenorientierte"@de .
 
@@ -93305,6 +93454,7 @@ keyword:deutsche-meteorologisches-rechenzentrum a skos:Concept ;
     skos:prefLabel "Deutsche Meteorologisches Rechenzentrum"@de .
 
 keyword:digital-responsibility a skos:Concept ;
+    skos:exactMatch wd:Q60194168 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digital Responsibility"@de .
 
@@ -93312,6 +93462,7 @@ keyword:digitalinfrastrukturgesetz a skos:Concept ;
     dh:cooccursWith keyword:digital,
         keyword:digitale-infrastruktur,
         keyword:digitalpakt ;
+    skos:exactMatch wd:Q122946109 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitalinfrastrukturgesetz"@de .
 
@@ -93356,13 +93507,13 @@ keyword:gesundheitsportal a skos:Concept ;
 
 keyword:gigabitbuero a skos:Concept ;
     dh:cooccursWith keyword:digitale-infrastruktur ;
+    skos:exactMatch wd:Q1069084 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Gigabitbüro"@de .
 
 keyword:hsp a skos:Concept ;
     dh:cooccursWith keyword:hochschulpakt,
         keyword:zukunftsvertrag-studium-und-lehre ;
-    skos:exactMatch wd:Q657516 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "HSP"@de .
 
@@ -93383,6 +93534,7 @@ keyword:it-architektur a skos:Concept ;
 keyword:it-ausstattung a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q3966 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Ausstattung"@de .
 
@@ -93390,6 +93542,7 @@ keyword:it-basis a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:it-rahmenkonzept,
         keyword:software ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Basis"@de .
 
@@ -93408,6 +93561,7 @@ keyword:it-rahmenkonzept a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:it-basis,
         keyword:software ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Rahmenkonzept"@de .
 
@@ -93421,6 +93575,7 @@ keyword:mein-bildungsraum a skos:Concept ;
 keyword:mobilfunkausbau a skos:Concept ;
     dh:cooccursWith keyword:digitale-infrastruktur,
         keyword:sondervermoegen-infrastruktur ;
+    skos:exactMatch wd:Q992968 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Mobilfunkausbau"@de .
 
@@ -93435,6 +93590,7 @@ keyword:netzwerkanalyse a skos:Concept ;
 keyword:professur-fuer-kuenstliche-intelligenz a skos:Concept ;
     dh:cooccursWith keyword:digitalisierung,
         keyword:mpg ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Professur für künstliche Intelligenz"@de .
 
@@ -93447,6 +93603,7 @@ keyword:telemedizin a skos:Concept ;
     skos:prefLabel "Telemedizin"@de .
 
 keyword:virtuelle-rekonstruktion a skos:Concept ;
+    skos:exactMatch wd:Q170519 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "virtuelle Rekonstruktion"@de .
 
@@ -93454,6 +93611,7 @@ keyword:vis-vo a skos:Concept ;
     dh:cooccursWith keyword:auslands-it,
         keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q1605915 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "VIS-VO"@de .
 
@@ -94542,6 +94700,12 @@ titel:91868101051 a dh:Haushaltstitel ;
     schema:identifier "91868101051" ;
     schema:name "[Bundesnetzagentur] für Elektrizität, Gas, {Telekommunikation}, Post und Eisenbahnen ({Bundesnetzagentur})  Entschädi..."@de .
 
+wd:Q124472412 rdfs:label "Geodaten"@de .
+
+wd:Q184199 rdfs:label "Automatisierung"@de .
+
+wd:Q3966 rdfs:label "Hardware"@de .
+
 funktion:18 a skos:Concept ;
     skos:broader funktion:1 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/funktionenplan> ;
@@ -94698,6 +94862,7 @@ kapitel:617 a skos:Concept ;
     skos:prefLabel "Bundesinstitut für Bevölkerungsforschung"@de .
 
 keyword:abbiegeassistenzsysteme a skos:Concept ;
+    skos:exactMatch wd:Q19835007 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Abbiegeassistenzsysteme"@de .
 
@@ -94706,10 +94871,12 @@ keyword:basisdienste a skos:Concept ;
         keyword:elektronische-gesundheitsakte,
         keyword:informationstechnik,
         keyword:it-unterstuetzung ;
+    skos:exactMatch wd:Q1431598 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Basisdienste"@de .
 
 keyword:datenerhebungsprogramm a skos:Concept ;
+    skos:exactMatch wd:Q16331069 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenerhebungsprogramm"@de .
 
@@ -94721,13 +94888,13 @@ keyword:datengesetz a skos:Concept ;
 keyword:datenplattform a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q113470369 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenplattform"@de .
 
 keyword:dati a skos:Concept ;
     dh:cooccursWith keyword:vernetzung,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q109674791 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "DATI"@de .
 
@@ -94746,6 +94913,7 @@ keyword:digitale-rentenuebersicht a skos:Concept ;
     skos:prefLabel "Digitale Rentenübersicht"@de .
 
 keyword:digitale-strategien a skos:Concept ;
+    skos:exactMatch wd:Q121197805 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitale Strategien"@de .
 
@@ -94754,7 +94922,6 @@ keyword:dma a skos:Concept ;
         keyword:max-planck,
         keyword:max-planck-gesellschaft,
         keyword:mpg ;
-    skos:exactMatch wd:Q784 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "DMA"@de .
 
@@ -94763,11 +94930,13 @@ keyword:echtzeitanalysator a skos:Concept ;
         keyword:funkmessstelle,
         keyword:hardware,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q115766617 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Echtzeitanalysator"@de .
 
 keyword:echtzeitdienste a skos:Concept ;
     dh:cooccursWith keyword:echtzeit ;
+    skos:exactMatch wd:Q347066 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Echtzeitdienste"@de .
 
@@ -94790,6 +94959,7 @@ keyword:endgeraete a skos:Concept ;
     dh:cooccursWith keyword:internet,
         keyword:server,
         keyword:soziale-medien ;
+    skos:exactMatch wd:Q1183543 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Endgeräte"@de .
 
@@ -94797,7 +94967,6 @@ keyword:epa a skos:Concept ;
     dh:cooccursWith keyword:digital,
         keyword:vernetz,
         keyword:vernetzung ;
-    skos:exactMatch wd:Q3244038 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "EPA"@de .
 
@@ -94829,11 +94998,13 @@ keyword:funkmessstelle a skos:Concept ;
         keyword:echtzeitanalysator,
         keyword:hardware,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q19280069 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Funkmessstelle"@de .
 
 keyword:gelaendedaten a skos:Concept ;
     dh:cooccursWith keyword:geoinfo-daten ;
+    skos:exactMatch wd:Q124472412 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Geländedaten"@de .
 
@@ -94861,7 +95032,6 @@ keyword:hochschulpakt a skos:Concept ;
     skos:prefLabel "Hochschulpakt"@de .
 
 keyword:igf a skos:Concept ;
-    skos:exactMatch wd:Q1047626 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IGF"@de .
 
@@ -94870,6 +95040,7 @@ keyword:informationsraum a skos:Concept ;
         keyword:digitalisierung,
         keyword:it-betrieb,
         keyword:kommunikationssystem ;
+    skos:exactMatch wd:Q28381792 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Informationsraum"@de .
 
@@ -94878,6 +95049,7 @@ keyword:intelligente-staedte a skos:Concept ;
         keyword:driving,
         keyword:reallabor,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1231558 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "intelligente Städte"@de .
 
@@ -94886,6 +95058,7 @@ keyword:it-unterstuetzung a skos:Concept ;
         keyword:digitalisierung,
         keyword:elektronische-gesundheitsakte,
         keyword:informationstechnik ;
+    skos:exactMatch wd:Q42882637 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Unterstützung"@de .
 
@@ -94900,6 +95073,7 @@ keyword:meldeportal a skos:Concept ;
     skos:prefLabel "Meldeportal"@de .
 
 keyword:militaerische-abschirmdienst a skos:Concept ;
+    skos:exactMatch wd:Q480220 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Militärische Abschirmdienst"@de .
 
@@ -94911,7 +95085,6 @@ keyword:nato-communications-and-information-agency a skos:Concept ;
 
 keyword:ncia a skos:Concept ;
     dh:cooccursWith keyword:nato-communications-and-information-agency ;
-    skos:exactMatch wd:Q30282083 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "NCIA"@de .
 
@@ -94939,6 +95112,7 @@ keyword:netzwerkmanagement a skos:Concept ;
 keyword:pc-arbeitsplaetze a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q16338 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "PC-Arbeitsplätze"@de .
 
@@ -94951,7 +95125,6 @@ keyword:radio-field-monitoring-and-analysis a skos:Concept ;
 keyword:ramona a skos:Concept ;
     dh:cooccursWith keyword:funkfeldueberwachungssystem,
         keyword:radio-field-monitoring-and-analysis ;
-    skos:exactMatch wd:Q2130276 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "RAMONA"@de .
 
@@ -94988,6 +95161,7 @@ keyword:tkue-tmc-erweiterung a skos:Concept ;
         keyword:breitbandiger,
         keyword:bundesnetzagentur,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q1067529 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TKÜ-TMC-Erweiterung"@de .
 
@@ -101219,6 +101393,8 @@ titel:91898201890 a dh:Haushaltstitel ;
     schema:identifier "91898201890" ;
     schema:name "[Bundesnetzagentur] für Elektrizität, Gas, {Telekommunikation}, Post und Eisenbahnen ({Bundesnetzagentur})  Erstattun..."@de .
 
+wd:Q2081419 rdfs:label "Quantentechnologie"@de .
+
 funktion:114 a skos:Concept ;
     skos:broader funktion:11 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/funktionenplan> ;
@@ -101405,6 +101581,7 @@ kapitel:610 a skos:Concept ;
 
 keyword:5x5g-strategie a skos:Concept ;
     dh:cooccursWith keyword:digitale-infrastruktur ;
+    skos:exactMatch wd:Q1363408 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "5x5G-Strategie"@de .
 
@@ -101428,6 +101605,7 @@ keyword:automatisierte a skos:Concept ;
     dh:cooccursWith keyword:automatis,
         keyword:automatisierung,
         keyword:digital ;
+    skos:exactMatch wd:Q184199 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Automatisierte"@de .
 
@@ -101458,6 +101636,7 @@ keyword:blockchain-technologien a skos:Concept ;
 
 keyword:booking-engine a skos:Concept ;
     dh:cooccursWith keyword:online ;
+    skos:exactMatch wd:Q1668023 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Booking Engine"@de .
 
@@ -101467,7 +101646,6 @@ keyword:cih a skos:Concept ;
         keyword:herkules-folgeprojekt,
         keyword:informationstechnik,
         keyword:kommunikationssystem ;
-    skos:exactMatch wd:Q17334923 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "CIH"@de .
 
@@ -101506,6 +101684,7 @@ keyword:cyber-innovation-hub a skos:Concept ;
         keyword:herkules-folgeprojekt,
         keyword:informationstechnik,
         keyword:kommunikationssystem ;
+    skos:exactMatch wd:Q109380216 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Cyber Innovation Hub"@de .
 
@@ -101518,6 +101697,7 @@ keyword:datenankauf a skos:Concept ;
 
 keyword:datenschutz-und-die-informationsfreiheit a skos:Concept ;
     dh:cooccursWith keyword:datenschutz ;
+    skos:exactMatch wd:Q1005821 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenschutz und die Informationsfreiheit"@de .
 
@@ -101527,6 +101707,7 @@ keyword:datentransfer a skos:Concept ;
         keyword:funkspektrum,
         keyword:software,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q389772 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datentransfer"@de .
 
@@ -101580,23 +101761,25 @@ keyword:funktechnik a skos:Concept ;
 
 keyword:geoinfo-daten a skos:Concept ;
     dh:cooccursWith keyword:gelaendedaten ;
+    skos:exactMatch wd:Q124472412 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "GeoInfo-Daten"@de .
 
 keyword:it-leistungen a skos:Concept ;
     dh:cooccursWith keyword:digital,
         keyword:informationstechnik ;
+    skos:exactMatch wd:Q1654942 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Leistungen"@de .
 
 keyword:iuk-systems a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik ;
+    skos:exactMatch wd:Q13407144 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IuK-Systems"@de .
 
 keyword:konsens a skos:Concept ;
     dh:cooccursWith keyword:software ;
-    skos:exactMatch wd:Q106403488 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KONSENS"@de .
 
@@ -101606,6 +101789,7 @@ keyword:mailsystem a skos:Concept ;
         keyword:it-sicherheit,
         keyword:netzwerkkomponente,
         keyword:software ;
+    skos:exactMatch wd:Q28601953 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Mailsystem"@de .
 
@@ -101617,6 +101801,7 @@ keyword:mint-foerderrichtlinie a skos:Concept ;
 keyword:modellierungsdienst a skos:Concept ;
     dh:cooccursWith keyword:datenportal,
         keyword:informationssystem ;
+    skos:exactMatch wd:Q11121294 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Modellierungsdienst"@de .
 
@@ -101640,6 +101825,7 @@ keyword:netzwerkkomponente a skos:Concept ;
 keyword:nutzung-von-datenplattformen a skos:Concept ;
     dh:cooccursWith keyword:digitalisierung,
         keyword:smart-cities ;
+    skos:exactMatch wd:Q113470369 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Nutzung von Datenplattformen"@de .
 
@@ -101655,6 +101841,7 @@ keyword:once-only a skos:Concept ;
         keyword:it,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
+    skos:exactMatch wd:Q51069963 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Once-Only"@de .
 
@@ -101673,6 +101860,12 @@ keyword:zukunftsvertrag-studium-und-lehre a skos:Concept ;
         keyword:hsp ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Zukunftsvertrag Studium und Lehre"@de .
+
+wd:Q1190465 rdfs:label "Hochleistungsrechnen"@de .
+
+wd:Q1654942 rdfs:label "IT-Dienstleistung"@de .
+
+wd:Q418 rdfs:label "Telekommunikation"@de .
 
 funktion:2 a skos:Concept ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/funktionenplan> ;
@@ -101764,6 +101957,7 @@ keyword:big-data-analytik a skos:Concept ;
         keyword:datenbank,
         keyword:natural-language-processing,
         keyword:software ;
+    skos:exactMatch wd:Q858810 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Big Data Analytik"@de .
 
@@ -101787,7 +101981,6 @@ keyword:demis a skos:Concept ;
     dh:cooccursWith keyword:digital,
         keyword:elektronisch,
         keyword:melde-und-informationssystems ;
-    skos:exactMatch wd:Q104860899 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "DEMIS"@de .
 
@@ -101802,6 +101995,7 @@ keyword:eumetsat-daten a skos:Concept ;
     dh:cooccursWith keyword:data-relay,
         keyword:datenankauf,
         keyword:observation-system ;
+    skos:exactMatch wd:Q692163 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "EUMETSAT-Daten"@de .
 
@@ -101817,6 +102011,7 @@ keyword:forlab a skos:Concept ;
 keyword:funksystem a skos:Concept ;
     dh:cooccursWith keyword:digitale-infrastruktur,
         keyword:gsm-r ;
+    skos:exactMatch wd:Q11375 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Funksystem"@de .
 
@@ -101834,6 +102029,7 @@ keyword:grosse-datenmengen a skos:Concept ;
         keyword:ki-gestuetzt,
         keyword:ki-gestuetzte-auswertetools,
         keyword:rfid-technologie ;
+    skos:exactMatch wd:Q6661985 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "große Datenmengen"@de .
 
@@ -101854,12 +102050,14 @@ keyword:herkules-folgeprojektes a skos:Concept ;
 keyword:hochleistungsrechn a skos:Concept ;
     dh:cooccursWith keyword:datenbank,
         keyword:hoechstleistungsrechn ;
+    skos:exactMatch wd:Q1190465 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Hochleistungsrechn"@de .
 
 keyword:it-kommunikation a skos:Concept ;
     dh:cooccursWith keyword:it-geschaeftsbedarf,
         keyword:software ;
+    skos:exactMatch wd:Q594593 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Kommunikation"@de .
 
@@ -101869,6 +102067,7 @@ keyword:ki-ideenwerkstaetten a skos:Concept ;
         keyword:kuenstliche-intelligenz,
         keyword:ressourceneffiziente-ki,
         keyword:strategie-kuenstliche-intelligenz ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Ideenwerkstätten"@de .
 
@@ -101877,6 +102076,7 @@ keyword:medientechnische-anlagen a skos:Concept ;
         keyword:hard-und-software,
         keyword:telefontechnik,
         keyword:videokonferenz ;
+    skos:exactMatch wd:Q1916441 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "medientechnische Anlagen"@de .
 
@@ -101900,6 +102100,7 @@ keyword:miteinander-durch-innovation a skos:Concept ;
 keyword:multimediaangebote a skos:Concept ;
     dh:cooccursWith keyword:digital,
         keyword:fake-news ;
+    skos:exactMatch wd:Q131765 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Multimediaangebote"@de .
 
@@ -101942,6 +102143,7 @@ keyword:telefontechnik a skos:Concept ;
         keyword:hard-und-software,
         keyword:medientechnische-anlagen,
         keyword:videokonferenz ;
+    skos:exactMatch wd:Q418 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Telefontechnik"@de .
 
@@ -101968,6 +102170,7 @@ keyword:weltraumgestuetzte a skos:Concept ;
         keyword:hightech-strategie,
         keyword:kuenstliche-intelligenz,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q2226016 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Weltraumgestützte"@de .
 
@@ -102089,12 +102292,14 @@ keyword:data-facility a skos:Concept ;
         keyword:max-planck,
         keyword:max-planck-gesellschaft,
         keyword:mpg ;
+    skos:exactMatch wd:Q28871075 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Data Facility"@de .
 
 keyword:datenakzelerator a skos:Concept ;
     dh:cooccursWith keyword:digitalisierung,
         keyword:kuenstliche-intelligenz ;
+    skos:exactMatch wd:Q155271 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenakzelerator"@de .
 
@@ -102120,10 +102325,12 @@ keyword:elektronische-portals a skos:Concept ;
         keyword:digitale-infrastruktur,
         keyword:mobilfunk,
         keyword:mobilfunkinfrastrukturgesellschaft ;
+    skos:exactMatch wd:Q186165 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "elektronische Portals"@de .
 
 keyword:fernmeldegeraet a skos:Concept ;
+    skos:exactMatch wd:Q832436 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fernmeldegerät"@de .
 
@@ -102146,6 +102353,7 @@ keyword:i-kfz a skos:Concept ;
     dh:cooccursWith keyword:fahrzeugdaten,
         keyword:internet,
         keyword:internetbasierte ;
+    skos:exactMatch wd:Q136779172 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "i-Kfz"@de .
 
@@ -102164,6 +102372,7 @@ keyword:identitaetsoekosystem a skos:Concept ;
         keyword:it,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
+    skos:exactMatch wd:Q977772 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Identitätsökosystem"@de .
 
@@ -102181,6 +102390,7 @@ keyword:internetbasierte a skos:Concept ;
     dh:cooccursWith keyword:fahrzeugdaten,
         keyword:i-kfz,
         keyword:internet ;
+    skos:exactMatch wd:Q58327688 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Internetbasierte"@de .
 
@@ -102188,6 +102398,7 @@ keyword:it-geraete a skos:Concept ;
     dh:cooccursWith keyword:datenverarbeitungsanlage,
         keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q3966 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Geräte"@de .
 
@@ -102199,6 +102410,7 @@ keyword:it-komponenten a skos:Concept ;
         keyword:new-radio,
         keyword:software,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q110401739 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Komponenten"@de .
 
@@ -102208,6 +102420,7 @@ keyword:ki-forschung a skos:Concept ;
         keyword:ki-servicezentr,
         keyword:kuenstliche-intelligenz,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Forschung"@de .
 
@@ -102217,6 +102430,7 @@ keyword:ki-servicezentr a skos:Concept ;
         keyword:ki-forschung,
         keyword:kuenstliche-intelligenz,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q130279460 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Servicezentr"@de .
 
@@ -102227,6 +102441,7 @@ keyword:ki-unterstuetzter a skos:Concept ;
         keyword:invite,
         keyword:plattform,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-unterstützter"@de .
 
@@ -102238,6 +102453,7 @@ keyword:lan a skos:Concept ;
         keyword:tkue,
         keyword:tkue-technik,
         keyword:voip ;
+    skos:exactMatch wd:Q11381 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "LAN"@de .
 
@@ -102247,6 +102463,7 @@ keyword:lan-anlagen a skos:Concept ;
         keyword:medientechnik,
         keyword:telekommunikation,
         keyword:tk ;
+    skos:exactMatch wd:Q11381 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "LAN-Anlagen"@de .
 
@@ -102258,6 +102475,7 @@ keyword:mensch-technik-interaktion a skos:Concept ;
         keyword:robotik,
         keyword:start-up,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q47146 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Mensch-Technik-Interaktion"@de .
 
@@ -102315,7 +102533,6 @@ keyword:next a skos:Concept ;
         keyword:it,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
-    skos:exactMatch wd:Q308993 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "NExT"@de .
 
@@ -102397,6 +102614,7 @@ keyword:tk a skos:Concept ;
         keyword:lan-anlagen,
         keyword:medientechnik,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q418 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TK/"@de .
 
@@ -102408,6 +102626,7 @@ keyword:tkue-anlagen a skos:Concept ;
         keyword:tk-anlagen,
         keyword:tkue,
         keyword:voip ;
+    skos:exactMatch wd:Q1067529 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TKÜ-Anlagen"@de .
 
@@ -102488,6 +102707,7 @@ keyword:berufsbildung-4-0 a skos:Concept ;
         keyword:digital,
         keyword:digitalisierte,
         keyword:nationale-weiterbildungsstrategie ;
+    skos:exactMatch wd:Q126346776 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Berufsbildung 4.0"@de .
 
@@ -102509,7 +102729,6 @@ keyword:bisp a skos:Concept ;
         keyword:it,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
-    skos:exactMatch wd:Q55229875 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "BISP"@de .
 
@@ -102522,6 +102741,7 @@ keyword:bug-bounty a skos:Concept ;
         keyword:sprind,
         keyword:sprunginnovation,
         keyword:stf ;
+    skos:exactMatch wd:Q16848759 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Bug-Bounty"@de .
 
@@ -102530,7 +102750,6 @@ keyword:bwi a skos:Concept ;
         keyword:bwi-informationstechnik,
         keyword:herkules-folgeprojektes,
         keyword:informationstechnik ;
-    skos:exactMatch wd:Q94895 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "BWI"@de .
 
@@ -102543,6 +102762,7 @@ keyword:cyberresilienz a skos:Concept ;
         keyword:it,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
+    skos:exactMatch wd:Q118945294 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Cyberresilienz"@de .
 
@@ -102581,6 +102801,7 @@ keyword:datenaufzeichnung a skos:Concept ;
         keyword:stammdaten,
         keyword:vernetzte-systeme,
         keyword:vis ;
+    skos:exactMatch wd:Q337445 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenaufzeichnung"@de .
 
@@ -102593,6 +102814,7 @@ keyword:datenhaltung a skos:Concept ;
         keyword:software,
         keyword:wan,
         keyword:web-kompetenzzentrum ;
+    skos:exactMatch wd:Q57515336 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenhaltung"@de .
 
@@ -102623,6 +102845,7 @@ keyword:deutsche-zentrum-mobilitaet-der-zukunft a skos:Concept ;
     dh:cooccursWith keyword:hamburg-wireless-competence,
         keyword:smart-rail-connectivity-campus,
         keyword:wireless-competence ;
+    skos:exactMatch wd:Q104603362 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Deutsche Zentrum Mobilität der Zukunft"@de .
 
@@ -102631,7 +102854,6 @@ keyword:dialog a skos:Concept ;
         keyword:interaction,
         keyword:online,
         keyword:plattform ;
-    skos:exactMatch wd:Q131395 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "DIALOG"@de .
 
@@ -102657,7 +102879,6 @@ keyword:dvc a skos:Concept ;
         keyword:moderne-verwaltung,
         keyword:netzpolitik,
         keyword:zendis ;
-    skos:exactMatch wd:Q5270173 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "DVC"@de .
 
@@ -102666,7 +102887,6 @@ keyword:ega a skos:Concept ;
         keyword:center-for-intelligence-and-security-studies,
         keyword:interoperabilitaet,
         keyword:polizei-2020 ;
-    skos:exactMatch wd:Q14941772 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "EGA"@de .
 
@@ -102718,6 +102938,7 @@ keyword:fahrplandaten a skos:Concept ;
         keyword:elektronische-buchung,
         keyword:plattform,
         keyword:schnittstelle ;
+    skos:exactMatch wd:Q294362 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fahrplandaten"@de .
 
@@ -102791,6 +103012,7 @@ keyword:ki-innovationen a skos:Concept ;
         keyword:ki-anwend,
         keyword:modellierung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Innovationen"@de .
 
@@ -102799,6 +103021,7 @@ keyword:netzwerkinfrastruktur a skos:Concept ;
         keyword:reallabor,
         keyword:sprind,
         keyword:sprunginnovation ;
+    skos:exactMatch wd:Q120499786 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Netzwerkinfrastruktur"@de .
 
@@ -102823,6 +103046,7 @@ keyword:positionsdaten a skos:Concept ;
         keyword:satellit,
         keyword:vernetz,
         keyword:verschluesselte ;
+    skos:exactMatch wd:Q60474237 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Positionsdaten"@de .
 
@@ -102832,6 +103056,7 @@ keyword:ressourceneffiziente-ki a skos:Concept ;
         keyword:ki-ideenwerkstaetten,
         keyword:kuenstliche-intelligenz,
         keyword:strategie-kuenstliche-intelligenz ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Ressourceneffiziente KI"@de .
 
@@ -102844,7 +103069,6 @@ keyword:saspf a skos:Concept ;
         keyword:stammdaten,
         keyword:vernetzte-systeme,
         keyword:vis ;
-    skos:exactMatch wd:Q2205026 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "SASPF"@de .
 
@@ -102920,6 +103144,7 @@ keyword:cospas-sarsat a skos:Concept ;
         keyword:itu,
         keyword:observing-system,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q605177 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "COSPAS/SARSAT"@de .
 
@@ -102939,7 +103164,6 @@ keyword:eucaris a skos:Concept ;
         keyword:driving,
         keyword:informationssystem,
         keyword:online ;
-    skos:exactMatch wd:Q5324529 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "EUCARIS"@de .
 
@@ -102962,6 +103186,7 @@ keyword:gesundheitsdatenbank a skos:Concept ;
         keyword:echtzeitdaten,
         keyword:ki-gestuetzt,
         keyword:sensornetzwerk ;
+    skos:exactMatch wd:Q18745135 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Gesundheitsdatenbank"@de .
 
@@ -102984,6 +103209,7 @@ keyword:hoechstleistungsrechnen a skos:Concept ;
         keyword:mikroelektronik,
         keyword:supercomputing,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1190465 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Höchstleistungsrechnen"@de .
 
@@ -103006,6 +103232,7 @@ keyword:ikt-auftraege a skos:Concept ;
         keyword:digitalisierung,
         keyword:informationstechnik,
         keyword:plattform ;
+    skos:exactMatch wd:Q1654942 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IKT-Aufträge"@de .
 
@@ -103070,6 +103297,7 @@ keyword:it-betrieb a skos:Concept ;
         keyword:informationstechnikzentrum,
         keyword:kommunikationssystem,
         keyword:software ;
+    skos:exactMatch wd:Q1654942 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Betrieb"@de .
 
@@ -103082,6 +103310,7 @@ keyword:itzb a skos:Concept ;
         keyword:tk-anlagen,
         keyword:tkue,
         keyword:voip ;
+    skos:exactMatch wd:Q23786362 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ITZB"@de .
 
@@ -103091,6 +103320,7 @@ keyword:kabelinfrastruktur a skos:Concept ;
         keyword:informationsfunk,
         keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q1413030 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Kabelinfrastruktur"@de .
 
@@ -103103,6 +103333,7 @@ keyword:kommunikationstechnik a skos:Concept ;
 
 keyword:normenkontrollrat a skos:Concept ;
     dh:cooccursWith keyword:digitalrat ;
+    skos:exactMatch wd:Q1968237 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Normenkontrollrat"@de .
 
@@ -103115,7 +103346,6 @@ keyword:skala a skos:Concept ;
         keyword:kuenstliche-intelligenz,
         keyword:omei,
         keyword:skalierbare ;
-    skos:exactMatch wd:Q12802776 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "SKALA"@de .
 
@@ -103126,6 +103356,7 @@ keyword:sondervermoegen-infrastruktur a skos:Concept ;
         keyword:european-rail-traffic-management-system,
         keyword:fernmelde,
         keyword:mobilfunkausbau ;
+    skos:exactMatch wd:Q1385171 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Sondervermögen Infrastruktur"@de .
 
@@ -103137,6 +103368,7 @@ keyword:ubregg a skos:Concept ;
         keyword:unternehmensbasisdatenregistergesetz,
         keyword:unternehmensstammdaten,
         keyword:vernetzt ;
+    skos:exactMatch wd:Q131463156 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "UBRegG"@de .
 
@@ -103148,6 +103380,7 @@ keyword:unternehmensbasisdaten a skos:Concept ;
         keyword:unternehmensbasisdatenregistergesetz,
         keyword:unternehmensstammdaten,
         keyword:vernetzt ;
+    skos:exactMatch wd:Q131463156 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Unternehmensbasisdaten"@de .
 
@@ -103159,6 +103392,7 @@ keyword:unternehmensbasisdatenregistergesetz a skos:Concept ;
         keyword:unternehmensbasisdaten,
         keyword:unternehmensstammdaten,
         keyword:vernetzt ;
+    skos:exactMatch wd:Q2498397 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Unternehmensbasisdatenregistergesetz"@de .
 
@@ -103170,6 +103404,7 @@ keyword:unternehmensstammdaten a skos:Concept ;
         keyword:unternehmensbasisdaten,
         keyword:unternehmensbasisdatenregistergesetz,
         keyword:vernetzt ;
+    skos:exactMatch wd:Q2498397 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Unternehmensstammdaten"@de .
 
@@ -103271,7 +103506,6 @@ keyword:beki a skos:Concept ;
         keyword:moderne-verwaltung,
         keyword:netzpolitik,
         keyword:open-data ;
-    skos:exactMatch wd:Q336286 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "BeKI"@de .
 
@@ -103285,6 +103519,7 @@ keyword:breitbandiger a skos:Concept ;
         keyword:software,
         keyword:telekommunikation,
         keyword:tkue-tmc-erweiterung ;
+    skos:exactMatch wd:Q15057100 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Breitbandiger"@de .
 
@@ -103298,6 +103533,7 @@ keyword:bug-resilience a skos:Concept ;
         keyword:sprind,
         keyword:sprunginnovation,
         keyword:stf ;
+    skos:exactMatch wd:Q179550 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Bug-Resilience"@de .
 
@@ -103308,7 +103544,6 @@ keyword:data-bank a skos:Concept ;
         keyword:fernmelde,
         keyword:itu,
         keyword:telekommunikation ;
-    skos:exactMatch wd:Q5048912 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Data Bank"@de .
 
@@ -103336,11 +103571,13 @@ keyword:digitalthemen a skos:Concept ;
 
 keyword:druckereigeraet a skos:Concept ;
     dh:cooccursWith keyword:bueromaschine ;
+    skos:exactMatch wd:Q82 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Druckereigerät"@de .
 
 keyword:fernmeldeeinrichtung a skos:Concept ;
     dh:cooccursWith keyword:funkeinrichtung ;
+    skos:exactMatch wd:Q2401720 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fernmeldeeinrichtung"@de .
 
@@ -103386,6 +103623,7 @@ keyword:it-ausgaben a skos:Concept ;
         keyword:internet,
         keyword:ozg,
         keyword:software ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Ausgaben"@de .
 
@@ -103407,6 +103645,7 @@ keyword:it-erwerb a skos:Concept ;
         keyword:fernmeldeleitung,
         keyword:it-geschaeftsbedarf,
         keyword:simulation ;
+    skos:exactMatch wd:Q829492 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Erwerb"@de .
 
@@ -103419,7 +103658,6 @@ keyword:mf a skos:Concept ;
         keyword:plattform,
         keyword:smart-contracts,
         keyword:vernetz ;
-    skos:exactMatch wd:Q193592 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "MF"@de .
 
@@ -103427,6 +103665,7 @@ keyword:netztechnologie a skos:Concept ;
     dh:cooccursWith keyword:digitale-infrastruktur,
         keyword:kommunikationstechnologie,
         keyword:software ;
+    skos:exactMatch wd:Q1301371 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Netztechnologie"@de .
 
@@ -103439,10 +103678,12 @@ keyword:netzwerksysteme a skos:Concept ;
         keyword:mobile-arbeit,
         keyword:server,
         keyword:software ;
+    skos:exactMatch wd:Q1301371 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Netzwerksysteme"@de .
 
 keyword:online-abwicklung a skos:Concept ;
+    skos:exactMatch wd:Q19967801 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Online-Abwicklung"@de .
 
@@ -103466,6 +103707,7 @@ keyword:ressort-cio a skos:Concept ;
         keyword:it-steuerung,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
+    skos:exactMatch wd:Q2589465 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Ressort-CIO"@de .
 
@@ -103509,7 +103751,6 @@ keyword:visp a skos:Concept ;
         keyword:satellit,
         keyword:satellitennavigation,
         keyword:schluesseltechnologie ;
-    skos:exactMatch wd:Q64147 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "VISP"@de .
 
@@ -103537,6 +103778,8 @@ keyword:zendis a skos:Concept ;
     skos:exactMatch wd:Q130385289 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ZenDiS"@de .
+
+wd:Q11661 rdfs:label "Informationstechnik"@de .
 
 gruppe:671 a skos:Concept ;
     skos:broader gruppe:67 ;
@@ -103583,6 +103826,7 @@ keyword:baustelleninformationssystem a skos:Concept ;
         keyword:information-modeling,
         keyword:informationssystem,
         keyword:viewer ;
+    skos:exactMatch wd:Q118385180 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Baustelleninformationssystem"@de .
 
@@ -103661,6 +103905,7 @@ keyword:daten-marktplatz a skos:Concept ;
         keyword:information-modeling,
         keyword:informationssystem,
         keyword:viewer ;
+    skos:exactMatch wd:Q1172474 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Daten-Marktplatz"@de .
 
@@ -103674,6 +103919,7 @@ keyword:daten-zum-nutzen a skos:Concept ;
         keyword:open-source,
         keyword:plattform,
         keyword:skalierbare ;
+    skos:exactMatch wd:Q42848 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Daten zum Nutzen"@de .
 
@@ -103688,6 +103934,7 @@ keyword:datenprovider a skos:Concept ;
         keyword:gnss,
         keyword:satellit,
         keyword:verkehrsdaten ;
+    skos:exactMatch wd:Q122625839 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenprovider"@de .
 
@@ -103700,6 +103947,7 @@ keyword:digital-health a skos:Concept ;
         keyword:robotik,
         keyword:start-up,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q5276090 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digital-Health"@de .
 
@@ -103726,6 +103974,7 @@ keyword:ferdinand-braun-institut a skos:Concept ;
         keyword:schloss-dagstuhl-leibniz-zentrum-fuer-informatik,
         keyword:tib,
         keyword:wgl ;
+    skos:exactMatch wd:Q1405041 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Ferdinand-Braun-Institut"@de .
 
@@ -103740,7 +103989,6 @@ keyword:fiz a skos:Concept ;
         keyword:schloss-dagstuhl-leibniz-zentrum-fuer-informatik,
         keyword:tib,
         keyword:wgl ;
-    skos:exactMatch wd:Q111356373 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "FIZ"@de .
 
@@ -103754,6 +104002,7 @@ keyword:gebaeudedaten a skos:Concept ;
         keyword:geodatenvermittlung,
         keyword:gnss,
         keyword:satellit ;
+    skos:exactMatch wd:Q842017 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Gebäudedaten"@de .
 
@@ -103796,6 +104045,7 @@ keyword:interaktive-technologien a skos:Concept ;
         keyword:robotik,
         keyword:start-up,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q839721 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Interaktive Technologien"@de .
 
@@ -103811,6 +104061,7 @@ keyword:ki-readiness a skos:Concept ;
         keyword:kuenstliche-intelligenz,
         keyword:mittelstand-digital,
         keyword:start-up ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Readiness"@de .
 
@@ -103825,6 +104076,7 @@ keyword:ki-systeme a skos:Concept ;
         keyword:software,
         keyword:vernetz,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Systeme"@de .
 
@@ -103899,6 +104151,7 @@ keyword:raumfahrtprogramm-fuer-innovation-und-internationale-kooperation a skos:
         keyword:sensor,
         keyword:software,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q60054001 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Raumfahrtprogramm für Innovation und internationale Kooperation"@de .
 
@@ -103913,6 +104166,7 @@ keyword:schloss-dagstuhl-leibniz-zentrum-fuer-informatik a skos:Concept ;
         keyword:leibniz-institut-fuer-wissensmedien,
         keyword:tib,
         keyword:wgl ;
+    skos:exactMatch wd:Q879857 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Schloss Dagstuhl - Leibniz-Zentrum für Informatik"@de .
 
@@ -103978,6 +104232,7 @@ keyword:computational a skos:Concept ;
         keyword:ki-innovationen,
         keyword:modellierung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q7397 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Computational"@de .
 
@@ -103985,6 +104240,7 @@ keyword:datenmaterial a skos:Concept ;
     dh:cooccursWith keyword:datenuebertragung,
         keyword:informationstechnik,
         keyword:standleitung ;
+    skos:exactMatch wd:Q121566744 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenmaterial"@de .
 
@@ -104030,6 +104286,7 @@ keyword:elektronische-business a skos:Concept ;
         keyword:kommunikationstechnologie,
         keyword:mittelstand-4-0,
         keyword:mittelstand-digital ;
+    skos:exactMatch wd:Q484847 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "elektronische Business"@de .
 
@@ -104055,6 +104312,7 @@ keyword:fachinformationssysteme a skos:Concept ;
         keyword:information-modeling,
         keyword:informationssystem,
         keyword:viewer ;
+    skos:exactMatch wd:Q118385180 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fachinformationssysteme"@de .
 
@@ -104071,6 +104329,7 @@ keyword:ikt-nachfrager a skos:Concept ;
         keyword:start-up,
         keyword:vernetzung,
         keyword:wagniskapital ;
+    skos:exactMatch wd:Q1481411 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IKT-Nachfrager"@de .
 
@@ -104087,6 +104346,7 @@ keyword:intelligente-vernetzung a skos:Concept ;
         keyword:start-up,
         keyword:vernetzung,
         keyword:wagniskapital ;
+    skos:exactMatch wd:Q1665681 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Intelligente Vernetzung"@de .
 
@@ -104114,6 +104374,7 @@ keyword:it-loesungen a skos:Concept ;
         keyword:kommunikationstechnologie,
         keyword:mittelstand-4-0,
         keyword:mittelstand-digital ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Lösungen"@de .
 
@@ -104127,6 +104388,7 @@ keyword:it-staatsvertrags a skos:Concept ;
         keyword:it-planungsrat,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
+    skos:exactMatch wd:Q131605583 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Staatsvertrags"@de .
 
@@ -104141,6 +104403,7 @@ keyword:ki-gestuetzt a skos:Concept ;
         keyword:grosse-datenmengen,
         keyword:rfid-technologie,
         keyword:sensornetzwerk ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-gestützt"@de .
 
@@ -104170,6 +104433,7 @@ keyword:open-source-oekosystem a skos:Concept ;
         keyword:sprind,
         keyword:sprunginnovation,
         keyword:stf ;
+    skos:exactMatch wd:Q39162 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Open Source Ökosystem"@de .
 
@@ -104195,6 +104459,7 @@ keyword:quantensichere a skos:Concept ;
         keyword:quantenkommunikation,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q2081419 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Quantensichere"@de .
 
@@ -104210,6 +104475,7 @@ keyword:scalable a skos:Concept ;
         keyword:maschinelle-lernen,
         keyword:mcml,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q727490 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Scalable"@de .
 
@@ -104268,7 +104534,6 @@ keyword:stf a skos:Concept ;
         keyword:sovereign-tech-fund,
         keyword:sprind,
         keyword:sprunginnovation ;
-    skos:exactMatch wd:Q519138 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "STF"@de .
 
@@ -104281,6 +104546,7 @@ keyword:verschluesselte a skos:Concept ;
         keyword:positionsdaten,
         keyword:satellit,
         keyword:vernetz ;
+    skos:exactMatch wd:Q141090 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Verschlüsselte"@de .
 
@@ -104359,6 +104625,7 @@ keyword:adv-verfahrens a skos:Concept ;
         keyword:e-vergabe,
         keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q6661985 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ADV-Verfahrens"@de .
 
@@ -104374,6 +104641,7 @@ keyword:ai-center a skos:Concept ;
         keyword:mcml,
         keyword:scalable,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "AI Center"@de .
 
@@ -104490,7 +104758,6 @@ keyword:lamarr a skos:Concept ;
         keyword:mcml,
         keyword:scalable,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q93306323 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Lamarr"@de .
 
@@ -104522,7 +104789,6 @@ keyword:mcml a skos:Concept ;
         keyword:maschinelle-lernen,
         keyword:scalable,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q18597 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "MCML"@de .
 
@@ -104584,6 +104850,7 @@ keyword:quantencomputing a skos:Concept ;
         keyword:sensor,
         keyword:technologische-souveraenitaet,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q2081419 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Quantencomputing"@de .
 
@@ -104804,6 +105071,7 @@ keyword:betriebsanalytik a skos:Concept ;
         keyword:repository,
         keyword:sensor,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q5001829 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Betriebsanalytik"@de .
 
@@ -104907,7 +105175,6 @@ keyword:it1 a skos:Concept ;
         keyword:repository,
         keyword:sensor,
         keyword:telekommunikation ;
-    skos:exactMatch wd:Q18046123 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT1"@de .
 
@@ -104924,6 +105191,7 @@ keyword:ki-trainer a skos:Concept ;
         keyword:kuenstliche-intelligenz,
         keyword:mittelstand-digital,
         keyword:start-up ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Trainer"@de .
 
@@ -104977,6 +105245,7 @@ keyword:solid-state a skos:Concept ;
         keyword:sensor,
         keyword:sensorik-aircraft,
         keyword:server ;
+    skos:exactMatch wd:Q487343 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Solid-State"@de .
 
@@ -104994,7 +105263,6 @@ keyword:supercomputing a skos:Concept ;
         keyword:mikroelektronik,
         keyword:schluesseltechnologie,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q4392761 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Supercomputing"@de .
 
@@ -105011,7 +105279,6 @@ keyword:usv a skos:Concept ;
         keyword:simulation,
         keyword:vernetzte-systeme,
         keyword:vis ;
-    skos:exactMatch wd:Q653439 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "USV"@de .
 
@@ -105127,7 +105394,6 @@ keyword:grw a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:wagniskapital ;
-    skos:exactMatch wd:Q176634 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "GRW"@de .
 
@@ -105164,7 +105430,6 @@ keyword:iais a skos:Concept ;
         keyword:izm,
         keyword:scai,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q10533272 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IAIS"@de .
 
@@ -105218,7 +105483,6 @@ keyword:izm a skos:Concept ;
         keyword:isst,
         keyword:scai,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q16183347 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IZM"@de .
 
@@ -105237,7 +105501,6 @@ keyword:scai a skos:Concept ;
         keyword:isst,
         keyword:izm,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q18054746 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "SCAI"@de .
 
@@ -105261,6 +105524,7 @@ keyword:xoev-standards a skos:Concept ;
         keyword:xbau,
         keyword:xinneres,
         keyword:xwaffe ;
+    skos:exactMatch wd:Q17327088 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "XÖV-Standards"@de .
 
@@ -105331,6 +105595,7 @@ keyword:datengewinnung a skos:Concept ;
         keyword:server,
         keyword:solid-state,
         keyword:systemupgrade ;
+    skos:exactMatch wd:Q4929239 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datengewinnung"@de .
 
@@ -105350,6 +105615,7 @@ keyword:datenwissenschaft a skos:Concept ;
         keyword:portal,
         keyword:softwareentwicklung,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q29169143 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenwissenschaft"@de .
 
@@ -105366,6 +105632,7 @@ keyword:digitalfunktechnik a skos:Concept ;
         keyword:tkue-anlagen,
         keyword:tkue-technik,
         keyword:voip ;
+    skos:exactMatch wd:Q1225037 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitalfunktechnik"@de .
 
@@ -105382,6 +105649,7 @@ keyword:elektr-schnittstelle-behoerden a skos:Concept ;
         keyword:tkue-anlagen,
         keyword:tkue-technik,
         keyword:voip ;
+    skos:exactMatch wd:Q165194 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Elektr. Schnittstelle Behörden"@de .
 
@@ -105439,6 +105707,7 @@ keyword:etsi-esb a skos:Concept ;
         keyword:tkue-anlagen,
         keyword:tkue-technik,
         keyword:voip ;
+    skos:exactMatch wd:Q51885719 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ETSI-ESB"@de .
 
@@ -105457,6 +105726,7 @@ keyword:federated-services a skos:Concept ;
         keyword:online,
         keyword:open-source-loesungen,
         keyword:plattform ;
+    skos:exactMatch wd:Q5440699 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Federated Services"@de .
 
@@ -105509,6 +105779,7 @@ keyword:geodatenvermittlung a skos:Concept ;
         keyword:gnss,
         keyword:satellit,
         keyword:verkehrsdaten ;
+    skos:exactMatch wd:Q124472412 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Geodatenvermittlung"@de .
 
@@ -105583,6 +105854,7 @@ keyword:it-kooperation a skos:Concept ;
         keyword:netzpolitik,
         keyword:onlinezugangsgesetz,
         keyword:software ;
+    skos:exactMatch wd:Q1654951 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Kooperation"@de .
 
@@ -105594,6 +105866,7 @@ keyword:it-steuerung a skos:Concept ;
         keyword:moderne-verwaltung,
         keyword:netzpolitik,
         keyword:ressort-cio ;
+    skos:exactMatch wd:Q1155318 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Steuerung"@de .
 
@@ -105651,6 +105924,7 @@ keyword:mikroelektronische a skos:Concept ;
         keyword:schluesseltechnologie,
         keyword:sensor,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q175561 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Mikroelektronische"@de .
 
@@ -105668,6 +105942,7 @@ keyword:mint-bildung a skos:Concept ;
         keyword:vernetz,
         keyword:weizenbaum-institut,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q60846594 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "MINT-Bildung"@de .
 
@@ -105686,6 +105961,7 @@ keyword:open-source-loesungen a skos:Concept ;
         keyword:offene-standards,
         keyword:online,
         keyword:plattform ;
+    skos:exactMatch wd:Q1130645 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Open Source Lösungen"@de .
 
@@ -105706,6 +105982,7 @@ keyword:ozg-e a skos:Concept ;
         keyword:open-government,
         keyword:ozg,
         keyword:portalverbund ;
+    skos:exactMatch wd:Q64739460 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "OZG e"@de .
 
@@ -105718,6 +105995,7 @@ keyword:polizei-2020 a skos:Concept ;
         keyword:interoperabilitaet,
         keyword:it-infrastruktur,
         keyword:software ;
+    skos:exactMatch wd:Q35535 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Polizei 2020"@de .
 
@@ -105754,6 +106032,7 @@ keyword:voip a skos:Concept ;
         keyword:tkue,
         keyword:tkue-anlagen,
         keyword:tkue-technik ;
+    skos:exactMatch wd:Q943687 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "VoIP"@de .
 
@@ -105814,6 +106093,7 @@ keyword:bildungsplattform a skos:Concept ;
         keyword:schul-cloud,
         keyword:vernetzung,
         keyword:virtual-reality ;
+    skos:exactMatch wd:Q241317 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Bildungsplattform"@de .
 
@@ -105894,6 +106174,7 @@ keyword:gnss-simulator a skos:Concept ;
         keyword:usv,
         keyword:vernetzte-systeme,
         keyword:vis ;
+    skos:exactMatch wd:Q179435 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "GNSS Simulator"@de .
 
@@ -105912,7 +106193,6 @@ keyword:invite a skos:Concept ;
         keyword:schul-cloud,
         keyword:vernetzung,
         keyword:virtual-reality ;
-    skos:exactMatch wd:Q609697 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "INVITE"@de .
 
@@ -105935,6 +106215,7 @@ keyword:it-geschaeftsbedarf a skos:Concept ;
         keyword:it-kommunikation,
         keyword:simulation,
         keyword:software ;
+    skos:exactMatch wd:Q1654942 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Geschäftsbedarf"@de .
 
@@ -105979,7 +106260,6 @@ keyword:oer a skos:Concept ;
         keyword:schul-cloud,
         keyword:vernetzung,
         keyword:virtual-reality ;
-    skos:exactMatch wd:Q116781 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "OER"@de .
 
@@ -105998,6 +106278,7 @@ keyword:offene-standards a skos:Concept ;
         keyword:online,
         keyword:open-source-loesungen,
         keyword:plattform ;
+    skos:exactMatch wd:Q681263 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "offene Standards"@de .
 
@@ -106014,6 +106295,7 @@ keyword:tk-anlagen a skos:Concept ;
         keyword:tkue-anlagen,
         keyword:tkue-technik,
         keyword:voip ;
+    skos:exactMatch wd:Q418 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TK-Anlagen"@de .
 
@@ -106030,7 +106312,6 @@ keyword:tkue a skos:Concept ;
         keyword:tkue-anlagen,
         keyword:tkue-technik,
         keyword:voip ;
-    skos:exactMatch wd:Q1067529 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "TKÜ"@de .
 
@@ -106107,6 +106388,7 @@ keyword:echtzeitbordnetze a skos:Concept ;
         keyword:usv,
         keyword:vernetzte-systeme,
         keyword:vis ;
+    skos:exactMatch wd:Q229362 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Echtzeitbordnetze"@de .
 
@@ -106146,6 +106428,7 @@ keyword:ki-strategie a skos:Concept ;
         keyword:vernetzung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Strategie"@de .
 
@@ -106221,6 +106504,7 @@ keyword:vernetzte-systeme a skos:Concept ;
         keyword:stammdaten,
         keyword:usv,
         keyword:vis ;
+    skos:exactMatch wd:Q251212 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "vernetzte Systeme"@de .
 
@@ -106327,7 +106611,6 @@ keyword:bwi-gmbh a skos:Concept ;
         keyword:kommunikationssystem,
         keyword:moderne-verwaltung,
         keyword:netzpolitik ;
-    skos:exactMatch wd:Q34561213 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "BWI GmbH"@de .
 
@@ -106341,6 +106624,7 @@ keyword:deutsche-zentrum-fuer-schienenverkehrsforschung a skos:Concept ;
         keyword:plattform,
         keyword:schnittstelle,
         keyword:software ;
+    skos:exactMatch wd:Q64485073 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Deutsche Zentrum für Schienenverkehrsforschung"@de .
 
@@ -106404,6 +106688,7 @@ keyword:kommunikationsnetze a skos:Concept ;
         keyword:quanten,
         keyword:quantenkommunikation,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q577764 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Kommunikationsnetze"@de .
 
@@ -106423,7 +106708,6 @@ keyword:mint a skos:Concept ;
         keyword:vernetz,
         keyword:virtual-reality,
         keyword:weizenbaum-institut ;
-    skos:exactMatch wd:Q47859 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "MINT"@de .
 
@@ -106446,7 +106730,6 @@ keyword:ozg a skos:Concept ;
         keyword:open-government,
         keyword:ozg-e,
         keyword:portalverbund ;
-    skos:exactMatch wd:Q1943201 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "OZG"@de .
 
@@ -106466,7 +106749,6 @@ keyword:vis a skos:Concept ;
         keyword:stammdaten,
         keyword:usv,
         keyword:vernetzte-systeme ;
-    skos:exactMatch wd:Q76504070 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "VIS"@de .
 
@@ -106481,7 +106763,6 @@ keyword:wgl a skos:Concept ;
         keyword:leibniz-institut-fuer-wissensmedien,
         keyword:schloss-dagstuhl-leibniz-zentrum-fuer-informatik,
         keyword:tib ;
-    skos:exactMatch wd:Q7946357 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "WGL"@de .
 
@@ -106593,6 +106874,7 @@ keyword:daten-und-analyse-infrastrukturen a skos:Concept ;
         keyword:schluesseltechnologie,
         keyword:technologieplattform,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q5227304 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Daten- und Analyse-Infrastrukturen"@de .
 
@@ -106661,6 +106943,7 @@ keyword:datenzugang a skos:Concept ;
         keyword:open-source,
         keyword:skalierbare,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q5227230 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenzugang"@de .
 
@@ -106752,6 +107035,7 @@ keyword:fair-data a skos:Concept ;
         keyword:portal,
         keyword:softwareentwicklung,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q29032648 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "FAIR-Data"@de .
 
@@ -106774,7 +107058,6 @@ keyword:fit a skos:Concept ;
         keyword:scai,
         keyword:sensor,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q6279182 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "FIT"@de .
 
@@ -106821,7 +107104,6 @@ keyword:iese a skos:Concept ;
         keyword:scai,
         keyword:sensor,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q606807 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IESE"@de .
 
@@ -106844,6 +107126,7 @@ keyword:it-aspekte a skos:Concept ;
         keyword:software-engineering,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q4027615 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Aspekte"@de .
 
@@ -106866,6 +107149,7 @@ keyword:it-forschung a skos:Concept ;
         keyword:software-engineering,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q4027615 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Forschung"@de .
 
@@ -106888,6 +107172,7 @@ keyword:ki-technologien a skos:Concept ;
         keyword:open-source,
         keyword:skalierbare,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Technologien"@de .
 
@@ -106904,6 +107189,7 @@ keyword:neue-fahrzeug-und-systemtechnologien a skos:Concept ;
         keyword:manufacturing-x,
         keyword:plattform,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q124192 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Neue Fahrzeug- und Systemtechnologien"@de .
 
@@ -107027,7 +107313,6 @@ keyword:cispa a skos:Concept ;
         keyword:schluesseltechnologie,
         keyword:technologieplattform,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q3678226 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "CISPA"@de .
 
@@ -107101,6 +107386,7 @@ keyword:helmholtz-zentrum-fuer-informationssicherheit a skos:Concept ;
 keyword:it-betriebskonsolidierung a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Betriebskonsolidierung"@de .
 
@@ -107147,6 +107433,7 @@ keyword:technologieplattform a skos:Concept ;
         keyword:max-planck,
         keyword:schluesseltechnologie,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q271680 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Technologieplattform"@de .
 
@@ -107195,6 +107482,7 @@ keyword:automatische a skos:Concept ;
         keyword:server,
         keyword:solid-state,
         keyword:systemupgrade ;
+    skos:exactMatch wd:Q184199 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Automatische"@de .
 
@@ -107209,7 +107497,7 @@ keyword:breitband a skos:Concept ;
         keyword:sondervermoegen-infrastruktur,
         keyword:telekommunikation,
         keyword:tkue-tmc-erweiterung ;
-    skos:exactMatch wd:Q24636819 ;
+    skos:exactMatch wd:Q15057100 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Breitband"@de .
 
@@ -107279,6 +107567,7 @@ keyword:it-geschaeftskonzepten a skos:Concept ;
         keyword:start-up,
         keyword:vernetzung,
         keyword:wagniskapital ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Geschäftskonzepten"@de .
 
@@ -107302,6 +107591,7 @@ keyword:open-data a skos:Concept ;
         keyword:ozg,
         keyword:ozg-e,
         keyword:portalverbund ;
+    skos:exactMatch wd:Q309901 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Open-Data"@de .
 
@@ -107343,6 +107633,8 @@ keyword:sprind a skos:Concept ;
     skos:exactMatch wd:Q72975645 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "SprinD"@de .
+
+wd:Q11660 rdfs:label "künstliche Intelligenz"@de .
 
 funktion:16 a skos:Concept ;
     skos:broader funktion:1 ;
@@ -107422,6 +107714,7 @@ keyword:chiptechnik a skos:Concept ;
         keyword:technologische-souveraenitaet,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q80831 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Chiptechnik"@de .
 
@@ -107446,6 +107739,7 @@ keyword:igd-r a skos:Concept ;
         keyword:scai,
         keyword:sensor,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1452008 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IGD-R"@de .
 
@@ -107470,6 +107764,7 @@ keyword:iisb a skos:Concept ;
         keyword:scai,
         keyword:sensor,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q23561231 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IISB"@de .
 
@@ -107494,7 +107789,6 @@ keyword:iks a skos:Concept ;
         keyword:scai,
         keyword:sensor,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q15729109 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IKS"@de .
 
@@ -107521,6 +107815,7 @@ keyword:ikt-anbieter a skos:Concept ;
         keyword:vernetzt,
         keyword:vernetzung,
         keyword:wagniskapital ;
+    skos:exactMatch wd:Q1481411 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IKT-Anbieter"@de .
 
@@ -107538,6 +107833,7 @@ keyword:information-modeling a skos:Concept ;
         keyword:informationssystem,
         keyword:interoperabilitaet,
         keyword:viewer ;
+    skos:exactMatch wd:Q1662581 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Information Modeling"@de .
 
@@ -107692,6 +107988,7 @@ keyword:sprunginnovation a skos:Concept ;
         keyword:stf,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1192297 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Sprunginnovation"@de .
 
@@ -107798,7 +108095,6 @@ keyword:wan a skos:Concept ;
         keyword:software,
         keyword:web-kompetenzzentrum,
         keyword:wide-area-network ;
-    skos:exactMatch wd:Q985855 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "WAN"@de .
 
@@ -107924,6 +108220,7 @@ keyword:data-relay a skos:Concept ;
         keyword:server,
         keyword:solid-state,
         keyword:systemupgrade ;
+    skos:exactMatch wd:Q784808 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Data Relay"@de .
 
@@ -107968,6 +108265,7 @@ keyword:drahtlose a skos:Concept ;
         keyword:tk,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q249 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Drahtlose"@de .
 
@@ -108043,6 +108341,7 @@ keyword:hochleistung a skos:Concept ;
         keyword:technologieplattform,
         keyword:technologische-souveraenitaet,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1190465 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Hochleistung"@de .
 
@@ -108069,6 +108368,7 @@ keyword:informationstechnologie a skos:Concept ;
         keyword:softwareentwicklung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Informationstechnologie"@de .
 
@@ -108096,6 +108396,7 @@ keyword:it-schutzniveaus a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:wagniskapital ;
+    skos:exactMatch wd:Q11661 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Schutzniveaus"@de .
 
@@ -108151,6 +108452,7 @@ keyword:offene-schnittstellen a skos:Concept ;
         keyword:software,
         keyword:start-up,
         keyword:strategie-kuenstliche-intelligenz ;
+    skos:exactMatch wd:Q165194 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "offene Schnittstellen"@de .
 
@@ -108260,6 +108562,7 @@ keyword:digitalstrategie a skos:Concept ;
         keyword:mittelstand-digital,
         keyword:plattform,
         keyword:start-up ;
+    skos:exactMatch wd:Q121197805 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitalstrategie"@de .
 
@@ -108315,6 +108618,7 @@ keyword:hoechstleistungsrechn a skos:Concept ;
         keyword:schluesseltechnologie,
         keyword:supercomputing,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1190465 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Höchstleistungsrechn"@de .
 
@@ -108400,6 +108704,7 @@ keyword:ki-mittel a skos:Concept ;
         keyword:plattform,
         keyword:portal,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Mittel"@de .
 
@@ -108446,7 +108751,6 @@ keyword:hdf a skos:Concept ;
         keyword:sensor,
         keyword:telekommunikation,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q1069215 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "HDF"@de .
 
@@ -108475,6 +108779,7 @@ keyword:helmholtz-data-federation a skos:Concept ;
         keyword:sensor,
         keyword:telekommunikation,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q679913 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Helmholtz Data Federation"@de .
 
@@ -108507,6 +108812,7 @@ keyword:intelligente-dienste-und-daten a skos:Concept ;
         keyword:smarte-datenwirtschaft,
         keyword:start-up,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q3353185 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Intelligente Dienste und Daten"@de .
 
@@ -108568,6 +108874,7 @@ keyword:massendaten a skos:Concept ;
         keyword:smarte-datenwirtschaft,
         keyword:start-up,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q858810 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Massendaten"@de .
 
@@ -108692,6 +108999,7 @@ keyword:virtual-reality a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:weizenbaum-institut ;
+    skos:exactMatch wd:Q170519 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Virtual-Reality"@de .
 
@@ -108739,6 +109047,7 @@ keyword:eingebettete-systeme a skos:Concept ;
         keyword:vernetzung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q193040 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "eingebettete Systeme"@de .
 
@@ -108769,6 +109078,7 @@ keyword:exascale a skos:Concept ;
         keyword:supercomputing,
         keyword:telekommunikation,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q2450880 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Exascale"@de .
 
@@ -108811,6 +109121,7 @@ keyword:it-konsolidierung a skos:Concept ;
         keyword:moderne-verwaltung,
         keyword:netzpolitik,
         keyword:software ;
+    skos:exactMatch wd:Q1665453 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "IT-Konsolidierung"@de .
 
@@ -108842,7 +109153,6 @@ keyword:konnektivitaet a skos:Concept ;
         keyword:vernetzung,
         keyword:wagniskapital,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q72898059 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Konnektivität"@de .
 
@@ -108918,6 +109228,7 @@ keyword:campusnetz a skos:Concept ;
         keyword:start-up,
         keyword:strategie-kuenstliche-intelligenz,
         keyword:wallet ;
+    skos:exactMatch wd:Q131384970 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Campusnetz"@de .
 
@@ -109047,6 +109358,7 @@ keyword:hard-und-software a skos:Concept ;
         keyword:vernetzung,
         keyword:videokonferenz,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q3966 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Hard- und Software"@de .
 
@@ -109145,6 +109457,7 @@ keyword:ki-innovationswettbewerbs a skos:Concept ;
         keyword:start-up,
         keyword:strategie-kuenstliche-intelligenz,
         keyword:wallet ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Innovationswettbewerbs"@de .
 
@@ -109179,6 +109492,7 @@ keyword:netzkomponente a skos:Concept ;
         keyword:start-up,
         keyword:strategie-kuenstliche-intelligenz,
         keyword:wallet ;
+    skos:exactMatch wd:Q4418003 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Netzkomponente"@de .
 
@@ -109245,7 +109559,6 @@ keyword:wallet a skos:Concept ;
         keyword:software-engineering,
         keyword:start-up,
         keyword:strategie-kuenstliche-intelligenz ;
-    skos:exactMatch wd:Q603337 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Wallet"@de .
 
@@ -109395,6 +109708,7 @@ keyword:elektroniksystem a skos:Concept ;
         keyword:technologische-souveraenitaet,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q65280844 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Elektroniksystem"@de .
 
@@ -109484,6 +109798,7 @@ keyword:ki-methoden a skos:Concept ;
         keyword:softwareentwicklung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Methoden"@de .
 
@@ -109614,6 +109929,7 @@ keyword:max-planck a skos:Concept ;
         keyword:mpg,
         keyword:schluesseltechnologie,
         keyword:technologieplattform ;
+    skos:exactMatch wd:Q158085 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Max-Planck"@de .
 
@@ -109738,6 +110054,7 @@ keyword:datenoekosystem a skos:Concept ;
         keyword:plattform,
         keyword:skalierbare,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q638422 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenökosystem"@de .
 
@@ -109845,6 +110162,7 @@ keyword:datenbasierte a skos:Concept ;
         keyword:smart-contracts,
         keyword:vernetz,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q5227278 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenbasierte"@de .
 
@@ -110021,6 +110339,7 @@ keyword:autonome-fahren a skos:Concept ;
         keyword:technologische-souveraenitaet,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q19835007 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "autonome Fahren"@de .
 
@@ -110053,6 +110372,7 @@ keyword:best-practice a skos:Concept ;
         keyword:plattform,
         keyword:start-up,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q830382 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Best-Practice"@de .
 
@@ -110115,6 +110435,7 @@ keyword:cyber a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q204606 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Cyber"@de .
 
@@ -110293,6 +110614,7 @@ keyword:interoperabel a skos:Concept ;
         keyword:start-up,
         keyword:vernetz,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q749647 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Interoperabel"@de .
 
@@ -110333,6 +110655,7 @@ keyword:machine-to-machine a skos:Concept ;
         keyword:start-up,
         keyword:vernetz,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q251072 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Machine-to-machine"@de .
 
@@ -110373,7 +110696,6 @@ keyword:paice a skos:Concept ;
         keyword:start-up,
         keyword:vernetz,
         keyword:vernetzung ;
-    skos:exactMatch wd:Q31039797 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "PAiCE"@de .
 
@@ -110568,6 +110890,7 @@ keyword:5g-campusnetz a skos:Concept ;
         keyword:start-up,
         keyword:strategie-kuenstliche-intelligenz,
         keyword:wallet ;
+    skos:exactMatch wd:Q1363408 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "5G-Campusnetz"@de .
 
@@ -110700,7 +111023,7 @@ keyword:fraunhofer a skos:Concept ;
         keyword:sensor,
         keyword:systemintegration,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q1452078 ;
+    skos:exactMatch wd:Q161057 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fraunhofer"@de .
 
@@ -110831,6 +111154,7 @@ keyword:high-performance-computing a skos:Concept ;
         keyword:wan,
         keyword:web-kompetenzzentrum,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1190465 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "High-Performance Computing"@de .
 
@@ -111138,6 +111462,7 @@ keyword:datenstrategie a skos:Concept ;
         keyword:vernetzung,
         keyword:weizenbaum-institut,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q121661896 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datenstrategie"@de .
 
@@ -111163,7 +111488,6 @@ keyword:disruptive a skos:Concept ;
         keyword:stf,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q135033654 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Disruptive"@de .
 
@@ -111202,6 +111526,7 @@ keyword:maschinelle-lernen a skos:Concept ;
         keyword:vernetzung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q2539 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Maschinelle Lernen"@de .
 
@@ -111350,7 +111675,6 @@ keyword:aktoren a skos:Concept ;
         keyword:vernetzung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q10404148 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Aktoren"@de .
 
@@ -111395,6 +111719,7 @@ keyword:datentransparenz a skos:Concept ;
     dh:cooccursWith keyword:digitalisierung,
         keyword:informationstechnik,
         keyword:software ;
+    skos:exactMatch wd:Q78670249 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Datentransparenz"@de .
 
@@ -111491,7 +111816,6 @@ keyword:vernetzt a skos:Concept ;
         keyword:vernetzung,
         keyword:wagniskapital,
         keyword:wissensspeicher-forschungsdaten ;
-    skos:exactMatch wd:Q98058138 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Vernetzt"@de .
 
@@ -111547,7 +111871,6 @@ keyword:esa a skos:Concept ;
         keyword:satellitennavigation,
         keyword:schluesseltechnologie,
         keyword:visp ;
-    skos:exactMatch wd:Q19860309 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ESA"@de .
 
@@ -111588,6 +111911,7 @@ keyword:interaktiv a skos:Concept ;
         keyword:vernetzung,
         keyword:wgl,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q839721 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Interaktiv"@de .
 
@@ -111705,6 +112029,7 @@ keyword:strategie-kuenstliche-intelligenz a skos:Concept ;
         keyword:software-engineering,
         keyword:start-up,
         keyword:wallet ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Strategie Künstliche Intelligenz"@de .
 
@@ -111918,6 +112243,7 @@ keyword:autonome-systeme a skos:Concept ;
         keyword:technologische-souveraenitaet,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q749245 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "autonome Systeme"@de .
 
@@ -112104,6 +112430,7 @@ keyword:autonom a skos:Concept ;
         keyword:start-up,
         keyword:vernetz,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q484105 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Autonom"@de .
 
@@ -112340,7 +112667,7 @@ keyword:leibniz a skos:Concept ;
         keyword:tib,
         keyword:wgl,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q9047 ;
+    skos:exactMatch wd:Q680090 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Leibniz"@de .
 
@@ -112582,6 +112909,7 @@ keyword:smarte-datenwirtschaft a skos:Concept ;
         keyword:strategie-kuenstliche-intelligenz,
         keyword:vernetz,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q120962327 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Smarte Datenwirtschaft"@de .
 
@@ -112606,6 +112934,7 @@ keyword:deutsche-zentrum-fuer-luft-und-raumfahrt a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q157332 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Deutsche Zentrum für Luft- und Raumfahrt"@de .
 
@@ -112742,6 +113071,7 @@ keyword:digitalisierte a skos:Concept ;
         keyword:wagniskapital,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q843958 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitalisierte"@de .
 
@@ -112846,6 +113176,7 @@ keyword:ki-anwend a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q11660 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "KI-Anwend"@de .
 
@@ -112983,7 +113314,6 @@ keyword:agile a skos:Concept ;
         keyword:start-up,
         keyword:vernetz,
         keyword:vernetzung ;
-    skos:exactMatch wd:Q14951 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Agile"@de .
 
@@ -113065,6 +113395,7 @@ keyword:fernmelde a skos:Concept ;
         keyword:software,
         keyword:sondervermoegen-infrastruktur,
         keyword:telekommunikation ;
+    skos:exactMatch wd:Q836610 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Fernmelde"@de .
 
@@ -113149,6 +113480,7 @@ keyword:elektronisch a skos:Concept ;
         keyword:telefontechnik,
         keyword:telekommunikation,
         keyword:videokonferenz ;
+    skos:exactMatch wd:Q65280844 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Elektronisch"@de .
 
@@ -113262,6 +113594,7 @@ keyword:automatis a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzt,
         keyword:vernetzung ;
+    skos:exactMatch wd:Q184199 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Automatis"@de .
 
@@ -113324,7 +113657,6 @@ keyword:edge a skos:Concept ;
         keyword:wallet,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q16869767 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Edge"@de .
 
@@ -113744,7 +114076,6 @@ keyword:hgf a skos:Concept ;
         keyword:vernetz,
         keyword:vernetzung,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q14906204 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "HGF"@de .
 
@@ -114038,6 +114369,7 @@ keyword:quanten a skos:Concept ;
         keyword:wallet,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q2081419 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Quanten"@de .
 
@@ -114284,7 +114616,6 @@ keyword:cloud a skos:Concept ;
         keyword:vernetzung,
         keyword:wallet,
         keyword:zukunftsstrategie ;
-    skos:exactMatch wd:Q5135629 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Cloud"@de .
 
@@ -114853,6 +115184,7 @@ keyword:informationstechnikzentrum a skos:Concept ;
         keyword:registermodernisierung,
         keyword:regmog,
         keyword:software ;
+    skos:exactMatch wd:Q23786362 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Informationstechnikzentrum"@de .
 
@@ -115057,6 +115389,7 @@ keyword:vernetz a skos:Concept ;
         keyword:weizenbaum-institut,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q253405 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Vernetz"@de .
 
@@ -115375,6 +115708,7 @@ keyword:informationstechnisch a skos:Concept ;
         keyword:vernetzung,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q1662611 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Informationstechnisch"@de .
 
@@ -116572,6 +116906,7 @@ keyword:moderne-verwaltung a skos:Concept ;
         keyword:xoev-standards,
         keyword:xwaffe,
         keyword:zendis ;
+    skos:exactMatch wd:Q211017 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Moderne Verwaltung"@de .
 
@@ -116726,7 +117061,7 @@ keyword:digitalfunk a skos:Concept ;
         keyword:xoev-standards,
         keyword:xwaffe,
         keyword:zendis ;
-    skos:exactMatch wd:Q1225035 ;
+    skos:exactMatch wd:Q1225037 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digitalfunk"@de .
 
@@ -117551,6 +117886,7 @@ keyword:digital a skos:Concept ;
         keyword:zendis,
         keyword:zukunftsfonds,
         keyword:zukunftsstrategie ;
+    skos:exactMatch wd:Q843958 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "Digital"@de .
 
