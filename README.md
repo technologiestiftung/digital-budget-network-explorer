@@ -19,6 +19,8 @@ We transformed their raw dataset into a **Linked Data Knowledge Graph (RDF/Turtl
 
 To enhance the dataset, we algorithmically linked keywords to **Wikidata** entities (assisted by AI and manually verified). This allows the application to fetch live context (descriptions, images, categories) and categorize the semantic landscape into high-level groups like *Technology*, *Law/Strategy*, or *Infrastructure*.
 
+The original data from Agora had already been preprocessed in another script: https://github.com/dawid-rempinski/digitalhaushalt 
+
 **The Goal:** To make the digital budget accessible and explorable. The visualization shows which terms dominate the budget, which topics are funded across multiple ministries, where unique niche terms appear, and how thematic trends shift over the years.
 
 ## Features
