@@ -9,18 +9,19 @@ import { buildGraph } from "../graph/buildGraph";
 import { colorForType } from "../colors";
 
 export type StoryFocus =
-  | { type: "all" }
-  | { type: "chain"; upto: number } // hebt chain[0..upto] hervor, zentriert auf upto
+  | { type: "all"; recenter?: boolean }
+  | { type: "chain"; upto: number }
   | { type: "set"; ids: string[]; primary?: string };
 
 interface Props {
   data: GraphData;
-  /** Keyword-Kette fuer Screen 3 (lokale IDs). */
-  chain: string[];
+  /** Keyword-Kette fuer Screen 3. */
+  chain: { id: string; type: "kw" | "ep" | "set"; ids?: string[] }[];
   focus: StoryFocus;
 }
 
 interface RenderState {
+  recenter: boolean;
   highlight: Set<string>;
   chainVisible: boolean;
   chainNodes: Set<string>;
@@ -36,11 +37,13 @@ export default function StoryBackground({ data, chain, focus }: Props) {
   const layoutRef = useRef<FA2Layout | null>(null);
   const rafRef = useRef<number | null>(null);
   const stableRef = useRef(false);
+  const prevAmbientRef = useRef(true);
   const stateRef = useRef<RenderState>({
     highlight: new Set(),
     chainVisible: false,
     chainNodes: new Set(),
     ambient: true,
+    recenter: true,
   });
 
   // Sigma + Graph einmalig aufbauen
@@ -51,30 +54,34 @@ export default function StoryBackground({ data, chain, focus }: Props) {
     const computed = buildGraph(
       data,
       {
-        jahr: null,
+        jahr: 2025,
         bereiche: new Set(),
         klassen: new Set(),
         einzelplaene: new Set(),
         hauptgruppen: new Set(),
         hauptfunktionen: new Set(),
-        minFrequency: 4,
+        minFrequency: 1,
         nurDigital: false,
       },
-      "keyword",
+      "bipartite",
     );
 
     const graph = new Graph({ multi: true, type: "undirected" });
     graphRef.current = graph;
 
-    const maxFreq = computed.nodes.reduce((m, n) => Math.max(m, n.frequency), 1);
+    const maxFreq = computed.nodes.reduce(
+      (m, n) => Math.max(m, n.frequency),
+      1,
+    );
     const maxW = computed.edges.reduce((m, e) => Math.max(m, e.weight), 1);
     for (const n of computed.nodes) {
       const t = Math.sqrt(n.frequency) / Math.sqrt(maxFreq);
+      const color = n.kind === "einzelplan" ? "#000000" : colorForType(n.type);
       graph.addNode(n.id, {
         label: n.label,
-        baseColor: colorForType(n.type),
-        color: colorForType(n.type),
-        size: 3 + t * 16,
+        baseColor: color,
+        color: color,
+        size: n.kind === "einzelplan" ? 6 + t * 20 : 3 + t * 16,
         x: 0,
         y: 0,
       });
@@ -135,7 +142,7 @@ export default function StoryBackground({ data, chain, focus }: Props) {
           const [s, t] = g.extremities(edge);
           if (st.chainNodes.has(s) && st.chainNodes.has(t)) {
             res.hidden = false;
-            res.color = "#2f6fed";
+            res.color = "#1E3791";
             res.size = 2.5;
             res.zIndex = 3;
             return res;
@@ -157,40 +164,48 @@ export default function StoryBackground({ data, chain, focus }: Props) {
       return res;
     });
 
-    // Layout stabilisieren, danach Story-Kanten (Kette) ergaenzen
+    // Layout stabilisieren
     const settings = forceAtlas2.inferSettings(graph);
-    const layout = new FA2Layout(graph, { settings: { ...settings, slowDown: 8 } });
+    const layout = new FA2Layout(graph, {
+      settings: { ...settings, slowDown: 8 },
+    });
     layoutRef.current = layout;
     layout.start();
     const stopTimer = setTimeout(() => {
       layout.stop();
       stableRef.current = true;
-      // Story-Kanten der Kette ergaenzen (verbinden Keyword-Sequenz sichtbar)
-      for (let i = 0; i < chain.length - 1; i++) {
-        const a = `kw:${chain[i]}`;
-        const b = `kw:${chain[i + 1]}`;
-        if (graph.hasNode(a) && graph.hasNode(b)) {
-          graph.addEdge(a, b, { size: 2.5, story: true, hidden: true });
-        }
-      }
-      renderer.getCamera().animatedReset({ duration: 600 });
       startAmbient();
-    }, 4000);
+    }, 3500);
 
-    // Ambient-Drift (langsame Bewegung im Hero/Stats-Modus)
+    // Ambient-Drift: sanft per Lerp, damit es beim Wechsel nie springt.
     function startAmbient() {
       if (rafRef.current != null) return;
       const cam = renderer.getCamera();
       const t0 = performance.now();
+      const lerp = (a: number, b: number, f: number) => a + (b - a) * f;
       const loop = (now: number) => {
         const st = stateRef.current;
-        if (st.ambient && st.highlight.size === 0) {
+        // Nur driften, wenn kein Fokus aktiv ist. Sonst uebernimmt cam.animate().
+        if (
+          st.ambient &&
+          !st.recenter &&
+          st.highlight.size === 0 &&
+          !cam.isAnimated()
+        ) {
           const t = (now - t0) / 1000;
+          const target = {
+            x: 1.46 + Math.sin(t * 0.1) * 0.02,
+            y: 0.58 + Math.cos(t * 0.08) * 0.02,
+            ratio: 1.25 + Math.sin(t * 0.07) * 0.04,
+            angle: Math.sin(t * 0.04) * 0.03,
+          };
+          const cur = cam.getState();
+          // weiches Annaehern an den Drift-Zielwert (kein harter Sprung)
           cam.setState({
-            x: 0.5 + Math.sin(t * 0.12) * 0.015,
-            y: 0.5 + Math.cos(t * 0.09) * 0.015,
-            ratio: 1.12 + Math.sin(t * 0.08) * 0.05,
-            angle: Math.sin(t * 0.05) * 0.04,
+            x: lerp(cur.x, target.x, 0.04),
+            y: lerp(cur.y, target.y, 0.04),
+            ratio: lerp(cur.ratio, target.ratio, 0.04),
+            angle: lerp(cur.angle, target.angle, 0.04),
           });
         }
         rafRef.current = requestAnimationFrame(loop);
@@ -226,45 +241,96 @@ export default function StoryBackground({ data, chain, focus }: Props) {
       st.chainNodes = new Set();
       st.ambient = true;
     } else if (focus.type === "chain") {
-      const ids = chain.slice(0, focus.upto + 1).map((c) => `kw:${c}`).filter((n) => graph.hasNode(n));
-      st.highlight = new Set(ids);
-      st.chainNodes = new Set(ids);
-      st.chainVisible = true;
+      // In the new story design, these are distinct examples, not a cumulative chain.
+      const chainItem = chain[focus.upto];
+      const highlight = new Set<string>();
+      let newCenterIds: string[] = [];
+
+      if (chainItem.type === "set" && chainItem.ids) {
+        chainItem.ids.forEach((kwId) => {
+          const nId = `kw:${kwId}`;
+          if (graph.hasNode(nId)) {
+            highlight.add(nId);
+            newCenterIds.push(nId);
+            graph.forEachNeighbor(nId, (neighbor) => {
+              highlight.add(neighbor);
+            });
+          }
+        });
+      } else {
+        const last = `${chainItem.type}:${chainItem.id}`;
+        if (graph.hasNode(last)) {
+          highlight.add(last);
+          newCenterIds.push(last);
+          graph.forEachNeighbor(last, (neighbor) => {
+            highlight.add(neighbor);
+          });
+        }
+      }
+
+      st.highlight = highlight;
+      st.chainNodes = new Set();
+      st.chainVisible = false;
       st.ambient = false;
-      const last = `kw:${chain[focus.upto]}`;
-      centerIds = graph.hasNode(last) ? [last] : ids;
+      centerIds = newCenterIds;
     } else {
-      const ids = focus.ids.map((c) => `kw:${c}`).filter((n) => graph.hasNode(n));
-      st.highlight = new Set(ids);
+      // "set" focus, usually for Ministry slides where primary is the EP
+      const primaryNode = focus.primary ? `ep:${focus.primary}` : null;
+      const highlight = new Set(
+        focus.ids.map((c) => `kw:${c}`).filter((n) => graph.hasNode(n)),
+      );
+      if (primaryNode && graph.hasNode(primaryNode)) {
+        highlight.add(primaryNode);
+        centerIds = [primaryNode];
+      } else {
+        centerIds = Array.from(highlight);
+      }
+      st.highlight = highlight;
       st.chainVisible = false;
       st.chainNodes = new Set();
       st.ambient = false;
-      centerIds = ids;
     }
 
     renderer.refresh();
 
-    // Kamera auf den Fokus bewegen
+    // Kamera auf den Fokus bewegen (einheitliche, weiche Fahrten)
     const cam = renderer.getCamera();
-    if (st.ambient) return; // Ambient-Loop uebernimmt
-    if (centerIds.length === 0) {
-      cam.animate({ x: 0.5, y: 0.5, ratio: 1.1, angle: 0 }, { duration: 700 });
+    const EASE = { duration: 1100, easing: "cubicInOut" as const };
+    st.recenter = (focus as any).recenter ?? false;
+    if (st.ambient) {
+      if ((focus as any).recenter) {
+        cam.animate({ x: 0.5, y: 0.5, ratio: 1.15, angle: 0 }, EASE);
+      } else if (!prevAmbientRef.current) {
+        // Von einem Fokus zurueck in den Ambient-Modus: zur Offset-Position fahren
+        cam.animate({ x: 0.7, y: 0.65, ratio: 1.35, angle: 0 }, EASE);
+      }
+      prevAmbientRef.current = true;
       return;
     }
-    let sx = 0,
-      sy = 0,
+    prevAmbientRef.current = false;
+    // Bounding-Box der Fokus-Knoten bestimmen -> konsistenter Zoom
+    let minX = Infinity,
+      maxX = -Infinity,
+      minY = Infinity,
+      maxY = -Infinity,
       n = 0;
     for (const id of centerIds) {
       const dd = renderer.getNodeDisplayData(id);
       if (dd) {
-        sx += dd.x;
-        sy += dd.y;
+        minX = Math.min(minX, dd.x);
+        maxX = Math.max(maxX, dd.x);
+        minY = Math.min(minY, dd.y);
+        maxY = Math.max(maxY, dd.y);
         n++;
       }
     }
     if (n === 0) return;
-    const ratio = centerIds.length <= 1 ? 0.45 : centerIds.length <= 4 ? 0.7 : 1.0;
-    cam.animate({ x: sx / n, y: sy / n, ratio, angle: 0 }, { duration: 900 });
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+    const spread = Math.max(maxX - minX, maxY - minY);
+    // Ratio aus Ausdehnung ableiten (mit Polster), begrenzt fuer ruhige Optik
+    const ratio = Math.min(1.0, Math.max(0.4, spread * 1.6 + 0.4));
+    cam.animate({ x: cx, y: cy, ratio, angle: 0 }, EASE);
   }, [focus, chain]);
 
   return <div ref={containerRef} className="story-bg" />;

@@ -59,7 +59,7 @@ export const useStore = create<AppState>((set) => ({
   error: null,
 
   view: initialView,
-  mode: "keyword",
+  mode: "bipartite",
   nodeSizeMetric: "count",
   filters: emptyFilters(),
   selectedNodeId: null,

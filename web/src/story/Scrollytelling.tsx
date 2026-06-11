@@ -42,25 +42,33 @@ function useMinistries(data: GraphData) {
 export default function Scrollytelling() {
   const data = useStore((s) => s.data)!;
   const setView = useStore((s) => s.setView);
-  const chain = useMemo(() => STORY_CHAIN.map((c) => c.id), []);
+  const chain = useMemo(
+    () => STORY_CHAIN.map((c) => ({ id: c.id, type: c.type, ids: c.ids })),
+    [],
+  );
   const ministries = useMinistries(data);
 
   // Reihenfolge der Panels + zugehoeriger Fokus
   const panels = useMemo<Panel[]>(() => {
     const list: Panel[] = [
-      { key: "hero", focus: { type: "all" } },
+      { key: "hero", focus: { type: "all", recenter: true } },
+      { key: "quote", focus: { type: "all" } },
+      { key: "explanation", focus: { type: "all" } },
       { key: "stats", focus: { type: "all" } },
     ];
-    STORY_CHAIN.forEach((_, i) =>
-      list.push({ key: `chain-${i}`, focus: { type: "chain", upto: i } }),
-    );
+    STORY_CHAIN.forEach((c, i) => {
+      if (c.title) {
+        list.push({ key: `chain-${i}-q`, focus: { type: "all" } });
+      }
+      list.push({ key: `chain-${i}-a`, focus: { type: "chain", upto: i } });
+    });
     ministries.forEach((m) =>
       list.push({
         key: `min-${m.epId}`,
         focus: { type: "set", ids: m.kwIds, primary: m.epId },
       }),
     );
-    list.push({ key: "cta", focus: { type: "all" } });
+    list.push({ key: "cta", focus: { type: "all", recenter: true } });
     return list;
   }, [ministries]);
 
@@ -122,39 +130,117 @@ export default function Scrollytelling() {
           data-idx={idxOf("hero")}
           className={`story-panel hero ${active === idxOf("hero") ? "is-active" : ""}`}>
           <div className="panel-inner center">
-            <p className="eyebrow">
-              Wofür zahlen wir, wenn wir von Digitalisierung im Bundeshaushalt
-              sprechen?
-            </p>
+            <p className="eyebrow">Sprachatlas Digitalhaushalt</p>
             <h1 className="hero-title">
-              Die Macht der <em>Worte</em>
+              Die Vielfalt der <em>Worte</em>
             </h1>
             <ul className="hero-questions">
-              <li>Welche Begriffe prägen die Digitalisierungsausgaben?</li>
-              <li>Welche Themen verbinden Ministerien?</li>
-              <li>Welche Technologien werden gemeinsam gefördert?</li>
+              <li>
+                Wovon sprechen Bundesinstitutionen, wenn sie Digitalisierung
+                meinen, fördern und vorantreiben?
+              </li>
             </ul>
             <div className="scroll-hint">Scrollen zum Erkunden ↓</div>
           </div>
         </section>
 
-        {/* Screen 2 – Erklärung / Zahlen */}
+        {/* Screen 2 – Zitat */}
+        <section
+          ref={setRef(idxOf("quote"))}
+          data-idx={idxOf("quote")}
+          className={`story-panel quote ${active === idxOf("quote") ? "is-active" : ""}`}>
+          <div className="panel-inner center">
+            <blockquote className="hero-quote">
+              <div className="quote-mark">“</div>
+              <p>
+                Um die Magie eines Dinges zu verstehen, muss man seinen wahren
+                Namen kennen […] womit ein Zauberer sein Leben verbringt, ist
+                das Herausfinden der Namen der Dinge und wie man die Namen der
+                Dinge herausfindet.
+              </p>
+              <div className="quote-separator"></div>
+              <footer>
+                — frei nach Ursula K. Le Guin, <cite>A Wizard of Earthsea</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
+        {/* Screen 3 – Erklärung Datenbasis */}
+        <section
+          ref={setRef(idxOf("explanation"))}
+          data-idx={idxOf("explanation")}
+          className={`story-panel ${active === idxOf("explanation") ? "is-active" : ""}`}>
+          <div className="panel-inner">
+            <h2 className="screen-title">
+              Wie aus Worten Zahlen wurden – Der Digitalhaushalt des Bundes
+            </h2>
+
+            <div className="explanation-text-block">
+              <p>
+                Der Haushalt zeigt, wie viel Geld der Bund ausgibt. Dafür geben
+                die Ministerien an, wie viel Geld sie brauchen und wofür: Sie
+                schreiben sogenannte <strong>Haushaltstitel</strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+        {/* Screen 3 – Erklärung Datenbasis */}
+        <section
+          ref={setRef(idxOf("explanation"))}
+          data-idx={idxOf("explanation")}
+          className={`story-panel ${active === idxOf("explanation") ? "is-active" : ""}`}>
+          <div className="panel-inner">
+            <div className="explanation-text-block">
+              <p>
+                Der <strong>Digitalhaushalt</strong> ist der Teil des
+                Gesamthaushalts, der für Aufgabe rund umd die Digitalisierung
+                verwendet wird. Er ist keine festgelegte, selbsterklärende
+                Kategorie. Um die <strong>Digitalausgaben des Bundes</strong>{" "}
+                abzuschätzen, wurde der Haushalt durch die Agora Digitale
+                Transformation analysiert.
+              </p>
+              <p>
+                Dafür wurden die Titel unter anderem auf vorher festgelegte{" "}
+                <strong>Schlagworte</strong> hin analysiert, die auf
+                Digitalisierung hinweisen. Diese Schlagworte nehmen wir in
+                dieser <strong>Netzwerk-Visualisierung</strong> unter die Lupe.
+              </p>
+            </div>
+            <div className="explanation-equation">
+              <div className="eq-box">
+                <span className="eq-text">
+                  Haushaltstitel-Beschreibung enthält{" "}
+                  <strong>"digitales" Schlagwort</strong>
+                </span>
+              </div>
+              <div className="eq-arrow">➔</div>
+              <div className="eq-box highlight">
+                <span className="eq-text">
+                  Teil des <strong>Digitalhaushalts</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Screen 5 – Erklärung / Zahlen */}
         <section
           ref={setRef(idxOf("stats"))}
           data-idx={idxOf("stats")}
           className={`story-panel ${active === idxOf("stats") ? "is-active" : ""}`}>
           <div className="panel-inner">
-            <h2 className="screen-title">Der Datensatz enthält</h2>
+            <h2 className="screen-title">
+              Was steckt im Datensatz zum Digitalhaushalt?
+            </h2>
+            <p className="stats-intro">
+              Der im Folgenden betrachtete Teil des Datensatz enthält
+              ausschließlich Titel, die eindeutig der Kategorie "digital"
+              zuzuordnen sind. Das bedeutet, dass innerhalb der Beschreibungen
+              Schlagworte vorkommen, die ein Kennzeichen für Ausgaben im Kontext
+              von Digitalisierung sind.
+            </p>
             <div className="stat-cards">
-              <div className="stat-card">
-                <span className="stat-num">
-                  <CountUp
-                    value={data.meta.counts.titel ?? 0}
-                    active={active === idxOf("stats")}
-                  />
-                </span>
-                <span className="stat-label">Haushaltstitel</span>
-              </div>
               <div className="stat-card">
                 <span className="stat-num">
                   <CountUp
@@ -162,20 +248,24 @@ export default function Scrollytelling() {
                     active={active === idxOf("stats")}
                   />
                 </span>
-                <span className="stat-label">Keywords</span>
+                <span className="stat-label">
+                  Schlagworte, die auf Digitalisierung hinweisen
+                </span>
               </div>
               <div className="stat-card">
                 <span className="stat-num">
                   <CountUp
-                    value={data.meta.counts.einzelplaene}
+                    value={data.meta.counts.titel ?? 0}
                     active={active === idxOf("stats")}
                   />
                 </span>
-                <span className="stat-label">Ministerien & Organe</span>
+                <span className="stat-label">
+                  Haushaltstitel, die ein oder mehrere dieser Worte beinhalten
+                </span>
               </div>
               <div className="stat-card">
                 <span className="stat-num">
-                  ≈{" "}
+                  ≈
                   <CountUp
                     value={budgetMrd.value}
                     decimals={1}
@@ -184,25 +274,52 @@ export default function Scrollytelling() {
                   Mrd €
                 </span>
                 <span className="stat-label">
-                  Soll-Volumen {budgetMrd.jahr}
+                  sind für diese Titel veranschlagt (2025, SOLL)
+                </span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-num">30 %</span>
+                <span className="stat-label">
+                  des Gesamthaushalts machen diese Ausgaben aus
                 </span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Screen 3 – Storytelling-Kette */}
-        {STORY_CHAIN.map((c, i) => {
-          const idx = idxOf(`chain-${i}`);
-          return (
+        {/* Screen 6 – Storytelling-Kette */}
+        {STORY_CHAIN.flatMap((c, i) => {
+          const res = [];
+          if (c.title) {
+            const idxQ = idxOf(`chain-${i}-q`);
+            res.push(
+              <section
+                key={`chain-${i}-q`}
+                ref={setRef(idxQ)}
+                data-idx={idxQ}
+                className={`story-panel chain question ${active === idxQ ? "is-active" : ""}`}>
+                <div className="panel-inner center">
+                  <span className="question-eyebrow">
+                    Frage{" "}
+                    {STORY_CHAIN.slice(0, i + 1).filter((x) => x.title).length}
+                  </span>
+                  <h2 className="question-title">{c.title}</h2>
+                  <div className="scroll-hint subtle">weiter scrollen ↓</div>
+                </div>
+              </section>,
+            );
+          }
+
+          const idxA = idxOf(`chain-${i}-a`);
+          res.push(
             <section
-              key={c.id}
-              ref={setRef(idx)}
-              data-idx={idx}
-              className={`story-panel chain ${active === idx ? "is-active" : ""}`}>
+              key={`chain-${i}-a`}
+              ref={setRef(idxA)}
+              data-idx={idxA}
+              className={`story-panel chain answer ${active === idxA ? "is-active" : ""}`}>
               <div className="panel-inner">
                 <span className="chain-step">
-                  {i + 1} / {STORY_CHAIN.length}
+                  Beispiel {i + 1} / {STORY_CHAIN.length}
                 </span>
                 <h2 className="chain-word">{c.label}</h2>
                 <p className="chain-note">{c.note}</p>
@@ -210,40 +327,12 @@ export default function Scrollytelling() {
                   <div className="chain-arrow">↓</div>
                 )}
               </div>
-            </section>
+            </section>,
           );
+          return res;
         })}
 
-        {/* Screen 4 – Ministerien */}
-        {ministries.map((m) => {
-          const idx = idxOf(`min-${m.epId}`);
-          return (
-            <section
-              key={m.epId}
-              ref={setRef(idx)}
-              data-idx={idx}
-              className={`story-panel ministry ${active === idx ? "is-active" : ""}`}>
-              <div className="panel-inner">
-                <h2 className="screen-title">
-                  Welche Ressorts beschäftigen sich mit ähnlichen Themen?
-                </h2>
-                <div className="ministry-card">
-                  <span className="ministry-short">{m.short}</span>
-                  <span className="ministry-name">{m.label}</span>
-                  <div className="ministry-keywords">
-                    {m.kwLabels.map((l) => (
-                      <span className="mini-tag" key={l}>
-                        {l}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        })}
-
-        {/* Screen 5 – Call to Action */}
+        {/* Screen 8 – Call to Action */}
         <section
           ref={setRef(idxOf("cta"))}
           data-idx={idxOf("cta")}
@@ -251,8 +340,9 @@ export default function Scrollytelling() {
           <div className="panel-inner center">
             <h2 className="cta-title">Jetzt selbst erkunden</h2>
             <p className="cta-sub">
-              Filtere nach Jahr, Ressort und Thema – und entdecke, welche
-              Begriffe den Digitalhaushalt verbinden.
+              Filtere nach Bundesinstitution, Jahr, oder Thema und entdecke,
+              welche Begriffe den Digitalhaushalt ausmachen und Institutionen
+              verbinden.
             </p>
             <button className="cta-button" onClick={() => setView("explore")}>
               Netzwerk-Explorer öffnen →
