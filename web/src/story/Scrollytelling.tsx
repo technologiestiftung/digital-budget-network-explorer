@@ -194,14 +194,14 @@ export default function Scrollytelling() {
                 verwendet wird.{" "}
               </p>
               <p>
-                Er ist allerdings keine eindeutig festgelegte Kategorie. Um die{" "}
+                Es handelt sich dabei allerdings nicht um eine eindeutig
+                festgelegte Kategorie. Um die{" "}
                 <strong>Digitalausgaben des Bundes</strong> abzuschätzen, wurde
                 der Haushalt deshalb durch die{" "}
                 <a
                   href="https://agoradigital.de/projekte/digitalhaushalt/"
                   target="_blank"
-                  rel="noreferrer"
-                >
+                  rel="noreferrer">
                   Agora Digitale Transformation
                 </a>{" "}
                 analysiert.
@@ -224,9 +224,10 @@ export default function Scrollytelling() {
             </h2>
             <div className="stats-intro">
               <p>
-                Dafür wurden die Haushaltstitel unter anderem auf <strong>vorher
-                festgelegte Schlagworte</strong> hin analysiert, die ein
-                Kennzeichen für Ausgaben im Kontext von Digitalisierung sind.
+                Dafür wurden die Haushaltstitel unter anderem auf{" "}
+                <strong>vorher festgelegte Schlagworte</strong> hin analysiert,
+                die als Kennzeichen für Ausgaben im Kontext von Digitalisierung
+                festgelegt wurden.
               </p>
             </div>
 
@@ -246,7 +247,8 @@ export default function Scrollytelling() {
             </div>
             <div className="stats-intro">
               <p>
-                Diese Schlagworte nehmen wir in dieser{" "}
+                Die identifizierten Haushaltstitel und die damit verbundenen
+                Schlagworte nehmen wir in der vorliegenden{" "}
                 <strong>Netzwerk-Visualisierung</strong> unter die Lupe.
               </p>
             </div>
@@ -327,7 +329,8 @@ export default function Scrollytelling() {
                   />
                 </span>
                 <span className="stat-label">
-                  Haushaltstitel, die ein oder mehrere dieser Worte beinhalten
+                  Haushaltstitel, die ein oder mehrere dieser Schlagworte
+                  beinhalten
                 </span>
               </div>
               <div className="stat-card">
@@ -341,13 +344,13 @@ export default function Scrollytelling() {
                   Mrd €
                 </span>
                 <span className="stat-label">
-                  sind für diese Titel veranschlagt (2025, SOLL)
+                  sind für diese Titel veranschlagt (2025, SOLL, enge Variante)
                 </span>
               </div>
               <div className="stat-card">
                 <span className="stat-num">30 %</span>
                 <span className="stat-label">
-                  des Gesamthaushalts machen diese Ausgaben aus
+                  des Gesamthaushalts macht diese Budget aus
                 </span>
               </div>
             </div>
@@ -374,8 +377,7 @@ export default function Scrollytelling() {
               className="imprint-link"
               href="https://www.technologiestiftung-berlin.de/impressum"
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               Impressum
             </a>
           </p>

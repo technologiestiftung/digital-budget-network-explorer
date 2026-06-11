@@ -21,7 +21,7 @@ export default function Legend({ nodeCount, edgeCount }: Props) {
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
       >
-        <span>Farblegende &amp; Stats</span>
+        <span>Legende &amp; Statistik</span>
         <span className="legend-chevron">{isOpen ? "▼" : "▲"}</span>
       </button>
       

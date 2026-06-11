@@ -14,7 +14,7 @@ export const STORY_CHAIN: {
     type: "kw",
     label: "Software",
     title: "Welche Begriffe prägen den Digitalhaushalt?",
-    note: '"Software" ist in 2025 das meistgenutzte Schlagwort, das zur Beschreibung von Digitalisierungsvorhaben genutzt wird. 24 von 26 Bundesinstitutionen nutzen diesen Querschnittsbegriff.',
+    note: '"Software" ist in 2025 das meistgenutzte Schlagwort, das zur Beschreibung von Digitalisierungsvorhaben genutzt wird. Ganze 24 Bundesinstitutionen nutzten diesen Querschnittsbegriff auf die eine oder andere Art und Weise.',
   },
   {
     id: "7",
@@ -22,7 +22,7 @@ export const STORY_CHAIN: {
     ids: ["hate-aid", "normenkontrollrat"],
     label: "Hate Aid",
     title: "Welche Begriffe sind einmalig oder sehr spezifisch?",
-    note: 'Neben großen Querschnittsbegriffen gibt es auch sehr spezifische Vorhaben. "Hate Aid" ist beispielsweise ein konkretes Schlagwort, das durch den Titel eines einzigen Ministeriums finanziert wird.',
+    note: 'Neben großen Querschnittsbegriffen gibt es auch sehr spezifische Vorhaben. "Hate Aid" ist beispielsweise ein konkretes Schlagwort, das durch einen Titel eines einzigen Ministeriums finanziert wird.',
   },
   {
     ids: ["kuenstliche-intelligenz", "blockchain"],

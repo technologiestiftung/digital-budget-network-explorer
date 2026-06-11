@@ -204,7 +204,7 @@ export default function DetailPanel() {
                       return labels[type] ?? "Nicht zuweisbar";
                     })()}
                   </strong>
-                  <InfoTooltip text="Die Kategorie wird automatisch aus den Wikidata-Instanz- und Unterklassen-Beziehungen (P31/P279) abgeleitet: Ein Begriff wird z. B. der Kategorie 'Technologie / Software' zugeordnet, wenn er in der Wikidata-Hierarchie direkt oder indirekt mit 'Software', 'Computerprogramm', 'Künstliche Intelligenz' o. Ä. verwandt ist." />
+                  <InfoTooltip text="Die Kategorie wird automatisch aus den Wikidata-Instanz- und Unterklassen-Beziehungen (P31/P279) abgeleitet. Ein Begriff wird z.B. der Kategorie ‘Technologie / Software’ zugeordnet, wenn er in der Wikidata-Hierarchie direkt oder indirekt mit den Begriffen ‘Software’, ‘Computerprogramm’, ‘Künstliche Intelligenz’ o. Ä. verwandt ist." />
                 </span>
               </div>
             )}
@@ -249,13 +249,13 @@ export default function DetailPanel() {
                 className={distTab === "bereich" ? "active" : ""}
                 onClick={() => setDistTab("bereich")}>
                 nach Digitalbereich
-                <InfoTooltip text="Zeigt, in welchen thematischen Digitalisierungsbereichen (z.B. Verwaltung, Infrastruktur) dieses Keyword vorkommt." />
+                <InfoTooltip text="Zeigt, in welchen von der Agora identifizierten thematischen Digitalisierungsbereichen das Schlagwort vorkommt (z.B. Verwaltung, Infrastruktur)." />
               </button>
               <button
                 className={distTab === "ressort" ? "active" : ""}
                 onClick={() => setDistTab("ressort")}>
                 nach Einzelplan
-                <InfoTooltip text="Listet die Ministerien und obersten Bundesbehörden auf, die dieses Keyword in ihren Titeln verwenden." />
+                <InfoTooltip text="Listet die Bundesinstitutionen auf, die das Schlagwort in ihren Titelbeschreibungen verwenden." />
               </button>
             </div>
 
@@ -331,13 +331,13 @@ export default function DetailPanel() {
                 className={semTab === "phrasen" ? "active" : ""}
                 onClick={() => setSemTab("phrasen")}>
                 Wortkontext
-                <InfoTooltip text="Zeigt, wie dieses Keyword tatsächlich im Fließtext der Haushaltstitel vorkommt (z.B. als 'digitale Infrastruktur' statt nur 'Infrastruktur')." />
+                <InfoTooltip text="Zeigt auf, in welchem Kontext das konkrete Schlagwort im Fließtext der Haushaltstitelbeschreibung vorkommt (z.B. als ‘digitale Infrastruktur’ anstatt nur ‘Infrastruktur’)." />
               </button>
               <button
                 className={semTab === "kookkurrenz" ? "active" : ""}
                 onClick={() => setSemTab("kookkurrenz")}>
                 Themenverbünde
-                <InfoTooltip text="Listet andere Keywords auf, die gemeinsam mit diesem in denselben Haushaltstiteln vorkommen – je häufiger, desto enger der thematische Zusammenhang." />
+                <InfoTooltip text="istet weitere Schlagwörter auf, die gemeinsam mit dem konkreten Schlagwort in denselben Haushaltstitelbeschreibungen vorkommen." />
               </button>
             </div>
 
@@ -397,7 +397,7 @@ export default function DetailPanel() {
                 Budget gesamt (SOLL, enge Variante):{" "}
                 <strong>{formatTEur(kwStats.titlesSollEngSum)} T€</strong>
               </span>
-              <InfoTooltip text="Summe der engen digitalen SOLL-Budgets aller aufgelisteten Haushaltstitel in Tausend Euro." />
+              <InfoTooltip text="Summe der (als eng definierten) digitalen SOLL-Budgets aller Haushaltstitel in Tausend EUR. Unten aufgelistet sind alle Titelbeschreibungen in denen das Schlagwort auftaucht und ihre jeweiligen SOLL-Budgets." />
             </div>
             <div className="title-card-list">
               {kwStats.titles.map((t) => (
@@ -468,7 +468,7 @@ export default function DetailPanel() {
                 Budget gesamt (SOLL, enge Variante):{" "}
                 <strong>{formatTEur(epStats.titlesSollEngSum)} T€</strong>
               </span>
-              <InfoTooltip text="Summe der engen digitalen SOLL-Budgets aller aufgelisteten Haushaltstitel in Tausend Euro." />
+              <InfoTooltip text="Summe der (als eng definierten) digitalen SOLL-Budgets aller Haushaltstitel in Tausend EUR. Unten aufgelistet sind alle Titelbeschreibungen in denen das Schlagwort auftaucht und ihre jeweiligen SOLL-Budgets." />
             </div>
             <div className="title-card-list">
               {epStats.titles.map((t) => (

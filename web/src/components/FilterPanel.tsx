@@ -32,18 +32,18 @@ export default function FilterPanel() {
         <section>
           <h2>
             Ansicht
-            <InfoTooltip text="Wechselt die Struktur des Netzwerks: Entweder nur thematische Keywords untereinander (Ko-Occurrence) oder die direkten Verknüpfungen zwischen Keywords und den verantwortlichen Ministerien." />
+            <InfoTooltip text="Verändert die Netzwerkstruktur: ‘Schlagwort’ zeigt nur die Verknüpfungen der thematischen Schlagworte untereinander (co-occurance). ‘Einzelplan’ zeigt die direkten Verknüpfungen zwischen Schlagworten und den zuständigen Bundesinstitutionen." />
           </h2>
           <div className="mode-toggle">
             <button
               className={mode === "keyword" ? "active" : ""}
               onClick={() => setMode("keyword")}>
-              Schlagwort-Netzwerk
+              Schlagwort
             </button>
             <button
               className={mode === "bipartite" ? "active" : ""}
               onClick={() => setMode("bipartite")}>
-              Schlagwort ↔ Einzelplan
+              Einzelplan
             </button>
           </div>
         </section>
@@ -51,7 +51,7 @@ export default function FilterPanel() {
         <section>
           <h2>
             Suche
-            <InfoTooltip text="Hebt gesuchte Keywords oder Ministerien im Graphen farblich hervor." />
+            <InfoTooltip text="Hebt gefundene Schlagworte oder Bundesinstitutionen im Netzwerk hervor." />
           </h2>
           <input
             type="search"
@@ -64,7 +64,7 @@ export default function FilterPanel() {
         <section>
           <h2>
             Haushaltsjahr
-            <InfoTooltip text="Schränkt die Datenbasis auf ein spezifisches Jahr ein. Es werden nur Haushaltstitel betrachtet, die in diesem Jahr ein Soll-Budget hatten." />
+            <InfoTooltip text="Schränkt die Datenbasis auf ein spezifisches Jahr ein. Es werden nur Haushaltstitel angezeigt, die im ausgewählten Jahr ein Digital-Soll-Budget hatten." />
           </h2>
           <div className="chips">
             {data.jahre.map((j) => (
@@ -85,7 +85,7 @@ export default function FilterPanel() {
             <summary>
               <h2>
                 Einzelplan
-                <InfoTooltip text="Filtert den Datensatz nach bestimmten Ressorts (Ministerien) und obersten Bundesbehörden." />
+                <InfoTooltip text="Filtert den Datensatz nach ausgewählten Bundesinstitutionen (= Einzelplänen). Eine Mehrfachauswahl ist möglich." />
               </h2>
             </summary>
             <div className="filter-accordion-content checklist scroll">
@@ -106,7 +106,7 @@ export default function FilterPanel() {
             <summary>
               <h2>
                 Digitalisierungsbereich
-                <InfoTooltip text="Filtert die Titel nach den übergeordneten Themengebieten der Digitalisierung (z.B. Verwaltung, Wirtschaft, Gesundheit)." />
+                <InfoTooltip text="Filtert die Haushaltstitel nach übergeordneten Themengebieten der Digitalisierung. Die Kategorisierung beruht auf der Einschätzung der Agora bei der Berechnung des Haushalts." />
               </h2>
             </summary>
             <div className="filter-accordion-content checklist">
@@ -127,7 +127,7 @@ export default function FilterPanel() {
             <summary>
               <h2>
                 Digitalisierungsklasse
-                <InfoTooltip text="Filtert nach der methodischen Einstufung, wie direkt der Digitalbezug des Haushaltstitels ist (von komplett digital bis zu manuellen Schätzwerten)." />
+                <InfoTooltip text="Filtert nach methodischer Einstufung, wie direkt der Digitalbezug des Haushaltstitels ist. Die Einstufung beruht auf der Einschätzung der Agora bei der Berechnung des Haushalts." />
               </h2>
             </summary>
             <div className="filter-accordion-content checklist">
@@ -150,7 +150,7 @@ export default function FilterPanel() {
             <summary>
               <h2>
                 Hauptgruppe
-                <InfoTooltip text="Filtert nach der groben wirtschaftlichen Art der Ausgaben (z.B. Personalausgaben, Sächliche Verwaltungsausgaben, Zuweisungen)." />
+                <InfoTooltip text="Filtert nach der im Bundeshaushalt zugeordneten Hauptgruppe. Diese gibt Aufschlüsse über die groben wirtschaftlichen Art der Ausgaben." />
               </h2>
             </summary>
             <div className="filter-accordion-content checklist">
@@ -173,7 +173,7 @@ export default function FilterPanel() {
             <summary>
               <h2>
                 Hauptfunktion
-                <InfoTooltip text="Filtert nach dem groben fachlichen Aufgabenbereich der Ausgaben im Bundeshaushalt (z.B. Bildung, Verkehr, Gesundheit)." />
+                <InfoTooltip text="Filtert nach der im Bundeshaushalt zugeordneten Hauptfunktion. Diese gibt Aufschlüsse über den groben fachlichen Aufgabenbereich der Ausgaben." />
               </h2>
             </summary>
             <div className="filter-accordion-content checklist">
@@ -201,7 +201,7 @@ export default function FilterPanel() {
               }}>
               <span>
                 Mindesthäufigkeit
-                <InfoTooltip text="Blendet Knoten aus, die seltener als der gewählte Wert auftreten. Hilft, das Netzwerk übersichtlicher zu machen." />
+                <InfoTooltip text="Blendet Knoten aus, die seltener als der gewählte Wert in Titeln auftreten. Unterstützt dabei, die Netzwerk-Visualisierung übersichtlich zu halten." />
               </span>
               <strong style={{ color: "var(--text)" }}>
                 {filters.minFrequency}
@@ -225,7 +225,7 @@ export default function FilterPanel() {
             style={{ paddingBottom: "12px", borderBottom: "none" }}>
             <h2 style={{ marginTop: 16 }}>
               Knotengröße nach
-              <InfoTooltip text="Steuert, ob die Kreise im Graphen nach der absoluten Anzahl der beteiligten Haushaltstitel oder nach dem zugrundeliegenden digitalen Budget (in T€) skaliert werden." />
+              <InfoTooltip text="Bestimmt ob die Kreisgröße entweder nach der absoluten Anzahl der beteiligten Haushaltstitel oder nach dem zugrundeliegenden digitalen Budget (SOLL, enge Variante) skaliert werden. Der Budget-Vergleich ist mit vorsicht zu genießen, da ein Haushaltstitel viele verschiedene Themen abdecken kann." />
             </h2>
             <div className="mode-toggle">
               <button
@@ -236,7 +236,7 @@ export default function FilterPanel() {
               <button
                 className={nodeSizeMetric === "budget" ? "active" : ""}
                 onClick={() => setNodeSizeMetric("budget")}>
-                Max. Budget (SOLL)
+                Maximales Budget
               </button>
             </div>
           </div>
