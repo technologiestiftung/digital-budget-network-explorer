@@ -635,7 +635,7 @@ input[type="range"] {
 }
 
 .chain-word {
-  font-size: clamp(40px, 7vw, 84px);
+  font-size: clamp(40px, 7vw, 60px);
   font-weight: 800;
   margin: 0;
   letter-spacing: -0.03em;
@@ -1546,7 +1546,7 @@ details > summary::-webkit-details-marker {
   align-items: center;
   gap: 12px;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--border);
+  border: 3px solid var(--accent);
   border-radius: 12px;
   padding: 16px 20px;
   backdrop-filter: blur(6px);
@@ -1555,7 +1555,7 @@ details > summary::-webkit-details-marker {
 .eq-box.highlight {
   background: #f4f3fd;
   border-color: #d8d7f5;
-  box-shadow: 0 8px 24px rgba(127, 123, 237, 0.15);
+
 }
 
 .eq-icon {
@@ -1567,7 +1567,7 @@ details > summary::-webkit-details-marker {
   font-size: 15px;
   color: var(--text);
   line-height: 1.3;
-  text-align: left;
+  text-align: center;
 }
 
 .eq-text strong {
@@ -1585,6 +1585,17 @@ details > summary::-webkit-details-marker {
   margin: 0 auto;
   text-align: left;
   border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 0 12px 12px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.explanation-text-block-clean {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
   padding-left: 20px;
   background: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
   border-radius: 0 12px 12px 0;
@@ -1613,5 +1624,16 @@ details > summary::-webkit-details-marker {
   .eq-arrow {
     transform: rotate(90deg);
   }
+}
+
+.explanation-text-block a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.15s;
+}
+
+.explanation-text-block a:hover {
+  opacity: 0.75;
 }
 

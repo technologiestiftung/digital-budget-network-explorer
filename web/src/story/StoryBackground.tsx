@@ -279,10 +279,15 @@ export default function StoryBackground({ data, chain, focus }: Props) {
       const highlight = new Set(
         focus.ids.map((c) => `kw:${c}`).filter((n) => graph.hasNode(n)),
       );
+      // Wenn kein Primary gesetzt ist (z.B. Erklärfolie), zeige alle
+      // verbundenen Einzelplan-Nachbarn mit an.
       if (primaryNode && graph.hasNode(primaryNode)) {
         highlight.add(primaryNode);
         centerIds = [primaryNode];
       } else {
+        for (const n of highlight) {
+          graph.forEachNeighbor(n, (neighbor) => highlight.add(neighbor));
+        }
         centerIds = Array.from(highlight);
       }
       st.highlight = highlight;

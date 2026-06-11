@@ -53,12 +53,21 @@ export default function Scrollytelling() {
     const list: Panel[] = [
       { key: "hero", focus: { type: "all", recenter: true } },
       { key: "quote", focus: { type: "all" } },
-      { key: "explanation", focus: { type: "all" } },
+      { key: "explanation-title", focus: { type: "all" } },
+      {
+        key: "explanation-text",
+        focus: {
+          type: "all",
+        },
+      },
       { key: "stats", focus: { type: "all" } },
     ];
     STORY_CHAIN.forEach((c, i) => {
       if (c.title) {
-        list.push({ key: `chain-${i}-q`, focus: { type: "all" } });
+        list.push({
+          key: `chain-${i}-q`,
+          focus: { type: "all", recenter: true },
+        });
       }
       list.push({ key: `chain-${i}-a`, focus: { type: "chain", upto: i } });
     });
@@ -130,7 +139,7 @@ export default function Scrollytelling() {
           data-idx={idxOf("hero")}
           className={`story-panel hero ${active === idxOf("hero") ? "is-active" : ""}`}>
           <div className="panel-inner center">
-            <p className="eyebrow">Sprachatlas Digitalhaushalt</p>
+            <p className="eyebrow">Sprachnetzwerk Digitalhaushalt</p>
             <h1 className="hero-title">
               Die Vielfalt der <em>Worte</em>
             </h1>
@@ -166,123 +175,80 @@ export default function Scrollytelling() {
           </div>
         </section>
 
-        {/* Screen 3 – Erklärung Datenbasis */}
+        {/* Screen 3 – Erklärung Titel */}
         <section
-          ref={setRef(idxOf("explanation"))}
-          data-idx={idxOf("explanation")}
-          className={`story-panel ${active === idxOf("explanation") ? "is-active" : ""}`}>
-          <div className="panel-inner">
-            <h2 className="screen-title">
-              Wie aus Worten Zahlen wurden – Der Digitalhaushalt des Bundes
+          ref={setRef(idxOf("explanation-title"))}
+          data-idx={idxOf("explanation-title")}
+          className={`story-panel ${active === idxOf("explanation-title") ? "is-active" : ""}`}>
+          <div className="panel-inner center">
+            <h2
+              className="screen-title"
+              style={{ fontSize: "clamp(30px, 4vw, 48px)" }}>
+              Der Digitalhaushalt des Bundes
             </h2>
-
             <div className="explanation-text-block">
               <p>
-                Der Haushalt zeigt, wie viel Geld der Bund ausgibt. Dafür geben
-                die Ministerien an, wie viel Geld sie brauchen und wofür: Sie
-                schreiben sogenannte <strong>Haushaltstitel</strong>.
+                Mit "Digitalhaushalt" ist der{" "}
+                <strong>Teil des Bundeshaushalts</strong> gemeint, der von
+                Bundesinstitutionen für Aufgaben rund um die Digitalisierung
+                verwendet wird.{" "}
+              </p>
+              <p>
+                Er ist allerdings keine eindeutig festgelegte Kategorie. Um die{" "}
+                <strong>Digitalausgaben des Bundes</strong> abzuschätzen, wurde
+                der Haushalt deshalb durch die{" "}
+                <a
+                  href="https://agoradigital.de/projekte/digitalhaushalt/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Agora Digitale Transformation
+                </a>{" "}
+                analysiert.
               </p>
             </div>
+            <div className="scroll-hint subtle">weiter scrollen ↓</div>
           </div>
         </section>
-        {/* Screen 3 – Erklärung Datenbasis */}
+
+        {/* Screen 4 – Erklärung Text */}
         <section
-          ref={setRef(idxOf("explanation"))}
-          data-idx={idxOf("explanation")}
-          className={`story-panel ${active === idxOf("explanation") ? "is-active" : ""}`}>
+          ref={setRef(idxOf("explanation-text"))}
+          data-idx={idxOf("explanation-text")}
+          className={`story-panel ${active === idxOf("explanation-text") ? "is-active" : ""}`}>
           <div className="panel-inner">
-            <div className="explanation-text-block">
+            <h2
+              className="screen-title"
+              style={{ fontSize: "clamp(30px, 4vw, 48px)" }}>
+              Wie aus Worten Zahlen wurden
+            </h2>
+            <div className="stats-intro">
               <p>
-                Der <strong>Digitalhaushalt</strong> ist der Teil des
-                Gesamthaushalts, der für Aufgabe rund umd die Digitalisierung
-                verwendet wird. Er ist keine festgelegte, selbsterklärende
-                Kategorie. Um die <strong>Digitalausgaben des Bundes</strong>{" "}
-                abzuschätzen, wurde der Haushalt durch die Agora Digitale
-                Transformation analysiert.
-              </p>
-              <p>
-                Dafür wurden die Titel unter anderem auf vorher festgelegte{" "}
-                <strong>Schlagworte</strong> hin analysiert, die auf
-                Digitalisierung hinweisen. Diese Schlagworte nehmen wir in
-                dieser <strong>Netzwerk-Visualisierung</strong> unter die Lupe.
+                Dafür wurden die Haushaltstitel unter anderem auf <strong>vorher
+                festgelegte Schlagworte</strong> hin analysiert, die ein
+                Kennzeichen für Ausgaben im Kontext von Digitalisierung sind.
               </p>
             </div>
+
             <div className="explanation-equation">
               <div className="eq-box">
                 <span className="eq-text">
-                  Haushaltstitel-Beschreibung enthält{" "}
+                  Haushaltstitel-Beschreibung enthält mindestens ein{" "}
                   <strong>"digitales" Schlagwort</strong>
                 </span>
               </div>
               <div className="eq-arrow">➔</div>
               <div className="eq-box highlight">
                 <span className="eq-text">
-                  Teil des <strong>Digitalhaushalts</strong>
+                  Titel ist Teil des <strong>Digitalhaushalts</strong>
                 </span>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Screen 5 – Erklärung / Zahlen */}
-        <section
-          ref={setRef(idxOf("stats"))}
-          data-idx={idxOf("stats")}
-          className={`story-panel ${active === idxOf("stats") ? "is-active" : ""}`}>
-          <div className="panel-inner">
-            <h2 className="screen-title">
-              Was steckt im Datensatz zum Digitalhaushalt?
-            </h2>
-            <p className="stats-intro">
-              Der im Folgenden betrachtete Teil des Datensatz enthält
-              ausschließlich Titel, die eindeutig der Kategorie "digital"
-              zuzuordnen sind. Das bedeutet, dass innerhalb der Beschreibungen
-              Schlagworte vorkommen, die ein Kennzeichen für Ausgaben im Kontext
-              von Digitalisierung sind.
-            </p>
-            <div className="stat-cards">
-              <div className="stat-card">
-                <span className="stat-num">
-                  <CountUp
-                    value={data.meta.counts.keywords}
-                    active={active === idxOf("stats")}
-                  />
-                </span>
-                <span className="stat-label">
-                  Schlagworte, die auf Digitalisierung hinweisen
-                </span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-num">
-                  <CountUp
-                    value={data.meta.counts.titel ?? 0}
-                    active={active === idxOf("stats")}
-                  />
-                </span>
-                <span className="stat-label">
-                  Haushaltstitel, die ein oder mehrere dieser Worte beinhalten
-                </span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-num">
-                  ≈
-                  <CountUp
-                    value={budgetMrd.value}
-                    decimals={1}
-                    active={active === idxOf("stats")}
-                  />{" "}
-                  Mrd €
-                </span>
-                <span className="stat-label">
-                  sind für diese Titel veranschlagt (2025, SOLL)
-                </span>
-              </div>
-              <div className="stat-card">
-                <span className="stat-num">30 %</span>
-                <span className="stat-label">
-                  des Gesamthaushalts machen diese Ausgaben aus
-                </span>
-              </div>
+            <div className="stats-intro">
+              <p>
+                Diese Schlagworte nehmen wir in dieser{" "}
+                <strong>Netzwerk-Visualisierung</strong> unter die Lupe.
+              </p>
             </div>
           </div>
         </section>
@@ -332,6 +298,62 @@ export default function Scrollytelling() {
           return res;
         })}
 
+        {/* Screen 5 – Erklärung / Zahlen */}
+        <section
+          ref={setRef(idxOf("stats"))}
+          data-idx={idxOf("stats")}
+          className={`story-panel ${active === idxOf("stats") ? "is-active" : ""}`}>
+          <div className="panel-inner">
+            <h2 className="screen-title">
+              Was steckt noch im Datensatz zum Digitalhaushalt?
+            </h2>
+            <div className="stat-cards">
+              <div className="stat-card">
+                <span className="stat-num">
+                  <CountUp
+                    value={data.meta.counts.keywords}
+                    active={active === idxOf("stats")}
+                  />
+                </span>
+                <span className="stat-label">
+                  Schlagworte, die auf Digitalisierung hinweisen
+                </span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-num">
+                  <CountUp
+                    value={data.meta.counts.titel ?? 0}
+                    active={active === idxOf("stats")}
+                  />
+                </span>
+                <span className="stat-label">
+                  Haushaltstitel, die ein oder mehrere dieser Worte beinhalten
+                </span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-num">
+                  ≈
+                  <CountUp
+                    value={budgetMrd.value}
+                    decimals={1}
+                    active={active === idxOf("stats")}
+                  />{" "}
+                  Mrd €
+                </span>
+                <span className="stat-label">
+                  sind für diese Titel veranschlagt (2025, SOLL)
+                </span>
+              </div>
+              <div className="stat-card">
+                <span className="stat-num">30 %</span>
+                <span className="stat-label">
+                  des Gesamthaushalts machen diese Ausgaben aus
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Screen 8 – Call to Action */}
         <section
           ref={setRef(idxOf("cta"))}
@@ -341,8 +363,7 @@ export default function Scrollytelling() {
             <h2 className="cta-title">Jetzt selbst erkunden</h2>
             <p className="cta-sub">
               Filtere nach Bundesinstitution, Jahr, oder Thema und entdecke,
-              welche Begriffe den Digitalhaushalt ausmachen und Institutionen
-              verbinden.
+              welche Begriffe den Digitalhaushalt ausmachen.
             </p>
             <button className="cta-button" onClick={() => setView("explore")}>
               Netzwerk-Explorer öffnen →

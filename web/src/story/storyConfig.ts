@@ -25,18 +25,12 @@ export const STORY_CHAIN: {
     note: 'Neben großen Querschnittsbegriffen gibt es auch sehr spezifische Vorhaben. "Hate Aid" ist beispielsweise ein konkretes Schlagwort, das durch den Titel eines einzigen Ministeriums finanziert wird.',
   },
   {
-    id: "blockchain",
-    type: "kw",
-    label: "Blockchain",
-    title: "Wie entwickeln sich Trends über die Zeit?",
-    note: "Die thematische Konjunktur wandelt sich: Noch vor wenigen Jahren erfuhr die Blockchain-Technologie große Aufmerksamkeit und wurde ressortübergreifend gefördert. Im aktuellen Haushalt für 2025 wird der Begriff nur noch von einem einzigen Ministerium im Haushalt erwähnt.",
-  },
-  {
+    ids: ["kuenstliche-intelligenz", "blockchain"],
     id: "kuenstliche-intelligenz",
-    type: "kw",
-    label: "Künstliche Intelligenz",
+    type: "set",
+    label: "Künstliche Intelligenz & Blockchain",
     title: "Wie entwickeln sich Trends über die Zeit?",
-    note: "Künstliche Intelligenz (KI) hat dagegen einen beispiellosen Aufstieg erlebt. Während das Thema 2019 nur von ganz wenigen Ministerien im Haushalt verankert war, ist KI heute omnipräsent und wird von einer breiten Mehrheit der Ressorts als zentraler Posten finanziert.",
+    note: "Die thematische Konjunktur wandelt sich: Noch vor wenigen Jahren erfuhr die Blockchain-Technologie große Aufmerksamkeit und wurde ressortübergreifend gefördert. Im aktuellen Haushalt für 2025 wird der Begriff nur noch von einem einzigen Ministerium im Haushalt erwähnt. Künstliche Intelligenz hat dagegen einen beispiellosen Aufstieg erlebt.",
   },
   {
     id: "ki-cluster",
@@ -49,7 +43,7 @@ export const STORY_CHAIN: {
     ],
     label: "Verbundene Themen",
     title: "Welche Themen stehen oft miteinander in Verbindung?",
-    note: "Ein einziger Haushaltstitel enthält häufig gleich mehrere Themen. Moderne Verwaltung, Robotik und Datenkompetenz. Das sind alles Themenbereiche, die gleichzeitig mit dem Schlagwort 'Künstliche Intelligenz' in Titeln genannt",
+    note: 'Ein einziger Haushaltstitel enthält häufig gleich mehrere Themen. Moderne Verwaltung, Robotik und Datenkompetenz. Das sind alles Themenbereiche, die gleichzeitig mit dem Schlagwort "Künstliche Intelligenz" in Titeln genannt werden.',
   },
 ];
 
