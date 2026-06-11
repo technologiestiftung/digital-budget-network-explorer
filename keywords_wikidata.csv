@@ -1,6 +1,6 @@
 keyword,keyword_uri,wikidata_qid,wikidata_uri,wikidata_label,wikidata_description,match_type,search_lang
 Smart Cities,http://example.org/digitalhaushalt/keyword/smart-cities,Q1231558,http://www.wikidata.org/entity/Q1231558,Smart City,"Sammelbegriff für gesamtheitliche Entwicklungskonzepte, die darauf abzielen, Städte effizienter, technologisch fortschrittlicher, grüner und sozial inklusiver zu gestalten",exact,de
-Digital,http://example.org/digitalhaushalt/keyword/digital,Q690079,http://www.wikidata.org/entity/Q690079,Digital Equipment Corporation,US-amerikanisches Unternehmen,fuzzy,de
+Digital,http://example.org/digitalhaushalt/keyword/digital,Q269415,http://www.wikidata.org/entity/Q269415,digitale Distribution,direkter Vertrieb digitaler Inhalte über das Internet,fuzzy,de
 Plattform,http://example.org/digitalhaushalt/keyword/plattform,Q241317,http://www.wikidata.org/entity/Q241317,Plattform,Basis für Anwendungsprogramme,exact,de
 Smart City,http://example.org/digitalhaushalt/keyword/smart-city,Q1231558,http://www.wikidata.org/entity/Q1231558,Smart City,"Sammelbegriff für gesamtheitliche Entwicklungskonzepte, die darauf abzielen, Städte effizienter, technologisch fortschrittlicher, grüner und sozial inklusiver zu gestalten",exact,de
 Vernetzung,http://example.org/digitalhaushalt/keyword/vernetzung,Q253405,http://www.wikidata.org/entity/Q253405,Vernetzung,"verschiedene Eigenschaften, die in gewissem Sinne ""alles aus einem Stück"" bedeuten",exact,de
@@ -22,12 +22,12 @@ Forschungsdateninfrastruktur,http://example.org/digitalhaushalt/keyword/forschun
 Forschungsdatenmanagement,http://example.org/digitalhaushalt/keyword/forschungsdatenmanagement,Q30089794,http://www.wikidata.org/entity/Q30089794,Forschungsdatenmanagement,Aktivitäten rund um den Lebenszyklus von Forschungsdaten,exact,de
 Informationsinfrastruktur,http://example.org/digitalhaushalt/keyword/informationsinfrastruktur,Q1047251,http://www.wikidata.org/entity/Q1047251,Informationsinfrastruktur,"Gesamtheit der informations- und kommunikationstechnischen, -organisatorischen und -verarbeitenden Einrichtungen",exact,de
 Weizenbaum-Institut,http://example.org/digitalhaushalt/keyword/weizenbaum-institut,Q31839610,http://www.wikidata.org/entity/Q31839610,Weizenbaum-Institut,interdisziplinäres Forschungsinstitut zur Erforschung des Wandels der Gesellschaft durch die Digitalisierung,exact,de
-Vernetz,http://example.org/digitalhaushalt/keyword/vernetz,Q864912,http://www.wikidata.org/entity/Q864912,Biotopverbund,im Verkehrswesen (Teilstücke) der natürlichen Bewegungsachsen von Wildtieren,fuzzy,de
+Vernetz,http://example.org/digitalhaushalt/keyword/vernetz,Q253405,http://www.wikidata.org/entity/Q253405,Vernetzung,"verschiedene Eigenschaften, die in gewissem Sinne ""alles aus einem Stück"" bedeuten",fuzzy,de
 Internet,http://example.org/digitalhaushalt/keyword/internet,Q75,http://www.wikidata.org/entity/Q75,Internet,"weltweites Netzwerk, bestehend aus Rechnernetzwerken, durch das Daten ausgetauscht werden",exact,de
 Digital-Gipfel,http://example.org/digitalhaushalt/keyword/digital-gipfel,Q1968219,http://www.wikidata.org/entity/Q1968219,Digital-Gipfel,Zentrale Plattform zur politischen Gestaltung des digitalen Wandels in Deutschland,exact,de
 Open Access,http://example.org/digitalhaushalt/keyword/open-access,Q232932,http://www.wikidata.org/entity/Q232932,Open Access,freier Zugang zu wissenschaftlicher Literatur und anderen Materialien im Internet,exact,de
 MINT,http://example.org/digitalhaushalt/keyword/mint,Q47859,http://www.wikidata.org/entity/Q47859,Minzen,Pflanzengattung der Familie Lippenblütler (Lamiaceae),exact,de
-Virtual-Reality,http://example.org/digitalhaushalt/keyword/virtual-reality,Q170519,http://www.wikidata.org/entity/Q170519,virtuelle Realität,computergenerierte interaktive virtuelle Umgebung,fuzzy,de
+Virtual-Reality,http://example.org/digitalhaushalt/keyword/virtual-reality,Q87741364,http://www.wikidata.org/entity/Q87741364,Virtual-Reality-Spiel,video game taking advantage of virtual reality,fuzzy,de
 Forschungsdaten,http://example.org/digitalhaushalt/keyword/forschungsdaten,Q15809982,http://www.wikidata.org/entity/Q15809982,Forschungsdaten,"Daten, die im Zuge wissenschaftlicher Vorhaben z.B. durch Digitalisierung, Quellenforschungen, Experimente, Messungen, Erhebungen oder Befragungen entstehen",exact,de
 NFDI,http://example.org/digitalhaushalt/keyword/nfdi,Q61658497,http://www.wikidata.org/entity/Q61658497,Nationale Forschungsdateninfrastruktur (NFDI) e.V.,"deutscher Verein mit dem Ziel, Daten von Wissenschaft und Forschung zur Verfügung zu stellen, zu vernetzen und somit langfristig nutzbar zu machen",exact,de
 Hightech-Strategie,http://example.org/digitalhaushalt/keyword/hightech-strategie,Q25385105,http://www.wikidata.org/entity/Q25385105,Hightech-Strategie,"mehrere Schwerpunkte in der deutschen Forschungspolitik (2006, 2007, 2010, 2014, 2018)",exact,de
@@ -43,7 +43,7 @@ Automatis,http://example.org/digitalhaushalt/keyword/automatis,Q184199,http://ww
 Funkspektrum,http://example.org/digitalhaushalt/keyword/funkspektrum,Q902174,http://www.wikidata.org/entity/Q902174,Funkspektrum,Frequenzbereich der zur technischen Kommunikation verwendeten elektromagnetischen Wellen,exact,de
 Datentransfer,http://example.org/digitalhaushalt/keyword/datentransfer,Q495092,http://www.wikidata.org/entity/Q495092,Datenübertragungsrate,Maß für die pro Zeit übertragene Datenmenge,fuzzy,de
 Rechenzentrum,http://example.org/digitalhaushalt/keyword/rechenzentrum,Q671224,http://www.wikidata.org/entity/Q671224,Rechenzentrum,"Gebäude oder Räumlichkeiten, in denen die zentrale Rechentechnik untergebracht ist",exact,de
-New Radio,http://example.org/digitalhaushalt/keyword/new-radio,Q89586589,http://www.wikidata.org/entity/Q89586589,New radiocarbon dates for iron-working sites on Exmoor,newsletter article published in 2000,fuzzy,de
+New Radio,http://example.org/digitalhaushalt/keyword/new-radio,Q7011122,http://www.wikidata.org/entity/Q7011122,New Radio and Performing Arts,American nonprofit organization,fuzzy,de
 IT-Komponenten,http://example.org/digitalhaushalt/keyword/it-komponenten,,,,,none,
 Breitbandiger,http://example.org/digitalhaushalt/keyword/breitbandiger,Q116114235,http://www.wikidata.org/entity/Q116114235,"Breitbandiger, hocheffizienter Photodetektor basierend auf dem SiGe-Materialsystem",GEPRIS Projekt,fuzzy,de
 Echtzeit,http://example.org/digitalhaushalt/keyword/echtzeit,Q347066,http://www.wikidata.org/entity/Q347066,Echtzeit,"Begriff; charakterisiert den Betrieb informationstechnischer Systeme, die bestimmte Ergebnisse zuverlässig innerhalb einer vorbestimmten Zeitspanne, zum Beispiel in einem festen Zeitraster, liefern können",exact,de
@@ -58,7 +58,7 @@ Drohne,http://example.org/digitalhaushalt/keyword/drohne,Q484000,http://www.wiki
 Breitband,http://example.org/digitalhaushalt/keyword/breitband,Q24636819,http://www.wikidata.org/entity/Q24636819,Breitband,"Hörfunksendung, Magazin für Medien und digitale Kultur",exact,de
 TKÜ-TMC-Erweiterung,http://example.org/digitalhaushalt/keyword/tkue-tmc-erweiterung,,,,,none,
 Sondervermögen Infrastruktur,http://example.org/digitalhaushalt/keyword/sondervermoegen-infrastruktur,,,,,none,
-Fernmelde,http://example.org/digitalhaushalt/keyword/fernmelde,Q418,http://www.wikidata.org/entity/Q418,Telekommunikation,elektronische Übermittlung von Informationen zwischen verschiedenen Standorten,fuzzy,de
+Fernmelde,http://example.org/digitalhaushalt/keyword/fernmelde,Q8117675,http://www.wikidata.org/entity/Q8117675,Fernmeldetruppe,branch of the military responsible for military communications,fuzzy,de
 Sensor,http://example.org/digitalhaushalt/keyword/sensor,Q167676,http://www.wikidata.org/entity/Q167676,Sensor,"technisches Bauteil, das bestimmte physikalische oder chemische Eigenschaften und/oder die stoffliche Beschaffenheit seiner Umgebung qualitativ oder als Messgröße quantitativ erfassen kann",exact,de
 Automatisierung,http://example.org/digitalhaushalt/keyword/automatisierung,Q184199,http://www.wikidata.org/entity/Q184199,Automatisierung,"selbsttätiges, zielorientiertes Handeln von technischen Systemen",exact,de
 Datenquelle,http://example.org/digitalhaushalt/keyword/datenquelle,Q121566744,http://www.wikidata.org/entity/Q121566744,Datenquelle,Quelle von Daten,exact,de
@@ -74,7 +74,7 @@ Galileo,http://example.org/digitalhaushalt/keyword/galileo,Q3757616,http://www.w
 Schlüsseltechnologie,http://example.org/digitalhaushalt/keyword/schluesseltechnologie,Q21074109,http://www.wikidata.org/entity/Q21074109,Schlüsseltechnologie,Art von Technologie,exact,de
 GNSS,http://example.org/digitalhaushalt/keyword/gnss,Q179435,http://www.wikidata.org/entity/Q179435,Globales Navigationssatellitensystem,System zur Positionsbestimmung durch den Empfang der Signale von Navigationssatelliten und Pseudoliten,exact,de
 VISP,http://example.org/digitalhaushalt/keyword/visp,Q64147,http://www.wikidata.org/entity/Q64147,Visp,"Gemeinde im Kanton Wallis, Schweiz",exact,de
-ESA,http://example.org/digitalhaushalt/keyword/esa,Q42262,http://www.wikidata.org/entity/Q42262,Europäische Weltraumorganisation,Zusammenschluss europäischer Staaten zur Weltraumforschung,exact,de
+ESA,http://example.org/digitalhaushalt/keyword/esa,Q19860309,http://www.wikidata.org/entity/Q19860309,Esa,männlicher Vorname,exact,de
 DLR,http://example.org/digitalhaushalt/keyword/dlr,Q157332,http://www.wikidata.org/entity/Q157332,Deutsches Zentrum für Luft- und Raumfahrt,deutsche Forschungs- und Technologiezentrum für Luft- und Raumfahrt,exact,de
 Deutsche Zentrum für Luft- und Raumfahrt,http://example.org/digitalhaushalt/keyword/deutsche-zentrum-fuer-luft-und-raumfahrt,,,,,none,
 Datenbank,http://example.org/digitalhaushalt/keyword/datenbank,Q8513,http://www.wikidata.org/entity/Q8513,Datenbank,Menge der (von einem Datenbankmanagementsystem) verwalteten Daten,exact,de
@@ -113,7 +113,7 @@ Baustelleninformationssystem,http://example.org/digitalhaushalt/keyword/baustell
 Client,http://example.org/digitalhaushalt/keyword/client,Q528166,http://www.wikidata.org/entity/Q528166,Client,"Programm, das auf einem Endgerät läuft und mit einem Server kommuniziert",exact,de
 Viewer,http://example.org/digitalhaushalt/keyword/viewer,Q7924308,http://www.wikidata.org/entity/Q7924308,ViEWER,Software,exact,de
 Interoperabilität,http://example.org/digitalhaushalt/keyword/interoperabilitaet,Q749647,http://www.wikidata.org/entity/Q749647,Interoperabilität,ability of systems to work with each other,exact,de
-Funksystem,http://example.org/digitalhaushalt/keyword/funksystem,Q1474505,http://www.wikidata.org/entity/Q1474505,Funksysteme zur Gebäudeautomatisierung,,fuzzy,de
+Funksystem,http://example.org/digitalhaushalt/keyword/funksystem,Q1225772,http://www.wikidata.org/entity/Q1225772,Funksystem der BOS in Österreich,Aktuelles Funknetz,fuzzy,de
 GSM-R,http://example.org/digitalhaushalt/keyword/gsm-r,Q549379,http://www.wikidata.org/entity/Q549379,GSM-R,digitales Mobilfunksystem zur Verwendung bei Eisenbahnen,exact,de
 Vernetzt,http://example.org/digitalhaushalt/keyword/vernetzt,Q98058138,http://www.wikidata.org/entity/Q98058138,Vernetzt,Dokureihe,exact,de
 Wissensspeicher Forschungsdaten,http://example.org/digitalhaushalt/keyword/wissensspeicher-forschungsdaten,,,,,none,
@@ -128,13 +128,13 @@ Digitalfunk,http://example.org/digitalhaushalt/keyword/digitalfunk,Q1225035,http
 Moderne Verwaltung,http://example.org/digitalhaushalt/keyword/moderne-verwaltung,,,,,none,
 Open Government,http://example.org/digitalhaushalt/keyword/open-government,Q720829,http://www.wikidata.org/entity/Q720829,Open Government,Öffnung von Regierung und Verwaltung,exact,de
 Netzpolitik,http://example.org/digitalhaushalt/keyword/netzpolitik,Q1978927,http://www.wikidata.org/entity/Q1978927,Netzpolitik,"Politikfeld um netzkulturelle, medienpolitische und medienrechtliche Fragen",exact,de
-Once-Only,http://example.org/digitalhaushalt/keyword/once-only,Q2609045,http://www.wikidata.org/entity/Q2609045,Once Only Imagined,2007 studio album by The Agonist,fuzzy,de
+Once-Only,http://example.org/digitalhaushalt/keyword/once-only,Q51069963,http://www.wikidata.org/entity/Q51069963,Once-Only-Prinzip,Prinzip zur Weitergabe von Standardinformationen an und zwischen Behörden oder Verwaltungen,fuzzy,de
 Netze des Bundes,http://example.org/digitalhaushalt/keyword/netze-des-bundes,Q92801800,http://www.wikidata.org/entity/Q92801800,Netze des Bundes,Kommunikationsnetz deutscher Bundesbehörden,exact,de
 Ressort-CIO,http://example.org/digitalhaushalt/keyword/ressort-cio,,,,,none,
 IT-Steuerung,http://example.org/digitalhaushalt/keyword/it-steuerung,,,,,none,
 IT-Controlling,http://example.org/digitalhaushalt/keyword/it-controlling,Q1654941,http://www.wikidata.org/entity/Q1654941,IT-Controlling,,exact,de
 BeKI,http://example.org/digitalhaushalt/keyword/beki,Q336286,http://www.wikidata.org/entity/Q336286,Abwehrspieler,Spielerposition im Mannschaftssport,exact,de
-Open-Data,http://example.org/digitalhaushalt/keyword/open-data,Q309901,http://www.wikidata.org/entity/Q309901,Open Data,frei ohne Einschränkungen nutzbare Daten,fuzzy,de
+Open-Data,http://example.org/digitalhaushalt/keyword/open-data,Q27031827,http://www.wikidata.org/entity/Q27031827,Open-Data-Portal,Website zur Verbreitung offener Daten,fuzzy,de
 IT-Konsolidierung,http://example.org/digitalhaushalt/keyword/it-konsolidierung,,,,,none,
 IT-Fonds,http://example.org/digitalhaushalt/keyword/it-fonds,,,,,none,
 Disruptive,http://example.org/digitalhaushalt/keyword/disruptive,Q135033654,http://www.wikidata.org/entity/Q135033654,Disruptive,"Computerspiel aus dem Jahr 2023, entwickelt von HVNSART Games",exact,de
@@ -146,7 +146,7 @@ elektronische Portals,http://example.org/digitalhaushalt/keyword/elektronische-p
 Datenerhebung,http://example.org/digitalhaushalt/keyword/datenerhebung,Q4929239,http://www.wikidata.org/entity/Q4929239,Datenerhebung,Erheben und Auswerten von Daten,exact,de
 Mobilfunkausbau,http://example.org/digitalhaushalt/keyword/mobilfunkausbau,,,,,none,
 Gigabitbüro,http://example.org/digitalhaushalt/keyword/gigabitbuero,,,,,none,
-Drahtlose,http://example.org/digitalhaushalt/keyword/drahtlose,Q1061197,http://www.wikidata.org/entity/Q1061197,Radio-Network,"Senderkette, die mit einem Leitsender zahlreiche lokale Hörfunksender mit einem Mantelprogramm beliefert",fuzzy,de
+Drahtlose,http://example.org/digitalhaushalt/keyword/drahtlose,Q249,http://www.wikidata.org/entity/Q249,drahtlose Kommunikation,"Verfahren, das Information ohne elektrischen Leiter im freien Raum mit Hilfe von elektromagnetischen Wellen überträgt",fuzzy,de
 Breitbandbüro,http://example.org/digitalhaushalt/keyword/breitbandbuero,,,,,none,
 Gigabit,http://example.org/digitalhaushalt/keyword/gigabit,Q3105497,http://www.wikidata.org/entity/Q3105497,Gigabit,"unit of digital information equal to one billion bits or 1,000 megabits",exact,de
 Netzausbau,http://example.org/digitalhaushalt/keyword/netzausbau,Q15836561,http://www.wikidata.org/entity/Q15836561,Netzausbau,Wikimedia-Begriffsklärungsseite,exact,de
@@ -160,16 +160,16 @@ Open Source,http://example.org/digitalhaushalt/keyword/open-source,Q39162,http:/
 Datenschutz,http://example.org/digitalhaushalt/keyword/datenschutz,Q456632,http://www.wikidata.org/entity/Q456632,Datenschutz,Rechtsbegriff; alle Maßnahmen zur angemessenen Nutzung von personenbezogenen Daten,exact,de
 Stiftung Datenschutz,http://example.org/digitalhaushalt/keyword/stiftung-datenschutz,Q15849271,http://www.wikidata.org/entity/Q15849271,Stiftung Datenschutz,gemeinnützige Stiftung,exact,de
 Datenschutz und die Informationsfreiheit,http://example.org/digitalhaushalt/keyword/datenschutz-und-die-informationsfreiheit,,,,,none,
-Automatische,http://example.org/digitalhaushalt/keyword/automatische,Q189436,http://www.wikidata.org/entity/Q189436,Spracherkennung,"interdisziplinäres Teilgebiet der Computerlinguistik, das Methoden und Technologien entwickelt, die die Erkennung und Übersetzung gesprochener Sprache in Text durch Computer ermöglichen",fuzzy,de
+Automatische,http://example.org/digitalhaushalt/keyword/automatische,Q846837,http://www.wikidata.org/entity/Q846837,automatische Wetterstation,set of sensors that record and provide physical measurements and meteorological parameters without any human intervention,fuzzy,de
 Datenerfassung,http://example.org/digitalhaushalt/keyword/datenerfassung,Q1172399,http://www.wikidata.org/entity/Q1172399,Datenerfassung,Gesamtheit der Methoden der zeitgleichen oder zeitfolgerichtigen Messungen und Zählungen für messbare oder zählbare Daten und Gruppen von zusammenhängenden Daten,exact,de
 Server,http://example.org/digitalhaushalt/keyword/server,Q44127,http://www.wikidata.org/entity/Q44127,Server,Computer für den Zugriff auf eine zentrale Ressource oder Dienst in einem Netzwerk,exact,de
 Datenbereitstellung,http://example.org/digitalhaushalt/keyword/datenbereitstellung,,,,,none,
 Network,http://example.org/digitalhaushalt/keyword/network,Q27720980,http://www.wikidata.org/entity/Q27720980,Network,wissenschaftliche Fachzeitschrift,exact,de
 Systemupgrade,http://example.org/digitalhaushalt/keyword/systemupgrade,,,,,none,
-Automatisierte,http://example.org/digitalhaushalt/keyword/automatisierte,Q19835007,http://www.wikidata.org/entity/Q19835007,autonomes Fahren,selbstständige Steuerung von Fahrzeugen durch eine künstliche Intelligenz,fuzzy,de
+Automatisierte,http://example.org/digitalhaushalt/keyword/automatisierte,Q787397,http://www.wikidata.org/entity/Q787397,Automatisierte Liegenschaftskarte,Typ einer Flurkarte,fuzzy,de
 AIS-Dienstes,http://example.org/digitalhaushalt/keyword/ais-dienstes,,,,,none,
 Zukunftsfonds,http://example.org/digitalhaushalt/keyword/zukunftsfonds,Q228721,http://www.wikidata.org/entity/Q228721,Zukunftsfonds der Republik Österreich,,fuzzy,de
-Telemedizinisch,http://example.org/digitalhaushalt/keyword/telemedizinisch,Q86777708,http://www.wikidata.org/entity/Q86777708,Telemedizinische Versorgungskonzepte in der regionalen Versorgung ländlicher Gebiete,im 1. April 2015 veröffentlichter wissenschaftlicher Artikel,fuzzy,de
+Telemedizinisch,http://example.org/digitalhaushalt/keyword/telemedizinisch,Q86041610,http://www.wikidata.org/entity/Q86041610,Telemedizinische Schlaganfallversorgung in der Ostschweiz,im 1. September 2015 veröffentlichter wissenschaftlicher Artikel,fuzzy,de
 Informatik,http://example.org/digitalhaushalt/keyword/informatik,Q21198,http://www.wikidata.org/entity/Q21198,Informatik,Wissenschaft von der systematischen Verarbeitung von Informationen,exact,de
 Modellierung,http://example.org/digitalhaushalt/keyword/modellierung,Q1116876,http://www.wikidata.org/entity/Q1116876,Modellierung,Art von Repräsentation,exact,de
 Onlineberatungsdienst,http://example.org/digitalhaushalt/keyword/onlineberatungsdienst,,,,,none,
@@ -199,17 +199,17 @@ KI-Methoden,http://example.org/digitalhaushalt/keyword/ki-methoden,Q136869180,ht
 KI-Anwend,http://example.org/digitalhaushalt/keyword/ki-anwend,Q4781507,http://www.wikidata.org/entity/Q4781507,Anwendungen von künstlicher Intelligenz,Anwendungen maschineller Intelligenz,fuzzy,de
 EHealth,http://example.org/digitalhaushalt/keyword/ehealth,Q4930,http://www.wikidata.org/entity/Q4930,E-Health,Anwendung elektronischer Geräte zur medizinischen Versorgung,exact,de
 Datenanalyse,http://example.org/digitalhaushalt/keyword/datenanalyse,Q1988917,http://www.wikidata.org/entity/Q1988917,Datenanalyse,activity for gaining insight from data,exact,de
-Datenbasierte,http://example.org/digitalhaushalt/keyword/datenbasierte,Q116100454,http://www.wikidata.org/entity/Q116100454,Datenbasierte Generierung und Optimierung von Fuzzy-Modellen mit dem Fuzzy-ROSA-VVerfahren für komplexe Systeme und Prozesse (P 1),GEPRIS Projekt,fuzzy,de
+Datenbasierte,http://example.org/digitalhaushalt/keyword/datenbasierte,Q124044049,http://www.wikidata.org/entity/Q124044049,Datenbasierte Prozesse auf Baustellen,wissenschaftlicher Artikel,fuzzy,de
 KI-Innovationen,http://example.org/digitalhaushalt/keyword/ki-innovationen,,,,,none,
-Computational,http://example.org/digitalhaushalt/keyword/computational,Q11660,http://www.wikidata.org/entity/Q11660,künstliche Intelligenz,"Teilgebiet der Informatik, das sich mit maschinellen Intelligenzleistungen befasst",fuzzy,de
+Computational,http://example.org/digitalhaushalt/keyword/computational,Q373639,http://www.wikidata.org/entity/Q373639,Computational and Theoretical Chemistry,Fachzeitschrift,fuzzy,de
 Data Gap,http://example.org/digitalhaushalt/keyword/data-gap,Q127113159,http://www.wikidata.org/entity/Q127113159,data gap,"the absence, inaccessibility, or incompleteness of data needed to fully understand a situation or make informed decisions",exact,de
 Zukunftsstadt,http://example.org/digitalhaushalt/keyword/zukunftsstadt,,,,,none,
 Reallabor,http://example.org/digitalhaushalt/keyword/reallabor,Q3027857,http://www.wikidata.org/entity/Q3027857,Reallabor,Art von Ökosystem,exact,de
 Datenorientierte,http://example.org/digitalhaushalt/keyword/datenorientierte,Q24882785,http://www.wikidata.org/entity/Q24882785,Datenorientiertes Design,Program optimization approach in computing,fuzzy,de
 Industrie 4.0,http://example.org/digitalhaushalt/keyword/industrie-4-0,Q1661989,http://www.wikidata.org/entity/Q1661989,Industrie 4.0,umfassende Digitalisierung der industriellen Prozesse,exact,de
-Digitalisierte,http://example.org/digitalhaushalt/keyword/digitalisierte,Q60474998,http://www.wikidata.org/entity/Q60474998,digitalisierte Sammlung,Sammlung digitalisierter Objekte,fuzzy,de
+Digitalisierte,http://example.org/digitalhaushalt/keyword/digitalisierte,Q129613939,http://www.wikidata.org/entity/Q129613939,digitalisierte Edition,"Werk, dessen Seiten gescannt wurden, oder von dessen Inhalten eine digitale Kopie angefertigt wurde",fuzzy,de
 technologische Souveränität,http://example.org/digitalhaushalt/keyword/technologische-souveraenitaet,Q17630369,http://www.wikidata.org/entity/Q17630369,Technologiesouveränität,Kompetenz,exact,de
-WIK,http://example.org/digitalhaushalt/keyword/wik,Q328,http://www.wikidata.org/entity/Q328,englischsprachige Wikipedia,Ausgabe der freien Online-Enzyklopädie Wikipedia in englischer Sprache,fuzzy,de
+WIK,http://example.org/digitalhaushalt/keyword/wik,Q565,http://www.wikidata.org/entity/Q565,Wikimedia Commons,"freie Sammlung von Bildern, Audio- und Videodateien",fuzzy,de
 WGL,http://example.org/digitalhaushalt/keyword/wgl,Q7946357,http://www.wikidata.org/entity/Q7946357,WADO,US-amerikanischer Hörfunksender (MW),exact,de
 Leibniz,http://example.org/digitalhaushalt/keyword/leibniz,Q9047,http://www.wikidata.org/entity/Q9047,Gottfried Wilhelm Leibniz,deutscher Philosoph und Wissenschaftler,exact,de
 FIZ,http://example.org/digitalhaushalt/keyword/fiz,Q111356373,http://www.wikidata.org/entity/Q111356373,Fiz,Familienname,exact,de
@@ -243,7 +243,7 @@ Internet der Dinge,http://example.org/digitalhaushalt/keyword/internet-der-dinge
 Maschinelle Lernen,http://example.org/digitalhaushalt/keyword/maschinelle-lernen,,,,,none,
 Big Data,http://example.org/digitalhaushalt/keyword/big-data,Q858810,http://www.wikidata.org/entity/Q858810,Big Data,Verarbeitung sehr großer Datenmengen,exact,de
 IKT,http://example.org/digitalhaushalt/keyword/ikt,Q5268834,http://www.wikidata.org/entity/Q5268834,Informations- und Kommunikationstechnik,Technik im Bereich der Information und Kommunikation,exact,de
-Informationstechnologie,http://example.org/digitalhaushalt/keyword/informationstechnologie,Q11661,http://www.wikidata.org/entity/Q11661,Informationstechnik,Oberbegriff für die Informations- und Datenverarbeitung sowie die dafür benötigte Hard- und Software,fuzzy,de
+Informationstechnologie,http://example.org/digitalhaushalt/keyword/informationstechnologie,Q6031253,http://www.wikidata.org/entity/Q6031253,Informationstechnologie in India,IT-Software in Indien,fuzzy,de
 Softwareentwicklung,http://example.org/digitalhaushalt/keyword/softwareentwicklung,Q80993,http://www.wikidata.org/entity/Q80993,Softwaretechnik,"Art und Weise, wie Software entwickelt wird",exact,de
 KI-Strategie,http://example.org/digitalhaushalt/keyword/ki-strategie,,,,,none,
 Start-up,http://example.org/digitalhaushalt/keyword/start-up,Q129238,http://www.wikidata.org/entity/Q129238,Jungunternehmen,junges Unternehmen mit (meist) innovativer Geschäftsidee,exact,de
@@ -266,7 +266,7 @@ IAGOS,http://example.org/digitalhaushalt/keyword/iagos,Q131428133,http://www.wik
 GRACE-I,http://example.org/digitalhaushalt/keyword/grace-i,Q106368354,http://www.wikidata.org/entity/Q106368354,Grace Ioppolo,British academic,fuzzy,de
 Neue Fahrzeug- und Systemtechnologien,http://example.org/digitalhaushalt/keyword/neue-fahrzeug-und-systemtechnologien,,,,,none,
 MPG,http://example.org/digitalhaushalt/keyword/mpg,Q158085,http://www.wikidata.org/entity/Q158085,Max-Planck-Gesellschaft,Institution im Bereich der Grundlagenforschung,exact,de
-Max-Planck,http://example.org/digitalhaushalt/keyword/max-planck,Q9021,http://www.wikidata.org/entity/Q9021,Max Planck,"deutscher Physiker, Nobelpreisträger (1858–1947)",fuzzy,de
+Max-Planck,http://example.org/digitalhaushalt/keyword/max-planck,Q158085,http://www.wikidata.org/entity/Q158085,Max-Planck-Gesellschaft,Institution im Bereich der Grundlagenforschung,fuzzy,de
 Max-Planck-Gesellschaft,http://example.org/digitalhaushalt/keyword/max-planck-gesellschaft,Q158085,http://www.wikidata.org/entity/Q158085,Max-Planck-Gesellschaft,Institution im Bereich der Grundlagenforschung,exact,de
 DMA,http://example.org/digitalhaushalt/keyword/dma,Q784,http://www.wikidata.org/entity/Q784,Dominica,Inselstaat in der östlichen Karibik,exact,de
 Computing,http://example.org/digitalhaushalt/keyword/computing,Q179310,http://www.wikidata.org/entity/Q179310,Computing,"Tätigkeiten, die auf Computern beziehungsweise algorithmischen Prozessen aufbauen",exact,de
@@ -278,7 +278,7 @@ Robotik,http://example.org/digitalhaushalt/keyword/robotik,Q170978,http://www.wi
 Ledger,http://example.org/digitalhaushalt/keyword/ledger,Q16871993,http://www.wikidata.org/entity/Q16871993,Ledger,Familienname,exact,de
 Smart Contracts,http://example.org/digitalhaushalt/keyword/smart-contracts,Q111688137,http://www.wikidata.org/entity/Q111688137,Smart Contracts,book section published in 2016,exact,de
 Kommunikationssystem,http://example.org/digitalhaushalt/keyword/kommunikationssystem,Q577764,http://www.wikidata.org/entity/Q577764,Kommunikationssystem,Infrastruktur für den Austausch von Informationen,exact,de
-Cyber,http://example.org/digitalhaushalt/keyword/cyber,Q15746553,http://www.wikidata.org/entity/Q15746553,"Cyberpsychology, Behavior and Social Networking",wissenschaftliche Fachzeitschrift,fuzzy,de
+Cyber,http://example.org/digitalhaushalt/keyword/cyber,Q204606,http://www.wikidata.org/entity/Q204606,Cyberspace,virtuelle Welt,fuzzy,de
 Quantenkommunikation,http://example.org/digitalhaushalt/keyword/quantenkommunikation,Q2122216,http://www.wikidata.org/entity/Q2122216,Quanteninformatik,"Wissenschaft von einer Informationsverarbeitung, die quantenmechanische Phänomene nutzt",exact,de
 Quantensichere,http://example.org/digitalhaushalt/keyword/quantensichere,,,,,none,
 Agile,http://example.org/digitalhaushalt/keyword/agile,Q14951,http://www.wikidata.org/entity/Q14951,AGILE,Satellit,exact,de
@@ -286,21 +286,21 @@ Kommunikationsnetze,http://example.org/digitalhaushalt/keyword/kommunikationsnet
 Kryptografie,http://example.org/digitalhaushalt/keyword/kryptografie,Q8789,http://www.wikidata.org/entity/Q8789,Kryptographie,Techniken zur sicheren Kommunikation in Anwesenheit Dritter,exact,de
 Konnektivität,http://example.org/digitalhaushalt/keyword/konnektivitaet,Q72898059,http://www.wikidata.org/entity/Q72898059,Knotenzusammenhangszahl,"das größte k, sodass ein gegebener Graph k-zusammenhängend ist",exact,de
 Souverän.Digital.Vernetzt,http://example.org/digitalhaushalt/keyword/souveraen-digital-vernetzt,,,,,none,
-Datengetriebene,http://example.org/digitalhaushalt/keyword/datengetriebene,Q102047184,http://www.wikidata.org/entity/Q102047184,datengetriebene Modellierung,mathematical modeling based on experimental measurement data,fuzzy,de
+Datengetriebene,http://example.org/digitalhaushalt/keyword/datengetriebene,Q105445682,http://www.wikidata.org/entity/Q105445682,datengetriebener Ansatz,an approach based on inference from experimental data instead of first principles,fuzzy,de
 KI-Kompetenz,http://example.org/digitalhaushalt/keyword/ki-kompetenz,Q126278541,http://www.wikidata.org/entity/Q126278541,KI-Kompetenz,"The ability to understand, use, monitor, and critically reflect on AI applications",exact,de
 BIFOLD,http://example.org/digitalhaushalt/keyword/bifold,Q108366971,http://www.wikidata.org/entity/Q108366971,Berlin Institute for the Foundations of Learning and Data,"Forschungsinstitut in Berlin, Deutschland",exact,de
 Berlin Institute for the Foundations of Learning and Data,http://example.org/digitalhaushalt/keyword/berlin-institute-for-the-foundations-of-learning-and-data,Q108366971,http://www.wikidata.org/entity/Q108366971,Berlin Institute for the Foundations of Learning and Data,"Forschungsinstitut in Berlin, Deutschland",exact,de
 MCML,http://example.org/digitalhaushalt/keyword/mcml,Q18597,http://www.wikidata.org/entity/Q18597,1950,Jahr,exact,de
 Machine Learning,http://example.org/digitalhaushalt/keyword/machine-learning,Q2539,http://www.wikidata.org/entity/Q2539,maschinelles Lernen,"wissenschaftliche Untersuchung von Algorithmen und statistischen Modellen, die Computersysteme verwenden, um aus Daten die Ausführung von Aufgaben zu lernen, für die sie nicht explizit programmiert werden",exact,de
 Lamarr,http://example.org/digitalhaushalt/keyword/lamarr,Q93306323,http://www.wikidata.org/entity/Q93306323,LaMarr,Familienname,exact,de
-Scalable,http://example.org/digitalhaushalt/keyword/scalable,Q2078,http://www.wikidata.org/entity/Q2078,Scalable Vector Graphics,Spezifikation zur Beschreibung zweidimensionaler Vektorgrafiken,fuzzy,de
+Scalable,http://example.org/digitalhaushalt/keyword/scalable,Q112245017,http://www.wikidata.org/entity/Q112245017,Scalable Capital,deutsche digitale Banking- und Investmentplattform,fuzzy,de
 Data Analytics,http://example.org/digitalhaushalt/keyword/data-analytics,Q485396,http://www.wikidata.org/entity/Q485396,Analytik,"die Wissenschaft, die sich mit der Durchführung einer systematischen Untersuchung eines Sachverhaltes oder eines Gegenstandes befasst, indem dieser Gegenstand „aufgelöst“, also in alle seine ihn bestimmenden Faktoren oder Komponenten getrennt wird.",exact,de
 AI Center,http://example.org/digitalhaushalt/keyword/ai-center,Q132128901,http://www.wikidata.org/entity/Q132128901,AICOE Institute,Global AI research hub,fuzzy,de
 KI-gestützte Auswertetools,http://example.org/digitalhaushalt/keyword/ki-gestuetzte-auswertetools,,,,,none,
 große Datenmengen,http://example.org/digitalhaushalt/keyword/grosse-datenmengen,,,,,none,
 KI-gestützt,http://example.org/digitalhaushalt/keyword/ki-gestuetzt,Q121889130,http://www.wikidata.org/entity/Q121889130,KI-gestützte Bildskalierungstechnologie,Technologie zur Hoch- oder Herunterskalierung von Bildern mit Hilfe künstlicher Intelligenz,fuzzy,de
 RFID-Technologie,http://example.org/digitalhaushalt/keyword/rfid-technologie,,,,,none,
-INVEST,http://example.org/digitalhaushalt/keyword/invest,Q6060707,http://www.wikidata.org/entity/Q6060707,Investigative Ophthalmology & Visual Science,wissenschaftliche Fachzeitschrift,fuzzy,de
+INVEST,http://example.org/digitalhaushalt/keyword/invest,Q4290,http://www.wikidata.org/entity/Q4290,Investition,"Verwendung finanzieller Mittel oder die Anlage von Kapital in Vermögen bzw. Geldkapital, um damit neue Geldgewinne aus bestehenden Unternehmungen zu bekommen",fuzzy,de
 Business Angel,http://example.org/digitalhaushalt/keyword/business-angel,Q778274,http://www.wikidata.org/entity/Q778274,Business Angel,Investor für Existenzgründer mit Know-How-Unterstützung,exact,de
 EXIST,http://example.org/digitalhaushalt/keyword/exist,Q311550,http://www.wikidata.org/entity/Q311550,EXist,database and application platform built entirely around XML technologies.,exact,de
 Wagniskapital,http://example.org/digitalhaushalt/keyword/wagniskapital,Q219409,http://www.wikidata.org/entity/Q219409,Risikokapital,"außerbörsliches Beteiligungskapital, das eine Beteiligungsgesellschaft zur Beteiligung an als besonders riskant geltenden Unternehmungen bereitstellt",exact,de
@@ -310,7 +310,7 @@ Miteinander durch Innovation,http://example.org/digitalhaushalt/keyword/miteinan
 IT-Forschung,http://example.org/digitalhaushalt/keyword/it-forschung,,,,,none,
 Software Engineering,http://example.org/digitalhaushalt/keyword/software-engineering,Q80993,http://www.wikidata.org/entity/Q80993,Softwaretechnik,"Art und Weise, wie Software entwickelt wird",exact,de
 IT-Aspekte,http://example.org/digitalhaushalt/keyword/it-aspekte,,,,,none,
-Hochleistung,http://example.org/digitalhaushalt/keyword/hochleistung,Q381233,http://www.wikidata.org/entity/Q381233,Hochleistungsflüssigkeitschromatographie,Trennverfahren für die Produktion und Analysemethode,fuzzy,de
+Hochleistung,http://example.org/digitalhaushalt/keyword/hochleistung,Q1190465,http://www.wikidata.org/entity/Q1190465,Hochleistungsrechnen,"umfasst alle Rechenarbeiten, deren Bearbeitung einer hohen Rechenleistung oder Speicherkapazität bedarf",fuzzy,de
 Exascale,http://example.org/digitalhaushalt/keyword/exascale,Q2450880,http://www.wikidata.org/entity/Q2450880,exascale computing,computer systems capable of one exaFLOPS,fuzzy,de
 Höchstleistungsrechnen,http://example.org/digitalhaushalt/keyword/hoechstleistungsrechnen,,,,,none,
 Elektroniksystem,http://example.org/digitalhaushalt/keyword/elektroniksystem,Q874743,http://www.wikidata.org/entity/Q874743,Elektroniksystem- und Logistik-GmbH,"historisches, deutsches Informationstechnik- und Rüstungsunternehmen",fuzzy,de
@@ -325,14 +325,14 @@ Helmholtz Data Federation,http://example.org/digitalhaushalt/keyword/helmholtz-d
 HDF,http://example.org/digitalhaushalt/keyword/hdf,Q1069215,http://www.wikidata.org/entity/Q1069215,Hierarchical Data Format,Dateiformat-Familie,exact,de
 SAP,http://example.org/digitalhaushalt/keyword/sap,Q552581,http://www.wikidata.org/entity/Q552581,SAP,deutscher Softwarehersteller,exact,de
 FZJ,http://example.org/digitalhaushalt/keyword/fzj,Q697111,http://www.wikidata.org/entity/Q697111,Forschungszentrum Jülich,Großforschungseinrichtung in Nordrhein-Westfalen,exact,de
-IT3,http://example.org/digitalhaushalt/keyword/it3,Q136699532,http://www.wikidata.org/entity/Q136699532,Instituto de Fomento à Tecnologia do Terceiro Setor,,fuzzy,de
+IT3,http://example.org/digitalhaushalt/keyword/it3,Q108047903,http://www.wikidata.org/entity/Q108047903,Environmental assets,national designation of Italy for protected areas registered in the CDDA Nationally Designated Areas inventory,fuzzy,de
 IT-Projekt,http://example.org/digitalhaushalt/keyword/it-projekt,Q105822973,http://www.wikidata.org/entity/Q105822973,IT-Projekt,Projekt zur Einführung oder Entwicklung informationstechnischer Systeme,exact,de
 Repository,http://example.org/digitalhaushalt/keyword/repository,Q1235234,http://www.wikidata.org/entity/Q1235234,Dokumentenserver,digitale Bibliothek zur Veröffentlichung und Archivierung von elektronischen Publikationen in einem Repository,exact,de
 Betriebsanalytik,http://example.org/digitalhaushalt/keyword/betriebsanalytik,,,,,none,
 IT1,http://example.org/digitalhaushalt/keyword/it1,Q18046123,http://www.wikidata.org/entity/Q18046123,HAUS3,Gen der Spezies Homo sapiens,exact,de
 BIMSB,http://example.org/digitalhaushalt/keyword/bimsb,,,,,none,
 JUNIQ,http://example.org/digitalhaushalt/keyword/juniq,Q139597465,http://www.wikidata.org/entity/Q139597465,Junique,,fuzzy,de
-DeepStor,http://example.org/digitalhaushalt/keyword/deepstor,Q96431533,http://www.wikidata.org/entity/Q96431533,DeepSTORM3D: dense 3D localization microscopy and PSF design by deep learning,wissenschaftlicher Artikel,fuzzy,de
+DeepStor,http://example.org/digitalhaushalt/keyword/deepstor,Q130964813,http://www.wikidata.org/entity/Q130964813,DeepStore,wissenschaftlicher Artikel,fuzzy,de
 Prototyp,http://example.org/digitalhaushalt/keyword/prototyp,Q207977,http://www.wikidata.org/entity/Q207977,Prototyp,funktionsfähiges Versuchsmodell eines geplanten Produktes,exact,de
 Forschungszentrum Jülich,http://example.org/digitalhaushalt/keyword/forschungszentrum-juelich,Q697111,http://www.wikidata.org/entity/Q697111,Forschungszentrum Jülich,Großforschungseinrichtung in Nordrhein-Westfalen,exact,de
 Helmholtz-Zentrum für Informationssicherheit,http://example.org/digitalhaushalt/keyword/helmholtz-zentrum-fuer-informationssicherheit,Q55436361,http://www.wikidata.org/entity/Q55436361,CISPA - Helmholtz-Zentrum für Informationssicherheit,Forschungseinrichtung für Informationssicherheit,exact,de
@@ -344,7 +344,7 @@ Hamburg Wireless Competence,http://example.org/digitalhaushalt/keyword/hamburg-w
 Smart Rail Connectivity Campus,http://example.org/digitalhaushalt/keyword/smart-rail-connectivity-campus,,,,,none,
 Deutsche Zentrum Mobilität der Zukunft,http://example.org/digitalhaushalt/keyword/deutsche-zentrum-mobilitaet-der-zukunft,,,,,none,
 GRW,http://example.org/digitalhaushalt/keyword/grw,Q176634,http://www.wikidata.org/entity/Q176634,Flughafen Graciosa,Flughafen in Portugal,exact,de
-Verschlüsselte,http://example.org/digitalhaushalt/keyword/verschluesselte,Q114514587,http://www.wikidata.org/entity/Q114514587,Verschlüsselte Nachrichten,Folge von Ancient Aliens – Unerklärliche Phänomene,fuzzy,de
+Verschlüsselte,http://example.org/digitalhaushalt/keyword/verschluesselte,Q114537037,http://www.wikidata.org/entity/Q114537037,Verschlüsselte Botschaft,Folge von Mord ist ihr Hobby,fuzzy,de
 Fraunhofer,http://example.org/digitalhaushalt/keyword/fraunhofer,Q1452078,http://www.wikidata.org/entity/Q1452078,Fraunhofer,Mondkrater,exact,de
 FhG,http://example.org/digitalhaushalt/keyword/fhg,Q161057,http://www.wikidata.org/entity/Q161057,Fraunhofer-Gesellschaft,Organisation für angewandte Forschungs- und Entwicklungsdienstleistungen,exact,de
 IISB,http://example.org/digitalhaushalt/keyword/iisb,Q19267706,http://www.wikidata.org/entity/Q19267706,Iisbaenstrjitte,Straße in Boarnsterhim in den Niederlanden,fuzzy,de
@@ -381,7 +381,7 @@ Kommunikationstechnologie,http://example.org/digitalhaushalt/keyword/kommunikati
 Digitalstrategie,http://example.org/digitalhaushalt/keyword/digitalstrategie,Q121197805,http://www.wikidata.org/entity/Q121197805,Digitalstrategie Deutschland,Zukunftsvision zur digitalen Transformation in Deutschland,fuzzy,de
 MF,http://example.org/digitalhaushalt/keyword/mf,Q193592,http://www.wikidata.org/entity/Q193592,Mittelfeldspieler,Position im Fußball,exact,de
 Peer-to-Peer,http://example.org/digitalhaushalt/keyword/peer-to-peer,Q161410,http://www.wikidata.org/entity/Q161410,Peer-to-Peer,"dezentrales, verteiltes Netzwerk gleichberechtigter Teilnehmer",exact,de
-Autonom,http://example.org/digitalhaushalt/keyword/autonom,Q43452,http://www.wikidata.org/entity/Q43452,Autonome Universität Barcelona,staatliche Universität nahe der spanischen Stadt Barcelona,fuzzy,de
+Autonom,http://example.org/digitalhaushalt/keyword/autonom,Q484105,http://www.wikidata.org/entity/Q484105,Autonomie,"Zustand der Selbstbestimmung, Selbstständigkeit und Unabhängigkeit",fuzzy,de
 SKALA,http://example.org/digitalhaushalt/keyword/skala,Q12802776,http://www.wikidata.org/entity/Q12802776,Skala,Familienname,exact,de
 OMEI,http://example.org/digitalhaushalt/keyword/omei,Q131220,http://www.wikidata.org/entity/Q131220,Omeisaurus,genus of sauropod from the middle Jurassic,fuzzy,de
 Blockchain-Technologien,http://example.org/digitalhaushalt/keyword/blockchain-technologien,Q130376267,http://www.wikidata.org/entity/Q130376267,Blockchain-Technologie,"the technology used to create a digital database containing information (such as records of financial transactions) that can be simultaneously used and shared within a large decentralized, publicly accessible network",exact,de
@@ -394,7 +394,7 @@ Green Ai,http://example.org/digitalhaushalt/keyword/green-ai,Q103845039,http://w
 MONOCAB,http://example.org/digitalhaushalt/keyword/monocab,Q117470322,http://www.wikidata.org/entity/Q117470322,Monocab,elektrisch motorisierte und selbstfahrende Einschienenbahn,exact,de
 5x5G-Strategie,http://example.org/digitalhaushalt/keyword/5x5g-strategie,,,,,none,
 DNS,http://example.org/digitalhaushalt/keyword/dns,Q8767,http://www.wikidata.org/entity/Q8767,Domain Name Server,hierarchisch unterteiltes Bezeichnungssystem zur Beantwortung von Anfragen zu Domain-Namen,exact,de
-Mikroelektronische,http://example.org/digitalhaushalt/keyword/mikroelektronische,Q116113816,http://www.wikidata.org/entity/Q116113816,Mikroelektronische Bauelemente für extrazelluläre Stimulation und Ableitung von Neuronen,GEPRIS Projekt,fuzzy,de
+Mikroelektronische,http://example.org/digitalhaushalt/keyword/mikroelektronische,Q127012099,http://www.wikidata.org/entity/Q127012099,Mikroelektronische Sensoren,wissenschaftlicher Artikel,fuzzy,de
 Important Project of Common European Interest,http://example.org/digitalhaushalt/keyword/important-project-of-common-european-interest,Q105443193,http://www.wikidata.org/entity/Q105443193,Important Project of Common European Interest,Förderprojekte der Europäischen Kommission,exact,de
 Datenwirtschaft,http://example.org/digitalhaushalt/keyword/datenwirtschaft,Q59385693,http://www.wikidata.org/entity/Q59385693,Datenökonomie,type of economy,exact,de
 E-Government,http://example.org/digitalhaushalt/keyword/e-government,Q211017,http://www.wikidata.org/entity/Q211017,E-Government,"Digitalisierung von Demokratie, Wahlen und staatlicher Verwaltung",exact,de
@@ -417,7 +417,7 @@ Netzkomponente,http://example.org/digitalhaushalt/keyword/netzkomponente,,,,,non
 Intelligente Dienste und Daten,http://example.org/digitalhaushalt/keyword/intelligente-dienste-und-daten,,,,,none,
 Gründerwettbewerb,http://example.org/digitalhaushalt/keyword/gruenderwettbewerb,Q25386214,http://www.wikidata.org/entity/Q25386214,Gründerwettbewerb,Wettbewerb in Deutschland,exact,de
 PAiCE,http://example.org/digitalhaushalt/keyword/paice,Q31039797,http://www.wikidata.org/entity/Q31039797,Paice,Familienname,exact,de
-Machine-to-machine,http://example.org/digitalhaushalt/keyword/machine-to-machine,Q251072,http://www.wikidata.org/entity/Q251072,Machine to Machine,automatisierter Informationsaustausch zwischen Maschinen,fuzzy,de
+Machine-to-machine,http://example.org/digitalhaushalt/keyword/machine-to-machine,Q127688628,http://www.wikidata.org/entity/Q127688628,Machine-to-machine bootstrapping,US patent 11354136,fuzzy,de
 Smart Service,http://example.org/digitalhaushalt/keyword/smart-service,Q24843185,http://www.wikidata.org/entity/Q24843185,Smart Service,Marketing-Buzzword,exact,de
 Smart Data,http://example.org/digitalhaushalt/keyword/smart-data,Q56297418,http://www.wikidata.org/entity/Q56297418,Smart Data,,exact,de
 Massendaten,http://example.org/digitalhaushalt/keyword/massendaten,,,,,none,
@@ -502,7 +502,7 @@ GINSEP,http://example.org/digitalhaushalt/keyword/ginsep,,,,,none,
 Digital Jetzt,http://example.org/digitalhaushalt/keyword/digital-jetzt,,,,,none,
 Digitalthemen,http://example.org/digitalhaushalt/keyword/digitalthemen,,,,,none,
 Digital Responsibility,http://example.org/digitalhaushalt/keyword/digital-responsibility,,,,,none,
-CIR,http://example.org/digitalhaushalt/keyword/cir,Q10508,http://www.wikidata.org/entity/Q10508,Zirkel,Sternbild,fuzzy,de
+CIR,http://example.org/digitalhaushalt/keyword/cir,Q5727902,http://www.wikidata.org/entity/Q5727902,circa,"ungefähr – sollte mit Qualifikator P1480 „Nachweisumstände“ verwendet werden, um auszudrücken, dass die Quelle eine Angabe als ungefähr bezeichnet, aber ohne die Präzision anzugeben, z. B. „geboren um 1709“",fuzzy,de
 CIRR-Festzinsprogramm,http://example.org/digitalhaushalt/keyword/cirr-festzinsprogramm,,,,,none,
 BSI,http://example.org/digitalhaushalt/keyword/bsi,Q257906,http://www.wikidata.org/entity/Q257906,Bundesamt für Sicherheit in der Informationstechnik,zentrale deutsche Bundesoberbehörde für IT-Sicherheit,exact,de
 Abbiegeassistenzsysteme,http://example.org/digitalhaushalt/keyword/abbiegeassistenzsysteme,,,,,none,
@@ -513,7 +513,7 @@ Datenaustausch,http://example.org/digitalhaushalt/keyword/datenaustausch,Q117233
 Wide Area Network,http://example.org/digitalhaushalt/keyword/wide-area-network,Q11384,http://www.wikidata.org/entity/Q11384,Wide Area Network,Netzwerk über große geografische Entfernungen,exact,de
 Web-Kompetenzzentrum,http://example.org/digitalhaushalt/keyword/web-kompetenzzentrum,,,,,none,
 WAN,http://example.org/digitalhaushalt/keyword/wan,Q985855,http://www.wikidata.org/entity/Q985855,Wan,Familienname (万),exact,de
-VoIP,http://example.org/digitalhaushalt/keyword/voip,Q81945,http://www.wikidata.org/entity/Q81945,IP-Telefonie,Technologie zur Übertragung von Sprache und anderen Daten über IP-Netzwerke,fuzzy,de
+VoIP,http://example.org/digitalhaushalt/keyword/voip,Q28146281,http://www.wikidata.org/entity/Q28146281,Voipio,Familienname,fuzzy,de
 Videokonferenzanlage,http://example.org/digitalhaushalt/keyword/videokonferenzanlage,,,,,none,
 Unternehmensstammdaten,http://example.org/digitalhaushalt/keyword/unternehmensstammdaten,,,,,none,
 Registermodernisierung,http://example.org/digitalhaushalt/keyword/registermodernisierung,Q135013037,http://www.wikidata.org/entity/Q135013037,Registermodernisierung,Aspekt der Verwaltungsdigitalisierung,exact,de
@@ -550,13 +550,13 @@ Internationale Fernmeldeunion,http://example.org/digitalhaushalt/keyword/interna
 Europäische Büro für Kommunikation,http://example.org/digitalhaushalt/keyword/europaeische-buero-fuer-kommunikation,,,,,none,
 COSPAS/SARSAT,http://example.org/digitalhaushalt/keyword/cospas-sarsat,,,,,none,
 ITU,http://example.org/digitalhaushalt/keyword/itu,Q5094647,http://www.wikidata.org/entity/Q5094647,Intensivstation,Krankenhauseinheit für Intensivpflege,exact,de
-Observation System,http://example.org/digitalhaushalt/keyword/observation-system,Q122444166,http://www.wikidata.org/entity/Q122444166,Observation system and information management method,US patent 11348350,fuzzy,de
+Observation System,http://example.org/digitalhaushalt/keyword/observation-system,Q121746443,http://www.wikidata.org/entity/Q121746443,Observation system and observation method,US patent 11258986,fuzzy,de
 Datenankauf,http://example.org/digitalhaushalt/keyword/datenankauf,,,,,none,
 EUMETSAT-Daten,http://example.org/digitalhaushalt/keyword/eumetsat-daten,,,,,none,
 Medientechnik,http://example.org/digitalhaushalt/keyword/medientechnik,Q1916441,http://www.wikidata.org/entity/Q1916441,Medientechnik,Teilgebiet der Medienwissenschaft,exact,de
 LAN-Anlagen,http://example.org/digitalhaushalt/keyword/lan-anlagen,,,,,none,
 TK/,http://example.org/digitalhaushalt/keyword/tk,Q12346891,http://www.wikidata.org/entity/Q12346891,TK/Stafeto,Esperanto publisher,fuzzy,de
-LAN,http://example.org/digitalhaushalt/keyword/lan,Q17,http://www.wikidata.org/entity/Q17,Japan,Inselstaat in Ostasien,fuzzy,de
+LAN,http://example.org/digitalhaushalt/keyword/lan,Q939416,http://www.wikidata.org/entity/Q939416,The Lancet,wissenschaftliche Fachzeitschrift,fuzzy,de
 Digitalfunktechnik,http://example.org/digitalhaushalt/keyword/digitalfunktechnik,,,,,none,
 Elektr. Schnittstelle Behörden,http://example.org/digitalhaushalt/keyword/elektr-schnittstelle-behoerden,,,,,none,
 ETSI-ESB,http://example.org/digitalhaushalt/keyword/etsi-esb,,,,,none,
@@ -574,7 +574,7 @@ OZG,http://example.org/digitalhaushalt/keyword/ozg,Q1943201,http://www.wikidata.
 IT-Architektur,http://example.org/digitalhaushalt/keyword/it-architektur,Q6030887,http://www.wikidata.org/entity/Q6030887,IT-Architektur,"methodical development of specifications, models and guidelines for information technology",exact,de
 ZITAgv,http://example.org/digitalhaushalt/keyword/zitagv,,,,,none,
 EGA,http://example.org/digitalhaushalt/keyword/ega,Q14941772,http://www.wikidata.org/entity/Q14941772,Ega,Gattung der Familie Laufkäfer (Carabidae),exact,de
-Internetbasierte,http://example.org/digitalhaushalt/keyword/internetbasierte,Q1714118,http://www.wikidata.org/entity/Q1714118,Online-Publikation,materielose Publikation,fuzzy,de
+Internetbasierte,http://example.org/digitalhaushalt/keyword/internetbasierte,Q58327688,http://www.wikidata.org/entity/Q58327688,Internetbasierter Dienst,service provided by or through an Internet-connected system,fuzzy,de
 i-Kfz,http://example.org/digitalhaushalt/keyword/i-kfz,Q136779172,http://www.wikidata.org/entity/Q136779172,I-Kfz-App,App des Kraftfahrt-Bundesamtes (KBA),fuzzy,de
 Informationssicherheit,http://example.org/digitalhaushalt/keyword/informationssicherheit,Q189900,http://www.wikidata.org/entity/Q189900,Informationssicherheit,technischer Begriff komplementär zum Datenschutz,exact,de
 IT-Betrieb,http://example.org/digitalhaushalt/keyword/it-betrieb,,,,,none,
@@ -639,7 +639,7 @@ IT-Standard-xGewerbeanzeige,http://example.org/digitalhaushalt/keyword/it-standa
 EAkte,http://example.org/digitalhaushalt/keyword/eakte,,,,,none,
 TKÜ-Anlagen,http://example.org/digitalhaushalt/keyword/tkue-anlagen,,,,,none,
 IP-Telefonie,http://example.org/digitalhaushalt/keyword/ip-telefonie,Q81945,http://www.wikidata.org/entity/Q81945,IP-Telefonie,Technologie zur Übertragung von Sprache und anderen Daten über IP-Netzwerke,exact,de
-ITZB,http://example.org/digitalhaushalt/keyword/itzb,Q23786362,http://www.wikidata.org/entity/Q23786362,Informationstechnikzentrum Bund,deutscher zentraler IT-Dienstleister des Bundes,fuzzy,de
+ITZB,http://example.org/digitalhaushalt/keyword/itzb,Q47457868,http://www.wikidata.org/entity/Q47457868,Itzbach,Wikimedia-Begriffsklärungsseite,fuzzy,de
 Dienstekonsolidierung,http://example.org/digitalhaushalt/keyword/dienstekonsolidierung,,,,,none,
 IT-Planungsrat,http://example.org/digitalhaushalt/keyword/it-planungsrat,Q1654951,http://www.wikidata.org/entity/Q1654951,IT-Planungsrat,deutsches Gremium von Bund und Ländern zur Steuerung der informationstechnischen Zusammenarbeit,exact,de
 IT-Kooperation,http://example.org/digitalhaushalt/keyword/it-kooperation,,,,,none,
@@ -668,14 +668,14 @@ Bibliotheksportal,http://example.org/digitalhaushalt/keyword/bibliotheksportal,Q
 BDBOS,http://example.org/digitalhaushalt/keyword/bdbos,Q1005549,http://www.wikidata.org/entity/Q1005549,Bundesanstalt für den Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben,Anstalt des Öffentlichen Rechts,exact,de
 Digitale Rentenübersicht,http://example.org/digitalhaushalt/keyword/digitale-rentenuebersicht,Q124429893,http://www.wikidata.org/entity/Q124429893,Digitale Rentenübersicht,,exact,de
 Meldeportal,http://example.org/digitalhaushalt/keyword/meldeportal,,,,,none,
-EMSWe,http://example.org/digitalhaushalt/keyword/emswe,Q37544508,http://www.wikidata.org/entity/Q37544508,Emsweller,Familienname,fuzzy,de
+EMSWe,http://example.org/digitalhaushalt/keyword/emswe,Q130559889,http://www.wikidata.org/entity/Q130559889,Emsweg,"Straße in Dormagen, Nordrhein-Westfalen",fuzzy,de
 Desktop,http://example.org/digitalhaushalt/keyword/desktop,Q1048818,http://www.wikidata.org/entity/Q1048818,Desktop,feature,exact,de
 Datenmaterial,http://example.org/digitalhaushalt/keyword/datenmaterial,,,,,none,
 Standleitung,http://example.org/digitalhaushalt/keyword/standleitung,Q2330575,http://www.wikidata.org/entity/Q2330575,Standleitung,Leitungstheorie,exact,de
 Datenleitung,http://example.org/digitalhaushalt/keyword/datenleitung,Q917186,http://www.wikidata.org/entity/Q917186,Datenleitung,electrical cable used for the transmission of data,exact,de
 ChatBots,http://example.org/digitalhaushalt/keyword/chatbots,Q870780,http://www.wikidata.org/entity/Q870780,Chatbot,textbasiertes automatisiertes Dialogsystem,exact,de
 Center for Intelligence and Security Studies,http://example.org/digitalhaushalt/keyword/center-for-intelligence-and-security-studies,Q5059695,http://www.wikidata.org/entity/Q5059695,Center for Intelligence and Security Studies,center at the University of Mississippi,exact,de
-virtuelle Rekonstruktion,http://example.org/digitalhaushalt/keyword/virtuelle-rekonstruktion,Q2333501,http://www.wikidata.org/entity/Q2333501,Stasi-Schnipselmaschine,"Computerprogramm zur Wiederherstellung von ""Stasi Schnipseln""",fuzzy,de
+virtuelle Rekonstruktion,http://example.org/digitalhaushalt/keyword/virtuelle-rekonstruktion,Q128032402,http://www.wikidata.org/entity/Q128032402,Virtuelle Rekonstruktion des Regensburger Ballhauses,conference paper presented at DHd 2015,fuzzy,de
 Interaction,http://example.org/digitalhaushalt/keyword/interaction,Q52948,http://www.wikidata.org/entity/Q52948,Interaktion,wechselseitiges aufeinander Einwirken von Akteuren oder Systemen,exact,de
 DIALOG,http://example.org/digitalhaushalt/keyword/dialog,Q131395,http://www.wikidata.org/entity/Q131395,Dialog,Gespräch zwischen zwei oder mehr Personen,exact,de
 Online-Bereich,http://example.org/digitalhaushalt/keyword/online-bereich,,,,,none,
@@ -683,7 +683,7 @@ Netzwerkdurchsetzungsgesetz,http://example.org/digitalhaushalt/keyword/netzwerkd
 Internetauftritt,http://example.org/digitalhaushalt/keyword/internetauftritt,Q35127,http://www.wikidata.org/entity/Q35127,Website,"Präsenz eines Anbieters von Telemedien im weltweiten Netz, die aus einzelnen Webseiten besteht",exact,de
 Hate Aid,http://example.org/digitalhaushalt/keyword/hate-aid,Q65237918,http://www.wikidata.org/entity/Q65237918,HateAid,gemeinnützige GmbH gegen Online-Hass,exact,de
 fachbezogene IT,http://example.org/digitalhaushalt/keyword/fachbezogene-it,,,,,none,
-Endgeräte,http://example.org/digitalhaushalt/keyword/endgeraete,Q56604316,http://www.wikidata.org/entity/Q56604316,Telekommunikationsausrüster,,fuzzy,de
+Endgeräte,http://example.org/digitalhaushalt/keyword/endgeraete,Q1340439,http://www.wikidata.org/entity/Q1340439,Endgerätemonopol,"Marktsituation, in der Endgeräte für die Telekommunikation ausschließlich von einem einzigen Anbieter bezogen werden können",fuzzy,de
 Soziale Medien,http://example.org/digitalhaushalt/keyword/soziale-medien,Q202833,http://www.wikidata.org/entity/Q202833,Soziale Medien,"Gesamtheit der Medien und Technologien, die die Funktion bieten, sich auszutauschen und mediale Inhalte zu erstellen",exact,de
 Digitale Strategien,http://example.org/digitalhaushalt/keyword/digitale-strategien,,,,,none,
 Games,http://example.org/digitalhaushalt/keyword/games,Q11410,http://www.wikidata.org/entity/Q11410,Spiel,"strukturierte Tätigkeit, die zum Vergnügen ausgeführt wird",exact,de

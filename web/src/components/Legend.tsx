@@ -37,7 +37,7 @@ export default function Legend({ nodeCount, edgeCount }: Props) {
             {mode === "bipartite" && (
               <div className="legend-item">
                 <span className="dot" style={{ background: EINZELPLAN_COLOR }} />
-                Einzelplan (Ressort)
+                Einzelplan (Bundesinstitution)
               </div>
             )}
             {Object.entries(TYPE_LABELS).map(([id, label]) => (

@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useStore } from "./store";
 import { loadGraph } from "./data/loadGraph";
 import { buildGraph } from "./graph/buildGraph";
@@ -7,6 +7,7 @@ import FilterPanel from "./components/FilterPanel";
 import DetailPanel from "./components/DetailPanel";
 import Legend from "./components/Legend";
 import Scrollytelling from "./story/Scrollytelling";
+import ProjectModal from "./components/ProjectModal";
 
 export default function App() {
   const data = useStore((s) => s.data);
@@ -21,9 +22,9 @@ export default function App() {
   const search = useStore((s) => s.search);
   const setData = useStore((s) => s.setData);
   const setError = useStore((s) => s.setError);
-  const selectNode = useStore((s) => s.selectNode);
+const selectNode = useStore((s) => s.selectNode);
+  const [showProjectModal, setShowProjectModal] = useState(false);
 
-  // Sync Browser URL mit View-Status
   useEffect(() => {
     const handlePopState = () => {
       setView(window.location.pathname.includes("/explorer") ? "explore" : "story");
@@ -79,10 +80,18 @@ export default function App() {
     <div className="layout">
       <FilterPanel />
       <main className="stage">
-        <button className="back-to-story" onClick={() => setView("story")}>
-          ← Intro
-        </button>
-        <GraphView
+          <div className="stage-top-buttons">
+            <button className="back-to-story" onClick={() => setView("story")}>
+              ← Intro
+            </button>
+            <button className="project-button" onClick={() => setShowProjectModal(true)}>
+              Über das Projekt
+            </button>
+          </div>
+          {showProjectModal && (
+            <ProjectModal onClose={() => setShowProjectModal(false)} />
+          )}
+          <GraphView
           computed={computed}
           selectedNodeId={selectedNodeId}
           search={search}

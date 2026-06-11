@@ -124,10 +124,18 @@ def wd_search_retry(query, lang, max_retries=6):
 
 
 def classify(keyword, candidates):
-    """Waehlt besten Treffer + match_type."""
+    """Waehlt besten Treffer + match_type.
+
+    Reihenfolge:
+      1) exakter (normalisierter) Label- oder Alias-Treffer  -> exact
+      2) Kandidat, dessen Label das Keyword als ganzes Wort enthaelt
+         (oder umgekehrt) und der eine Beschreibung hat        -> fuzzy
+      3) Top-Suchtreffer von Wikidata                          -> fuzzy
+    """
     if not candidates:
         return None, "none"
     nk = norm(keyword)
+
     # 1) exakter Label- oder Alias-Treffer
     for c in candidates:
         if norm(c["label"]) == nk:
@@ -135,7 +143,30 @@ def classify(keyword, candidates):
         m = c.get("match", {})
         if m.get("type") in ("label", "alias") and norm(m.get("text", "")) == nk:
             return c, "exact"
-    # 2) sonst Top-Treffer als fuzzy
+
+    # 2) bestes Teilstring-Match bevorzugen: Label enthaelt Keyword oder
+    #    Keyword enthaelt Label. Kandidaten mit Beschreibung werden bevorzugt
+    #    (deuten auf gepflegte, "echte" Entitaeten hin).
+    def score(c):
+        nl = norm(c.get("label", ""))
+        if not nl:
+            return -1
+        s = 0
+        if nl == nk:
+            s += 100
+        elif nk in nl or nl in nk:
+            s += 50
+            # je aehnlicher die Laenge, desto besser
+            s -= abs(len(nl) - len(nk)) * 0.5
+        if c.get("description"):
+            s += 5
+        return s
+
+    best = max(candidates, key=score)
+    if score(best) > 0:
+        return best, "fuzzy"
+
+    # 3) sonst Top-Treffer als fuzzy
     return candidates[0], "fuzzy"
 
 

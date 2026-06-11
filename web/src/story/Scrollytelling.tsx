@@ -369,6 +369,16 @@ export default function Scrollytelling() {
               Netzwerk-Explorer öffnen →
             </button>
           </div>
+          <p className="cta-imprint">
+            <a
+              className="imprint-link"
+              href="https://www.technologiestiftung-berlin.de/impressum"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Impressum
+            </a>
+          </p>
         </section>
       </div>
 

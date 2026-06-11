@@ -175,12 +175,12 @@ export default function DetailPanel() {
                         (data!.keywords as any)[parsed!.localId]?.type ??
                         "other";
                       const colors: Record<string, string> = {
-                        tech: "#DCE14B",
-                        org: "#41B496",
-                        law: "#7F7BED",
-                        infra: "#41B496",
-                        science: "#FBD8F2",
-                        other: "#FB7A68",
+                        tech: "#2f6fed",
+                        org: "#f28e2b",
+                        law: "#e15759",
+                        infra: "#59a14f",
+                        science: "#b07aa1",
+                        other: "#9aa7b5",
                       };
                       return colors[t] ?? "#FB7A68";
                     })(),
@@ -199,9 +199,9 @@ export default function DetailPanel() {
                         law: "Recht / Strategie",
                         infra: "Infrastruktur / Hardware",
                         science: "Forschung / Methode",
-                        other: "Sonstiges",
+                        other: "Nicht zuweisbar",
                       };
-                      return labels[type] ?? "Sonstiges";
+                      return labels[type] ?? "Nicht zuweisbar";
                     })()}
                   </strong>
                   <InfoTooltip text="Die Kategorie wird automatisch aus den Wikidata-Instanz- und Unterklassen-Beziehungen (P31/P279) abgeleitet: Ein Begriff wird z. B. der Kategorie 'Technologie / Software' zugeordnet, wenn er in der Wikidata-Hierarchie direkt oder indirekt mit 'Software', 'Computerprogramm', 'Künstliche Intelligenz' o. Ä. verwandt ist." />
@@ -227,14 +227,18 @@ export default function DetailPanel() {
         <>
           <div className="stats-grid">
             <div className="stat">
-              <span className="lbl">Das Keyword taucht in</span>
+              <span className="lbl">Kommt vor in</span>
               <span className="num">{kwStats.frequency}</span>
-              <span className="lbl">Titeln auf</span>
+              <span className="lbl">
+                {kwStats.frequency === 1 ? "Haushaltstitel" : "Haushaltstiteln"}
+              </span>
             </div>
             <div className="stat">
-              <span className="lbl">Das Keyword wird von</span>
+              <span className="lbl">Wird genutzt von</span>
               <span className="num">{kwStats.actors.length}</span>
-              <span className="lbl">Einzelplänen verwendet</span>
+              <span className="lbl">
+                {kwStats.actors.length === 1 ? "Einzelplan" : "Einzelplänen"}
+              </span>
             </div>
           </div>
 
@@ -361,11 +365,6 @@ export default function DetailPanel() {
             {semTab === "kookkurrenz" && kwStats.cooccurrences.length > 0 && (
               <div className="dist-list">
                 {kwStats.cooccurrences.map((c) => {
-                  const total = kwStats.cooccurrences.reduce(
-                    (sum, item) => sum + item.count,
-                    0,
-                  );
-                  const pct = Math.round((c.count / total) * 100);
                   return (
                     <button
                       key={c.id}
@@ -374,12 +373,6 @@ export default function DetailPanel() {
                       <div className="dist-label">
                         <span className="dist-name">{c.label}</span>
                         <span className="dist-count">{c.count}</span>
-                      </div>
-                      <div className="dist-bar-bg">
-                        <div
-                          className="dist-bar-fill"
-                          style={{ width: `${pct}%` }}
-                        />
                       </div>
                     </button>
                   );
@@ -401,7 +394,7 @@ export default function DetailPanel() {
             </summary>
             <div className="title-summary-text">
               <span className="title-summary-soil">
-                SOLL-eng gesamt:{" "}
+                Budget gesamt (SOLL, enge Variante):{" "}
                 <strong>{formatTEur(kwStats.titlesSollEngSum)} T€</strong>
               </span>
               <InfoTooltip text="Summe der engen digitalen SOLL-Budgets aller aufgelisteten Haushaltstitel in Tausend Euro." />
@@ -420,8 +413,7 @@ export default function DetailPanel() {
                           : "—"}
                       </span>
                       <span className="title-card-budget">
-                        {formatTEur(t.sollEng ?? 0)} /{" "}
-                        {formatTEur(t.istEng ?? 0)} T€
+                        {formatTEur(t.sollEng ?? 0)} T€
                       </span>
                     </div>
                   </summary>
@@ -436,12 +428,20 @@ export default function DetailPanel() {
         <>
           <div className="stats-grid">
             <div className="stat">
+              <span className="lbl">Verantwortet</span>
               <span className="num">{epStats.frequency}</span>
-              <span className="lbl">Titel</span>
+              <span className="lbl">
+                {epStats.frequency === 1 ? "digitalen Titel" : "digitale Titel"}
+              </span>
             </div>
             <div className="stat">
+              <span className="lbl">Verwendet</span>
               <span className="num">{epStats.topKeywords.length}</span>
-              <span className="lbl">Keywords</span>
+              <span className="lbl">
+                {epStats.topKeywords.length === 1
+                  ? "Schlagwort"
+                  : "Schlagworte"}
+              </span>
             </div>
           </div>
 
@@ -465,7 +465,7 @@ export default function DetailPanel() {
             </summary>
             <div className="title-summary-text">
               <span className="title-summary-soil">
-                SOLL-eng gesamt:{" "}
+                Budget gesamt (SOLL, enge Variante):{" "}
                 <strong>{formatTEur(epStats.titlesSollEngSum)} T€</strong>
               </span>
               <InfoTooltip text="Summe der engen digitalen SOLL-Budgets aller aufgelisteten Haushaltstitel in Tausend Euro." />
@@ -484,8 +484,7 @@ export default function DetailPanel() {
                           : "—"}
                       </span>
                       <span className="title-card-budget">
-                        {formatTEur(t.sollEng ?? 0)} /{" "}
-                        {formatTEur(t.istEng ?? 0)} T€
+                        {formatTEur(t.sollEng ?? 0)} T€
                       </span>
                     </div>
                   </summary>

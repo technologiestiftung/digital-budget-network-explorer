@@ -14,7 +14,7 @@ export const TYPE_LABELS: Record<string, string> = {
   law: "Recht / Strategie",
   infra: "Infrastruktur / Hardware",
   science: "Forschung / Methode",
-  other: "Sonstiges",
+  other: "Nicht zuweisbar",
 };
 
 export const EINZELPLAN_COLOR = "#000000";

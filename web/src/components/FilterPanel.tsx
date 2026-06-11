@@ -24,8 +24,10 @@ export default function FilterPanel() {
   return (
     <aside className="panel filter-panel">
       <div className="filter-panel-scroll">
-        <h1>Digitalhaushalt</h1>
-        <p className="subtitle">Semantischer Netzwerk-Explorer</p>
+        <h1>Die Vielfalt der Worte</h1>
+        <p className="subtitle">
+          Entdecke das Sprachnetzwerk zum Digitalhaushalts des Bundes
+        </p>
 
         <section>
           <h2>
@@ -36,7 +38,7 @@ export default function FilterPanel() {
             <button
               className={mode === "keyword" ? "active" : ""}
               onClick={() => setMode("keyword")}>
-              nur Schlagwort-Netzwerk
+              Schlagwort-Netzwerk
             </button>
             <button
               className={mode === "bipartite" ? "active" : ""}

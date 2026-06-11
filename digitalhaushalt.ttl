@@ -90726,6 +90726,8 @@ wd:Q1945081 rdfs:label "Monopolkommission"@de .
 
 wd:Q1968219 rdfs:label "Digital-Gipfel"@de .
 
+wd:Q19860309 rdfs:label "Esa"@de .
+
 wd:Q1988917 rdfs:label "Datenanalyse"@de .
 
 wd:Q199687 rdfs:label "Fernerkundung"@de .
@@ -90847,8 +90849,6 @@ wd:Q389772 rdfs:label "Datenübertragung"@de .
 wd:Q39162 rdfs:label "Open Source"@de .
 
 wd:Q3966 rdfs:label "Hardware"@de .
-
-wd:Q42262 rdfs:label "Europäische Weltraumorganisation"@de .
 
 wd:Q4288448 rdfs:label "Internationales Institut für Soziologie"@de .
 
@@ -111547,7 +111547,7 @@ keyword:esa a skos:Concept ;
         keyword:satellitennavigation,
         keyword:schluesseltechnologie,
         keyword:visp ;
-    skos:exactMatch wd:Q42262 ;
+    skos:exactMatch wd:Q19860309 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/keywords> ;
     skos:prefLabel "ESA"@de .
 
