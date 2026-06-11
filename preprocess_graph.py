@@ -345,6 +345,11 @@ def main() -> None:
             "sollEng": num(DH.sollDigitalEng),
             "istEng": num(DH.istDigitalEng),
         }
+        
+        # Titel mit SOLL-Budget = 0 oder fehlendem Budget direkt herausfiltern
+        if not rec["soll"] or rec["soll"] <= 0:
+            continue
+            
         posten.append(rec)
 
     out = {
