@@ -175,14 +175,14 @@ export default function DetailPanel() {
                         (data!.keywords as any)[parsed!.localId]?.type ??
                         "other";
                       const colors: Record<string, string> = {
-                        tech: "#2f6fed",
-                        org: "#f28e2b",
-                        law: "#e15759",
-                        infra: "#59a14f",
-                        science: "#b07aa1",
-                        other: "#9aa7b5",
+                        tech: "#DCE14B",
+                        org: "#41B496",
+                        law: "#7F7BED",
+                        infra: "#41B496",
+                        science: "#FBD8F2",
+                        other: "#FB7A68",
                       };
-                      return colors[t] ?? "#9aa7b5";
+                      return colors[t] ?? "#FB7A68";
                     })(),
                   }}
                 />

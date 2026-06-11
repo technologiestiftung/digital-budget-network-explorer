@@ -1,8 +1,6 @@
 import { useStore } from "../store";
 import InfoTooltip from "./InfoTooltip";
 
-
-
 export default function FilterPanel() {
   const data = useStore((s) => s.data);
   const filters = useStore((s) => s.filters);
@@ -38,12 +36,12 @@ export default function FilterPanel() {
             <button
               className={mode === "keyword" ? "active" : ""}
               onClick={() => setMode("keyword")}>
-              Keyword-Netzwerk
+              nur Schlagwort-Netzwerk
             </button>
             <button
               className={mode === "bipartite" ? "active" : ""}
               onClick={() => setMode("bipartite")}>
-              Keyword ↔ Einzelplan
+              Schlagwort ↔ Einzelplan
             </button>
           </div>
         </section>
