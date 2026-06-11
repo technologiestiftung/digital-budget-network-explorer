@@ -4065,5 +4065,2112 @@
 "description": "",
 "match_type": "fuzzy",
 "search_lang": "de"
+},
+"Plattform": {
+"qid": "Q241317",
+"label": "Plattform",
+"description": "Basis für Anwendungsprogramme",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Vernetzung": {
+"qid": "Q253405",
+"label": "Vernetzung",
+"description": "verschiedene Eigenschaften, die in gewissem Sinne \"alles aus einem Stück\" bedeuten",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Schnittstelle": {
+"qid": "Q23808",
+"label": "Schnittstelle",
+"description": "Teil eines Systems, welcher der Kommunikation dient",
+"match_type": "exact",
+"search_lang": "de"
+},
+"elektronische Buchung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Deutsche Zentrum für Schienenverkehrsforschung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Nutzung von Datenplattformen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Digitalpolitik": {
+"qid": "Q1978927",
+"label": "Netzpolitik",
+"description": "Politikfeld um netzkulturelle, medienpolitische und medienrechtliche Fragen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Strategische IT-Steuerung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Vernetz": {
+"qid": "Q864912",
+"label": "Biotopverbund",
+"description": "im Verkehrswesen (Teilstücke) der natürlichen Bewegungsachsen von Wildtieren",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Digital-Gipfel": {
+"qid": "Q1968219",
+"label": "Digital-Gipfel",
+"description": "Zentrale Plattform zur politischen Gestaltung des digitalen Wandels in Deutschland",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Virtual-Reality": {
+"qid": "Q170519",
+"label": "virtuelle Realität",
+"description": "computergenerierte interaktive virtuelle Umgebung",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Informationstechnik": {
+"qid": "Q11661",
+"label": "Informationstechnik",
+"description": "Oberbegriff für die Informations- und Datenverarbeitung sowie die dafür benötigte Hard- und Software",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Automatis": {
+"qid": "Q184199",
+"label": "Automatisierung",
+"description": "selbsttätiges, zielorientiertes Handeln von technischen Systemen",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Funkspektrum": {
+"qid": "Q902174",
+"label": "Funkspektrum",
+"description": "Frequenzbereich der zur technischen Kommunikation verwendeten elektromagnetischen Wellen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Breitbandiger": {
+"qid": "Q116114235",
+"label": "Breitbandiger, hocheffizienter Photodetektor basierend auf dem SiGe-Materialsystem",
+"description": "GEPRIS Projekt",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Echtzeitanalysator": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"FuMOS-Nachfolgekonzeptes": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Drohne": {
+"qid": "Q484000",
+"label": "unbemanntes Luftfahrzeug",
+"description": "Luftfahrzeug ohne an Bord befindliche Besatzung",
+"match_type": "exact",
+"search_lang": "de"
+},
+"TKÜ-TMC-Erweiterung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Sensor": {
+"qid": "Q167676",
+"label": "Sensor",
+"description": "technisches Bauteil, das bestimmte physikalische oder chemische Eigenschaften und/oder die stoffliche Beschaffenheit seiner Umgebung qualitativ oder als Messgröße quantitativ erfassen kann",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Datenquelle": {
+"qid": "Q121566744",
+"label": "Datenquelle",
+"description": "Quelle von Daten",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Halbleiter": {
+"qid": "Q11456",
+"label": "Halbleiter",
+"description": "Festkörper, die sowohl als Leiter als auch als Nichtleiter betrachtet werden können",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Satellitennavigation": {
+"qid": "Q179435",
+"label": "Globales Navigationssatellitensystem",
+"description": "System zur Positionsbestimmung durch den Empfang der Signale von Navigationssatelliten und Pseudoliten",
+"match_type": "exact",
+"search_lang": "de"
+},
+"VISP": {
+"qid": "Q64147",
+"label": "Visp",
+"description": "Gemeinde im Kanton Wallis, Schweiz",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Funkfeldüberwachungssystem": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Supercomputing": {
+"qid": "Q4392761",
+"label": "ACM/IEEE Supercomputing Conference",
+"description": "jährlich stattfindende Konferenz",
+"match_type": "exact",
+"search_lang": "de"
+},
+"High-Performance Computing": {
+"qid": "Q1190465",
+"label": "Hochleistungsrechnen",
+"description": "umfasst alle Rechenarbeiten, deren Bearbeitung einer hohen Rechenleistung oder Speicherkapazität bedarf",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"EuroHPC": {
+"qid": "Q60983149",
+"label": "European High-Performance Computing Joint Undertaking",
+"description": "Gemeinsames Unternehmen der Europäischen Union",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Lärm-Monitoringsystems": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Internet Governance": {
+"qid": "Q1633452",
+"label": "Internet Governance",
+"description": "Entwicklung und Anwendung gemeinsamer Grundsätze, Normen, Regeln, Entscheidungsprozesse und Programme, die die Entwicklung und Nutzung des Internets prägen.",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Informationstechnisch": {
+"qid": "Q1662611",
+"label": "informationstechnisches System",
+"description": "alle Systeme, die aus einer Kombination von Hardware, Software und Netzwerken bestehen und Daten verarbeiten können",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Krypto": {
+"qid": "Q1633467",
+"label": "Krypto",
+"description": "amerikanisch-kanadische Fernsehserie (2005–2006)",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Daten-Marktplatz": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Funksystem": {
+"qid": "Q1474505",
+"label": "Funksysteme zur Gebäudeautomatisierung",
+"description": "",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Vernetzt": {
+"qid": "Q98058138",
+"label": "Vernetzt",
+"description": "Dokureihe",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Wissensspeicher Forschungsdaten": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Fernmeldeeinrichtung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Elektronisch": {
+"qid": "Q9778",
+"label": "elektronische Musik",
+"description": "Musik, die elektronisch hergestellt und mit Lautsprechern wiedergegeben wird",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Digitalisierung Kommunaler": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Moderne Verwaltung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Once-Only": {
+"qid": "Q2609045",
+"label": "Once Only Imagined",
+"description": "2007 studio album by The Agonist",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Ressort-CIO": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"BeKI": {
+"qid": "Q336286",
+"label": "Abwehrspieler",
+"description": "Spielerposition im Mannschaftssport",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Open-Data": {
+"qid": "Q309901",
+"label": "Open Data",
+"description": "frei ohne Einschränkungen nutzbare Daten",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Disruptive": {
+"qid": "Q135033654",
+"label": "Disruptive",
+"description": "Computerspiel aus dem Jahr 2023, entwickelt von HVNSART Games",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Digitale Infrastruktur": {
+"qid": "Q1224901",
+"label": "Digitale Infrastruktur",
+"description": "Grundlage für die Digitalisierung von Wirtschaft und Gesellschaft",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Netztechnologie": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"elektronische Portals": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Drahtlose": {
+"qid": "Q1061197",
+"label": "Radio-Network",
+"description": "Senderkette, die mit einem Leitsender zahlreiche lokale Hörfunksender mit einem Mantelprogramm beliefert",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Breitbandbüro": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Skalierbare": {
+"qid": "Q1232548",
+"label": "Skalierbare Benutzeroberfläche",
+"description": "Art von grafischer Benutzeroberfläche",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Stiftung Datenschutz": {
+"qid": "Q15849271",
+"label": "Stiftung Datenschutz",
+"description": "gemeinnützige Stiftung",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Automatische": {
+"qid": "Q189436",
+"label": "Spracherkennung",
+"description": "interdisziplinäres Teilgebiet der Computerlinguistik, das Methoden und Technologien entwickelt, die die Erkennung und Übersetzung gesprochener Sprache in Text durch Computer ermöglichen",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Server": {
+"qid": "Q44127",
+"label": "Server",
+"description": "Computer für den Zugriff auf eine zentrale Ressource oder Dienst in einem Netzwerk",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Network": {
+"qid": "Q27720980",
+"label": "Network",
+"description": "wissenschaftliche Fachzeitschrift",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Systemupgrade": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Automatisierte": {
+"qid": "Q19835007",
+"label": "autonomes Fahren",
+"description": "selbstständige Steuerung von Fahrzeugen durch eine künstliche Intelligenz",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"AIS-Dienstes": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Telemedizinisch": {
+"qid": "Q86777708",
+"label": "Telemedizinische Versorgungskonzepte in der regionalen Versorgung ländlicher Gebiete",
+"description": "im 1. April 2015 veröffentlichter wissenschaftlicher Artikel",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Onlineberatungsdienst": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Melde- und Informationssystems": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datenmenge": {
+"qid": "Q1172472",
+"label": "Datenmenge",
+"description": "Maß für die Menge von Daten",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Internetgebrauch": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Intensivregister": {
+"qid": "Q89412656",
+"label": "DIVI IntensivRegister",
+"description": "Register zur Erfassung der Belegung von Intensivbetten in Krankenhäuser in Deutschland",
+"match_type": "exact",
+"search_lang": "de"
+},
+"EPA": {
+"qid": "Q3244038",
+"label": "Établissement public à caractère administratif",
+"description": "Rechtsform in Frankreich",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Telemedizin": {
+"qid": "Q46994",
+"label": "Telemedizin",
+"description": "Teilbereich der Telematik im Gesundheitswesen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Gematik": {
+"qid": "Q1499925",
+"label": "gematik",
+"description": "deutsche Non-Profit-Organisation für die Digitalisierung des Gesundheitswesens",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Computational Life Sciences": {
+"qid": "Q106245171",
+"label": "Computational Life Sciences, First International Symposium, CompLife 2005, Konstanz, Germany, September 25-27, 2005",
+"description": "academic conference",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"KI-Anwend": {
+"qid": "Q4781507",
+"label": "Anwendungen von künstlicher Intelligenz",
+"description": "Anwendungen maschineller Intelligenz",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"EHealth": {
+"qid": "Q4930",
+"label": "E-Health",
+"description": "Anwendung elektronischer Geräte zur medizinischen Versorgung",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Datenbasierte": {
+"qid": "Q116100454",
+"label": "Datenbasierte Generierung und Optimierung von Fuzzy-Modellen mit dem Fuzzy-ROSA-VVerfahren für komplexe Systeme und Prozesse (P 1)",
+"description": "GEPRIS Projekt",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Datenorientierte": {
+"qid": "Q24882785",
+"label": "Datenorientiertes Design",
+"description": "Program optimization approach in computing",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Digitalisierte": {
+"qid": "Q60474998",
+"label": "digitalisierte Sammlung",
+"description": "Sammlung digitalisierter Objekte",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Leibniz-Institut für Wissensmedien": {
+"qid": "Q1813768",
+"label": "Leibniz-Institut für Wissensmedien",
+"description": "Forschungseinrichtung der Leibniz-Gemeinschaft",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Leibniz-Institut für innovative Mikroelektronik": {
+"qid": "Q829654",
+"label": "Innovations for High Performance Microelectronics",
+"description": "Forschungseinrichtung der Leibniz-Gemeinschaft",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Interaktiv": {
+"qid": "Q839721",
+"label": "Interaktivität",
+"description": "Wechselbeziehung zwischen zwei oder mehreren beliebigen Größen, Dingen oder Personen",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Schloss Dagstuhl - Leibniz-Zentrum für Informatik": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Weltraumgestützte": {
+"qid": "Q1981843",
+"label": "weltraumgestützte Solarenergie",
+"description": "Solarenergie aus Solarmodulen im Weltraum",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Strategie Künstliche Intelligenz": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Sprunginnovation": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"SprinD": {
+"qid": "Q72975645",
+"label": "Bundesagentur für Sprunginnovationen",
+"description": "Bundesagentur zur Förderung von disruptiven Technologien",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Sovereign Tech Fund": {
+"qid": "Q115946387",
+"label": "Sovereign Tech Fund",
+"description": "Fördertopf des Bundesministerium für Wirtschaft und Klimaschutz um Open Source Software finanziell zu unterstützen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Open Source Ökosystem": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Bug-Bounty": {
+"qid": "Q16848759",
+"label": "Bug-Bounty-Programm",
+"description": "Initiativen zur Identifizierung, Behebung und Bekanntmachung von Fehlern in Software",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Precision Farmings": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"eingebettete Systeme": {
+"qid": "Q116094253",
+"label": "Eingebettete Systeme zur Implemetierung Neuronaler Netze am Beispiel Regelung von Verbrennungsmotoren",
+"description": "GEPRIS Projekt",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Internet der Dinge": {
+"qid": "Q251212",
+"label": "Internet der Dinge",
+"description": "Verknüpfung eindeutig identifizierbarer physischer Objekte mit einer virtuellen Repräsentation in einer Internet-ähnlichen Struktur",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Maschinelle Lernen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"QI Digital": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Quantencomputing": {
+"qid": "Q130104027",
+"label": "Quantencomputing startet in Stuttgart durch",
+"description": "wissenschaftlicher Artikel",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Quantenmeterologie": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Hard- und Software": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Max-Planck-Gesellschaft": {
+"qid": "Q158085",
+"label": "Max-Planck-Gesellschaft",
+"description": "Institution im Bereich der Grundlagenforschung",
+"match_type": "exact",
+"search_lang": "de"
+},
+"DMA": {
+"qid": "Q784",
+"label": "Dominica",
+"description": "Inselstaat in der östlichen Karibik",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Computing": {
+"qid": "Q179310",
+"label": "Computing",
+"description": "Tätigkeiten, die auf Computern beziehungsweise algorithmischen Prozessen aufbauen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"DATA Center": {
+"qid": "Q671224",
+"label": "Rechenzentrum",
+"description": "Gebäude oder Räumlichkeiten, in denen die zentrale Rechentechnik untergebracht ist",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Mensch-Technik-Interaktion": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Smart Contracts": {
+"qid": "Q111688137",
+"label": "Smart Contracts",
+"description": "book section published in 2016",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Quantensichere": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Kommunikationsnetze": {
+"qid": "Q116072145",
+"label": "Kommunikationsnetze und -Anwendungen für NEXUS",
+"description": "GEPRIS Projekt",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Souverän.Digital.Vernetzt": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datengetriebene": {
+"qid": "Q102047184",
+"label": "datengetriebene Modellierung",
+"description": "mathematical modeling based on experimental measurement data",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Scalable": {
+"qid": "Q2078",
+"label": "Scalable Vector Graphics",
+"description": "Spezifikation zur Beschreibung zweidimensionaler Vektorgrafiken",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Data Analytics": {
+"qid": "Q485396",
+"label": "Analytik",
+"description": "die Wissenschaft, die sich mit der Durchführung einer systematischen Untersuchung eines Sachverhaltes oder eines Gegenstandes befasst, indem dieser Gegenstand „aufgelöst“, also in alle seine ihn bestimmenden Faktoren oder Komponenten getrennt wird.",
+"match_type": "exact",
+"search_lang": "de"
+},
+"KI-gestützte Auswertetools": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"große Datenmengen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"RFID-Technologie": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Interaktive Technologien": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Digital-Health": {
+"qid": "Q50815224",
+"label": "Digital Health",
+"description": "Academic journal published by SAGE Publishing, covering the subjects: Medicine: Medicine (General): Computer applications to medicine. Medical informatics",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Software Engineering": {
+"qid": "Q80993",
+"label": "Softwaretechnik",
+"description": "Art und Weise, wie Software entwickelt wird",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Hochleistung": {
+"qid": "Q381233",
+"label": "Hochleistungsflüssigkeitschromatographie",
+"description": "Trennverfahren für die Produktion und Analysemethode",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Höchstleistungsrechnen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Elektroniksystem": {
+"qid": "Q874743",
+"label": "Elektroniksystem- und Logistik-GmbH",
+"description": "historisches, deutsches Informationstechnik- und Rüstungsunternehmen",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Chiptechnik": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Spezialprozessor": {
+"qid": "Q20181828",
+"label": "Assist Processor",
+"description": "CPUs, die auf IBMs Mainframes des Typs System z eingesetzt werden",
+"match_type": "exact",
+"search_lang": "de"
+},
+"autonome Systeme": {
+"qid": "Q128941718",
+"label": "Autonome Systeme in der Produktion",
+"description": "wissenschaftlicher Artikel",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"autonome Fahren": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Helmholtz Data Federation": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IT3": {
+"qid": "Q136699532",
+"label": "Instituto de Fomento à Tecnologia do Terceiro Setor",
+"description": "",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"IT-Projekt": {
+"qid": "Q105822973",
+"label": "IT-Projekt",
+"description": "Projekt zur Einführung oder Entwicklung informationstechnischer Systeme",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Repository": {
+"qid": "Q1235234",
+"label": "Dokumentenserver",
+"description": "digitale Bibliothek zur Veröffentlichung und Archivierung von elektronischen Publikationen in einem Repository",
+"match_type": "exact",
+"search_lang": "de"
+},
+"IT1": {
+"qid": "Q18046123",
+"label": "HAUS3",
+"description": "Gen der Spezies Homo sapiens",
+"match_type": "exact",
+"search_lang": "de"
+},
+"BIMSB": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"DeepStor": {
+"qid": "Q96431533",
+"label": "DeepSTORM3D: dense 3D localization microscopy and PSF design by deep learning",
+"description": "wissenschaftlicher Artikel",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Helmholtz-Zentrum für Informationssicherheit": {
+"qid": "Q55436361",
+"label": "CISPA - Helmholtz-Zentrum für Informationssicherheit",
+"description": "Forschungseinrichtung für Informationssicherheit",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Technologieplattform": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Daten- und Analyse-Infrastrukturen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"HIPOLE": {
+"qid": "Q20578841",
+"label": "Hipolenn",
+"description": "",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Hamburg Wireless Competence": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Smart Rail Connectivity Campus": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Deutsche Zentrum Mobilität der Zukunft": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Verschlüsselte": {
+"qid": "Q114514587",
+"label": "Verschlüsselte Nachrichten",
+"description": "Folge von Ancient Aliens – Unerklärliche Phänomene",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Intelligent Computing": {
+"qid": "Q123958958",
+"label": "Intelligent Computing",
+"description": "academic journal",
+"match_type": "exact",
+"search_lang": "de"
+},
+"IGD-R": {
+"qid": "Q32177798",
+"label": "IgD receptor-mediated signal transduction in T cells",
+"description": "wissenschaftlicher Artikel",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"IBMT": {
+"qid": "Q1167435",
+"label": "Fraunhofer-Institut für Biomedizinische Technik",
+"description": "Forschungsinstitut im Saarland (Sulzbach/Saar, St. Ingbert)",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Echtzeitdienste": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Driving": {
+"qid": "Q999646",
+"label": "Autofahren",
+"description": "Fahrt mit dem Auto",
+"match_type": "exact",
+"search_lang": "de"
+},
+"intelligente Städte": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Digital Twin": {
+"qid": "Q25099680",
+"label": "Digitaler Zwilling",
+"description": "digitale Repräsentanz eines Objekts aus der realen Welt",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Gesundheitsdatenbank": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Sensornetzwerk": {
+"qid": "Q336038",
+"label": "Sensornetz",
+"description": "Art von Datennetz",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Kommunikationstechnologie": {
+"qid": "Q1780543",
+"label": "Kommunikationstechnik",
+"description": "Sammelbegriff für Techniken für die technisch gestützte Kommunikation",
+"match_type": "exact",
+"search_lang": "de"
+},
+"MF": {
+"qid": "Q193592",
+"label": "Mittelfeldspieler",
+"description": "Position im Fußball",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Autonom": {
+"qid": "Q43452",
+"label": "Autonome Universität Barcelona",
+"description": "staatliche Universität nahe der spanischen Stadt Barcelona",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Blockchain-Technologien": {
+"qid": "Q130376267",
+"label": "Blockchain-Technologie",
+"description": "the technology used to create a digital database containing information (such as records of financial transactions) that can be simultaneously used and shared within a large decentralized, publicly accessible network",
+"match_type": "exact",
+"search_lang": "de"
+},
+"elektronische Mauterhebung": {
+"qid": "Q1191337",
+"label": "Elektronische Mauterhebung",
+"description": "Kontaktlose Methode der Erhebung von Benutzungsgebühren für Verkehrswege",
+"match_type": "exact",
+"search_lang": "de"
+},
+"App": {
+"qid": "Q620615",
+"label": "Mobile-App",
+"description": "Anwendungssoftware für Mobilgeräte",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Building Information Modeling": {
+"qid": "Q842017",
+"label": "Building Information Modeling",
+"description": "informationstechnische Methodik der Bauwirtschaft",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Green Ai": {
+"qid": "Q103845039",
+"label": "Green AI",
+"description": "",
+"match_type": "exact",
+"search_lang": "de"
+},
+"5x5G-Strategie": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Smarte Datenwirtschaft": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Industrial Data Space": {
+"qid": "Q58328699",
+"label": "Industrial Data Space",
+"description": "",
+"match_type": "exact",
+"search_lang": "de"
+},
+"5G-Campusnetz": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"offene Schnittstellen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"KI-Innovationswettbewerbs": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"generative KI": {
+"qid": "Q117246174",
+"label": "generative Künstliche Intelligenz",
+"description": "KI, die in der Lage ist, Inhalte als Reaktion auf eine Aufforderung (Prompt) zu erstellen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Netzkomponente": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Machine-to-machine": {
+"qid": "Q251072",
+"label": "Machine to Machine",
+"description": "automatisierter Informationsaustausch zwischen Maschinen",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Prototypisch": {
+"qid": "Q228641",
+"label": "Prototype",
+"description": "Wikimedia-Begriffsklärungsseite",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Interoperabel": {
+"qid": "Q99354765",
+"label": "Interoperabel markbaserad infrastruktur för ledning av JAS Gripen",
+"description": "written question from Allan Widman to Sten Tolgfors",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Algorithmus": {
+"qid": "Q8366",
+"label": "Algorithmus",
+"description": "endliche, eindeutige Handlungsvorschrift zur Lösung eines Problems",
+"match_type": "exact",
+"search_lang": "de"
+},
+"KI-Technologien": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datenerhebungsprogramm": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"MINT-Bildung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Best-Practice": {
+"qid": "Q830382",
+"label": "Best practice",
+"description": "bewährte, optimale bzw. vorbildliche Methoden, Praktiken oder Vorgehensweisen in Unternehmen",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"MINT-Förderrichtlinie": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"ASCOT+": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Multimediaangebote": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"KI-Nachwuchs Fachhochschulen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Hochleistungsrechn": {
+"qid": "Q1190465",
+"label": "Hochleistungsrechnen",
+"description": "umfasst alle Rechenarbeiten, deren Bearbeitung einer hohen Rechenleistung oder Speicherkapazität bedarf",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Fake- News": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Professur für künstliche Intelligenz": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datenwissenschaft": {
+"qid": "Q29169143",
+"label": "Data Scientist",
+"description": "Person, die im Bereich Data Science arbeit",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"OER-Strategie": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Schul-Cloud": {
+"qid": "Q56298189",
+"label": "Schul-Cloud",
+"description": "Projekt zur Nutzung von Filesharing-Diensten in der Schulausbildung",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Bildungskompetenzzentrum": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Digitalgestützte": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"KI-unterstützter": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Netzwerkmanagement": {
+"qid": "Q1454667",
+"label": "Netzwerkmanagement",
+"description": "the process of administering and managing computer networks",
+"match_type": "exact",
+"search_lang": "de"
+},
+"ERP-Sondervermögen": {
+"qid": "Q1275809",
+"label": "ERP-Sondervermögen",
+"description": "vom Bund verwaltetes Sondervermögen aus dem European Recovery Program",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Mittelstand Digital": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"elektronische Business": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"offene Standards": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Online": {
+"qid": "Q73368",
+"label": "online",
+"description": "aktive Verbindung mit einem Kommunikationsnetzwerk",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Federated Services": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Open Source Lösungen": {
+"qid": "Q115144988",
+"label": "Open-Source-Lösungen zur Automatisierung des Deployments und Betriebs von Clouds",
+"description": "wissenschaftlicher Artikel",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"go-digital": {
+"qid": "Q5132414",
+"label": "Digital Planet",
+"description": "britische Hörfunksendung des BBC World Service",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"IT-Geschäftskonzepten": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IT-Schutzniveaus": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"de:hub": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Intelligente Vernetzung": {
+"qid": "Q116102470",
+"label": "Intelligente Vernetzung und Adaption von IT-Systemen zur Qualitätssteigerung der Behandlung von Glaukompatienten (C05)",
+"description": "GEPRIS Projekt",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Initiative Stadt.Land.Digital": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Venture-Capital": {
+"qid": "Q219409",
+"label": "Risikokapital",
+"description": "außerbörsliches Beteiligungskapital, das eine Beteiligungsgesellschaft zur Beteiligung an als besonders riskant geltenden Unternehmungen bereitstellt",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Digital Jetzt": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Digital Responsibility": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"CIR": {
+"qid": "Q10508",
+"label": "Zirkel",
+"description": "Sternbild",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"CIRR-Festzinsprogramm": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Abbiegeassistenzsysteme": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"XÖV-Standards": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Wide Area Network": {
+"qid": "Q11384",
+"label": "Wide Area Network",
+"description": "Netzwerk über große geografische Entfernungen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Videokonferenzanlage": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Festnetz": {
+"qid": "Q738621",
+"label": "Festnetz",
+"description": "Telefontechnik",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Telekommunikationsstandard": {
+"qid": "Q1852983",
+"label": "Liste der Telekommunikationsstandards",
+"description": "Wikimedia-Liste",
+"match_type": "exact",
+"search_lang": "de"
+},
+"medientechnische Anlagen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Big Data Analytik": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Natural Language Processing": {
+"qid": "Q59289206",
+"label": "Natural Language Processing",
+"description": "wissenschaftliche Fachzeitschrift",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Crawler": {
+"qid": "Q45842",
+"label": "Webcrawler",
+"description": "Computerprogramm, das automatisch das World Wide Web durchsucht und Webseiten analysiert",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Deutsche Meteorologisches Rechenzentrum": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Internetseite": {
+"qid": "Q35127",
+"label": "Website",
+"description": "Präsenz eines Anbieters von Telemedien im weltweiten Netz, die aus einzelnen Webseiten besteht",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Booking Engine": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Online-Abwicklung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Internationale Fernmeldeunion": {
+"qid": "Q376150",
+"label": "Internationale Fernmeldeunion",
+"description": "Sonderorganisation der Vereinten Nationen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Europäische Büro für Kommunikation": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"LAN-Anlagen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"TK/": {
+"qid": "Q12346891",
+"label": "TK/Stafeto",
+"description": "Esperanto publisher",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Digitalfunktechnik": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Elektr. Schnittstelle Behörden": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"ETSI-ESB": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"TKÜ-Technik": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IT-Leistungen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IT-Betriebskonsolidierung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IT-Architektur": {
+"qid": "Q6030887",
+"label": "IT-Architektur",
+"description": "methodical development of specifications, models and guidelines for information technology",
+"match_type": "exact",
+"search_lang": "de"
+},
+"EGA": {
+"qid": "Q14941772",
+"label": "Ega",
+"description": "Gattung der Familie Laufkäfer (Carabidae)",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Internetbasierte": {
+"qid": "Q1714118",
+"label": "Online-Publikation",
+"description": "materielose Publikation",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"ADV-Verfahrens": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Cyberangriffe": {
+"qid": "Q110560472",
+"label": "Cyberangriffe auf Regierungswebsites der Ukraine (2022)",
+"description": "Angriff auf ukrainische Regierungswebseiten",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Netzwerksysteme": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IuK-Systems": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Virtualisierung": {
+"qid": "Q270471",
+"label": "Virtualisierung",
+"description": "Nachbildung eines Hard- oder Softwareobjekts",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Netzwerkkomponente": {
+"qid": "Q1546066",
+"label": "Netzwerkkomponente",
+"description": "devices that mediate data in a computer network",
+"match_type": "exact",
+"search_lang": "de"
+},
+"IT-Basis": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datenabgabe": {
+"qid": "Q122871685",
+"label": "Datenabgabe",
+"description": "Funktion im Open Archival Information System-Modell",
+"match_type": "exact",
+"search_lang": "de"
+},
+"e-Vergabe": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datenverarbeitungsanlage": {
+"qid": "Q68",
+"label": "Computer",
+"description": "Apparat, der mithilfe einer programmierbaren Rechenvorschrift Daten verarbeiten kann",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Datenspeicher": {
+"qid": "Q57515336",
+"label": "Datenspeicher",
+"description": "Element der Zentraleinheit eines Computers",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Auslands- IT": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"VIS-VO": {
+"qid": "Q4014747",
+"label": "Vis Volley Castelfidardo",
+"description": "",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Modellierungsdienst": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Geodatenvermittlung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"USV-Anlage": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Funkeinrichtung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Fernmeldegerät": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Fernmeldeanlage": {
+"qid": "Q2401720",
+"label": "Telekommunikationsanlage",
+"description": "Anlage, die Nachrichten in Form elektromagnetischer oder optischer Signale senden, übertragen, vermitteln, empfangen, steuern oder kontrollieren kann",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Handfunkgeräte": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"e-Rechnung": {
+"qid": "Q15806970",
+"label": "E-Rechnung an den Bund",
+"description": "",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"e-commerce-Verbindungsstelle": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"DigitalService4Germany": {
+"qid": "Q116897462",
+"label": "DigitalService des Bundes",
+"description": "deutsche GmbH in Bundesbesitz, die mit und für die Bundesministerien sowie nachgeordneten Behörden digitale Lösungen entwickelt",
+"match_type": "exact",
+"search_lang": "de"
+},
+"XUnternehmen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"IT-Standard-xGewerbeanzeige": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"EAkte": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"TKÜ-Anlagen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"ITZB": {
+"qid": "Q23786362",
+"label": "Informationstechnikzentrum Bund",
+"description": "deutscher zentraler IT-Dienstleister des Bundes",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"FITKO": {
+"qid": "Q104760828",
+"label": "Föderale IT-Kooperation",
+"description": "deutsche Anstalt des öffentlichen Rechts zur Unterstützung des IT-Planungsrat und die Umsetzung seiner Beschlüsse durch Bund und Länder",
+"match_type": "exact",
+"search_lang": "de"
+},
+"IT-Staatsvertrags": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"souveräne Arbeitsplatzes": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Deutsche Verwaltungscloud": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Information Sharing Portal": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"BWI GmbH": {
+"qid": "Q34561213",
+"label": "BWI GmbH",
+"description": "deutsches IT-Systemhaus der Bundeswehr",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Elektronische Akte": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"elektronische Beschaffung": {
+"qid": "Q377505",
+"label": "Elektronische Beschaffung",
+"description": "purchase or sale conducted through the Internet",
+"match_type": "exact",
+"search_lang": "de"
+},
+"OZG e": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Bibliotheksportal": {
+"qid": "Q856608",
+"label": "Bibliotheksportal",
+"description": "Wikimedia-Begriffsklärungsseite",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Digitale Rentenübersicht": {
+"qid": "Q124429893",
+"label": "Digitale Rentenübersicht",
+"description": "",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Meldeportal": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Standleitung": {
+"qid": "Q2330575",
+"label": "Standleitung",
+"description": "Leitungstheorie",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Datenleitung": {
+"qid": "Q917186",
+"label": "Datenleitung",
+"description": "electrical cable used for the transmission of data",
+"match_type": "exact",
+"search_lang": "de"
+},
+"ChatBots": {
+"qid": "Q870780",
+"label": "Chatbot",
+"description": "textbasiertes automatisiertes Dialogsystem",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Center for Intelligence and Security Studies": {
+"qid": "Q5059695",
+"label": "Center for Intelligence and Security Studies",
+"description": "center at the University of Mississippi",
+"match_type": "exact",
+"search_lang": "de"
+},
+"virtuelle Rekonstruktion": {
+"qid": "Q2333501",
+"label": "Stasi-Schnipselmaschine",
+"description": "Computerprogramm zur Wiederherstellung von \"Stasi Schnipseln\"",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Interaction": {
+"qid": "Q52948",
+"label": "Interaktion",
+"description": "wechselseitiges aufeinander Einwirken von Akteuren oder Systemen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"DIALOG": {
+"qid": "Q131395",
+"label": "Dialog",
+"description": "Gespräch zwischen zwei oder mehr Personen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Online-Bereich": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Internetauftritt": {
+"qid": "Q35127",
+"label": "Website",
+"description": "Präsenz eines Anbieters von Telemedien im weltweiten Netz, die aus einzelnen Webseiten besteht",
+"match_type": "exact",
+"search_lang": "de"
+},
+"fachbezogene IT": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Digitale Strategien": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Computerspiel": {
+"qid": "Q7889",
+"label": "Computerspiel",
+"description": "elektronisches Spiel, das durch Interaktion mit einer Benutzeroberfläche visuelles Feedback auf einem Videobildschirm generiert",
+"match_type": "exact",
+"search_lang": "de"
+},
+"vernetzte Systeme": {
+"qid": "Q59562559",
+"label": "Vernetzte Systeme und multimediale Anwendungen aus software-ergonomischer Sicht",
+"description": "scholarly article published 1990",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"GNSS Simulator": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Simulation": {
+"qid": "Q45045",
+"label": "Simulation",
+"description": "Nachahmung der Funktionsweise eines realen Prozesses oder Systems im Laufe der Zeit, um entweder reale Ereignisse in vielen Kontexten oder die Auswirkungen alternativer Bedingungen und Vorgehensweisen zu untersuchen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Echtzeitbordnetze": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Bildgenerator": {
+"qid": "Q113403137",
+"label": "Bildgenerator",
+"description": "process of automatically generating images",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Satellitenkommunikation": {
+"qid": "Q2225985",
+"label": "Satellitenkommunikation",
+"description": "über einen Satelliten hergestellte bidirektionale Telekommunikation zwischen zwei Bodenstationen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Fernmeldewesen": {
+"qid": "Q418",
+"label": "Telekommunikation",
+"description": "elektronische Übermittlung von Informationen zwischen verschiedenen Standorten",
+"match_type": "exact",
+"search_lang": "de"
+},
+"TaWAN": {
+"qid": "Q96653984",
+"label": "Tawan",
+"description": "männlicher Vorname",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Militärische Abschirmdienst": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Kryptomodernisierung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"HERKULES Folgeprojekt": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Informationsraum": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Elektronische Kampfführung": {
+"qid": "Q272826",
+"label": "Elektronischer Kampf",
+"description": "militärische Maßnahmen in der Auseinandersetzung um die Nutzung des elektromagnetischen Spektrums",
+"match_type": "exact",
+"search_lang": "de"
+},
+"HERKULES-Folgeprojektes": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"BWI Informationstechnik": {
+"qid": "Q797193",
+"label": "BWI Informationstechnik",
+"description": "Identität der heutigen BWI GmbH zwischen 2006 und 2017",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Fraunhofer-Gesellschaft": {
+"qid": "Q161057",
+"label": "Fraunhofer-Gesellschaft",
+"description": "Organisation für angewandte Forschungs- und Entwicklungsdienstleistungen",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Fernmeldematerial": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Fernmeldeleitung": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Fernmeldeagentur": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"EGASUS": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Büromaschine": {
+"qid": "Q106707749",
+"label": "Bürotechnik",
+"description": "technologies used for office work",
+"match_type": "exact",
+"search_lang": "de"
+},
+"Digitalisierung landbasierte Operationen": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Datengesetz": {
+"qid": "",
+"label": "",
+"description": "",
+"match_type": "none",
+"search_lang": ""
+},
+"Cyber Innovation Hub": {
+"qid": "Q109380216",
+"label": "Cyber Innovation Hub der Bundeswehr",
+"description": "Einrichtung der Bundeswehr",
+"match_type": "fuzzy",
+"search_lang": "de"
+},
+"Elektronische Gesundheitsakte": {
+"qid": "Q10871684",
+"label": "elektronische Gesundheitsakte",
+"description": "Datenbank, in der individuelle Gesundheitsdaten gespeichert werden können",
+"match_type": "exact",
+"search_lang": "de"
 }
 }

@@ -206,7 +206,7 @@ def write_csv(keywords, cache, base, out):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", "-i",
-                    default="digitalhaushalt_transformed_with_titel_text_and_extracted_keywords.csv")
+                    default="digitalhaushalt_transformed_with_titel_text_and_extracted_keywords_level_1_cleaned.csv")
     ap.add_argument("--output", "-o", default="keywords_wikidata.csv")
     ap.add_argument("--base", default=DEFAULT_BASE)
     ap.add_argument("--delimiter", default=";")
