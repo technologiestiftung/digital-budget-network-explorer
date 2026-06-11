@@ -334,23 +334,15 @@ export default function Scrollytelling() {
                 </span>
               </div>
               <div className="stat-card">
-                <span className="stat-num">
-                  ≈
-                  <CountUp
-                    value={budgetMrd.value}
-                    decimals={1}
-                    active={active === idxOf("stats")}
-                  />{" "}
-                  Mrd €
-                </span>
+                <span className="stat-num">≈ 16,9 Mrd €</span>
                 <span className="stat-label">
-                  sind für diese Titel veranschlagt (2025, SOLL, enge Variante)
+                  sind für den Digitalhaushalt veranschlagt (2025, SOLL)
                 </span>
               </div>
               <div className="stat-card">
-                <span className="stat-num">30 %</span>
+                <span className="stat-num"> ≈ 3%</span>
                 <span className="stat-label">
-                  des Gesamthaushalts macht diese Budget aus
+                  des Gesamthaushalts macht dieses Budget aus
                 </span>
               </div>
             </div>
