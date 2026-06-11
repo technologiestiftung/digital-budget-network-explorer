@@ -1922,3 +1922,163 @@ details > summary::-webkit-details-marker {
   margin: 16px 0 8px;
   color: var(--text);
 }
+
+/* ============================================================
+   Mobile-Optimierung (konsolidiert)
+   ============================================================ */
+@media (max-width: 900px) {
+  /* Vollbild-Graph: Grid auf eine Spalte, Stage füllt alles */
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100dvh;
+  }
+  .stage {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  /* Filter-Panel als Overlay, das von links einschiebt */
+  .filter-panel {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .filter-panel.is-open {
+    transform: translateX(0);
+  }
+
+  /* Filter- und Detail-Panel als Vollbild-Overlays */
+  .filter-panel,
+  .detail-panel {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.18);
+  }
+  /* Detail-Panel scrollt als Ganzes -> Safe-Area unten */
+  .detail-panel {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+  /* Filter-Panel hat eigenen Footer -> Safe-Area dort ergänzen */
+  .filter-panel-footer {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  /* Detail-Panel: scrollbar + bequemer Innenabstand */
+  .detail-panel.is-open {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Große, gut tippbare Schließen-Buttons */
+  .close,
+  .mobile-close-btn {
+    top: 10px;
+    right: 12px;
+    font-size: 30px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border);
+    z-index: 30;
+  }
+
+  /* Filter-Panel: Platz oben für den Close-Button */
+  .filter-panel-scroll {
+    padding-top: 8px;
+  }
+
+  /* Top-Buttons kompakter und umbruchfähig */
+  .stage-top-buttons {
+    top: 10px;
+    left: 10px;
+    right: 64px; /* Platz, damit sie nicht endlos breit werden */
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .back-to-story,
+  .project-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Legende: kompakter, über der Bottom-Bar, unter den Panels */
+  .legend {
+    left: 10px;
+    right: auto;
+    width: auto;
+    max-width: 220px;
+    bottom: calc(72px + env(safe-area-inset-bottom));
+    z-index: 15;
+  }
+
+  /* Bottom-Bar: Safe-Area + größere Touch-Ziele */
+  .mobile-bottom-bar {
+    height: auto;
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  }
+  .mobile-bottom-btn {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 12px;
+    min-height: 48px;
+    justify-content: center;
+  }
+  .mobile-bottom-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  /* Modal "Über das Projekt": fast vollflächig, gut scrollbar */
+  .modal-overlay {
+    padding: 0;
+    align-items: stretch;
+  }
+  .modal-content {
+    max-width: 100%;
+    max-height: 100dvh;
+    border-radius: 0;
+    padding: 24px 18px calc(32px + env(safe-area-inset-bottom));
+  }
+  .modal-close {
+    top: 10px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+  }
+  .modal-heading {
+    font-size: 21px;
+    padding-right: 40px;
+  }
+}
+
+/* Sehr schmale Geräte: Story-Texte und Titel verkleinern */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(34px, 11vw, 52px);
+  }
+  .chain-word {
+    font-size: clamp(32px, 12vw, 60px);
+  }
+  .question-title,
+  .screen-title {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .story-panel {
+    padding: 32px 18px;
+  }
+  .stat-num {
+    font-size: clamp(26px, 9vw, 40px);
+  }
+  /* Story-Skip & Intro-Hinweis nicht von Systemleisten verdecken */
+  .story-skip {
+    top: 10px;
+    right: 10px;
+  }
+}

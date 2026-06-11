@@ -20,6 +20,7 @@ export default function DetailPanel() {
   const filters = useStore((s) => s.filters);
   const selectedNodeId = useStore((s) => s.selectedNodeId);
   const selectNode = useStore((s) => s.selectNode);
+  const mobileDetailOpen = useStore((s) => s.mobileDetailOpen);
   const [distTab, setDistTab] = useState<"bereich" | "ressort">("bereich");
   const [semTab, setSemTab] = useState<"phrasen" | "kookkurrenz">("phrasen");
 
@@ -100,8 +101,12 @@ export default function DetailPanel() {
   }
 
   return (
-    <aside className={`panel detail-panel is-open`}>
-      <button className="close" onClick={() => selectNode(null)}>
+    <aside className={`panel detail-panel ${mobileDetailOpen ? "is-open" : ""}`}>
+      <button
+        className="close"
+        onClick={() => selectNode(null)}
+        aria-label="Schließen"
+      >
         ×
       </button>
       <span className={`badge ${meta.kind}`}>

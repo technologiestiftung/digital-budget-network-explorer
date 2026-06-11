@@ -34,6 +34,7 @@ interface AppState {
   selectedNodeId: string | null;
   search: string;
   mobileFilterOpen: boolean;
+  mobileDetailOpen: boolean;
 
   setData: (data: GraphData) => void;
   setError: (msg: string) => void;
@@ -53,6 +54,7 @@ interface AppState {
   selectNode: (id: string | null) => void;
   setSearch: (s: string) => void;
   setMobileFilterOpen: (b: boolean) => void;
+  setMobileDetailOpen: (b: boolean) => void;
 }
 
 export const useStore = create<AppState>((set) => ({
@@ -67,6 +69,7 @@ export const useStore = create<AppState>((set) => ({
   selectedNodeId: null,
   search: "",
   mobileFilterOpen: false,
+  mobileDetailOpen: false,
 
   setData: (data) => set({ data, loading: false, error: null }),
   setError: (msg) => set({ error: msg, loading: false }),
@@ -93,7 +96,11 @@ export const useStore = create<AppState>((set) => ({
 
   resetFilters: () => set({ filters: emptyFilters() }),
 
-  selectNode: (id) => set({ selectedNodeId: id }),
+  // Beim Auswaehlen eines Knotens auf Mobilgeraeten das Detail-Panel oeffnen,
+  // beim Deselektieren schliessen. Filter-Overlay immer schliessen.
+  selectNode: (id) =>
+    set({ selectedNodeId: id, mobileDetailOpen: id !== null, mobileFilterOpen: false }),
   setSearch: (s) => set({ search: s }),
   setMobileFilterOpen: (b) => set({ mobileFilterOpen: b }),
+  setMobileDetailOpen: (b) => set({ mobileDetailOpen: b }),
 }));
