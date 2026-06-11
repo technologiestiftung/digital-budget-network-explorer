@@ -167,7 +167,8 @@ kapitel:1701 a skos:Concept ;
 kapitel:701 a skos:Concept ;
     dcterms:isPartOf einzelplan:7 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "701" .
+    skos:notation "701" ;
+    skos:prefLabel "Verbraucherpolitik"@de .
 
 keyword:ais-dienstes a skos:Concept ;
     skos:exactMatch wd:Q787197 ;
@@ -91315,7 +91316,8 @@ kapitel:1611 a skos:Concept ;
 kapitel:510 a skos:Concept ;
     dcterms:isPartOf einzelplan:5 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "510" .
+    skos:notation "510" ;
+    skos:prefLabel "Sonstige Bewilligungen"@de .
 
 kapitel:801 a skos:Concept ;
     dcterms:isPartOf einzelplan:8 ;
@@ -93389,7 +93391,8 @@ kapitel:1102 a skos:Concept ;
 kapitel:814 a skos:Concept ;
     dcterms:isPartOf einzelplan:8 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "814" .
+    skos:notation "814" ;
+    skos:prefLabel "Bundesamt zur Bekämpfung von Finanzkriminalität"@de .
 
 keyword:auslands-it a skos:Concept ;
     dh:cooccursWith keyword:informationstechnik,
@@ -94841,7 +94844,8 @@ kapitel:411 a skos:Concept ;
 kapitel:413 a skos:Concept ;
     dcterms:isPartOf einzelplan:4 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "413" .
+    skos:notation "413" ;
+    skos:prefLabel "Die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration. Die Beauftragte der Bundesregierung für Antirassismus"@de .
 
 kapitel:502 a skos:Concept ;
     dcterms:isPartOf einzelplan:5 ;
@@ -101876,7 +101880,7 @@ funktion:2 a skos:Concept ;
         funktion:25,
         funktion:29 ;
     skos:notation "2" ;
-    skos:prefLabel "Allgemeine Dienste"@de ;
+    skos:prefLabel "Soziale Sicherung, Familie und Jugend, Arbeitsmarktpolitik"@de ;
     skos:topConceptOf <http://example.org/digitalhaushalt/scheme/funktionenplan> .
 
 funktion:21 a skos:Concept ;
@@ -101902,7 +101906,7 @@ funktion:4 a skos:Concept ;
         funktion:46,
         funktion:47 ;
     skos:notation "4" ;
-    skos:prefLabel "Wohnungswesen, Städtebau, Raumordnung und kommunale Gemeinschaftsdienste"@de ;
+    skos:prefLabel "Allgemeine Dienste"@de ;
     skos:topConceptOf <http://example.org/digitalhaushalt/scheme/funktionenplan> .
 
 gruppe:53 a skos:Concept ;
@@ -101932,17 +101936,20 @@ kapitel:1412 a skos:Concept ;
 kapitel:455 a skos:Concept ;
     dcterms:isPartOf einzelplan:4 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "455" .
+    skos:notation "455" ;
+    skos:prefLabel "Der Bundesbeauftragte für die Unterlagen des Staatssicherheitsdienstes der ehemaligen DDR"@de .
 
 kapitel:604 a skos:Concept ;
     dcterms:isPartOf einzelplan:6 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "604" .
+    skos:notation "604" ;
+    skos:prefLabel "Wohnungswesen und Stadtentwicklung"@de .
 
 kapitel:621 a skos:Concept ;
     dcterms:isPartOf einzelplan:6 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "621" .
+    skos:notation "621" ;
+    skos:prefLabel "Bundesamt für Bauwesen und Raumordnung"@de .
 
 keyword:ascot a skos:Concept ;
     dh:cooccursWith keyword:berufsbildung-4-0,
@@ -103453,8 +103460,8 @@ funktion:22 a skos:Concept ;
     skos:narrower funktion:221,
         funktion:224 ;
     skos:notation "22" ;
-    skos:prefLabel "Auswärtige Angelegenheiten"@de,
-        "Internationale Organisationen Beteiligungen an europäischen Organisationen und Einrichtungen der Ver"@de .
+    skos:prefLabel "Internationale Organisationen Beteiligungen an europäischen Organisationen und Einrichtungen der Ver"@de,
+        "Sozialversicherung einschl. Arbeitslosenversicherung"@de .
 
 funktion:322 a skos:Concept ;
     skos:broader funktion:32 ;
@@ -103495,7 +103502,8 @@ gruppe:883 a skos:Concept ;
 kapitel:1514 a skos:Concept ;
     dcterms:isPartOf einzelplan:15 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
-    skos:notation "1514" .
+    skos:notation "1514" ;
+    skos:prefLabel "Deutsches Institut für Medizinische Dokumentation und Information"@de .
 
 keyword:beki a skos:Concept ;
     dh:cooccursWith keyword:datenpolitik,
@@ -103797,7 +103805,7 @@ kapitel:454 a skos:Concept ;
     dcterms:isPartOf einzelplan:4 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
     skos:notation "454" ;
-    skos:prefLabel "Bundesinstitut für Kultur und Geschichte des östlichen Europa"@de .
+    skos:prefLabel "Bundesinstitut für Kultur und Geschichte der Deutschen im östlichen Europa"@de .
 
 kapitel:456 a skos:Concept ;
     dcterms:isPartOf einzelplan:4 ;
@@ -104916,7 +104924,7 @@ kapitel:1014 a skos:Concept ;
     dcterms:isPartOf einzelplan:10 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
     skos:notation "1014" ;
-    skos:prefLabel "Friedrich-Loeffler-Institut, Bundesforschungsinstitut für Tiergesundheit"@de .
+    skos:prefLabel "Friedrich Loeffler-Institut, Bundesforschungsinstitut für Tiergesundheit"@de .
 
 kapitel:1018 a skos:Concept ;
     dcterms:isPartOf einzelplan:10 ;
@@ -108014,7 +108022,7 @@ kapitel:1213 a skos:Concept ;
     dcterms:isPartOf einzelplan:12 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
     skos:notation "1213" ;
-    skos:prefLabel "Bundesamt für Logistik und Mobilität"@de .
+    skos:prefLabel "Bundesamt für Güterverkehr"@de .
 
 kapitel:1613 a skos:Concept ;
     dcterms:isPartOf einzelplan:16 ;
@@ -108182,7 +108190,7 @@ kapitel:412 a skos:Concept ;
     dcterms:isPartOf einzelplan:4 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
     skos:notation "412" ;
-    skos:prefLabel "Bundeskanzler und Bundeskanzleramt"@de .
+    skos:prefLabel "Bundeskanzlerin und Bundeskanzleramt"@de .
 
 kapitel:513 a skos:Concept ;
     dcterms:isPartOf einzelplan:5 ;
@@ -114712,7 +114720,7 @@ funktion:32 a skos:Concept ;
     skos:narrower funktion:322 ;
     skos:notation "32" ;
     skos:prefLabel "Deutsche Verteidigungsstreitkräfte Militärische Dienststellen und Einheiten einschließlich zentrale"@de,
-        "Sport und Erholung"@de .
+        "Verteidigung (nur Bund)"@de .
 
 kapitel:2112 a skos:Concept ;
     dcterms:isPartOf einzelplan:21 ;
@@ -115785,28 +115793,28 @@ keyword:digitale-infrastruktur a skos:Concept ;
     skos:prefLabel "Digitale Infrastruktur"@de .
 
 einzelplan:7 a schema:GovernmentOrganization ;
-    rdfs:label "Bundesministerium der Justiz und für Verbraucherschutz"@de ;
+    rdfs:label "Bundesministerium der Justiz"@de ;
     owl:sameAs wd:Q498251 ;
     schema:identifier "7" ;
-    schema:name "Bundesministerium der Justiz und für Verbraucherschutz"@de .
+    schema:name "Bundesministerium der Justiz"@de .
 
 kapitel:3004 a skos:Concept ;
     dcterms:isPartOf einzelplan:30 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/kapitel> ;
     skos:notation "3004" ;
-    skos:prefLabel "Forschung für Innovationen, Zukunftsstrategie"@de .
+    skos:prefLabel "Forschung für Innovationen, Hightech-Strategie"@de .
 
 einzelplan:10 a schema:GovernmentOrganization ;
-    rdfs:label "Bundesministerium für Landwirtschaft, Ernährung und Heimat"@de ;
+    rdfs:label "Bundesministerium für Ernährung und Landwirtschaft"@de ;
     owl:sameAs wd:Q699656 ;
     schema:identifier "10" ;
-    schema:name "Bundesministerium für Landwirtschaft, Ernährung und Heimat"@de .
+    schema:name "Bundesministerium für Ernährung und Landwirtschaft"@de .
 
 einzelplan:4 a schema:GovernmentOrganization ;
-    rdfs:label "Bundeskanzler und Bundeskanzleramt"@de ;
+    rdfs:label "Bundeskanzlerin und Bundeskanzleramt"@de ;
     owl:sameAs wd:Q317027 ;
     schema:identifier "4" ;
-    schema:name "Bundeskanzler und Bundeskanzleramt"@de .
+    schema:name "Bundeskanzlerin und Bundeskanzleramt"@de .
 
 bereich:bundeswehr a skos:Concept ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/digitalisierungsbereiche> ;
@@ -116837,10 +116845,10 @@ keyword:zukunftsstrategie a skos:Concept ;
     skos:prefLabel "Zukunftsstrategie"@de .
 
 einzelplan:30 a schema:GovernmentOrganization ;
-    rdfs:label "Bundesministerium für Forschung, Technologie und Raumfahrt"@de ;
+    rdfs:label "Bundesministerium für Bildung und Forschung"@de ;
     owl:sameAs wd:Q492234 ;
     schema:identifier "30" ;
-    schema:name "Bundesministerium für Forschung, Technologie und Raumfahrt"@de .
+    schema:name "Bundesministerium für Bildung und Forschung"@de .
 
 keyword:moderne-verwaltung a skos:Concept ;
     dh:cooccursWith keyword:agile,
@@ -116988,7 +116996,8 @@ funktion:61 a skos:Concept ;
     skos:broader funktion:6 ;
     skos:inScheme <http://example.org/digitalhaushalt/scheme/funktionenplan> ;
     skos:notation "61" ;
-    skos:prefLabel "Verwaltung für Energie- und Wasserwirtschaft, Gewerbe und Dienstleistungen Bergverwaltung Bundesamt"@de .
+    skos:prefLabel "Finanzverwaltung"@de,
+        "Steuer- und Zollverwaltung Bundesfinanzverwaltung Informationstechnikzentrum Bund Bundeszentralamt f"@de .
 
 keyword:digitalfunk a skos:Concept ;
     dh:cooccursWith keyword:agile,
@@ -117548,10 +117557,10 @@ funktion:165 a skos:Concept ;
     skos:prefLabel "Forschung und experimentelle Entwicklung Einrichtung, Unterhaltung und Betrieb von eigenen Einrichtu"@de .
 
 einzelplan:12 a schema:GovernmentOrganization ;
-    rdfs:label "Bundesministerium für Verkehr"@de ;
+    rdfs:label "Bundesministerium für Verkehr und digitale Infrastruktur"@de ;
     owl:sameAs wd:Q491637 ;
     schema:identifier "12" ;
-    schema:name "Bundesministerium für Verkehr"@de .
+    schema:name "Bundesministerium für Verkehr und digitale Infrastruktur"@de .
 
 gruppe:511 a skos:Concept ;
     skos:broader gruppe:51 ;
